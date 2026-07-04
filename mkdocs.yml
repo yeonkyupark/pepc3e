@@ -5,9 +5,12 @@ theme:
     - content.action.edit
 repo_url: https://github.com/yeonkyupark/pepc3e
 repo_name: yeonkyupark/pepc3e
-
 edit_uri: edit/main/docs/
 
+markdown_extensions:
+  - footnotes
+  - admonition
+  
 nav:
   - Home: index.md
 
