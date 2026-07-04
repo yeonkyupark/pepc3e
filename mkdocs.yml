@@ -1,6 +1,10 @@
 site_name: 생산운영과 공장관리
 theme:
   name: material
+repo_url: https://github.com/yeonkyupark/pepc3e
+repo_name: yeonkyupark/pepc3e
+
+edit_uri: edit/main/docs/
 
 nav:
   - Home: index.md
