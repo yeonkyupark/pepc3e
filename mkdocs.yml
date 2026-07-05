@@ -11,8 +11,11 @@ markdown_extensions:
   - footnotes
   - admonition
   - pymdownx.superfences:
+      preserve_tabs: true
       custom_fences:
+        # Mermaid diagrams
         - name: mermaid
+          class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
   
 nav:
