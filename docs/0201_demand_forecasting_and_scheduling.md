@@ -315,17 +315,9 @@ $$
 
 예측 편향(bias) 여부를 판단하는 지표
 
-* RSFE (Running Sum of Forecast Error)  
-  
-  $$
-  RSFE = \sum_{t=1}^{n} e_t
-  $$
+* RSFE (Running Sum of Forecast Error) $RSFE = \sum_{t=1}^{n} e_t$
 
-* Tracking Signal
-  
-  $$
-  TS = \frac{RSFE}{MAD}
-  $$
+* Tracking Signal $TS = \frac{RSFE}{MAD}$
 
 **특징**
 
