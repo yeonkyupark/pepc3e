@@ -3,6 +3,9 @@ theme:
   name: material
   features:
     - content.action.edit
+    - navigation.sections
+    - navigation.indexes
+    - toc.follow
 repo_url: https://github.com/yeonkyupark/pepc3e
 repo_name: yeonkyupark/pepc3e
 edit_uri: edit/main/docs/
@@ -17,6 +20,8 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+extra_css:
+  - stylesheets/extra.css
   
 nav:
   - Home: index.md
