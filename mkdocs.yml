@@ -3,8 +3,6 @@ theme:
   name: material
   features:
     - content.action.edit
-    - navigation.sections
-    - navigation.indexes
     - toc.follow
 repo_url: https://github.com/yeonkyupark/pepc3e
 repo_name: yeonkyupark/pepc3e
