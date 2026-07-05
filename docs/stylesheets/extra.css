@@ -102,8 +102,3 @@
 .md-sidebar--secondary .md-nav__item--active > .md-nav__list {
     display: block;
 }
-
-.md-sidebar--secondary .md-nav__item--active
-.md-nav__item--active > .md-nav__list {
-    display: block;
-}
