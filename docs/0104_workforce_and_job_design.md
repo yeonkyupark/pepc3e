@@ -40,7 +40,7 @@ graph TB
 
 ```mermaid 
 flowchart TD
-    A["해빙 (Unfreezing)"] --> B["변화 (Change)"] --> C[:재동결 (Refreezing)"]
+    A["해빙 (Unfreezing)"] --> B["변화 (Change)"] --> C["재동결 (Refreezing)"]
 ```
 
 | 단계  | 내용            |
