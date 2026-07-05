@@ -1,0 +1,91 @@
+/* =========================
+   Heading Base Reset
+========================= */
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5 {
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: 2.2em;
+  margin-bottom: 0.8em;
+  position: relative;
+}
+
+/* =========================
+   H2 - Section (가장 중요)
+========================= */
+.md-typeset h2 {
+  font-size: 1.6em;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.3em;
+}
+
+/* 왼쪽 강조 라인 */
+.md-typeset h2::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 0.2em;
+  width: 5px;
+  height: 1.2em;
+  background: #1976d2;
+  border-radius: 2px;
+}
+
+/* =========================
+   H3 - Sub Section
+========================= */
+.md-typeset h3 {
+  font-size: 1.3em;
+}
+
+.md-typeset h3::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 0.25em;
+  width: 4px;
+  height: 1em;
+  background: #42a5f5;
+  border-radius: 2px;
+}
+
+/* =========================
+   H4 - Detail Section
+========================= */
+.md-typeset h4 {
+  font-size: 1.1em;
+  color: #333;
+}
+
+.md-typeset h4::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 0.3em;
+  width: 3px;
+  height: 0.9em;
+  background: #90caf9;
+  border-radius: 2px;
+}
+
+/* =========================
+   H5 - Minor Note
+========================= */
+.md-typeset h5 {
+  font-size: 1em;
+  color: #555;
+  font-weight: 500;
+}
+
+.md-typeset h5::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 0.35em;
+  width: 2px;
+  height: 0.8em;
+  background: #cfd8dc;
+  border-radius: 2px;
+}
