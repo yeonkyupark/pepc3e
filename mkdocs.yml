@@ -10,6 +10,10 @@ edit_uri: edit/main/docs/
 markdown_extensions:
   - footnotes
   - admonition
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   
 nav:
   - Home: index.md
