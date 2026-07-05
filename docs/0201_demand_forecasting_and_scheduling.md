@@ -176,15 +176,9 @@ $$
 \hat{Y}_{t+h} = L_t + hT_t
 $$
 
-* 수준(level)
-  $$
-  L_t = \alpha Y_t + (1-\alpha)(L_{t-1}+T_{t-1})
-  $$
+* 수준(level) $L_t = \alpha Y_t + (1-\alpha)(L_{t-1}+T_{t-1})$
 
-* 추세(trend)
-  $$
-  T_t = \beta (L_t - L_{t-1}) + (1-\beta)T_{t-1}
-  $$
+* 추세(trend) $T_t = \beta (L_t - L_{t-1}) + (1-\beta)T_{t-1}$
 
 ## Holt-Winters 모형
 
@@ -209,15 +203,9 @@ $$
 ARIMA(p,d,q)
 $$
 
-* AR(p): 자기회귀
-  $$  
-  Y_t = c + \sum_{i=1}^{p} \phi_i Y_{t-i} + \epsilon_t
-  $$
+* AR(p): 자기회귀 $Y_t = c + \sum_{i=1}^{p} \phi_i Y_{t-i} + \epsilon_t$
 
-* MA(q): 이동평균
-  $$
-  Y_t = \mu + \epsilon_t + \sum_{i=1}^{q} \theta_i \epsilon_{t-i}
-  $$
+* MA(q): 이동평균 $Y_t = \mu + \epsilon_t + \sum_{i=1}^{q} \theta_i \epsilon_{t-i}$
 
 * d: 차분(order of differencing)
 
@@ -262,8 +250,8 @@ $$
 
 **기본 정의**
 
-* 실제값: ( Y_t )
-* 예측값: ( \hat{Y}_t )
+* 실제값: $Y_t$
+* 예측값: $\hat{Y}_t$
 * 오차: $e_t = Y_t - \hat{Y}_t$
 
 
@@ -321,18 +309,20 @@ $$
 
 * 비율 기반 오차
 * 서로 다른 규모 데이터 비교 가능
-* (Y_t \approx 0)일 때 왜곡 발생
+* $Y_t \approx 0$일 때 왜곡 발생
 
 ##### Tracking Signal (TS)
 
 예측 편향(bias) 여부를 판단하는 지표
 
-* RSFE (Running Sum of Forecast Error)
+* RSFE (Running Sum of Forecast Error)  
+  
   $$
   RSFE = \sum_{t=1}^{n} e_t
   $$
 
 * Tracking Signal
+  
   $$
   TS = \frac{RSFE}{MAD}
   $$
