@@ -33,6 +33,10 @@
   border-radius: 2px;
 }
 
+.md-typeset h2 {
+  counter-increment: h2;
+}
+
 /* =========================
    H3 - Sub Section
 ========================= */
