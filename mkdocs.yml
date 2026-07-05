@@ -22,9 +22,10 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
 extra_css:
   - stylesheets/extra.css
+  
 extra_javascript:
   - javascripts/mathjax.js
-  - https://unpkg.com
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
   - Home: index.md
