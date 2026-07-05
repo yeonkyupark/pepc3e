@@ -282,7 +282,8 @@ graph LR
 | IT 아웃소싱 | IT 운영 위탁   |
 | 제조 아웃소싱 | 생산활동 위탁    |
 
-[^bpo]: BPO(Business Process Outsourcing)는 기업의 일부 업무 프로세스를 외부 전문 업체에 맡기는 것을 의미한다.
+[^bpo]: BPO(Business Process Outsourcing)는 기업의 일부 업무 프로세스를 외부 전문 업체에 맡기는 것을 의미한다.  
+
     - 인사(HR) 업무
     - 회계/재무 처리
     - 고객센터(Call Center)
