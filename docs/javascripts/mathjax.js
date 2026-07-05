@@ -10,3 +10,8 @@ window.MathJax = {
     processHtmlClass: "arithmatex"
   }
 };
+
+document.addEventListener("DOMContentSwitch", function() {
+  MathJax.typesetClear();
+  MathJax.typesetPromise();
+});
