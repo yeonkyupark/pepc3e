@@ -93,3 +93,17 @@
   background: #cfd8dc;
   border-radius: 2px;
 }
+
+/* 우측 ToC 접기 */
+.md-sidebar--secondary .md-nav__list .md-nav__list {
+    display: none;
+}
+
+.md-sidebar--secondary .md-nav__item--active > .md-nav__list {
+    display: block;
+}
+
+.md-sidebar--secondary .md-nav__item--active
+.md-nav__item--active > .md-nav__list {
+    display: block;
+}
