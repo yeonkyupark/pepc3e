@@ -50,7 +50,7 @@ flowchart LR
 
 진도관리는 PDCA[^pdca] 사이클의 Check 단계에 해당한다.
 
-[pdca]: PDCA(plan–do–check–act)는 사업 활동에서 생산 및 품질 등을 관리하는 방법이다. Plan(계획)-Do(실행)-Check(평가)-Act(개선)의 4단계를 반복하여 업무를 지속적으로 개선한다. 월터 슈하트(Walter A. Shewhart), 에드워즈 데밍(W. Edwards Deming) 등에 의해 유명해졌다.
+[^pdca]: PDCA(plan–do–check–act)는 사업 활동에서 생산 및 품질 등을 관리하는 방법이다. Plan(계획)-Do(실행)-Check(평가)-Act(개선)의 4단계를 반복하여 업무를 지속적으로 개선한다. 월터 슈하트(Walter A. Shewhart), 에드워즈 데밍(W. Edwards Deming) 등에 의해 유명해졌다.
 
 ## 진도관리 방식
 
@@ -247,7 +247,7 @@ $$
 
 ### Drum-Buffer-Rope
 
-![[https://ensembletechnology.com/method/operations-toc-overview/production/](https://www.slideserve.com/laken/toc)](https://image2.slideserve.com/3754876/drum-buffer-rope-n.jpg)
+![https://ensembletechnology.com/method/operations-toc-overview/production/](https://www.slideserve.com/laken/toc)](https://image2.slideserve.com/3754876/drum-buffer-rope-n.jpg)
 
 1. **드럼**(Drum) : 생산의 박자
    - 의미: 공정 중 가장 느린 부분인 제약 자원(병목)의 작업 일정표
