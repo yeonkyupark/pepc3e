@@ -11,6 +11,8 @@ edit_uri: edit/main/docs/
 markdown_extensions:
   - footnotes
   - admonition
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.superfences:
       preserve_tabs: true
       custom_fences:
