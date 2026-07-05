@@ -1,0 +1,4423 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../0203_supply_chain_management/">
+      
+      
+        <link rel="next" href="../0301_production_planning/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>4. 물류관리(자재 및 재고관리) - 생산운영과 공장관리</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="생산운영과 공장관리" class="md-header__button md-logo" aria-label="생산운영과 공장관리" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            생산운영과 공장관리
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4. 물류관리(자재 및 재고관리)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/yeonkyupark/pepc3e" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    yeonkyupark/pepc3e
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="생산운영과 공장관리" class="md-nav__button md-logo" aria-label="생산운영과 공장관리" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    생산운영과 공장관리
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/yeonkyupark/pepc3e" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    yeonkyupark/pepc3e
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 생산전략
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1. 생산전략
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0101_competitive_manufacturing_strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 경쟁우위 생산전략
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0102_production_structure_and_layout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 생산구조와 방식(Layout)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0103_purchasing_and_outsourcing_strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 구매와 외주전략
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0104_workforce_and_job_design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 인력과 직무설계
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0105_business_environment_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 사업환경 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 생산운영 및 물류관리
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2. 생산운영 및 물류관리
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0201_demand_forecasting_and_scheduling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 수요예측과 일정관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0202_process_progress_control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 프로세스 진도관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0203_supply_chain_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 공급망 관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 물류관리(자재 및 재고관리)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 물류관리(자재 및 재고관리)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        물류관리(자재 및 재고관리)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        물류관리의 개요
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="물류관리의 개요">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        물류관리의 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        물류관리의 목적
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        물류의 기능
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7r" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        물류관리의 7R
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#material-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        자재관리(Material Management)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="자재관리(Material Management)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        자재관리의 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        자재관리 프로세스
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#material-requirement-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        소요계획 (Material Requirement Planning)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="소요계획 (Material Requirement Planning)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 활동
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        핵심 목표
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purchasing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        구매 (Purchasing)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="구매 (Purchasing)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 활동
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        핵심 목표
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#receiving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        입고 (Receiving)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="입고 (Receiving)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 활동
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        핵심 목표
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        보관 (Storage)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="보관 (Storage)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 활동
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        핵심 목표
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        불출 (Issue)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="불출 (Issue)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 활동
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        핵심 목표
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inventory-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고관리 (Inventory Control)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="재고관리 (Inventory Control)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 활동
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        핵심 목표
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-right" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        자재관리 5 Right
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        자재관리의 목표
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고관리의 개요
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="재고관리의 개요">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고의 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고의 기능
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고의 분류
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="재고의 분류">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        용도별 분류
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        목적별 분류
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고관리 전략
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="재고관리 전략">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고관리의 목적
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고관리 비용
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고관리의 상충관계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eoq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        경제적 주문량(EOQ)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="경제적 주문량(EOQ)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eoq_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EOQ의 개요
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eoq_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EOQ 기본모형
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eoq_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EOQ 공식
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eoq_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EOQ의 가정
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eoq_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EOQ의 한계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        발주관리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="발주관리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재주문점
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="재주문점">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재주문점 공식
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        예제
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        안전재고가 필요한 이유
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safety-stock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        안전재고(Safety Stock)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="안전재고(Safety Stock)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        안전재고의 목적
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고관리 기법
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="재고관리 기법">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ABC 분석
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ABC 분석">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        파레토 법칙
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xyz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XYZ 분석
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fsn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FSN 분석
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abc-xyz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ABC-XYZ 매트릭스
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mrp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        자재소요계획(MRP)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="자재소요계획(MRP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mrp_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MRP 구성요소
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MRP 구성요소">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mps-master-production-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기준생산계획 (MPS : Master Production Schedule)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bom-bill-of-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BOM (Bill of Materials)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inventory-records" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고기록 파일 (Inventory Records)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mrp_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MRP 처리과정
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mrp_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MRP 입력물과 출력물
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warehouse-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        창고관리(Warehouse Management)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="창고관리(Warehouse Management)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        창고관리의 목적
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        보관 원칙
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        창고관리 시스템(WMS)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="창고관리 시스템(WMS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 기능
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        스마트 물류
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="스마트 물류">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        물류자동화
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        디지털 물류
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#40" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        물류 4.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        최근 동향
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="최근 동향">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        옴니채널 물류
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ESG 물류
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        공급망 회복탄력성
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        물류관리와 재고관리의 종합
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="물류관리와 재고관리의 종합">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        단원범위 연계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 공정관리
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3. 공정관리
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0301_production_planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 생산계획수립
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0302_process_design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 공정설계
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0303_work_planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 작업계획수립
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0304_standard_work_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 표준작업관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0305_maintenance_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 설비보전관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0306_process_improvement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 공정개선
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 설비관리
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4. 설비관리
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0401_facility_planning_and_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 설비계획 및 관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0402_material_handling_and_transport/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 자재취급 및 운반관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0403_environmental_and_safety_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 환경관리 및 안전관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0404_facility_and_utility_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 시설 및 유틸리티관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0405_factory_automation_technology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 공장자동화 기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 작업 및 생산성과 측정과 개선
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5. 작업 및 생산성과 측정과 개선
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0501_work_method_and_time_study/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 작업방법 및 시간연구
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0502_process_analysis_and_improvement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 프로세스 분석과 개선
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0503_productivity_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 생선성 관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0504_quality_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 품질관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 원가관리 및 경제성 공학
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    6. 원가관리 및 경제성 공학
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0601_feasibility_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 사업성 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0602_cost_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 원가관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0603_value_engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 가치공학
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0604_operations_research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 경영과학(OR)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. 생산지원기술 및 기타
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    7. 생산지원기술 및 기타
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0701_information_technology_and_smart_factory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 정보화활용기술(스마트팩토리 등)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0702_product_development_technology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 제품개발기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0703_service_operations_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 서비스운영관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0704_production_innovation_technology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 생산혁신기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0705_emerging_factory_management_technologies_and_trends/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 공장관리에 관한 신기술 및 경향에 관한 사항
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        물류관리(자재 및 재고관리)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        물류관리의 개요
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="물류관리의 개요">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        물류관리의 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        물류관리의 목적
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        물류의 기능
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7r" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        물류관리의 7R
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#material-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        자재관리(Material Management)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="자재관리(Material Management)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        자재관리의 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        자재관리 프로세스
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#material-requirement-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        소요계획 (Material Requirement Planning)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="소요계획 (Material Requirement Planning)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 활동
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        핵심 목표
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purchasing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        구매 (Purchasing)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="구매 (Purchasing)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 활동
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        핵심 목표
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#receiving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        입고 (Receiving)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="입고 (Receiving)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 활동
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        핵심 목표
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        보관 (Storage)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="보관 (Storage)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 활동
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        핵심 목표
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        불출 (Issue)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="불출 (Issue)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 활동
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        핵심 목표
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inventory-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고관리 (Inventory Control)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="재고관리 (Inventory Control)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 활동
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        핵심 목표
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-right" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        자재관리 5 Right
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        자재관리의 목표
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고관리의 개요
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="재고관리의 개요">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고의 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고의 기능
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고의 분류
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="재고의 분류">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        용도별 분류
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        목적별 분류
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고관리 전략
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="재고관리 전략">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고관리의 목적
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고관리 비용
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고관리의 상충관계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eoq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        경제적 주문량(EOQ)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="경제적 주문량(EOQ)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eoq_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EOQ의 개요
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eoq_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EOQ 기본모형
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eoq_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EOQ 공식
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eoq_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EOQ의 가정
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eoq_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EOQ의 한계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        발주관리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="발주관리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재주문점
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="재주문점">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재주문점 공식
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        예제
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        안전재고가 필요한 이유
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safety-stock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        안전재고(Safety Stock)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="안전재고(Safety Stock)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        안전재고의 목적
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고관리 기법
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="재고관리 기법">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ABC 분석
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ABC 분석">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        파레토 법칙
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xyz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XYZ 분석
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fsn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FSN 분석
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abc-xyz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ABC-XYZ 매트릭스
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mrp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        자재소요계획(MRP)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="자재소요계획(MRP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mrp_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MRP 구성요소
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MRP 구성요소">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mps-master-production-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기준생산계획 (MPS : Master Production Schedule)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bom-bill-of-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BOM (Bill of Materials)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inventory-records" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고기록 파일 (Inventory Records)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mrp_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MRP 처리과정
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mrp_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MRP 입력물과 출력물
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warehouse-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        창고관리(Warehouse Management)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="창고관리(Warehouse Management)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        창고관리의 목적
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        보관 원칙
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        창고관리 시스템(WMS)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="창고관리 시스템(WMS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 기능
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        스마트 물류
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="스마트 물류">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        물류자동화
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        디지털 물류
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#40" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        물류 4.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        최근 동향
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="최근 동향">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        옴니채널 물류
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ESG 물류
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        공급망 회복탄력성
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        물류관리와 재고관리의 종합
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="물류관리와 재고관리의 종합">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        단원범위 연계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/yeonkyupark/pepc3e/edit/main/docs/0204_logistics_material_and_inventory_management.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+  <h1>4. 물류관리(자재 및 재고관리)</h1>
+
+<h2 id="_1">물류관리(자재 및 재고관리)</h2>
+<p><strong>물류관리</strong>(Logistics Management)는 원자재의 조달부터 생산, 보관, 운송 및 고객에게 전달되는 전 과정을 효율적으로 관리하는 활동이며, 재고관리는 필요한 자재와 제품을 적정 수준으로 유지하여 고객서비스와 운영효율을 동시에 확보하는 관리기법이다. 최근에는 SCM, 스마트물류, AI 기반 재고최적화 기술이 물류관리의 핵심 경쟁력으로 부상하고 있다.</p>
+<h2 id="_2">물류관리의 개요</h2>
+<h3 id="_3">물류관리의 정의</h3>
+<p>물류관리(Logistics Management)는 원재료, 반제품 및 완제품의 이동과 보관, 정보흐름을 계획·실행·통제하는 활동이다. 즉, 재화가 공급자에서 소비자에게 이동하고 다시 회수되는 전 과정을 효율적으로 관리하는 활동이다.</p>
+<h3 id="_4">물류관리의 목적</h3>
+<ul>
+<li>고객서비스 향상</li>
+<li>물류비 절감</li>
+<li>리드타임 단축</li>
+<li>재고 최소화</li>
+<li>공급망 효율화</li>
+</ul>
+<h3 id="_5">물류의 기능</h3>
+<p><strong>물류 5대 기능</strong></p>
+<ul>
+<li><strong>운송</strong>: 생산된 제품을 소비지나 물류센터로 이동시켜 공간적 가치를 창출하는 핵심 기능</li>
+<li><strong>보관</strong>: 제품을 수요가 발생할 때까지 안전하게 보관하고 재고를 관리하여 시간적 가치를 창출</li>
+<li><strong>하역</strong>: 물류센터 내에서 이루어지는 상품의 상하차, 분류, 운반 등 인력 및 기계 작업</li>
+<li><strong>포장</strong>: 제품의 파손을 방지하고 보관·운송의 효율성을 높이기 위한 작업</li>
+<li><strong>정보처리</strong>: 주문, 재고, 배송 등 물류 전 과정을 전산화하고 데이터를 기반으로 추적·관리유통가공: 단순 보관을 넘어 포장, 라벨링, 조립, 수리 등 제품에 새로운 부가가치를 더하는 기능</li>
+</ul>
+<p>일반적으로 물류기능은 운송, 보관, 하역, 포장, 정보처리 기능 및 유통가공으로 구성된다.</p>
+<h3 id="7r">물류관리의 7R</h3>
+<p>물류관리의 기본원칙은 <strong>7 Right</strong>를 만족하는 것이다.</p>
+<ul>
+<li>Right Product(적정 품목)</li>
+<li>Right Quantity(적정 수량)</li>
+<li>Right Condition(적정 품질)</li>
+<li>Right Place(적정 장소)</li>
+<li>Right Time(적정 시간)</li>
+<li>Right Customer(적정 고객)</li>
+<li>Right Cost(적정 비용)</li>
+</ul>
+<h2 id="material-management">자재관리(Material Management)</h2>
+<h3 id="_6">자재관리의 정의</h3>
+<p>자재관리는 생산활동에 필요한 자재를 경제적으로 조달·보관·공급하는 관리활동이다.</p>
+<h3 id="_7">자재관리 프로세스</h3>
+<pre class="mermaid"><code>flowchart LR
+
+    A[소요계획&lt;br&gt;Material Requirement Planning]
+    B[구매&lt;br&gt;Purchasing]
+    C[입고&lt;br&gt;Receiving]
+    D[보관&lt;br&gt;Storage]
+    E[불출&lt;br&gt;Issue]
+    F[재고관리&lt;br&gt;Inventory Control]
+
+    A --&gt; B
+    B --&gt; C
+    C --&gt; D
+    D --&gt; E
+    E --&gt; F
+    F -.재고정보 피드백.-&gt; A</code></pre>
+<h3 id="material-requirement-planning">소요계획 (Material Requirement Planning)</h3>
+<p>생산계획에 따라 필요한 자재의 종류, 수량, 시기를 산정하는 단계이다.</p>
+<h4 id="_8">주요 활동</h4>
+<ul>
+<li>생산계획 분석</li>
+<li>BOM 전개</li>
+<li>자재소요량 계산</li>
+<li>발주 시점 결정</li>
+</ul>
+<h4 id="_9">핵심 목표</h4>
+<ul>
+<li>결품 방지</li>
+<li>과잉재고 방지</li>
+<li>적정 재고 확보</li>
+</ul>
+<h3 id="purchasing">구매 (Purchasing)</h3>
+<p>소요계획에 따라 공급업체로부터 자재를 조달하는 단계이다.</p>
+<h4 id="_10">주요 활동</h4>
+<ul>
+<li>공급업체 선정</li>
+<li>견적 및 가격 협상</li>
+<li>발주</li>
+<li>납기 관리</li>
+</ul>
+<h4 id="_11">핵심 목표</h4>
+<ul>
+<li>적기 조달</li>
+<li>구매원가 절감</li>
+<li>안정적 공급망 확보</li>
+</ul>
+<h3 id="receiving">입고 (Receiving)</h3>
+<p>구매한 자재를 수령하고 검수하는 단계이다.</p>
+<h4 id="_12">주요 활동</h4>
+<ul>
+<li>입고 확인</li>
+<li>수량 검수</li>
+<li>품질 검사</li>
+<li>전산 등록</li>
+</ul>
+<h4 id="_13">핵심 목표</h4>
+<ul>
+<li>입고 정확성 확보</li>
+<li>불량 자재 차단</li>
+</ul>
+<h3 id="storage">보관 (Storage)</h3>
+<p>입고된 자재를 적절한 장소에 저장·관리하는 단계이다.</p>
+<h4 id="_14">주요 활동</h4>
+<ul>
+<li>저장 위치 지정</li>
+<li>로케이션 관리</li>
+<li>FIFO·FEFO 관리</li>
+<li>보관 환경 유지</li>
+</ul>
+<h4 id="_15">핵심 목표</h4>
+<ul>
+<li>자재 손실 방지</li>
+<li>공간 활용 최적화</li>
+</ul>
+<h3 id="issue">불출 (Issue)</h3>
+<p>생산 또는 사용 부서에 자재를 공급하는 단계이다.</p>
+<h4 id="_16">주요 활동</h4>
+<ul>
+<li>자재 출고</li>
+<li>생산라인 공급</li>
+<li>사용실적 기록</li>
+</ul>
+<h4 id="_17">핵심 목표</h4>
+<ul>
+<li>적시 공급</li>
+<li>생산 차질 방지</li>
+</ul>
+<h3 id="inventory-control">재고관리 (Inventory Control)</h3>
+<p>재고 수준을 지속적으로 모니터링하고 최적화하는 단계이다.</p>
+<h4 id="_18">주요 활동</h4>
+<ul>
+<li>재고조사</li>
+<li>ABC 분석</li>
+<li>안전재고 관리</li>
+<li>재주문점 관리</li>
+</ul>
+<h4 id="_19">핵심 목표</h4>
+<ul>
+<li>재고비용 최소화</li>
+<li>서비스 수준 향상</li>
+</ul>
+<h3 id="5-right">자재관리 5 Right</h3>
+<ul>
+<li>Right Material (적정 품목)</li>
+<li>Right Quantity (적정 수량)</li>
+<li>Right Quality (적정 품질)</li>
+<li>Right Time (적정 시기)</li>
+<li>Right Cost (적정 비용)</li>
+</ul>
+<h3 id="_20">자재관리의 목표</h3>
+<ul>
+<li>자재비 절감</li>
+<li>안정적 생산지원</li>
+<li>재고 최소화</li>
+<li>구매 효율화</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">관련 단원</p>
+<p>구매전략과 공급자 관리는 「구매와 외주전략」에서 상세히 설명한다.</p>
+</div>
+<h2 id="_21">재고관리의 개요</h2>
+<h3 id="_22">재고의 정의</h3>
+<p>재고(Inventory)는 미래 수요에 대응하기 위하여 일정 기간 보유하는 자재, 반제품 및 완제품을 의미한다.</p>
+<h3 id="_23">재고의 기능</h3>
+<ul>
+<li>생산과 수요의 완충(Buffer)</li>
+<li>납기 대응</li>
+<li>경제적 구매</li>
+<li>생산 안정화</li>
+<li>공급망 위험 대응</li>
+</ul>
+<h3 id="_24">재고의 분류</h3>
+<h4 id="_25">용도별 분류</h4>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원재료 재고</td>
+<td>생산 투입 자재</td>
+</tr>
+<tr>
+<td>재공품(WIP)</td>
+<td>공정 중 재고</td>
+</tr>
+<tr>
+<td>완제품 재고</td>
+<td>판매 대기 제품</td>
+</tr>
+<tr>
+<td>소모품</td>
+<td>간접자재</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_26">목적별 분류</h4>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>목적</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>사이클 재고</td>
+<td>정상 운영</td>
+</tr>
+<tr>
+<td>안전재고</td>
+<td>수요 변동 대응</td>
+</tr>
+<tr>
+<td>예비재고</td>
+<td>공급 중단 대비</td>
+</tr>
+<tr>
+<td>계절재고</td>
+<td>계절수요 대응</td>
+</tr>
+<tr>
+<td>운송재고</td>
+<td>운송 중 재고</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_27">재고관리 전략</h2>
+<h3 id="_28">재고관리의 목적</h3>
+<ul>
+<li>품절 방지</li>
+<li>재고비용 최소화</li>
+<li>고객서비스 향상</li>
+<li>자본회전율 향상</li>
+</ul>
+<h3 id="_29">재고관리 비용</h3>
+<table>
+<thead>
+<tr>
+<th>비용</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>주문비용(Ordering Cost)</td>
+<td>주문 및 발주 비용</td>
+</tr>
+<tr>
+<td>보관비용(Holding Cost)</td>
+<td>창고, 보험, 자본비용</td>
+</tr>
+<tr>
+<td>품절비용(Shortage Cost)</td>
+<td>판매기회 손실</td>
+</tr>
+<tr>
+<td>구매비용(Purchase Cost)</td>
+<td>자재 구매비</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_30">재고관리의 상충관계</h3>
+<p>재고를 증가시키면 품절(Stock-out) 위험이 감소하여 납기준수율과 고객서비스 수준은 향상된다. 그러나 반대로 보관비용, 보험료, 창고운영비 등의 재고유지비용이 증가하고, 재고에 자본이 묶여 자금운용 효율이 저하되는 문제가 발생한다. 따라서 재고관리는 고객서비스 수준과 재고유지비용 간의 상충관계(Trade-off)를 고려하여 최적 재고수준을 결정하는 것이 중요하다.</p>
+<h2 id="eoq">경제적 주문량(EOQ)</h2>
+<h3 id="eoq_1">EOQ의 개요</h3>
+<p>경제적 주문량(Economic Order Quantity)은 주문비용과 재고보관비용의 합이 최소가 되는 최적 주문량이다.</p>
+<h3 id="eoq_2">EOQ 기본모형</h3>
+<div class="highlight"><pre><span></span><code>EOQ
+
+주문비용
+      ╲
+       ╲
+        ╳ 최소 총비용
+       ╱
+      ╱
+보관비용
+</code></pre></div>
+<h3 id="eoq_3">EOQ 공식</h3>
+<div class="arithmatex">\[
+Q^* = \sqrt{\frac{2DS}{H}}
+\]</div>
+<p>각 기호의 의미는 다음과 같다.</p>
+<ul>
+<li><span class="arithmatex">\(Q^*\)</span> : 경제적 주문량(EOQ)</li>
+<li><span class="arithmatex">\(D\)</span> : 연간 수요량(Annual Demand)</li>
+<li><span class="arithmatex">\(S\)</span> : 1회 주문비용(Ordering Cost)</li>
+<li><span class="arithmatex">\(H\)</span> : 단위당 연간 재고유지비용(Holding Cost)</li>
+</ul>
+<p>아래는 관련 공식이며 <span class="arithmatex">\(TC\)</span>(Total Cost)는 총재고비용이며 <span class="arithmatex">\(EOQ\)</span>는 비용을 최소화 하는 주문량이다.</p>
+<div class="arithmatex">\[
+\text{연간 주문횟수} = \frac{D}{Q^*}
+\]</div>
+<div class="arithmatex">\[
+\text{주문주기} = \frac{Q^*}{D}
+\]</div>
+<div class="arithmatex">\[
+TC = \frac{DS}{Q} + \frac{QH}{2}
+\]</div>
+<h3 id="eoq_4">EOQ의 가정</h3>
+<ul>
+<li>수요가 일정</li>
+<li>납기가 일정</li>
+<li>품절 없음</li>
+<li>단가 일정</li>
+<li>일괄 입고</li>
+</ul>
+<h3 id="eoq_5">EOQ의 한계</h3>
+<ul>
+<li>실제 수요 변동 반영 어려움</li>
+<li>안전재고 미고려</li>
+<li>공급망 불확실성 반영 한계</li>
+</ul>
+<h2 id="_31">발주관리</h2>
+<h3 id="_32">재주문점</h3>
+<p>재주문점(ROP)은 재고가 일정 수준에 도달했을 때 새로운 주문을 발주해야 하는 시점을 의미한다. 즉, <strong>조달기간(Lead Time) 동안의 수요를 충족하면서 품절을 방지할 수 있는 최소 재고수준</strong>이다.</p>
+<h4 id="_33">재주문점 공식</h4>
+<div class="arithmatex">\[
+ROP = dL + SS
+\]</div>
+<p>또는</p>
+<div class="arithmatex">\[
+재주문점 = 일평균수요량 \times 조달기간 + 안전재고
+\]</div>
+<ul>
+<li><span class="arithmatex">\(ROP\)</span> : 재주문점 (Reorder Point)</li>
+<li><span class="arithmatex">\(d\)</span> : 일평균수요량 (Daily Demand)</li>
+<li><span class="arithmatex">\(L\)</span> : 조달기간 (Lead Time)</li>
+<li><span class="arithmatex">\(SS\)</span> : 안전재고 (Safety Stock)</li>
+</ul>
+<p>재고가 재주문점에 도달하면 즉시 발주를 실시하며, 조달기간 동안 발생하는 수요는 재주문점에 포함된 재고로 충당한다.</p>
+<div class="highlight"><pre><span></span><code>재고수준
+│
+│\
+│ \
+│  \
+│   \
+│    \ ← 재주문점(ROP)
+│     \  주문발생
+│      \_________
+│                \
+│                 \ 품목 입고
+└──────────────────→ 시간
+      ← Lead Time →
+</code></pre></div>
+<h4 id="_34">예제</h4>
+<p>일평균수요량이 100개, 조달기간이 5일, 안전재고가 200개인 경우</p>
+<div class="arithmatex">\[
+ROP = (100 \times 5) + 200
+\]</div>
+<div class="arithmatex">\[
+ROP = 700
+\]</div>
+<p>따라서 재고가 <strong>700개 이하가 되는 시점에 발주</strong>하여야 품절을 방지할 수 있다.</p>
+<h4 id="_35">안전재고가 필요한 이유</h4>
+<p>재주문점 공식에서 조달기간 동안의 수요만 고려하면 수요 변동이나 납기 지연 시 품절이 발생할 수 있다. 따라서 다음과 같은 불확실성에 대응하기 위해 안전재고를 추가한다.</p>
+<ul>
+<li>수요 변동(Demand Variability)</li>
+<li>공급 지연(Lead Time Variability)</li>
+<li>품질 문제</li>
+<li>운송 지연</li>
+</ul>
+<h3 id="safety-stock">안전재고(Safety Stock)</h3>
+<p>수요 및 납기 변동에 대비하여 추가로 보유하는 재고를 말한다.</p>
+<h4 id="_36">안전재고의 목적</h4>
+<ul>
+<li>품절 방지</li>
+<li>납기 준수</li>
+<li>생산 안정화</li>
+</ul>
+<h2 id="_37">재고관리 기법</h2>
+<h3 id="abc">ABC 분석</h3>
+<p>ABC 분석은 품목의 중요도에 따라 차등 관리하는 기법이다.</p>
+<h4 id="_38">파레토 법칙</h4>
+<ul>
+<li>A품목 : 소수 품목, 높은 금액</li>
+<li>B품목 : 중간 수준</li>
+<li>C품목 : 다수 품목, 낮은 금액</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>관리수준</th>
+<th>특징</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>집중관리</td>
+<td>고가·핵심품목</td>
+</tr>
+<tr>
+<td>B</td>
+<td>일반관리</td>
+<td>중간 중요도</td>
+</tr>
+<tr>
+<td>C</td>
+<td>단순관리</td>
+<td>저가·다빈도</td>
+</tr>
+</tbody>
+</table>
+<h3 id="xyz">XYZ 분석</h3>
+<p>수요 변동성을 기준으로 품목을 분류하는 방법이다.</p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>특징</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X</td>
+<td>수요 안정</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>계절성 존재</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>수요 변동 큼</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fsn">FSN 분석</h3>
+<p>사용빈도를 기준으로 분류하는 기법이다.</p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F</td>
+<td>Fast Moving</td>
+</tr>
+<tr>
+<td>S</td>
+<td>Slow Moving</td>
+</tr>
+<tr>
+<td>N</td>
+<td>Non Moving</td>
+</tr>
+</tbody>
+</table>
+<h3 id="abc-xyz">ABC-XYZ 매트릭스</h3>
+<p>품목의 중요도와 수요변동성을 동시에 고려하여 관리전략을 수립한다.</p>
+<h2 id="mrp">자재소요계획(MRP)</h2>
+<h3 id="mrp_1">MRP 구성요소</h3>
+<p>자재소요계획(Material Requirements Planning, MRP)는 기준생산계획(MPS)을 바탕으로 제품 생산에 필요한 자재의 종류, 수량 및 소요시점을 계산하여 적시에 자재를 공급하기 위한 계획시스템이다.</p>
+<p>MRP는 다음의 3대 입력정보를 기반으로 운영된다.</p>
+<h4 id="mps-master-production-schedule">기준생산계획 (MPS : Master Production Schedule)</h4>
+<p>최종제품(Finished Goods)의 생산일정과 생산수량을 계획한 것이다.</p>
+<p><strong>주요 역할</strong></p>
+<ul>
+<li>고객수요 반영</li>
+<li>생산일정 수립</li>
+<li>MRP의 출발점 역할</li>
+</ul>
+<p><strong>예시</strong></p>
+<table>
+<thead>
+<tr>
+<th>제품</th>
+<th style="text-align: right;">생산수량</th>
+<th>생산시점</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A제품</td>
+<td style="text-align: right;">1,000개</td>
+<td>1주차</td>
+</tr>
+<tr>
+<td>B제품</td>
+<td style="text-align: right;">500개</td>
+<td>2주차</td>
+</tr>
+</tbody>
+</table>
+<h4 id="bom-bill-of-materials">BOM (Bill of Materials)</h4>
+<p>제품 1단위를 생산하기 위해 필요한 부품 및 원자재의 구성표이다.</p>
+<p><strong>주요 역할</strong></p>
+<ul>
+<li>제품 구조 정의</li>
+<li>자재소요량 산출</li>
+<li>부품 전개(Explosion)</li>
+</ul>
+<p><strong>예시</strong></p>
+<div class="highlight"><pre><span></span><code>완제품 A
+├─ 부품 B × 2
+├─ 부품 C × 3
+└─ 부품 D × 1
+</code></pre></div>
+<h4 id="inventory-records">재고기록 파일 (Inventory Records)</h4>
+<p>현재 보유 중인 재고와 발주잔량을 관리하는 데이터이다.</p>
+<p><strong>주요 정보</strong></p>
+<ul>
+<li>현재고(On-hand Inventory)</li>
+<li>입고예정량(Scheduled Receipts)</li>
+<li>안전재고(Safety Stock)</li>
+<li>리드타임(Lead Time)</li>
+</ul>
+<p><strong>주요 역할</strong></p>
+<ul>
+<li>순소요량(Net Requirement) 계산</li>
+<li>과잉발주 방지</li>
+<li>재고 최적화</li>
+</ul>
+<h3 id="mrp_2">MRP 처리과정</h3>
+<p>MRP는 MPS, BOM, 재고기록을 입력으로 하여 순소요량을 계산하고 발주계획을 생성한다.</p>
+<pre class="mermaid"><code>flowchart TD
+
+    A[기준생산계획&lt;br&gt;MPS]
+    B[BOM&lt;br&gt;자재명세서]
+    C[재고기록&lt;br&gt;Inventory Records]
+
+    A --&gt; D[MRP 처리]
+    B --&gt; D
+    C --&gt; D
+
+    D --&gt; E[순소요량 계산&lt;br&gt;Net Requirement]
+    E --&gt; F[계획발주량 산출]
+    F --&gt; G[계획발주일 결정]
+    G --&gt; H[발주계획&lt;br&gt;Planned Order Release]</code></pre>
+<p>MRP의 기본 논리는 다음과 같다.</p>
+<div class="highlight"><pre><span></span><code>총소요량(Gross Requirement)
+            -
+현재고(On-hand Inventory)
+            -
+입고예정량(Scheduled Receipt)
+            =
+순소요량(Net Requirement)
+</code></pre></div>
+<p>따라서 순소요량이 발생하면 리드타임을 고려하여 발주시점과 발주수량을 결정한다.</p>
+<h3 id="mrp_3">MRP 입력물과 출력물</h3>
+<p><strong>입력물</strong></p>
+<ul>
+<li>MPS (무엇을 언제 생산할 것인가?)</li>
+<li>BOM (무엇이 얼마나 필요한가?)</li>
+<li>재고기록 (현재 얼마나 보유하고 있는가?)</li>
+</ul>
+<p><strong>산출물</strong></p>
+<ul>
+<li>계획발주량(Planned Order Quantity)</li>
+<li>계획발주일(Planned Order Release)</li>
+<li>자재소요계획(Material Requirement Plan)</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">관련 단원</p>
+<p>MRP의 계산절차와 상세 알고리즘은 「생산계획수립」에서 설명한다.</p>
+</div>
+<h2 id="warehouse-management">창고관리(Warehouse Management)</h2>
+<h3 id="_39">창고관리의 목적</h3>
+<ul>
+<li>보관 효율 향상</li>
+<li>물류비 절감</li>
+<li>작업 효율 향상</li>
+<li>재고 정확성 확보</li>
+</ul>
+<h3 id="_40">보관 원칙</h3>
+<ul>
+<li>FIFO(선입선출)</li>
+<li>FEFO(유효기간 우선출고)</li>
+<li>로케이션 관리</li>
+<li>바코드·RFID 관리</li>
+</ul>
+<h3 id="wms">창고관리 시스템(WMS)</h3>
+<p>WMS(Warehouse Management System)는 입출고, 보관 및 재고정보를 실시간 관리하는 시스템이다.</p>
+<h4 id="_41">주요 기능</h4>
+<ul>
+<li>입고관리</li>
+<li>출고관리</li>
+<li>재고관리</li>
+<li>로케이션 관리</li>
+<li>실시간 재고조회</li>
+</ul>
+<h2 id="_42">스마트 물류</h2>
+<h3 id="_43">물류자동화</h3>
+<ul>
+<li>AS/RS(자동창고)</li>
+<li>AGV/AMR</li>
+<li>Conveyor System</li>
+<li>Picking System</li>
+</ul>
+<h3 id="_44">디지털 물류</h3>
+<table>
+<thead>
+<tr>
+<th>기술</th>
+<th>활용 분야</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IoT</td>
+<td>위치 추적</td>
+</tr>
+<tr>
+<td>RFID</td>
+<td>자동 인식</td>
+</tr>
+<tr>
+<td>AI</td>
+<td>수요예측 및 재고최적화</td>
+</tr>
+<tr>
+<td>Big Data</td>
+<td>물류분석</td>
+</tr>
+<tr>
+<td>Digital Twin</td>
+<td>물류 시뮬레이션</td>
+</tr>
+</tbody>
+</table>
+<h3 id="40">물류 4.0</h3>
+<p>물류설비와 정보시스템을 연계하여 자율적이고 지능적인 물류 운영을 구현하는 개념이다.</p>
+<h2 id="_45">최근 동향</h2>
+<h3 id="_46">옴니채널 물류</h3>
+<p>온라인과 오프라인을 통합하여 고객 중심의 물류서비스를 제공하는 전략</p>
+<h3 id="esg">ESG 물류</h3>
+<ul>
+<li>친환경 운송</li>
+<li>탄소배출 저감</li>
+<li>순환물류</li>
+<li>친환경 포장</li>
+</ul>
+<h3 id="_47">공급망 회복탄력성</h3>
+<p>팬데믹과 지정학적 리스크 증가에 대응하기 위해 재고 최적화와 공급망 다변화를 동시에 추구하는 방향으로 발전하고 있다.</p>
+<h2 id="_48">물류관리와 재고관리의 종합</h2>
+<p>물류관리와 재고관리는 고객서비스 수준과 운영효율을 동시에 결정하는 핵심 기능이다. 물류관리는 자재와 제품의 흐름을 최적화하고, 재고관리는 적정 재고를 유지하여 비용과 서비스 수준의 균형을 달성한다. 최근에는 SCM, WMS, AI, RFID, 디지털 트윈 등 스마트 물류기술을 활용한 데이터 기반 의사결정이 기업 경쟁력의 핵심 요소로 자리매김하고 있다.</p>
+<h3 id="_49">단원범위 연계</h3>
+<table>
+<thead>
+<tr>
+<th>내용</th>
+<th>관련 단원</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>구매 및 조달</td>
+<td>구매와 외주전략</td>
+</tr>
+<tr>
+<td>SCM 협업(VMI 등)</td>
+<td>공급망관리</td>
+</tr>
+<tr>
+<td>MRP·MPS</td>
+<td>생산계획수립</td>
+</tr>
+<tr>
+<td>AGV·AS/RS</td>
+<td>자재취급 및 운반관리</td>
+</tr>
+<tr>
+<td>스마트 물류</td>
+<td>정보화활용기술</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.action.edit", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

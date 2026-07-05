@@ -1,0 +1,4690 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../0602_cost_management/">
+      
+      
+        <link rel="next" href="../0604_operations_research/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>3. 가치공학 - 생산운영과 공장관리</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#value-engineering" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="생산운영과 공장관리" class="md-header__button md-logo" aria-label="생산운영과 공장관리" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            생산운영과 공장관리
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3. 가치공학
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/yeonkyupark/pepc3e" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    yeonkyupark/pepc3e
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="생산운영과 공장관리" class="md-nav__button md-logo" aria-label="생산운영과 공장관리" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    생산운영과 공장관리
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/yeonkyupark/pepc3e" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    yeonkyupark/pepc3e
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 생산전략
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1. 생산전략
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0101_competitive_manufacturing_strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 경쟁우위 생산전략
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0102_production_structure_and_layout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 생산구조와 방식(Layout)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0103_purchasing_and_outsourcing_strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 구매와 외주전략
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0104_workforce_and_job_design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 인력과 직무설계
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0105_business_environment_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 사업환경 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 생산운영 및 물류관리
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2. 생산운영 및 물류관리
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0201_demand_forecasting_and_scheduling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 수요예측과 일정관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0202_process_progress_control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 프로세스 진도관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0203_supply_chain_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 공급망 관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0204_logistics_material_and_inventory_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 물류관리(자재 및 재고관리)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 공정관리
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3. 공정관리
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0301_production_planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 생산계획수립
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0302_process_design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 공정설계
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0303_work_planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 작업계획수립
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0304_standard_work_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 표준작업관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0305_maintenance_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 설비보전관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0306_process_improvement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 공정개선
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 설비관리
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4. 설비관리
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0401_facility_planning_and_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 설비계획 및 관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0402_material_handling_and_transport/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 자재취급 및 운반관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0403_environmental_and_safety_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 환경관리 및 안전관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0404_facility_and_utility_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 시설 및 유틸리티관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0405_factory_automation_technology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 공장자동화 기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 작업 및 생산성과 측정과 개선
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5. 작업 및 생산성과 측정과 개선
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0501_work_method_and_time_study/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 작업방법 및 시간연구
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0502_process_analysis_and_improvement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 프로세스 분석과 개선
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0503_productivity_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 생선성 관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0504_quality_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 품질관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 원가관리 및 경제성 공학
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    6. 원가관리 및 경제성 공학
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0601_feasibility_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 사업성 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0602_cost_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 원가관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 가치공학
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 가치공학
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#value-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학(Value Engineering)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학의 개요
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="가치공학의 개요">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학의 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학의 목적
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학의 기본원리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="가치공학의 기본원리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기능 중심 사고
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치 향상 방법
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학의 발전과정
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="가치공학의 발전과정">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        역사적 배경
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ve-va" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VE와 VA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VE와 VA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vevalue-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VE(Value Engineering)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vavalue-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VA(Value Analysis)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기능분석(Function Analysis)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="기능분석(Function Analysis)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기능의 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기능의 표현
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기능의 분류
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="기능의 분류">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기본기능(Basic Function)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secondary-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        부가기능(Secondary Function)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기능가치 분석
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학 추진절차
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="가치공학 추진절차">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ve-job-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VE Job Plan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        정보단계
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="정보단계">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 활동
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기능분석단계
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="기능분석단계">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 활동
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        창조단계
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="창조단계">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 기법
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        평가단계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개발단계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        제안단계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실행단계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fastfunction-analysis-system-technique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAST(Function Analysis System Technique)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAST(Function Analysis System Technique)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개요
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기본원리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="기본원리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-why-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How-Why Logic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAST 활용 목적
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fast_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAST의 장점
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학의 주요 기법
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="가치공학의 주요 기법">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기능원가 분석
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pareto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pareto 분석
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        브레인스토밍
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        벤치마킹
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#triz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TRIZ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qfd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QFD 연계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        원가절감과 가치공학
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="원가절감과 가치공학">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        원가절감과의 차이
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        목표원가관리와의 관계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        제품개발과 가치공학
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="제품개발과 가치공학">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concurrent-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        동시공학(Concurrent Engineering)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dfxdesign-for-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DFX(Design for X)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DFX(Design for X)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 유형
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ve-dfx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VE와 DFX 관계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학의 조직적 추진
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="가치공학의 조직적 추진">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VE 조직
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VE 조직">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        전담조직
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        프로젝트 조직
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-functional-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cross Functional Team
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cross Functional Team">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        참여 부문
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        성공요인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학 적용분야
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="가치공학 적용분야">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        제품 가치공학
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        공정 가치공학
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        구매 가치공학
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        서비스 가치공학
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ve_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        건설 VE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="건설 VE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 적용 분야
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학과 생산혁신
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="가치공학과 생산혁신">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lean-ve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lean 생산과 VE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tps-ve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TPS와 VE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#six-sigma-ve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Six Sigma와 VE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        디지털 전환과 가치공학
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="디지털 전환과 가치공학">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#digital-ve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Digital VE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#digital-twin-ve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Digital Twin 기반 VE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI 기반 가치분석
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generative-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generative Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ESG 관점의 가치공학
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ESG 관점의 가치공학">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#green-ve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Green VE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        탄소배출 최소화 설계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        순환경제 설계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학 성과지표
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="가치공학 성과지표">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재무적 성과
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        운영적 성과
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        고객 성과
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학의 한계
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="가치공학의 한계">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_55" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기능 정량화의 어려움
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_56" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        창의성 의존
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        초기 투자 필요
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        단기성과 한계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학의 최근 동향
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="가치공학의 최근 동향">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#target-value-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target Value Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-to-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design-to-Cost
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sustainable-ve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sustainable VE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-ve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI 기반 VE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smart-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Smart Engineering
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학의 종합
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="가치공학의 종합">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        범위 연계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        각주
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0604_operations_research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 경영과학(OR)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. 생산지원기술 및 기타
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    7. 생산지원기술 및 기타
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0701_information_technology_and_smart_factory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 정보화활용기술(스마트팩토리 등)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0702_product_development_technology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 제품개발기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0703_service_operations_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 서비스운영관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0704_production_innovation_technology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 생산혁신기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0705_emerging_factory_management_technologies_and_trends/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 공장관리에 관한 신기술 및 경향에 관한 사항
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#value-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학(Value Engineering)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학의 개요
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="가치공학의 개요">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학의 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학의 목적
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학의 기본원리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="가치공학의 기본원리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기능 중심 사고
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치 향상 방법
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학의 발전과정
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="가치공학의 발전과정">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        역사적 배경
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ve-va" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VE와 VA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VE와 VA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vevalue-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VE(Value Engineering)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vavalue-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VA(Value Analysis)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기능분석(Function Analysis)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="기능분석(Function Analysis)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기능의 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기능의 표현
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기능의 분류
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="기능의 분류">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기본기능(Basic Function)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secondary-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        부가기능(Secondary Function)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기능가치 분석
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학 추진절차
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="가치공학 추진절차">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ve-job-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VE Job Plan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        정보단계
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="정보단계">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 활동
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기능분석단계
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="기능분석단계">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 활동
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        창조단계
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="창조단계">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 기법
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        평가단계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개발단계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        제안단계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실행단계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fastfunction-analysis-system-technique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAST(Function Analysis System Technique)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAST(Function Analysis System Technique)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개요
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기본원리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="기본원리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-why-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How-Why Logic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAST 활용 목적
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fast_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAST의 장점
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학의 주요 기법
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="가치공학의 주요 기법">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기능원가 분석
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pareto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pareto 분석
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        브레인스토밍
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        벤치마킹
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#triz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TRIZ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qfd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QFD 연계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        원가절감과 가치공학
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="원가절감과 가치공학">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        원가절감과의 차이
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        목표원가관리와의 관계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        제품개발과 가치공학
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="제품개발과 가치공학">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concurrent-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        동시공학(Concurrent Engineering)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dfxdesign-for-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DFX(Design for X)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DFX(Design for X)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 유형
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ve-dfx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VE와 DFX 관계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학의 조직적 추진
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="가치공학의 조직적 추진">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VE 조직
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VE 조직">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        전담조직
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        프로젝트 조직
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-functional-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cross Functional Team
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cross Functional Team">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        참여 부문
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        성공요인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학 적용분야
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="가치공학 적용분야">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        제품 가치공학
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        공정 가치공학
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        구매 가치공학
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        서비스 가치공학
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ve_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        건설 VE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="건설 VE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 적용 분야
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학과 생산혁신
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="가치공학과 생산혁신">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lean-ve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lean 생산과 VE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tps-ve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TPS와 VE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#six-sigma-ve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Six Sigma와 VE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        디지털 전환과 가치공학
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="디지털 전환과 가치공학">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#digital-ve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Digital VE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#digital-twin-ve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Digital Twin 기반 VE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI 기반 가치분석
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generative-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generative Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ESG 관점의 가치공학
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ESG 관점의 가치공학">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#green-ve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Green VE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        탄소배출 최소화 설계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        순환경제 설계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학 성과지표
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="가치공학 성과지표">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재무적 성과
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        운영적 성과
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        고객 성과
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학의 한계
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="가치공학의 한계">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_55" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기능 정량화의 어려움
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_56" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        창의성 의존
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        초기 투자 필요
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        단기성과 한계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학의 최근 동향
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="가치공학의 최근 동향">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#target-value-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target Value Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-to-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design-to-Cost
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sustainable-ve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sustainable VE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-ve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI 기반 VE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smart-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Smart Engineering
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        가치공학의 종합
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="가치공학의 종합">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        범위 연계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        각주
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/yeonkyupark/pepc3e/edit/main/docs/0603_value_engineering.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+  <h1>3. 가치공학</h1>
+
+<h2 id="value-engineering">가치공학(Value Engineering)</h2>
+<p>가치공학(Value Engineering, VE)은 제품이나 서비스가 수행해야 할 기능(Function)을 체계적으로 분석하여 필요한 기능은 유지하거나 향상시키면서 총비용(Cost)을 최소화함으로써 가치를 극대화하는 관리기법이다. 제2차 세계대전 당시 대체자재 검토 과정에서 시작되었으며, 현재는 제품개발, 생산설계, 원가절감, 공정개선, 구매전략 등 전 분야에서 활용되는 대표적인 가치혁신 기법으로 발전하였다.</p>
+<div class="highlight"><pre><span></span><code>가치(Value)
+=
+기능(Function)
+────────────
+비용(Cost)
+</code></pre></div>
+<p>가치공학의 궁극적인 목적은 단순한 비용절감이 아니라 고객이 요구하는 기능을 가장 경제적으로 달성하는 데 있다.</p>
+<h2 id="_1">가치공학의 개요</h2>
+<h3 id="_2">가치공학의 정의</h3>
+<p>기능 중심 사고(Function-Oriented Thinking)를 기반으로 제품·공정·서비스의 기능을 분석하고 불필요한 비용을 제거하여 가치를 향상시키는 체계적 방법론이다.</p>
+<h3 id="_3">가치공학의 목적</h3>
+<ul>
+<li>고객가치 향상</li>
+<li>원가절감</li>
+<li>기능개선</li>
+<li>품질향상</li>
+<li>수익성 향상</li>
+<li>경쟁력 확보</li>
+</ul>
+<h3 id="_4">가치공학의 기본원리</h3>
+<h4 id="_5">기능 중심 사고</h4>
+<p>가치공학은 제품 자체가 아니라 제품이 수행하는 기능을 대상으로 분석한다.</p>
+<p>예를 들어 볼펜의 기능은 "글씨를 쓴다", 의자의 기능은 "사람을 지지한다"로 표현된다.</p>
+<h4 id="_6">가치 향상 방법</h4>
+<div class="highlight"><pre><span></span><code>기능 향상 + 비용 유지
+기능 유지 + 비용 절감
+기능 향상 + 비용 절감
+</code></pre></div>
+<p>가치공학은 위 세 가지 방향을 통해 가치를 향상시킨다.</p>
+<h2 id="_7">가치공학의 발전과정</h2>
+<h3 id="_8">역사적 배경</h3>
+<table>
+<thead>
+<tr>
+<th>시기</th>
+<th>주요 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1940년대</td>
+<td>대체자재 검토 활동</td>
+</tr>
+<tr>
+<td>1947년</td>
+<td>Lawrence D. Miles의 VE 체계 정립</td>
+</tr>
+<tr>
+<td>1960년대</td>
+<td>미국 국방부 및 공공사업 적용</td>
+</tr>
+<tr>
+<td>1980년대</td>
+<td>제조업 중심 확산</td>
+</tr>
+<tr>
+<td>현재</td>
+<td>제품개발·서비스·건설·공공사업 확대</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ve-va">VE와 VA</h3>
+<h4 id="vevalue-engineering">VE(Value Engineering)</h4>
+<p>설계 및 개발단계에서 수행하는 가치향상 활동</p>
+<h4 id="vavalue-analysis">VA(Value Analysis)</h4>
+<p>기존 제품을 대상으로 수행하는 가치향상 활동</p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>VE</th>
+<th>VA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>적용시점</td>
+<td>개발 전</td>
+<td>생산 후</td>
+</tr>
+<tr>
+<td>목적</td>
+<td>사전 원가절감</td>
+<td>사후 원가개선</td>
+</tr>
+<tr>
+<td>효과</td>
+<td>예방적 접근</td>
+<td>개선적 접근</td>
+</tr>
+</tbody>
+</table>
+<h2 id="function-analysis">기능분석(Function Analysis)</h2>
+<h3 id="_9">기능의 정의</h3>
+<p>기능(Function)은 고객이 제품이나 서비스에 기대하는 역할 또는 목적이다.</p>
+<h3 id="_10">기능의 표현</h3>
+<p>기능은 일반적으로 동사 + 명사 형태로 표현한다.</p>
+<table>
+<thead>
+<tr>
+<th>대상</th>
+<th>기능</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>볼트</td>
+<td>부품을 고정한다</td>
+</tr>
+<tr>
+<td>모터</td>
+<td>동력을 전달한다</td>
+</tr>
+<tr>
+<td>포장재</td>
+<td>제품을 보호한다</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_11">기능의 분류</h3>
+<h4 id="basic-function">기본기능(Basic Function)</h4>
+<p>제품 존재의 핵심 목적</p>
+<h4 id="secondary-function">부가기능(Secondary Function)</h4>
+<p>기본기능을 지원하거나 고객 편의성을 제공하는 기능</p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>기본기능</td>
+<td>제품의 존재 이유</td>
+</tr>
+<tr>
+<td>부가기능</td>
+<td>품질, 디자인, 편의성 등</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_12">기능가치 분석</h3>
+<div class="highlight"><pre><span></span><code>기능
+ ↓
+원가 측정
+ ↓
+가치 평가
+ ↓
+개선 대상 선정
+</code></pre></div>
+<p>기능 대비 비용이 과도한 요소가 개선 대상이 된다.</p>
+<h2 id="_13">가치공학 추진절차</h2>
+<h3 id="ve-job-plan">VE Job Plan</h3>
+<p>가치공학은 일반적으로 Job Plan 절차에 따라 수행된다.</p>
+<div class="highlight"><pre><span></span><code>정보단계
+ ↓
+기능분석단계
+ ↓
+창조단계
+ ↓
+평가단계
+ ↓
+개발단계
+ ↓
+제안단계
+ ↓
+실행단계
+</code></pre></div>
+<h3 id="_14">정보단계</h3>
+<p>현황과 문제점을 파악한다.</p>
+<h4 id="_15">주요 활동</h4>
+<ul>
+<li>고객요구 분석</li>
+<li>원가분석</li>
+<li>시장조사</li>
+<li>경쟁제품 조사</li>
+</ul>
+<h3 id="_16">기능분석단계</h3>
+<p>제품의 기능을 체계적으로 분석한다.</p>
+<h4 id="_17">주요 활동</h4>
+<ul>
+<li>기본기능 정의</li>
+<li>부가기능 정의</li>
+<li>기능계통도 작성</li>
+</ul>
+<h3 id="_18">창조단계</h3>
+<p>기능 수행을 위한 대안을 자유롭게 도출한다.</p>
+<h4 id="_19">주요 기법</h4>
+<ul>
+<li>브레인스토밍</li>
+<li>체크리스트법</li>
+<li>TRIZ</li>
+<li>벤치마킹</li>
+</ul>
+<h3 id="_20">평가단계</h3>
+<p>도출된 대안을 경제성과 실현 가능성 측면에서 평가한다.</p>
+<h3 id="_21">개발단계</h3>
+<p>선정된 대안을 구체화한다.</p>
+<h3 id="_22">제안단계</h3>
+<p>최종 개선안을 경영진에게 제안한다.</p>
+<h3 id="_23">실행단계</h3>
+<p>선정된 개선안을 실제 업무에 적용한다.</p>
+<h2 id="fastfunction-analysis-system-technique">FAST(Function Analysis System Technique)</h2>
+<h3 id="_24">개요</h3>
+<p>기능 간 논리적 관계를 분석하는 대표적인 기능분석 기법이다.</p>
+<h3 id="_25">기본원리</h3>
+<h4 id="how-why-logic">How-Why Logic</h4>
+<div class="highlight"><pre><span></span><code>왜(Why)?
+←────────
+
+기능 A ──→ 기능 B
+
+────────→
+어떻게(How)?
+</code></pre></div>
+<h3 id="fast">FAST 활용 목적</h3>
+<ul>
+<li>기능 구조 파악</li>
+<li>불필요 기능 제거</li>
+<li>개선 아이디어 도출</li>
+</ul>
+<h3 id="fast_1">FAST의 장점</h3>
+<ul>
+<li>기능 중심 분석 가능</li>
+<li>개선 대상 명확화</li>
+<li>팀 의사소통 향상</li>
+</ul>
+<h2 id="_26">가치공학의 주요 기법</h2>
+<h3 id="_27">기능원가 분석</h3>
+<p>기능별 원가를 분석하여 개선 대상을 선정한다.</p>
+<h3 id="pareto">Pareto 분석</h3>
+<p>중요 기능과 원가 집중 영역을 파악한다.</p>
+<h3 id="_28">브레인스토밍</h3>
+<p>창의적 대안을 도출한다.</p>
+<h3 id="_29">벤치마킹</h3>
+<p>우수 사례를 비교 분석한다.</p>
+<h3 id="triz">TRIZ</h3>
+<p>발명의 원리를 활용하여 혁신적 대안을 도출한다.</p>
+<h3 id="qfd">QFD 연계</h3>
+<p>고객 요구사항을 기능 요구사항으로 변환한다.</p>
+<div class="highlight"><pre><span></span><code>VOC
+ ↓
+QFD
+ ↓
+기능 정의
+ ↓
+VE 수행
+</code></pre></div>
+<h2 id="_30">원가절감과 가치공학</h2>
+<h3 id="_31">원가절감과의 차이</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>원가절감</th>
+<th>가치공학</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>목적</td>
+<td>비용 감소</td>
+<td>가치 향상</td>
+</tr>
+<tr>
+<td>접근</td>
+<td>비용 중심</td>
+<td>기능 중심</td>
+</tr>
+<tr>
+<td>품질</td>
+<td>저하 가능</td>
+<td>유지 또는 향상</td>
+</tr>
+<tr>
+<td>관점</td>
+<td>단기적</td>
+<td>장기적</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_32">목표원가관리와의 관계</h3>
+<div class="highlight"><pre><span></span><code>시장가격
+ ↓
+목표원가 설정
+ ↓
+VE 수행
+ ↓
+목표원가 달성
+</code></pre></div>
+<p>목표원가관리(Target Costing)의 핵심 실행수단이 가치공학이다.</p>
+<h2 id="_33">제품개발과 가치공학</h2>
+<h3 id="concurrent-engineering">동시공학(Concurrent Engineering)</h3>
+<p>설계·생산·구매·품질 부문이 동시에 참여하여 가치를 향상시킨다.</p>
+<h3 id="dfxdesign-for-x">DFX(Design for X)</h3>
+<p>설계단계에서 다양한 관점을 반영한다.</p>
+<h4 id="_34">주요 유형</h4>
+<ul>
+<li>DFM(생산 용이성)</li>
+<li>DFA(조립 용이성)</li>
+<li>DFS(서비스 용이성)</li>
+<li>DFR(신뢰성 향상)</li>
+<li>DFE(환경친화 설계)</li>
+</ul>
+<h3 id="ve-dfx">VE와 DFX 관계</h3>
+<p>DFX가 설계 원칙이라면 VE는 가치 향상을 위한 체계적 추진방법론이다.</p>
+<h2 id="_35">가치공학의 조직적 추진</h2>
+<h3 id="ve">VE 조직</h3>
+<h4 id="_36">전담조직</h4>
+<p>전문인력이 지속적으로 수행</p>
+<h4 id="_37">프로젝트 조직</h4>
+<p>과제별로 운영</p>
+<h3 id="cross-functional-team">Cross Functional Team</h3>
+<p>가치공학은 다기능 협업이 핵심이다.</p>
+<h4 id="_38">참여 부문</h4>
+<ul>
+<li>설계</li>
+<li>생산</li>
+<li>품질</li>
+<li>구매</li>
+<li>물류</li>
+<li>마케팅</li>
+</ul>
+<h3 id="_39">성공요인</h3>
+<ul>
+<li>최고경영자 지원</li>
+<li>데이터 기반 분석</li>
+<li>부서 간 협업</li>
+<li>고객 중심 사고</li>
+</ul>
+<h2 id="_40">가치공학 적용분야</h2>
+<h3 id="_41">제품 가치공학</h3>
+<p>제품 설계 개선을 통한 원가절감</p>
+<h3 id="_42">공정 가치공학</h3>
+<p>공정 단순화 및 자동화</p>
+<h3 id="_43">구매 가치공학</h3>
+<p>대체자재 및 공급망 최적화</p>
+<h3 id="_44">서비스 가치공학</h3>
+<p>서비스 프로세스 개선</p>
+<h3 id="ve_1">건설 VE</h3>
+<p>공공사업과 건설 프로젝트에 활용</p>
+<h4 id="_45">주요 적용 분야</h4>
+<ul>
+<li>플랜트</li>
+<li>SOC 사업</li>
+<li>건축 프로젝트</li>
+</ul>
+<h2 id="_46">가치공학과 생산혁신</h2>
+<h3 id="lean-ve">Lean 생산과 VE</h3>
+<table>
+<thead>
+<tr>
+<th>Lean</th>
+<th>VE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>낭비 제거</td>
+<td>기능 최적화</td>
+</tr>
+<tr>
+<td>공정 중심</td>
+<td>기능 중심</td>
+</tr>
+<tr>
+<td>운영 개선</td>
+<td>설계 개선</td>
+</tr>
+</tbody>
+</table>
+<p>Lean은 운영단계, VE는 설계단계에서 가치 향상을 추구한다.</p>
+<h3 id="tps-ve">TPS와 VE</h3>
+<p>TPS가 생산과정의 낭비를 제거한다면 VE는 설계단계에서 불필요한 기능원가를 제거한다.</p>
+<h3 id="six-sigma-ve">Six Sigma와 VE</h3>
+<div class="highlight"><pre><span></span><code>VE
+→ 가치 향상
+
+Six Sigma
+→ 변동 감소
+
+Lean
+→ 낭비 제거
+</code></pre></div>
+<p>세 기법은 상호 보완적으로 활용된다.</p>
+<h2 id="_47">디지털 전환과 가치공학</h2>
+<h3 id="digital-ve">Digital VE</h3>
+<p>디지털 기술을 활용한 가치분석</p>
+<h3 id="digital-twin-ve">Digital Twin 기반 VE</h3>
+<p>가상환경에서 설계대안을 비교 평가한다.</p>
+<h3 id="ai">AI 기반 가치분석</h3>
+<ul>
+<li>기능별 원가예측</li>
+<li>설계대안 자동 생성</li>
+<li>최적 대안 추천</li>
+</ul>
+<h3 id="generative-design">Generative Design</h3>
+<p>AI가 기능 요구조건을 만족하는 설계안을 자동 생성한다.</p>
+<h2 id="esg">ESG 관점의 가치공학</h2>
+<h3 id="green-ve">Green VE</h3>
+<p>환경성과 경제성을 동시에 고려한다.</p>
+<h3 id="_48">탄소배출 최소화 설계</h3>
+<ul>
+<li>저탄소 소재 적용</li>
+<li>에너지 절감 설계</li>
+<li>재활용성 향상</li>
+</ul>
+<h3 id="_49">순환경제 설계</h3>
+<p>제품의 재사용·재제조·재활용을 고려한다.</p>
+<h2 id="_50">가치공학 성과지표</h2>
+<h3 id="_51">재무적 성과</h3>
+<ul>
+<li>원가절감액</li>
+<li>투자회수기간</li>
+<li>ROI</li>
+</ul>
+<h3 id="_52">운영적 성과</h3>
+<ul>
+<li>생산성 향상</li>
+<li>리드타임 단축</li>
+<li>품질 향상</li>
+</ul>
+<h3 id="_53">고객 성과</h3>
+<ul>
+<li>고객만족도</li>
+<li>기능 향상 수준</li>
+<li>시장경쟁력</li>
+</ul>
+<h2 id="_54">가치공학의 한계</h2>
+<h3 id="_55">기능 정량화의 어려움</h3>
+<p>고객가치를 수치로 표현하기 어렵다.</p>
+<h3 id="_56">창의성 의존</h3>
+<p>개선성과가 팀 역량에 영향을 받는다.</p>
+<h3 id="_57">초기 투자 필요</h3>
+<p>분석과 검토에 상당한 시간과 비용이 소요된다.</p>
+<h3 id="_58">단기성과 한계</h3>
+<p>즉각적인 재무성과가 나타나지 않을 수 있다.</p>
+<h2 id="_59">가치공학의 최근 동향</h2>
+<h3 id="target-value-design">Target Value Design</h3>
+<p>목표원가와 목표가치를 동시에 관리</p>
+<h3 id="design-to-cost">Design-to-Cost</h3>
+<p>설계단계 원가최적화 강화</p>
+<h3 id="sustainable-ve">Sustainable VE</h3>
+<p>ESG와 탄소중립을 고려한 가치혁신</p>
+<h3 id="ai-ve">AI 기반 VE</h3>
+<p>생성형 AI와 최적화 알고리즘 활용 확대</p>
+<h3 id="smart-engineering">Smart Engineering</h3>
+<p>PLM, Digital Twin, AI를 연계한 가치공학 체계 구축</p>
+<h2 id="_60">가치공학의 종합</h2>
+<p>가치공학은 기능 중심 사고를 기반으로 고객이 요구하는 기능은 유지 또는 향상시키면서 비용을 최소화하여 가치를 극대화하는 체계적 혁신기법이다. 전통적인 원가절감 활동이 비용 자체를 줄이는 데 초점을 두었다면, 가치공학은 기능과 비용의 균형을 최적화하여 고객가치와 기업수익성을 동시에 향상시키는 데 목적이 있다. 최근에는 목표원가관리, DFX, Lean, Digital Twin, AI 기술과 융합되면서 설계단계 중심의 전략적 가치혁신 도구로 발전하고 있다.</p>
+<h3 id="_61">범위 연계</h3>
+<table>
+<thead>
+<tr>
+<th>연계 영역</th>
+<th>주요 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원가관리</td>
+<td>목표원가관리, 원가기획</td>
+</tr>
+<tr>
+<td>제품개발기술</td>
+<td>동시공학, DFX, PLM</td>
+</tr>
+<tr>
+<td>품질관리</td>
+<td>QFD, 고객가치</td>
+</tr>
+<tr>
+<td>생산성관리</td>
+<td>가치향상과 생산성</td>
+</tr>
+<tr>
+<td>공정개선</td>
+<td>Lean, TPS, Six Sigma</td>
+</tr>
+<tr>
+<td>사업성분석</td>
+<td>경제성 평가</td>
+</tr>
+<tr>
+<td>스마트팩토리</td>
+<td>Digital Twin, AI</td>
+</tr>
+<tr>
+<td>생산혁신기술</td>
+<td>TRIZ, 혁신설계</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_62">각주</h3>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>가치공학은 미국의 GE(General Electric)에서 Lawrence D. Miles에 의해 체계화되었으며, 기능 중심 사고(Function-Oriented Thinking)를 핵심 철학으로 한다.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>FAST(Function Analysis System Technique)는 기능 간의 "왜(Why)-어떻게(How)" 관계를 분석하여 기능구조를 시각화하는 대표적인 기능분석 기법이다.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>목표원가관리(Target Costing)는 시장가격에서 목표이익을 차감하여 목표원가를 설정하고, 이를 달성하기 위한 핵심 수단으로 VE를 활용한다.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>국내 공공건설사업에서는 일정 규모 이상의 사업에 대해 설계 VE를 의무적으로 수행하는 경우가 많으며, 원가절감뿐 아니라 품질 및 안전성 향상을 동시에 추구한다.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>최근 가치공학은 비용 절감 중심에서 고객경험, ESG, 탄소중립, 순환경제까지 포함하는 지속가능 가치혁신(Sustainable Value Innovation) 개념으로 확대되고 있다.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.action.edit", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
