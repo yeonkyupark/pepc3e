@@ -21,12 +21,12 @@
 #### 전략의 위계
 
 ```mermaid
-graph TD;
-  A["기업전략(Corporate Strategy)"]
-  B["사업전략(Business Strategy)"]
-  C["생산전략(Operations Strategy)"]
-  D["생산시스템 및 운영관리"]
-  A --> B --> C --> D  
+graph TD
+    A["기업전략(Corporate Strategy)"]
+    B["사업전략(Business Strategy)"]
+    C["생산전략(Operations Strategy)"]
+    D["생산시스템 및 운영관리"]
+    A --> B --> C --> D  
 ```
 
 | 구분   | 핵심질문        | 주요 의사결정       |
