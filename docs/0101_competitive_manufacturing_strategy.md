@@ -22,7 +22,11 @@
 
 ```mermaid
 graph TD;
-  "기업전략(Corporate Strategy)" --> "사업전략(Business Strategy)" --> "생산전략(Operations Strategy)" --> "생산시스템 및 운영관리";
+  A["기업전략(Corporate Strategy)"]
+  B["사업전략(Business Strategy)"]
+  C["생산전략(Operations Strategy)"]
+  D["생산시스템 및 운영관리"]
+  A --> B --> C --> D  
 ```
 
 | 구분   | 핵심질문        | 주요 의사결정       |
