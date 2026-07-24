@@ -1,104 +1,399 @@
-/* =========================
-   Heading Base Reset
-========================= */
+/* ==========================================================================
+   Material for MkDocs - Custom Theme
+   Version : 1.0
+   ========================================================================== */
+
+
+/* ==========================================================================
+   본문
+   ========================================================================== */
+
+.md-typeset{
+    font-family:
+        "Pretendard",
+        "SUIT",
+        "Inter",
+        "Noto Sans KR",
+        sans-serif;
+
+    font-size:17px;
+    line-height:1.9;
+    color:#333;
+}
+
+
+/* 본문 폭 */
+
+.md-grid{
+    max-width:1500px;
+}
+
+.md-content{
+    max-width:900px;
+}
+
+
+/* 문단 */
+
+.md-typeset p{
+    margin:.9rem 0;
+}
+
+
+/* ==========================================================================
+   제목
+   ========================================================================== */
+
+.md-typeset h1{
+
+    font-size:2.3rem;
+    font-weight:700;
+
+    color:#263238;
+
+    margin-top:.6rem;
+    margin-bottom:1.3rem;
+
+    padding-bottom:.45rem;
+
+    border-bottom:3px solid #1976d2;
+}
+
+
+
+.md-typeset h2{
+
+    font-size:1.8rem;
+    font-weight:700;
+
+    color:#1565c0;
+
+    margin-top:2.4rem;
+    margin-bottom:1rem;
+
+    padding-left:.7rem;
+
+    border-left:6px solid #1976d2;
+}
+
+
+
+.md-typeset h3{
+
+    font-size:1.35rem;
+    font-weight:600;
+
+    color:#37474f;
+
+    margin-top:2rem;
+    margin-bottom:.8rem;
+}
+
+
+
+.md-typeset h4{
+
+    font-size:1.15rem;
+    font-weight:600;
+
+    color:#546e7a;
+
+    margin-top:1.5rem;
+    margin-bottom:.5rem;
+}
+
+
+
+.md-typeset h5{
+
+    font-size:1rem;
+    font-weight:600;
+
+    color:#607d8b;
+}
+
+
+
+/* ==========================================================================
+   리스트
+   ========================================================================== */
+
+.md-typeset ul li,
+.md-typeset ol li{
+
+    margin-bottom:.45rem;
+}
+
+
+.md-typeset ul{
+
+    margin-top:.6rem;
+    margin-bottom:.8rem;
+}
+
+
+
+/* ==========================================================================
+   링크
+   ========================================================================== */
+
+.md-typeset a{
+
+    font-weight:500;
+
+    text-decoration:none;
+}
+
+
+.md-typeset a:hover{
+
+    text-decoration:underline;
+}
+
+
+
+/* ==========================================================================
+   코드 블록
+   ========================================================================== */
+
+.highlight{
+
+    margin:1.2rem 0;
+}
+
+
+.highlight pre{
+
+    border-radius:10px;
+
+    padding:1rem;
+
+    font-size:.92rem;
+
+    line-height:1.7;
+
+    overflow-x:auto;
+}
+
+
+
+/* Inline Code */
+
+.md-typeset code{
+
+    border-radius:4px;
+
+    padding:.15rem .35rem;
+
+    font-size:.88rem;
+}
+
+
+
+/* ==========================================================================
+   Table
+   ========================================================================== */
+
+.md-typeset table{
+
+    font-size:.95rem;
+
+    margin:1.3rem 0;
+}
+
+
+
+.md-typeset table th{
+
+    font-weight:700;
+}
+
+
+
+.md-typeset table td,
+.md-typeset table th{
+
+    padding:.8rem;
+}
+
+
+
+/* ==========================================================================
+   Blockquote
+   ========================================================================== */
+
+.md-typeset blockquote{
+
+    border-left:5px solid #42a5f5;
+
+    padding:.8rem 1rem;
+
+    border-radius:4px;
+
+    margin:1rem 0;
+}
+
+
+
+/* ==========================================================================
+   이미지
+   ========================================================================== */
+
+.md-typeset img{
+
+    border-radius:8px;
+
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
+
+    margin:1rem auto;
+
+    display:block;
+}
+
+
+
+/* ==========================================================================
+   구분선
+   ========================================================================== */
+
+.md-typeset hr{
+
+    margin:2rem 0;
+}
+
+
+
+/* ==========================================================================
+   Admonition
+   ========================================================================== */
+
+.md-typeset .admonition{
+
+    border-radius:8px;
+
+    margin:1.4rem 0;
+}
+
+
+
+/* ==========================================================================
+   Task List
+   ========================================================================== */
+
+.md-typeset input[type=checkbox]{
+
+    transform:scale(1.1);
+}
+
+
+
+/* ==========================================================================
+   Keyboard
+   ========================================================================== */
+
+.md-typeset kbd{
+
+    border-radius:4px;
+
+    padding:.15rem .4rem;
+
+    font-size:.85rem;
+}
+
+
+
+/* ==========================================================================
+   Dark Mode
+   ========================================================================== */
+
+[data-md-color-scheme="slate"] .md-typeset{
+
+    color:#d7d7d7;
+}
+
+
+
+[data-md-color-scheme="slate"] .md-typeset h1{
+
+    color:#ffffff;
+
+    border-bottom-color:#42a5f5;
+}
+
+
+
+[data-md-color-scheme="slate"] .md-typeset h2{
+
+    color:#64b5f6;
+
+    border-left-color:#42a5f5;
+}
+
+
+
+[data-md-color-scheme="slate"] .md-typeset h3{
+
+    color:#eceff1;
+}
+
+
+
+[data-md-color-scheme="slate"] .md-typeset h4{
+
+    color:#cfd8dc;
+}
+
+
+
+[data-md-color-scheme="slate"] .md-typeset blockquote{
+
+    background:#263238;
+}
+
+
+
+[data-md-color-scheme="slate"] .md-typeset img{
+
+    box-shadow:0 2px 14px rgba(255,255,255,.08);
+}
+
+
+
+/* ==========================================================================
+   스크롤바
+   ========================================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+    height:10px;
+}
+
+::-webkit-scrollbar-thumb{
+
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+
+    background:transparent;
+}
+
+
+
+/* ==========================================================================
+   애니메이션
+   ========================================================================== */
+
+.md-typeset h1,
 .md-typeset h2,
-.md-typeset h3,
-.md-typeset h4,
-.md-typeset h5 {
-  font-weight: 600;
-  line-height: 1.4;
-  margin-top: 2.2em;
-  margin-bottom: 0.8em;
-  position: relative;
+.md-typeset h3{
+
+    scroll-margin-top:80px;
 }
 
-/* =========================
-   H2 - Section (가장 중요)
-========================= */
-.md-typeset h2 {
-  font-size: 1.6em;
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 0.3em;
-}
+html{
 
-/* 왼쪽 강조 라인 */
-.md-typeset h2::before {
-  content: "";
-  position: absolute;
-  left: -12px;
-  top: 0.2em;
-  width: 5px;
-  height: 1.2em;
-  background: #1976d2;
-  border-radius: 2px;
-}
-
-.md-typeset h2 {
-  counter-increment: h2;
-}
-
-/* =========================
-   H3 - Sub Section
-========================= */
-.md-typeset h3 {
-  font-size: 1.3em;
-}
-
-.md-typeset h3::before {
-  content: "";
-  position: absolute;
-  left: -10px;
-  top: 0.25em;
-  width: 4px;
-  height: 1em;
-  background: #42a5f5;
-  border-radius: 2px;
-}
-
-/* =========================
-   H4 - Detail Section
-========================= */
-.md-typeset h4 {
-  font-size: 1.1em;
-  color: #333;
-}
-
-.md-typeset h4::before {
-  content: "";
-  position: absolute;
-  left: -8px;
-  top: 0.3em;
-  width: 3px;
-  height: 0.9em;
-  background: #90caf9;
-  border-radius: 2px;
-}
-
-/* =========================
-   H5 - Minor Note
-========================= */
-.md-typeset h5 {
-  font-size: 1em;
-  color: #555;
-  font-weight: 500;
-}
-
-.md-typeset h5::before {
-  content: "";
-  position: absolute;
-  left: -6px;
-  top: 0.35em;
-  width: 2px;
-  height: 0.8em;
-  background: #cfd8dc;
-  border-radius: 2px;
-}
-
-/* 우측 ToC 접기 */
-.md-sidebar--secondary .md-nav__list .md-nav__list {
-    display: none;
-}
-
-.md-sidebar--secondary .md-nav__item--active > .md-nav__list {
-    display: block;
+    scroll-behavior:smooth;
 }
