@@ -351,26 +351,28 @@ EOQ는 제조현장에서는 Lot size 결정에 영향을 주게 된다. 예로 
 **재고관리 모형 분류**  
 
 ```mermaid
-mindmap
-  root((재고관리 모형))
+flowchart LR
 
-    확정적 모형
-      EOQ
-      EPQ
-      Quantity Discount Model
+    A[재고관리 모형]
 
-    확률적 모형
-      Q System<br/>(정량발주)
-      P System<br/>(정기발주)
-      Base Stock Model
-      Min-Max System
-      Two-Bin System
-      Newsvendor Model
+    A --> B[확정적 모형]
+    A --> C[확률적 모형]
+    A --> D[품목관리 기법]
 
-    품목관리 기법
-      ABC 분석
-      XYZ 분석
-      FSN 분석
+    B --> B1[EOQ]
+    B --> B2[EPQ]
+    B --> B3[Quantity Discount Model]
+
+    C --> C1[Q System<br/>(정량발주)]
+    C --> C2[P System<br/>(정기발주)]
+    C --> C3[Base Stock Model]
+    C --> C4[Min-Max System]
+    C --> C5[Two-Bin System]
+    C --> C6[Newsvendor Model]
+
+    D --> D1[ABC 분석]
+    D --> D2[XYZ 분석]
+    D --> D3[FSN 분석]
 ```
 
 ### 재고관리 기본 개념
@@ -428,12 +430,13 @@ EOQ는 구매 중심이고 EQP는 생산 중심 관리 모형이다.
 2. 정기발주 모형(P System, Periodic Review System)  
    일정한 주기마다 재고를 확인하고 필요한 양을 주문하는 방식이다. 관리가 단순하고 발주 일정 관리가 용이하지만 재고 부족 위험이 증가하게 된다.
 
-> 재주문점(Reorder Point, ROP): 재고가 일정 수준에 도달하면 발주하는 기준점  
-> $ROP = 일일수요량 \times 조달기간 + 안전재고$  
->   
-> 예: 하루 사용량이 100개, 공급기간이 5일, 안전재고 200개이며,  
-> $ROP = 100 \times 5 + 200 = 700(개)$  
-> 즉, 재고가 700개가 되면 주문해야 한다는 의미이다.  
+::: info "재주문점(Reorder Point, ROP): 재고가 일정 수준에 도달하면 발주하는 기준점"
+
+    $ROP = 일일수요량 \times 조달기간 + 안전재고$  
+       
+    예: 하루 사용량이 100개, 공급기간이 5일, 안전재고 200개이며,  
+    $ROP = 100 \times 5 + 200 = 700(개)$  
+    즉, 재고가 700개가 되면 주문해야 한다는 의미이다.  
    
 
 **Q System vs P System**
