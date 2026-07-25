@@ -68,7 +68,8 @@ flowchart LR
     | 개별생산(Job Shop)   | 다품종 소량 | 금형, 특수기계 |
     | 배치생산(Batch)      | 중품종 중량 | 의약품, 식품  |
     | 반복생산(Repetitive) | 소품종 대량 | 자동차 조립   |
-    | 연속생산(Continuous) | 대량 연속  | 정유, 제철   |      
+    | 연속생산(Continuous) | 대량 연속  | 정유, 제철   |
+    
 3. **작업순서 결정**(Routing)  
    제품이 생산되는 동안 거쳐야 하는 공정 순서와 경로를 결정하는 활동이다. Routing은 공정계획에 있어 핵심 요소이다.     
    ```mermaid
@@ -100,6 +101,7 @@ flowchart LR
     | 제품별 배치(Product Layout)         | 대량생산      |
     | 셀 배치(Cellular Layout)          | 유사 제품군 생산 |
     | 고정위치 배치(Fixed Position Layout) | 대형 제품 생산  |
+   
 7. **작업표준**(Standardization)  
    공정을 표준화하여 품질과 생산성을 확보한다. 작업표준에는 작업방법(Standard Method), 표준시간(Standard Time), 표준작업(Standard Work)과 같은 내용이 있다.
 
