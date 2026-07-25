@@ -191,8 +191,10 @@ flowchart LR
    시스템상 재고와 실제 재고가 얼마나 일치하는지 정도를 나타낸다. 예를 들어 ERP 상 재고가 부품 A 1,000개이고 실제 창고 부품 A가 980개이면 재고 정확도가 저하된다.
 
 !!! note "재고회전율"  
-    연간 매출원가가 10억이고 평균 재고가 2억이면,  
-    $\text{재고회전율} = \frac{\text{매출원가}}{\text{평균재고}} = \frac{10억}{2억} = 5(회)$     
+    연간 매출원가가 10억이고 평균 재고가 2억이면,
+    
+    - $\text{재고회전율} = \frac{\text{매출원가}}{\text{평균재고}} = \frac{10억}{2억} = 5(회)$     
+    
     이는 1년 동안 재고가 평균 5번 교체되었다는 의미이다. 일반적으로 재고회전율이 높을수록 재고 운영 효율이 좋다고 판단한다.  
 
 ### 재고관리 주요 기법
@@ -357,19 +359,19 @@ flowchart TB
     A["재고관리 모형"]
 
     A --> B["확정적 모형"]
-    A ---> C["확률적 모형"]
+    A ----> C["확률적 모형"]
     A --> D["품목관리 기법"]
 
     B --> B1["EOQ"]
     B --> B2["EPQ"]
     B --> B3["Quantity Discount Model"]
 
-    C ---> C1["Q System (정량발주)"]
-    C ---> C2["P System (정기발주)"]
-    C ---> C3["Base Stock Model"]
-    C ---> C4["Min-Max System"]
-    C ---> C5["Two-Bin System"]
-    C ---> C6["Newsvendor Model"]
+    C --> C1["Q System (정량발주)"]
+    C --> C2["P System (정기발주)"]
+    C --> C3["Base Stock Model"]
+    C --> C4["Min-Max System"]
+    C --> C5["Two-Bin System"]
+    C --> C6["Newsvendor Model"]
 
     D --> D1["ABC 분석"]
     D --> D2["XYZ 분석"]
