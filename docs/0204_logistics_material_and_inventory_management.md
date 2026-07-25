@@ -42,9 +42,9 @@ flowchart LR
 
 ### 물류 종류
 
-1. 조달물류 (Inbound Logistics)  
+1. **조달물류** (Inbound Logistics)  
    원자재와 부품을 공급업체에서 공장으로 운송하는 활동이다. 철강 입고, 반도체 입고, 배터리 입고 등이 해당된다.
-2. 생산물류 (Production Logistics)  
+2. **생산물류** (Production Logistics)  
    공장 내부에서 자재와 반제품을 공정 간 이동시키는 활동이다. 공정간 자재를 적시에 공급하는 것이 핵심이다.  
    ```mermaid
    flowchart LR
@@ -55,7 +55,7 @@ flowchart LR
    
    A --> B --> C --> D
    ```
-3. 판매물류 (Outbound Logistics)  
+3. **판매물류** (Outbound Logistics)  
    완제품을 고객이나 대리점으로 출하하는 활동이다.  
    ```mermaid
    flowchart LR
@@ -66,7 +66,7 @@ flowchart LR
    
    A --> B --> C --> D
    ```   
-4. 회수물류 (Reverse Logistics)  
+4. **회수물류** (Reverse Logistics)  
    고객으로부터 반품, 불량품, 재활용 제품 등을 회수하는 활동이다. 불량 제품 회수, 리콜, 폐배터리 회수, 재활용 등이 해당된다. 최근 ESG와 순환경제 중요성이 커지면서 회수물류 역활도 확대되고 있다.
 
 ### 핵심 관리 대상
@@ -184,9 +184,11 @@ flowchart LR
 1. **재고회전율** (Inventory Turnover Ratio)  
    재고가 얼마나 빠르게 판매 또는 생산에 사용되는지를 나타내는 지표이다.
    
-   $$
-   재고회전율 = \frac{매출원가}{평균재고}
-   $$
+   $$  
+   \text{재고회전율}
+   =
+   \frac{\text{매출원가}}{\text{평균재고}}
+   $$  
    
    연간 매출원가가 10억이고 평균 재고가 2억이며 재고회전율 = 10/2 = 5(회)가 된다. 이는 1년 동안 재고가 평균 5번 교체되었다는 의미가 된다. 일반적으로 재고회전율이 높을수록 재고 운영 효율이 좋다고 판단한다.
 3. **재고일수** (Days Inventory Outstanding)  
