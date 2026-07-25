@@ -182,16 +182,20 @@ flowchart LR
 ### 재고 관리 주요 지표(KPI)
 
 1. **재고회전율** (Inventory Turnover Ratio)  
-   재고가 얼마나 빠르게 판매 또는 생산에 사용되는지를 나타내는 지표이다.  
-   $\text{재고회전율} = \frac{\text{매출원가}}{\text{평균재고}}$  
+   재고가 얼마나 빠르게 판매 또는 생산에 사용되는지를 나타내는 지표이다.
+   
+   - $\text{재고회전율} = \frac{\text{매출원가}}{\text{평균재고}}$  
+   
    연간 매출원가가 10억이고 평균 재고가 2억이면,  
-   $\text{재고회전율} = \frac{10억}{2억} = 5(회)$  
+
+   - $\text{재고회전율} = \frac{10억}{2억} = 5(회)$  
+   
    이는 1년 동안 재고가 평균 5번 교체되었다는 의미이다. 일반적으로 재고회전율이 높을수록 재고 운영 효율이 좋다고 판단한다.
-2. **재고일수** (Days Inventory Outstanding)  
+3. **재고일수** (Days Inventory Outstanding)  
    현재 재고가 몇 일동안 운영 가능한지를 나타낸다. 예를 들어 현재 재고가 30일분이면 공급이 중단되어도 약 30일 동안 생산 가능하다는 의미이다.
-3. **결품률** (Stockout Rate)  
+4. **결품률** (Stockout Rate)  
    필요한 시점에 재고가 부족했던 비율이다. 낮을수록 좋다.
-4. **재고 정확도** (Inventory Accuracy)  
+5. **재고 정확도** (Inventory Accuracy)  
    시스템상 재고와 실제 재고가 얼마나 일치하는지 정도를 나타낸다. 예를 들어 ERP 상 재고가 부품 A 1,000개이고 실제 창고 부품 A가 980개이면 재고 정확도가 저하된다.
 
 ### 재고관리 주요 기법
@@ -363,8 +367,8 @@ flowchart LR
     B --> B2[EPQ]
     B --> B3[Quantity Discount Model]
 
-    C --> C1[Q System<br/>(정량발주)]
-    C --> C2[P System<br/>(정기발주)]
+    C --> C1["Q System<br/>(정량발주)"]
+    C --> C2["P System<br/>(정기발주)"]
     C --> C3[Base Stock Model]
     C --> C4[Min-Max System]
     C --> C5[Two-Bin System]
@@ -460,8 +464,7 @@ EOQ는 구매 중심이고 EQP는 생산 중심 관리 모형이다.
 
 
 
-::: info "재주문점(Reorder Point, ROP): 재고가 일정 수준에 도달하면 발주하는 기준점"
-
+::: info "재주문점(Reorder Point, ROP): 재고가 일정 수준에 도달하면 발주하는 기준점"  
     $ROP = 일일수요량 \times 조달기간 + 안전재고$  
        
     예: 하루 사용량이 100개, 공급기간이 5일, 안전재고 200개이며,  
