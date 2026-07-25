@@ -60,8 +60,8 @@ flowchart LR
 ### 공정설계 주요 내용
 
 1. **공정선택**(Process Selection)  
-   공정선택은 제품 특성과 생산량에 적합한 생산방식을 선택하는 과정이다. Hayes & Wheelwright가 제시한 제품-공정 매트리스(Product-Process Matrix)가 대표적인 이론이다.  
-   
+   공정선택은 제품 특성과 생산량에 적합한 생산방식을 선택하는 과정이다. Hayes & Wheelwright가 제시한 제품-공정 매트리스(Product-Process Matrix)가 대표적인 이론이다.
+      
     | 생산방식             | 특징     | 대표 사례    |
     | ---------------- | ------ | -------- |
     | 프로젝트(Project)    | 소량·고품종 | 조선, 건설   |
@@ -69,7 +69,7 @@ flowchart LR
     | 배치생산(Batch)      | 중품종 중량 | 의약품, 식품  |
     | 반복생산(Repetitive) | 소품종 대량 | 자동차 조립   |
     | 연속생산(Continuous) | 대량 연속  | 정유, 제철   |      
-2. **작업순서 결정**(Routing)  
+3. **작업순서 결정**(Routing)  
    제품이 생산되는 동안 거쳐야 하는 공정 순서와 경로를 결정하는 활동이다. Routing은 공정계획에 있어 핵심 요소이다.     
    ```mermaid
    flowchart LR
@@ -89,18 +89,18 @@ flowchart LR
     D --> E
     E --> F
    ```     
-3. **설비선정**(Machine Selection)  
+4. **설비선정**(Machine Selection)  
    생산량과 제품 특성에 따라 적절한 설비를 선정한다. 생산 능력, 정밀도, 자동화 수준, 경제성, 유지보수성 등을 고려해야 한다.
-4. **공장배치**(Layout)  
-   공정을 효율적으로 운영하기 위해 설비를 배치한다. 대표적인 배치 방식은 다음과 같다.     
-   
+5. **공장배치**(Layout)  
+   공정을 효율적으로 운영하기 위해 설비를 배치한다. 대표적인 배치 방식은 다음과 같다.
+      
     | 배치 방식                          | 특징        |
     | ------------------------------ | --------- |
     | 기능별 배치(Process Layout)         | 다품종 소량생산  |
     | 제품별 배치(Product Layout)         | 대량생산      |
     | 셀 배치(Cellular Layout)          | 유사 제품군 생산 |
     | 고정위치 배치(Fixed Position Layout) | 대형 제품 생산  |
-5. **작업표준**(Standardization)  
+7. **작업표준**(Standardization)  
    공정을 표준화하여 품질과 생산성을 확보한다. 작업표준에는 작업방법(Standard Method), 표준시간(Standard Time), 표준작업(Standard Work)과 같은 내용이 있다.
 
 ### 관련 이론
