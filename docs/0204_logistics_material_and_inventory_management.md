@@ -30,7 +30,7 @@
 ### 물류 흐름
 
 ```mermaid
-flowchart TD
+flowchart LR
     A[원자재 공급업체]
     --> B["입고 물류<br/>(Inbound Logistics)"]
     --> C[생산 공정]
@@ -45,7 +45,7 @@ flowchart TD
 1. 조달물류 (Inbound Logistics)  
    원자재와 부품을 공급업체에서 공장으로 운송하는 활동이다. 철강 입고, 반도체 입고, 배터리 입고 등이 해당된다.
 2. 생산물류 (Production Logistics)  
-   공장 내부에서 자재와 반제품을 공정 간 이동시키는 활동이다. 공정간 자재를 적시에 공급하는 것이 핵심이다.
+   공장 내부에서 자재와 반제품을 공정 간 이동시키는 활동이다. 공정간 자재를 적시에 공급하는 것이 핵심이다.  
 
    ```mermaid
    flowchart TD
@@ -60,8 +60,8 @@ flowchart TD
    A --> B --> C --> D
    ```
 
-4. 판매물류 (Outbound Logistics)  
-   완제품을 고객이나 대리점으로 출하하는 활동이다.
+3. 판매물류 (Outbound Logistics)  
+   완제품을 고객이나 대리점으로 출하하는 활동이다.  
 
    ```mermaid
    flowchart TD
@@ -76,7 +76,7 @@ flowchart TD
    A --> B --> C --> D
    ```
    
-6. 회수물류 (Reverse Logistics)
+4. 회수물류 (Reverse Logistics)
    고객으로부터 반품, 불량품, 재활용 제품 등을 회수하는 활동이다. 불량 제품 회수, 리콜, 폐배터리 회수, 재활용 등이 해당된다. 최근 ESG와 순환경제 중요성이 커지면서 회수물류 역활도 확대되고 있다.
 
 ### 핵심 관리 대상
