@@ -364,12 +364,12 @@ flowchart TB
     B --> B2["EPQ"]
     B --> B3["Quantity Discount Model"]
 
-    C --> C1["Q System (정량발주)"]
-    C --> C2["P System (정기발주)"]
-    C --> C3["Base Stock Model"]
-    C --> C4["Min-Max System"]
-    C --> C5["Two-Bin System"]
-    C --> C6["Newsvendor Model"]
+    C ---> C1["Q System (정량발주)"]
+    C ---> C2["P System (정기발주)"]
+    C ---> C3["Base Stock Model"]
+    C ---> C4["Min-Max System"]
+    C ---> C5["Two-Bin System"]
+    C ---> C6["Newsvendor Model"]
 
     D --> D1["ABC 분석"]
     D --> D2["XYZ 분석"]
