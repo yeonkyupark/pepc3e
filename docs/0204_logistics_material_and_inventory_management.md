@@ -182,10 +182,12 @@ flowchart LR
 ### 재고 관리 주요 지표(KPI)
 
 1. **재고회전율** (Inventory Turnover Ratio)  
-   재고가 얼마나 빠르게 판매 또는 생산에 사용되는지를 나타내는 지표이다.  
+   재고가 얼마나 빠르게 판매 또는 생산에 사용되는지를 나타내는 지표이다.
+   
    $$
    재고회전율 = \frac{매출원가}{평균재고}
-   $$  
+   $$
+   
    연간 매출원가가 10억이고 평균 재고가 2억이며 재고회전율 = 10/2 = 5(회)가 된다. 이는 1년 동안 재고가 평균 5번 교체되었다는 의미가 된다. 일반적으로 재고회전율이 높을수록 재고 운영 효율이 좋다고 판단한다.
 3. **재고일수** (Days Inventory Outstanding)  
    현재 재고가 몇 일동안 운영 가능한지를 나타낸다. 예를 들어 현재 재고가 30일분이면 공급이 중단되어도 약 30일 동안 생산 가능하다는 의미이다.
@@ -215,10 +217,10 @@ flowchart LR
     ```mermaid
     flowchart LR
     
-    A[생산계획<br/>"(MPS: Master Production Schedule)"]
-    --> B[제품구조<br/>"(BOM: Bill of Materials)"]
+    A["생산계획<br/>(MPS: Master Production Schedule)"]
+    --> B["제품구조<br/>(BOM: Bill of Materials)"]
     --> C[현재재고 확인]
-    --> D[필요 자재 계산<br/>"(Net Requirements)"]
+    --> D["필요 자재 계산<br/>(Net Requirements)"]
     --> E[구매 및 생산 계획]
     
     ```
