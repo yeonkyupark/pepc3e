@@ -11,6 +11,10 @@ edit_uri: edit/main/docs/
 markdown_extensions:
   - footnotes
   - admonition
+  - attr_list
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.superfences:
