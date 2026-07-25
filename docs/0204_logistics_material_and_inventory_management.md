@@ -32,9 +32,9 @@
 ```mermaid
 flowchart TD
     A[원자재 공급업체]
-    --> B[입고 물류<br/>(Inbound Logistics)]
+    --> B["입고 물류<br/>(Inbound Logistics)"]
     --> C[생산 공정]
-    --> D[출고 물류<br/>(Outbound Logistics)]
+    --> D["출고 물류<br/>(Outbound Logistics)"]
     --> E[물류센터]
     --> F[유통업체]
     --> G[최종 고객]
