@@ -61,6 +61,7 @@ flowchart LR
 
 1. **공정선택**(Process Selection)  
    공정선택은 제품 특성과 생산량에 적합한 생산방식을 선택하는 과정이다. Hayes & Wheelwright가 제시한 제품-공정 매트리스(Product-Process Matrix)가 대표적인 이론이다.  
+   
     | 생산방식             | 특징     | 대표 사례    |
     | ---------------- | ------ | -------- |
     | 프로젝트(Project)    | 소량·고품종 | 조선, 건설   |
@@ -92,6 +93,7 @@ flowchart LR
    생산량과 제품 특성에 따라 적절한 설비를 선정한다. 생산 능력, 정밀도, 자동화 수준, 경제성, 유지보수성 등을 고려해야 한다.
 4. **공장배치**(Layout)  
    공정을 효율적으로 운영하기 위해 설비를 배치한다. 대표적인 배치 방식은 다음과 같다.     
+   
     | 배치 방식                          | 특징        |
     | ------------------------------ | --------- |
     | 기능별 배치(Process Layout)         | 다품종 소량생산  |
@@ -103,13 +105,13 @@ flowchart LR
 
 ### 관련 이론
 
-1. 제품-공정 메트릭스(Product-Process Matrix)  
+1. **제품-공정 메트릭스**(Product-Process Matrix)  
    Haeys & Wheelwright가 제시한 이론으로 제품 다양성(Product variety)과 생산성(Volume)에 따라 적절한 생산공정을 선택해야 한다고 설명했다. 제품 특성과 생산공정이 일치할수록 생산성이 높아진다.  
    ![Product-Process Matrix](https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Product-process_matrix.svg/960px-Product-process_matrix.svg.png)
-2. 동시공학(Concurrent Engineering)  
+2. **동시공학**(Concurrent Engineering)  
    제품설계와 공정설계를 동시에 수행하여 개발기간 단축, 제조성 향상, 원가절감을 달성하는 기법이다.  
    ![Concurrent Engineering](https://upload.wikimedia.org/wikipedia/commons/d/d6/Waterfall_vs_iterative.JPG)
-3. DFM(Design for Manufacturability)
+3. **DFM**(Design for Manufacturability)
    제조 용이성을 고려하여 제품을 설계하는 기법이다. 제품설계 단계에서 공정설계를 함게 고려하여 생산성을 향상시킨다.
 
 
