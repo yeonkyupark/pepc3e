@@ -357,26 +357,26 @@ EOQ는 제조현장에서는 Lot size 결정에 영향을 주게 된다. 예로 
 ```mermaid
 flowchart LR
 
-    A[재고관리 모형]
+    A["재고관리 모형"]
 
-    A --> B[확정적 모형]
-    A --> C[확률적 모형]
-    A --> D[품목관리 기법]
+    A --> B["확정적 모형"]
+    A --> C["확률적 모형"]
+    A --> D["품목관리 기법"]
 
-    B --> B1[EOQ]
-    B --> B2[EPQ]
-    B --> B3[Quantity Discount Model]
+    B --> B1["EOQ"]
+    B --> B2["EPQ"]
+    B --> B3["Quantity Discount Model"]
 
-    C --> C1["Q System<br/>(정량발주)"]
-    C --> C2["P System<br/>(정기발주)"]
-    C --> C3[Base Stock Model]
-    C --> C4[Min-Max System]
-    C --> C5[Two-Bin System]
-    C --> C6[Newsvendor Model]
+    C --> C1["Q System (정량발주)"]
+    C --> C2["P System (정기발주)"]
+    C --> C3["Base Stock Model"]
+    C --> C4["Min-Max System"]
+    C --> C5["Two-Bin System"]
+    C --> C6["Newsvendor Model"]
 
-    D --> D1[ABC 분석]
-    D --> D2[XYZ 분석]
-    D --> D3[FSN 분석]
+    D --> D1["ABC 분석"]
+    D --> D2["XYZ 분석"]
+    D --> D3["FSN 분석"]
 ```
 
 ### 재고관리 기본 개념
@@ -464,7 +464,7 @@ EOQ는 구매 중심이고 EQP는 생산 중심 관리 모형이다.
 
 
 
-::: info "재주문점(Reorder Point, ROP): 재고가 일정 수준에 도달하면 발주하는 기준점"  
+!!! note "재주문점(Reorder Point, ROP): 재고가 일정 수준에 도달하면 발주하는 기준점"  
     $ROP = 일일수요량 \times 조달기간 + 안전재고$  
        
     예: 하루 사용량이 100개, 공급기간이 5일, 안전재고 200개이며,  
