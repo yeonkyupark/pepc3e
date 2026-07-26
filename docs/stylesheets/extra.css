@@ -218,7 +218,7 @@
 
 .md-typeset ul li table,
 .md-typeset ol li table {
-    margin-left: 0.3rem;
+    margin-left: 0.1rem;
 }
 
 
@@ -407,5 +407,5 @@ html{
    ========================================================================== */
 
 .md-typeset li .mermaid {
-    margin-left: 0.3rem;
+    margin-left: 0.1rem;
 }
