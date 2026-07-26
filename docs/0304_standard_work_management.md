@@ -83,7 +83,7 @@ $$TT = \frac{가용\ 생산시간}{고객\ 요구량}$$
 
 $$CT=\frac{총\ 작업시간}{생산량}$$
 
-!!! tip "Cycle Time
+!!! tip "Cycle Time"
 
     총 작업시간이 400분이고 생산량이 200개일 대 CT는 다음과 같이 계살할 수 있다.
 
@@ -288,4 +288,7 @@ flowchart TD
 | 동작연구(Motion Study)       | 불필요한 동작 제거 |
 | 작업분석(Operation Analysis) | 작업순서 개선    |
 | 라인밸런싱(Line Balancing)    | 공정 균형화     |
+
+## 레이팅 기법
+
 
