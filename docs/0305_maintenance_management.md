@@ -111,6 +111,48 @@ TPM(Total Productive Maintenance)은 다음과 같이 정의한다. (Nakajima, 1
 | 관리간접 개선 | 사무 생산성 향상   |
 | 안전·환경   | 무재해 활동      |
 
+#### 자주보전 7단계
+
+**자주보전**(自主保全, Autonomous Maintenance)은 TPM(Total Productive Maintenance)의 8대 활동 중 하나로, 생산부문의 **작업자가 자신의 설비를 스스로 관리하여 설비의 기본 조건을 유지하고 이상을 조기에 발견하는 활동**이다. TPM 자주보전은 일반적으로 다음 7단계 전개 과정으로 추진한다.
+
+```mermaid
+flowchart TD
+    classDef main fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#000,font-weight:bold;
+    classDef step fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000,font-weight:bold;
+    classDef final fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#000,font-weight:bold;
+
+
+    A["자주보전<br/>(Autonomous Maintenance)<br/>7단계"]:::main
+
+    B["1단계<br/>초기청소<br/>(Initial Cleaning)"]:::step
+    C["2단계<br/>발생원·곤란개소 개선<br/>(Eliminate Sources & Hard-to-Access Areas)"]:::step
+    D["3단계<br/>청소·급유 기준 작성<br/>(Cleaning & Lubrication Standards)"]:::step
+    E["4단계<br/>총점검<br/>(General Inspection)"]:::step
+    F["5단계<br/>자주점검<br/>(Autonomous Inspection)"]:::step
+    G["6단계<br/>표준화<br/>(Standardization)"]:::step
+    H["7단계<br/>자주관리<br/>(Autonomous Management)"]:::final
+
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+```
+
+| 단계  | 명칭          | 핵심 활동                         |
+| --- | ----------- | ----------------------------- |
+| 1단계 | 초기청소        | 설비 구석구석 청소하며 이상 발견            |
+| 2단계 | 발생원·곤란개소 개선 | 오염 발생 원인 제거, 청소·점검하기 쉬운 구조 개선 |
+| 3단계 | 청소·급유 기준 작성 | 청소·급유 방법과 주기 표준화              |
+| 4단계 | 총점검         | 설비 구조 및 기능 교육, 이상 발견 능력 향상    |
+| 5단계 | 자주점검        | 작업자가 스스로 점검 수행                |
+| 6단계 | 표준화         | 관리 기준, 작업 방법, 점검 항목 표준화       |
+| 7단계 | 자주관리        | 지속적인 개선과 자율적인 설비 관리 정착        |
+
+
 ### 설비효율 지표
 
 대표적인 설비효율 지표로 OEE(Overall Equipment Effectiveness, 설비 종합효율)가 있다.
@@ -212,6 +254,55 @@ $$Availability = \frac{MTBF}{MTBF + MTTR}$$
     MTBF 200시간, MTTR 10시간이라 가정했을 때 가용도는 다음과 같이 계산된다.
 
     $$Availability = \frac{200}{210} = 95.2\%$$
+
+## 설비 6대 로스
+
+설비 6대 로스(6 Big Losses)란 TPM(Total Productive Maintenance)에서 설비종합효율(OEE)을 저해하는 대표적인 생산 손실 요인을 6가지로 분류한 것이다. TPM의 창시자인 Seiichi Nakajima가 제시한 개념으로, 설비가 가진 최대 생산능력을 발휘하지 못하는 원인을 분석하고 개선하기 위한 관리 체계이다.
+
+> 설비가 정지하거나 정상 속도와 품질로 생산하지 못하여 발생하는 모든 생산 손실을 6가지 유형으로 분류한 
+
+![](https://yeonkyupark.github.io/pepc2e/images/oee.png)
+
+### 설비 6대 로스 종류
+
+| 구분 | 6대 로스                                       | OEE 영향 |
+| -- | ------------------------------------------- | ------ |
+| 1  | 고장 정지 로스(Breakdown Loss)                    | 가동률    |
+| 2  | 준비·조정 로스(Setup and Adjustment Loss)         | 가동률    |
+| 3  | 공회전·순간정지 로스(Idling and Minor Stoppage Loss) | 성능률    |
+| 4  | 속도 저하 로스(Reduced Speed Loss)                | 성능률    |
+| 5  | 초기 수율 로스(Start-up Yield Loss)               | 품질률    |
+| 6  | 불량·재작업 로스(Defect and Rework Loss)           | 품질률    |
+
+1. 고장 정리 로스  
+   설비고장으로 인해 계획되지 않은 정지가 발생하여 생산하지 못하는 시간 손실을 의미한다.  
+   예방보전, 예지보전, 고장원인 분석, MTBF 향상을 통해 개선할 수 있다.
+2. 준비·조정 로스  
+   제품 변경, 금형 교체, 조건 설정 등 생산 준비 과정에서 발생하는 시간 손실을 의미한다.  
+   SMED(Single Minute Exchange of Die), 금형 교환 시간을 한자리 분(minute) 수준으로 단축하는 방법으로 개선할 수 있다.
+3. 공회전·순간정지 로스  
+   설비가 일시적으로 멈추거나 공회전하여 발생하는 작은 정지 손실을 의미한다.  
+   현상 분석, 센서 개선, 부품 공급 개선, 자주보전을 통해 개선할 수 있다.   
+4. 속도 저하 로스  
+   설비가 설계속도 또는 표준속도보다 낮은 속도로 운전하여 발생하는 생산 손실을 의미한다.  
+   최적 운전조건 설정, 설비 개선, 마모 관리를 통해 개선할 수 있다.
+5. 초기 수율 로스  
+   설비 가동 초기 안정화 과정에서 발생하는 불량 및 손실을 의미한다.  
+   조건 표준화, 초품 승인 체계, 설비 초기 완정화를 통해 개선할 수 있다.
+6. 불량·재작업 로스  
+   생산 과정에서 발생한 불량품과 재작업으로 인해 발생하는 손실을 의미한다.  
+   불량 원인 분석, 공정능력 향상, Fool Proof(Poka-Yoke), 품질보전을 통해 개선할 수 있다.
+
+6대 로스 개선과 TPM 활동을 연결하면 다음과 같다.
+
+| 6대 로스 | 주요 TPM 활동       |
+| ----- | --------------- |
+| 고장 정지 | 계획보전, 예지보전      |
+| 준비 조정 | 개별개선, SMED      |
+| 순간정지  | 자주보전, 조건관리      |
+| 속도저하  | 개량보전, 설비 개선     |
+| 초기수율  | 초기관리, 품질보전      |
+| 불량재작업 | 품질보전, Poka-Yoke |
 
 ## 욕조곡선
 
