@@ -380,18 +380,31 @@ $$LCL = \mu - 3\sigma$$
 
 관리도는 "공정이 안정적인가"를 판단하고 공정능력지수는 "안정된 공정이 규격을 만족할 능력이 있는가"를 판단한다.
 
-1. Cp(Process Capacity Index)  
-    공정에서 귝격 중심과 일치한다고 가정한 잠재 능력이다.
-    
-    $C_p = \frac{USL - LSL}{6\sigma}$
-    
+1. Cp (Process Capability Index)
+
+    공정 평균이 규격 중심과 일치한다고 가정한 잠재 공정능력이다.
+
+    $$
+    C_p = \frac{USL - LSL}{6\sigma}
+    $$
+
     - $USL$: 규격 상한
     - $LSL$: 규격 하한
-    - $σ$ : 공정 표준편차  
-2. Cpk(Process Capacity Index considering Centering)  
-    공정 평균 치우침을 고려한 실제 능력이다.
-    
-    $C_{pk} = min(\frac{USL - \mu}{3\sigma}, \frac{\mu - LSL}{3\sigma})$
+    - $\sigma$: 공정 표준편차
+
+
+2. Cpk (Process Capability Index considering Centering)
+
+    공정 평균의 치우침을 고려한 실제 공정능력이다.
+
+    $$
+    C_{pk}=min\left(\frac{USL-\mu}{3\sigma},\frac{\mu-LSL}{3\sigma}\right)
+    $$
+
+    - $USL$: 규격 상한
+    - $LSL$: 규격 하한
+    - $\mu$: 공정 평균
+    - $\sigma$: 공정 표준편차
 
 **Cp vs. Cpk**
 
