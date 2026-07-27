@@ -382,15 +382,15 @@ $$LCL = \mu - 3\sigma$$
 
 1. Cp(Process Capacity Index)  
     공정에서 귝격 중심과 일치한다고 가정한 잠재 능력이다.
-
+    
     $C_p = \frac{USL - LSL}{6\sigma}$
-
+    
     - $USL$: 규격 상한
     - $LSL$: 규격 하한
     - $σ$ : 공정 표준편차  
 2. Cpk(Process Capacity Index considering Centering)  
     공정 평균 치우침을 고려한 실제 능력이다.
-
+    
     $C_{pk} = min(\frac{USL - \mu}{3\sigma}, \frac{\mu - LSL}{3\sigma})$
 
 **Cp vs. Cpk**
