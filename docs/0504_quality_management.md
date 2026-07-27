@@ -168,12 +168,40 @@ ISO 9000에서는 품질관리를 다음과 같이 정의한다.
 
 Juran과 Feigenbaum은 품질비용(Cost of Quality, COQ)를 다음과 같이 구분한다.
 
-| 구분     | 내용            |
-| ------ | ------------- |
-| 예방비용   | 교육, 표준화, 예방활동 |
-| 평가비용   | 검사, 시험        |
-| 내부실패비용 | 폐기, 재작업       |
-| 외부실패비용 | 클레임, 리콜, A/S  |
+```mermaid
+flowchart TD
+    classDef main fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#000,font-weight:bold;
+    classDef prevent fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#000,font-weight:bold;
+    classDef appraisal fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000,font-weight:bold;
+    classDef failure fill:#FFEBEE,stroke:#D32F2F,stroke-width:2px,color:#000,font-weight:bold;
+
+
+    A["품질비용<br/>(COQ : Cost of Quality)"]:::main
+
+
+    B["예방비용<br/>(Prevention Cost)"]:::prevent
+    C["평가비용<br/>(Appraisal Cost)"]:::appraisal
+    D["내부실패비용<br/>(Internal Failure Cost)"]:::failure
+    E["외부실패비용<br/>(External Failure Cost)"]:::failure
+
+
+    A --> B
+    A --> C
+    A --> D
+    A --> E
+
+
+    B1["교육<br/>표준화<br/>예방활동"]:::prevent
+    C1["검사<br/>시험"]:::appraisal
+    D1["폐기<br/>재작업"]:::failure
+    E1["클레임<br/>리콜<br/>A/S"]:::failure
+
+
+    B --> B1
+    C --> C1
+    D --> D1
+    E --> E1
+```
 
 공장관리에서는 예방비용을 증가시켜 실패비용을 감소시키는 것이 경제적이다.
 
@@ -181,12 +209,43 @@ Juran과 Feigenbaum은 품질비용(Cost of Quality, COQ)를 다음과 같이 �
 
 통계적 품질관리(SQC, Statistical Quality Control)는 통계적 방법을 이용하여 제품과 공정의 변동을 분석하고 품질을 유지·개선하는 관리 방법이다. 주요 구성으로는 통계적 공정관리(SPC), 샘플링 검사, 실험계획법이 있다. SPC에서는 관리도를 이용하여 공정의 안정성을 판단하고, 공정능력지수 Cp와 Cpk를 통해 규격 만족 능력을 평가한다. 또한 샘플링 검사는 표본 검사를 통해 LOT의 합격 여부를 판단하며, 실험계획법은 공정 인자의 영향 분석과 최적 조건 도출에 활용된다. 이러한 통계적 품질관리 기법은 데이터 기반으로 공정 변동을 감소시키고 품질 향상을 달성하기 위한 핵심 방법이다.
 
-| 구분  | 대표 기법   | 목적       |
-| --- | ------- | -------- |
-| SPC | 관리도     | 공정 안정화   |
-| SPC | Cp, Cpk | 공정능력 평가  |
-| 검사  | 샘플링 검사  | LOT 판정   |
-| 개선  | DOE     | 최적 조건 도출 |
+```mermaid
+flowchart TD
+    classDef main fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#000,font-weight:bold;
+    classDef category fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000,font-weight:bold;
+    classDef detail fill:#F5F5F5,stroke:#757575,stroke-width:1px,color:#000;
+
+
+    A["통계적 품질관리<br/>(SQC : Statistical Quality Control)"]:::main
+
+
+    B["통계적 공정관리<br/>(SPC : Statistical Process Control)"]:::category
+    C["검사<br/>(Inspection)"]:::category
+    D["개선<br/>(Quality Improvement)"]:::category
+
+
+    A --> B
+    A --> C
+    A --> D
+
+
+    B1["관리도<br/>(Control Chart)<br/><br/>공정 안정화<br/>변동 감시 및 이상 탐지"]:::detail
+    B2["공정능력 분석<br/>(Cp, Cpk)<br/><br/>규격 만족 능력 평가"]:::detail
+
+
+    C1["샘플링 검사<br/>(Sampling Inspection)<br/><br/>LOT 품질 판정"]:::detail
+
+
+    D1["실험계획법<br/>(DOE : Design of Experiments)<br/><br/>인자 영향 분석<br/>최적 조건 도출"]:::detail
+
+
+    B --> B1
+    B --> B2
+
+    C --> C1
+
+    D --> D1
+```
 
 ### SQC 기본 개념
 
@@ -289,7 +348,9 @@ xychart-beta
 관리도는 일반적으로 3σ 원리를 사용한다.
 
 $$UCL = \mu + 3\sigma$$
+
 $$CL = \mu$$
+
 $$LCL = \mu - 3\sigma$$
 
 **관리도 중료**
@@ -326,7 +387,7 @@ $$LCL = \mu - 3\sigma$$
 
     - $USL$: 규격 상한
     - $LSL$: 규격 하한
-    - $σ$ : 공정 표준편차
+    - $σ$ : 공정 표준편차  
 2. Cpk(Process Capacity Index considering Centering)  
     공정 평균 치우침을 고려한 실제 능력이다.
 
@@ -575,52 +636,71 @@ MBNQA는 단순히 품질부서만 평가하지 않고, 경영전략, 조직문�
 
 ```mermaid
 flowchart LR
+
     classDef main fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#000,font-weight:bold;
-    classDef enabler fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000,font-weight:bold;
+    classDef direction fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000,font-weight:bold;
+    classDef execution fill:#EDE7F6,stroke:#7B1FA2,stroke-width:2px,color:#000,font-weight:bold;
     classDef result fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#000,font-weight:bold;
+    classDef feedback fill:#FFEBEE,stroke:#D32F2F,stroke-width:2px,color:#000,font-weight:bold;
 
 
-    A["EFQM Excellence Model<br/>품질경영 모델"]:::main
+    A["EFQM Excellence Model 2020<br/>(탁월성 모델)"]:::main
 
 
-    B["Enablers<br/>(가능요인)"]:::enabler
+    B["Direction<br/>(방향 설정)"]:::direction
 
-    B1["Leadership<br/>(리더십)"]:::enabler
-    B2["Strategy<br/>(전략)"]:::enabler
-    B3["People<br/>(인적자원)"]:::enabler
-    B4["Partnership<br/>(파트너십)"]:::enabler
-    B5["Processes<br/>(프로세스)"]:::enabler
+    B1["Purpose, Vision & Strategy<br/>(목적·비전·전략)"]:::direction
+    B2["Organisational Culture & Leadership<br/>(조직문화·리더십)"]:::direction
 
 
-    C["Results<br/>(성과)"]:::result
+    C["Execution<br/>(실행)"]:::execution
 
-    C1["Customer Results<br/>(고객 성과)"]:::result
-    C2["People Results<br/>(구성원 성과)"]:::result
-    C3["Society Results<br/>(사회 성과)"]:::result
-    C4["Business Results<br/>(사업 성과)"]:::result
+    C1["Engaging Stakeholders<br/>(이해관계자 참여)"]:::execution
+    C2["Creating Sustainable Value<br/>(지속가능 가치 창출)"]:::execution
+    C3["Driving Performance & Transformation<br/>(성과 및 변화 추진)"]:::execution
+
+
+    D["Results<br/>(성과)"]:::result
+
+    D1["Stakeholder Perceptions<br/>(이해관계자 인식 성과)"]:::result
+    D2["Strategic & Operational Performance<br/>(전략 및 운영 성과)"]:::result
 
 
     A --> B
     A --> C
+    A --> D
 
 
     B --> B1
     B --> B2
-    B --> B3
-    B --> B4
-    B --> B5
 
 
     C --> C1
     C --> C2
     C --> C3
-    C --> C4
+
+
+    D --> D1
+    D --> D2
 
 
     B --> C
+    C --> D
+
+
+    D --> B
 ```
 
-"어떻게 운영하는가(Enabler)"와 "어떤 결과를 얻었는가(Result)"의 관계를 평가한다.
+EFQM 2020 모델은 기존 Enablers–Results(가능요인–성과) 구조에서 벗어나 Direction → Execution → Results의 3개 영역으로 재구성되었다.
+
+| 구분     | EFQM 2010          | EFQM 2020                       |
+| ------ | ------------------ | ------------------------------- |
+| 핵심 구조  | Enablers → Results | Direction → Execution → Results |
+| 관점     | 조직 운영 요소 중심        | 지속가능한 가치 창출 중심                  |
+| 리더십 위치 | Enabler 항목         | Direction의 핵심 요소                |
+| 개선 방식  | 결과 피드백             | 학습·혁신 기반 지속 개선                  |
+| 주요 대상  | 조직 내부 운영           | 고객·구성원·사회 등 이해관계자               |
+
 
 ### ISO 9001 품질경영시스템 평가
 
