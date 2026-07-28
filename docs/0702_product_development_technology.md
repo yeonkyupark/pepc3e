@@ -71,7 +71,7 @@ flowchart TD
 #### 주요 기법
 
 ```mermaid
-flowchart TD
+flowchart LR
 
     classDef main fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#000,font-weight:bold;
     classDef category fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000,font-weight:bold;
