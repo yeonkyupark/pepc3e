@@ -234,7 +234,8 @@
 
     margin:1rem 0;
 
-    font-size:.90rem;
+    /* font-size:.90rem; */
+    font-size:16px;
 }
 
 
@@ -261,6 +262,7 @@
 .md-typeset table:not([class]) th,
 .md-typeset table:not([class]) td{
 
+    font-size:16px;
     padding:.4rem .6rem;
 
     line-height:1.45;
@@ -407,11 +409,7 @@
 
 .md-typeset .admonition{
 
-    margin:1.4rem 0;
-
-    border-radius:8px;
-
-    font-size:.90rem;
+    font-size:16px;
 
     line-height:1.6;
 }
@@ -419,9 +417,10 @@
 
 .md-typeset .admonition-title{
 
+    font-size:16px;
+
     font-weight:700;
 }
-
 
 
 /* ==========================================================================
