@@ -291,7 +291,8 @@ flowchart TD
 
 <figture markdown="span">
       
-      <img width="1400" height="472" alt="image" src="https://github.com/user-attachments/assets/a9ecfb98-8aaa-4f08-ac94-8b2929b2f36b" />
+      ![](https://github.com/user-attachments/assets/a9ecfb98-8aaa-4f08-ac94-8b2929b2f36b)
+      
       <figcaption>중소밴처기업부 스마트공장관리시스템<br>https://www.smart-factory.kr/usr/pr/sf/ma/smrtFctryIntrcn</figcaption>
 
 </figture>
@@ -300,7 +301,7 @@ flowchart TD
 
 아래는 스마트공장을 구성하고 수준별로 발전시킴에 있어 꼭 필요한 5가지 조건이다.
 
-1. **4M + 1E의 디지털화**
+1. **4M + 1E의 디지털화**  
     4M+1E의 각 요소 (Man, Machinery, Material, Method, Environment) 들의 실시간으로 디지털 값을 인지하고, 측정 가능한 정보를 제공해야 하며, 통신을 통해 대화가 가능해야 함
 2. **지능화**  
     알고리즘 또는 인공지능 등의 솔루션을 이용, 최적해 또는 예측가능한 해를 제공해야 함
