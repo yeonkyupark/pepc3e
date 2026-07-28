@@ -315,8 +315,11 @@ flowchart TD
 스마트공장은 제품 기획·개발부터 양산까지, 주문에서부터 완제품 출하까지 제조 관련 모든 과정을 말한다. 응용 시스템뿐 아니라 현장자동화와 제어자동화 영역까지 공장 운영 모든 부분을 포함한다.
 
 <figure markdown> 
+    
 ![스마트공장 적용 범위](https://www.smart-factory.kr/images/info-image-2.png)
+
 <figcaption>중소밴처기업부 스마트공장관리시스템<br>https://www.smart-factory.kr/usr/pr/sf/ma/smrtFctryIntrcn</figcaption>     
+
 </figure>
 
 ### 구축 단계
