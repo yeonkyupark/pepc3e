@@ -291,7 +291,7 @@ flowchart TD
 
 <figure markdown>  
     
-![스마트팩토리 구축 단계](https://github-production-user-asset-6210df.s3.amazonaws.com/72383349/627654720-a9ecfb98-8aaa-4f08-ac94-8b2929b2f36b.png)      
+![스마트팩토리 구축 단계](https://github.com/user-attachments/assets/a9ecfb98-8aaa-4f08-ac94-8b2929b2f36b)      
 
 <figcaption>중소밴처기업부 스마트공장관리시스템<br>https://www.smart-factory.kr/usr/pr/sf/ma/smrtFctryIntrcn</figcaption>
       
