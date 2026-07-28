@@ -1,556 +1,336 @@
 ## 정보화 활용기술
 
-정보화 활용기술은 생산활동 전반에 정보기술(IT)과 운영기술(OT)을 적용하여 생산성, 품질, 유연성 및 의사결정 수준을 향상시키는 기술체계이다. 과거의 단순 전산화(Computerization)에서 시작하여 통합정보화(Integration), 지능화(Intelligence)를 거쳐 오늘날에는 스마트팩토리, 디지털 트윈, 산업용 AI 기반의 자율운영 체계로 발전하고 있다.
+정보화 활용 기술(Production Support Technology)은 생산활동을 지원하기 위해 정보통신기술과 정보시스템을 활용하는 기술이다. 주요 시스템으로는 ERP, MES, SCM, PLM, WMS 등이 있으며, ERP는 전사 자원관리, MES는 생산 실행관리, SCM은 공급망 최적화 관리, PLM은 제품 생애주기 관리, WMS는 창고 및 재고 관리를 담당한다. 최근 IoT를 통한 실시간 데이터 수집과 Big Data·AI를 활용한 품질 예측, 설비 예지보전 등으로 발전하고 있으며, 이러한 기술들은 스마트팩토리 구현에 있어 핵심 기반이 된다.
 
-```text
-자동화(Automation)
-      ↓
-전산화(Computerization)
-      ↓
-정보화(Integration)
-      ↓
-스마트팩토리(Intelligence)
-      ↓
-자율생산(Autonomous Factory)
+### 정보화 활용 기술 목적
+
+정보화를 통해 다음과 같은 효과를 얻을 수 있다.
+
+| 목적      | 내용             |
+| ------- | -------------- |
+| 생산성 향상  | 자동화 및 업무 효율 증대 |
+| 품질 향상   | 실시간 품질 데이터 관리  |
+| 원가 절감   | 재고 및 낭비 최소화    |
+| 납기 단축   | 생산 및 물류 정보 공유  |
+| 의사결정 지원 | 실시간 데이터 기반 경영  |
+
+### 정보화 활용 기술 구성
+
+대표적인 정보화 기술 관련 시스템이다.
+
+```mermaid
+flowchart TD
+    classDef main fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#000,font-weight:bold;
+    classDef system fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000,font-weight:bold;
+    classDef sub fill:#F5F5F5,stroke:#757575,stroke-width:1px,color:#000;
+    classDef tech fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#000,font-weight:bold;
+
+    ERP["ERP<br/>(Enterprise Resource Planning)"]:::main
+
+    SCM["SCM<br/>(Supply Chain Management)"]:::system
+    MES["MES<br/>(Manufacturing Execution System)"]:::system
+    PLM["PLM<br/>(Product Lifecycle Management)"]:::system
+
+    WMS["WMS<br/>(Warehouse Management System)"]:::sub
+    POP["POP<br/>(Point of Production)"]:::sub
+
+    IoT["IoT<br/>(Internet of Things)"]:::tech
+    AI["Big Data / AI"]:::tech
+
+    ERP --> SCM
+    ERP --> MES
+    ERP --> PLM
+
+    SCM --> WMS
+    MES --> POP
+
+    WMS --> IoT
+    POP --> IoT
+
+    PLM --> IoT
+
+    IoT --> AI
 ```
 
-정보화 활용기술의 궁극적인 목적은 데이터 기반의 실시간 의사결정과 생산시스템 최적화를 통한 경쟁우위 확보에 있다.
+| 시스템           | 역할                         |
+| ------------- | -------------------------- |
+| ERP           | 기업 전체 자원 및 경영관리            |
+| SCM           | 공급망 계획 및 물류 관리             |
+| WMS           | 창고 및 재고 관리(SCM의 하위)        |
+| MES           | 생산 실행 및 현장 관리              |
+| POP           | 생산 실적 및 설비 데이터 수집(MES의 하위) |
+| PLM           | 제품 기획부터 폐기까지의 제품 수명주기 관리   |
+| IoT           | 설비·물류·제품 데이터 수집 인프라        |
+| Big Data / AI | 데이터 분석, 예지보전, 품질예측, 생산 최적화 |
 
-## 정보화 활용기술의 개요
+#### ERP
 
-### 정의
+ERP (Enterprise Resource Planning)는 기업 자산(생산, 구매, 재무, 인사 등)을 통합 관리하는 전사적 자원관리 시스템이다.
 
-생산 및 경영활동에 정보기술을 적용하여 업무를 자동화·통합·지능화하는 기술체계이다.
+**주요 기능**
 
-### 목적
+- 생산 계획
+- 구매 관리
+- 재고 관리
+- 회계 관리
+- 원가 관리
 
-* 생산성 향상
-* 품질 안정화
-* 원가 절감
-* 납기 단축
-* 의사결정 고도화
-* 공급망 최적화
+제조업 경우, 고객 주문이 ERP에 등록되면 생산계획 생성, 자재 구매 요청, 그리고 출하 및 매출 관리를 진행한다.
 
-### 정보화 발전단계
+#### MES 
 
-| 단계   | 특징      | 대표기술          |
-| ---- | ------- | ------------- |
-| 전산화  | 업무 자동화  | MRP           |
-| 통합화  | 정보 통합   | ERP           |
-| 실시간화 | 현장 연계   | MES           |
-| 지능화  | 데이터 분석  | AI, Big Data  |
-| 자율화  | 자율 의사결정 | Smart Factory |
+MES (Manufacturing Execution System)s는 생산계획과 실제 생산현장을 연결하는 생산실행 시스템이다.
 
-## 생산정보시스템의 발전
+**주요 기능**
 
-### 발전 흐름
+- 작업지시
+- 공정 추적
+- 생산실적 관리
+- 설비 가동 정보
+- 작업자 관리
+- 품질 및 불량 관리
 
-```text
-재고관리
-    ↓
-MRP
-    ↓
-MRP II
-    ↓
-ERP
-    ↓
-MES
-    ↓
-SCM
-    ↓
-Smart Factory
+제조업 경우, ERP에 주문이 등록되면 생산계획을 수립하고 MES를 통해 작업지시, 설비 생산, 생산실적 자동 수집이 이루어진다.
+
+#### SCM
+
+SCM (Supply Chain Management)은 원자재 조달부터 고객에게 제품이 전달될 때까지 공급방 전체를 최적화하는 시스템이다.
+
+**주요 기능**
+
+- 수요예측
+- 공급계획
+- 물류관리
+- 재고관리
+- 협력업체 관리
+
+#### PLM
+
+PLM (Product Lifecycle Management)은 제품 기획부터 설계, 생산, 유지보수, 폐기까지 제품 생애주기를 관리하는 시스템이다.
+
+**주요 기능**
+
+- 도면관리
+- BOM 관리
+- 설계 변경관리
+- 제품 이력관리
+
+#### WMS
+
+WMS (Warehouse Management System)는 창고 운영과 재고를 효율적으로 관리하는 시스템이다.
+
+**주요 기능**
+
+- 입고관리
+- 출고관리
+- 재고관리
+- 위치관리
+- 바코드 관리
+
+#### POP
+
+POP (Point of Production)는 생산현장에서 작업 실적을 실시간으로 수집하는 시스템이다.
+
+**주요 기능**
+
+- 생산량 집계
+- 작업시간 관리
+- 설비 가동율
+- 작업자 실적
+
+#### IoT
+
+IoT (Internet of Things)는 설비와 센서를 네트워크로 연결하여 데이터를 실시간 수집하는 기술이다.
+
+**활용 사례**
+
+- 설비 온도 모니터링
+- 진동 측정
+- 전력 사용량 관리
+- 예지보전(Predictive Maintenance)
+
+#### Big Data/AI
+
+Big Data는 대량의 생산 데이터를 저장하고 분석하는 기술이다. AI는 데이터를 기반으로 예측 및 최적화를 수행하는 기술이다. 
+
+**활용 사례**
+
+- 불량 예측
+- 수요 예측
+- 공정 최적화
+- 이상 탐지
+- 설비 고장 예
+
+### 정보화 기술 연계
+
+```mermaid
+flowchart TD
+    classDef process fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#000,font-weight:bold;
+    classDef system fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000,font-weight:bold;
+    classDef tech fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#000,font-weight:bold;
+    classDef feedback fill:#F3E5F5,stroke:#7B1FA2,stroke-width:2px,color:#000,font-weight:bold;
+
+    A["고객 주문<br/>(Customer Order)"]:::process
+
+    B["ERP<br/>(생산계획·자원관리)"]:::system
+
+    C["MES<br/>(생산 실행·공정관리)"]:::system
+
+    D["IoT<br/>(설비·공정 데이터 수집)"]:::tech
+
+    E["Big Data / AI<br/>(품질예측·설비진단·최적화)"]:::tech
+
+    F["ERP<br/>(실적·재고·원가 반영)"]:::system
+
+    G["출하<br/>(Shipment)"]:::process
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+
+    E --> B
+    E --> C
+
+    C --> F
+    F --> G
+
+    FB["Closed Loop Optimization<br/>(지속적 개선)"]:::feedback
+
+    B -.-> FB
+    C -.-> FB
+    E -.-> FB
 ```
-
-### 생산정보시스템의 역할
-
-* 정보 공유
-* 자원 최적화
-* 생산 통제
-* 의사결정 지원
-
-## MRP(Material Requirements Planning)
-
-### 개요
-
-생산계획을 기반으로 자재 소요량을 계산하는 시스템이다.
-
-### 입력정보
-
-* MPS(기준생산계획)
-* BOM(자재명세서)
-* 재고정보
-
-### 출력정보
-
-* 자재소요계획
-* 구매계획
-* 생산오더
-
-### 장점
-
-* 재고 감소
-* 자재부족 예방
-* 생산계획 정합성 향상
-
-### 한계
-
-* 리드타임 고정 가정
-* 실시간 대응 한계
-* 생산제약 반영 부족
-
-## MRP II(Manufacturing Resource Planning)
-
-### 개요
-
-MRP를 확장하여 생산자원 전반을 관리하는 시스템이다.
-
-### 주요 기능
-
-* 생산계획
-* 능력소요계획(CRP)
-* 구매관리
-* 재무관리
-
-### 의의
-
-MRP가 자재 중심이라면 MRP II는 생산자원 중심의 관리체계이다.
-
-## ERP(Enterprise Resource Planning)
-
-### 개요
-
-기업 전 부문의 자원을 통합 관리하는 시스템이다.
-
-### 주요 모듈
-
-```text
-ERP
- ├─ 생산관리
- ├─ 구매관리
- ├─ 재고관리
- ├─ 회계관리
- ├─ 인사관리
- └─ 영업관리
-```
-
-### 특징
-
-* 데이터 일원화
-* 업무 프로세스 표준화
-* 전사적 자원관리
-
-### 기대효과
-
-* 업무 효율화
-* 정보 공유
-* 경영 투명성 향상
-
-### ERP의 한계
-
-* 구축 비용 과다
-* 사용자 저항
-* 현장 실시간성 부족
-
-## MES(Manufacturing Execution System)
-
-### 개요
-
-생산현장의 실행 정보를 실시간으로 관리하는 시스템이다.
-
-### 주요 기능
-
-| 기능   | 내용      |
-| ---- | ------- |
-| 생산지시 | 작업지시 관리 |
-| 공정추적 | LOT 추적  |
-| 품질관리 | 검사정보 관리 |
-| 설비관리 | 설비상태 수집 |
-| 실적관리 | 생산실적 집계 |
-
-### ERP와 MES 관계
-
-```text
-ERP
- ↓
-MES
- ↓
-설비 및 작업현장
-```
-
-ERP가 계획을 담당한다면 MES는 실행을 담당한다.
-
-### 기대효과
-
-* 생산 가시성 확보
-* 품질 추적성 확보
-* 실시간 생산관리
-
-## APS(Advanced Planning and Scheduling)
-
-### 개요
-
-생산능력 및 제약조건을 고려하여 최적 생산계획을 수립하는 시스템이다.
-
-### 특징
-
-* 유한능력계획(Finite Capacity Scheduling)
-* 실시간 계획 조정
-* 생산 최적화
-
-### ERP·MES·APS 관계
-
-```text
-ERP
- ↓
-APS
- ↓
-MES
- ↓
-현장
-```
-
-### 의의
-
-스마트팩토리의 계획 최적화 엔진 역할을 수행한다.[^1]
-
-## SCM(Supply Chain Management)
-
-### 개요
-
-원재료 공급부터 고객 인도까지 공급망 전체를 통합 관리하는 체계이다.
-
-### 주요 영역
-
-* 구매
-* 생산
-* 물류
-* 판매
-
-### 목적
-
-* 공급망 최적화
-* 재고 최소화
-* 고객서비스 향상
-
-※ 상세 내용은 「공급망관리」 참고
-
-## PLM(Product Lifecycle Management)
-
-### 개요
-
-제품의 전 생애주기를 통합 관리하는 시스템이다.
-
-### 관리 영역
-
-```text
-기획
- ↓
-설계
- ↓
-생산
- ↓
-판매
- ↓
-서비스
- ↓
-폐기
-```
-
-### 기대효과
-
-* 개발기간 단축
-* 설계품질 향상
-* 기술정보 공유
-
-### PLM과 ERP 비교
-
-| 구분 | PLM     | ERP     |
-| -- | ------- | ------- |
-| 관점 | 제품 중심   | 자원 중심   |
-| 범위 | 개발 프로세스 | 운영 프로세스 |
-| 목적 | 제품 경쟁력  | 경영 효율성  |
-
-## CPS(Cyber Physical System)
-
-### 개요
-
-물리공장과 가상공장을 실시간으로 연결하는 시스템이다.
-
-### 구성
-
-```text
-Physical World
-      ↕
-Sensor
-      ↕
-Network
-      ↕
-Cyber World
-```
-
-### 특징
-
-* 실시간 데이터 수집
-* 가상 시뮬레이션
-* 자동 제어
-
-### 의의
-
-스마트팩토리의 핵심 기반 기술이다.[^2]
-
-## 디지털 트윈(Digital Twin)
-
-### 개요
-
-현실의 설비·공정·공장을 가상공간에 동일하게 구현한 모델이다.
-
-### 활용 분야
-
-* 생산시뮬레이션
-* 설비예지보전
-* 에너지 최적화
-* 공정 최적화
-
-### 기대효과
-
-* 시행착오 감소
-* 의사결정 정확도 향상
-* 운영비용 절감
-
-### 디지털 트윈 발전단계
-
-| 단계             | 특징      |
-| -------------- | ------- |
-| Digital Model  | 단순 모델   |
-| Digital Shadow | 데이터 연계  |
-| Digital Twin   | 실시간 동기화 |
-
-## 산업용 IoT(IIoT)
-
-### 개요
-
-센서와 네트워크를 활용하여 생산현장의 데이터를 실시간으로 수집·활용하는 기술이다.
-
-### 구성요소
-
-* Sensor
-* Edge Device
-* Network
-* Platform
-* Application
-
-### 활용 사례
-
-* 설비 모니터링
-* 품질 추적
-* 에너지 관리
-* 예지보전
-
-## 빅데이터와 AI
-
-### 빅데이터 활용
-
-#### 5V 특성
-
-* Volume
-* Velocity
-* Variety
-* Veracity
-* Value
-
-#### 활용 분야
-
-* 수요예측
-* 품질예측
-* 이상탐지
-* 공급망 분석
-
-### AI 활용
-
-#### 머신러닝
-
-과거 데이터를 기반으로 패턴 학습
-
-#### 딥러닝
-
-복잡한 비정형 데이터 분석
-
-#### 생성형 AI
-
-문서작성 및 의사결정 지원
-
-### 생산관리 활용
-
-* 품질예측
-* 설비예지보전
-* 생산계획 최적화
-* 수요예측
 
 ## 스마트팩토리
 
-### 개요
+**스마트팩토리**(Smart Factory)란 제조 전 과정에 정보통신기술(ICT), 자동화 기술, 데이터 분석 기술, 인공지능(AI)을 적용하여 생산 시스템을 지능화한 공장을 의미한다. 단순한 자동화 공장과 차이점은 설비 자동화 자체가 목적이 아니라 생산 데이터를 기반으로 스스로 판단하고 최적화하는 지능형 생산체계 구축에 있다.
 
-정보통신기술을 활용하여 생산 전 과정을 지능화한 공장이다.
+> 스마트공장은 제품의 기획부터 판매까지 모든 생산과정을 ICT(정보통신)기술로 통합해 최소 비용과 시간으로 고객 맞춤형 제품을 생산하는 사람 중심의 첨단 지능형 공장이다.  
+> 출처: 중소벤처기업부
 
-### 구성요소
+```mermaid
+flowchart LR
 
-```text
-설비
- ↓
-IoT
- ↓
-Data
- ↓
-AI
- ↓
-Autonomous Factory
+    classDef start fill:#F5F5F5,stroke:#616161,stroke-width:2px,color:#000,font-weight:bold;
+    classDef improve fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000,font-weight:bold;
+    classDef smart fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#000,font-weight:bold;
+
+
+    A["수작업 생산<br/>(Manual Production)<br/><br/>노동력·숙련 중심"]:::start
+
+    B["기계화<br/>(Mechanization)<br/><br/>동력 기반 기계 활용"]:::improve
+
+    C["자동화<br/>(Automation)<br/><br/>제어 기반 공정 자동 수행"]:::improve
+
+    D["정보화<br/>(Informationization)<br/><br/>ERP·MES·생산 데이터 관리"]:::improve
+
+    E["지능화<br/>(Intelligence)<br/><br/>AI·Big Data·Digital Twin<br/>기반 분석 및 예측"]:::improve
+
+    F["스마트팩토리<br/>(Smart Factory)<br/><br/>CPS 기반<br/>연결·자율·최적화 제조"]:::smart
+
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
 ```
 
-### 스마트팩토리 성숙도
+!!! note "기존 자동화 공장 vs. 스마트팩토리"  
 
-| 단계  | 특징     |
-| --- | ------ |
-| 기초  | 데이터 수집 |
-| 중간1 | 모니터링   |
-| 중간2 | 분석     |
-| 고도화 | 예측     |
-| 자율화 | 자율제어   |
+      | 구분     | 자동화 공장     | 스마트팩토리       |
+      | ------ | ---------- | ------------ |
+      | 목적     | 작업 자동화     | 생산 최적화       |
+      | 중심     | 설비         | 데이터          |
+      | 운영 방식  | 사전에 설정된 제어 | 데이터 기반 자율 판단 |
+      | 데이터 활용 | 제한적        | 실시간 분석 및 활용  |
+      | 품질관리   | 검사 중심      | 예측 및 예방 중심   |
+      | 설비관리   | 예방보전       | 예지보전         |
 
-### 기대효과
 
-* 생산성 향상
-* 품질 향상
-* 에너지 절감
-* 납기 준수
+### 스마트팩토리 구성 기술
 
-## 제조 데이터 표준과 상호운용성
+스마트팩토리는 크게 현장 데이터 수집 → 데이터 관리 → 분석 및 의사결정 → 최적화 구조로 구성된다.
 
-### 중요성
+```mermaid
+flowchart TD
 
-스마트팩토리는 다양한 시스템 간 데이터 연계가 필수적이다.
+    classDef business fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#000,font-weight:bold;
+    classDef execution fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000,font-weight:bold;
+    classDef field fill:#FCE4EC,stroke:#C2185B,stroke-width:2px,color:#000,font-weight:bold;
+    classDef intelligence fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#000,font-weight:bold;
 
-### 주요 표준
 
-* OPC UA
-* ISA-95
-* IEC 62264
-* MTConnect
-* ISO 22400(KPI)
+    A["경영 영역<br/>(Business Level)<br/><br/>ERP / SCM<br/>생산계획·자원관리·공급망 관리<br/>(ISA-95 Level 4)"]:::business
 
-### 효과
 
-* 시스템 통합
-* 데이터 일관성 확보
-* 확장성 향상
+    B["생산 실행 영역<br/>(Manufacturing Operations)<br/><br/>MES<br/>생산관리·품질관리·실적관리<br/>(ISA-95 Level 3)"]:::execution
 
-## 산업 사이버보안
 
-### 개요
+    C["현장 제어 영역<br/>(Control & Field Level)<br/><br/>PLC / Robot / Sensor<br/>IoT / POP<br/>(ISA-95 Level 0~2)"]:::field
 
-생산설비와 정보시스템을 사이버 위협으로부터 보호하는 기술이다.
 
-### 주요 위협
+    D["데이터 분석 및 지능화 영역<br/>(Intelligence Layer)<br/><br/>Big Data / AI / Digital Twin<br/>예측·최적화·자율제어"]:::intelligence
 
-* 랜섬웨어
-* 설비 해킹
-* 데이터 유출
-* 공급망 공격
 
-### 대응방안
+    A --> B
+    B --> C
 
-* 네트워크 분리
-* 접근통제
-* 백업체계 구축
-* 보안관제
 
-### 관련 표준
+    C --> D
 
-* IEC 62443
-* NIST Cybersecurity Framework
+    D -. 분석 결과 피드백 .-> B
+    D -. 경영 의사결정 지원 .-> A
 
-## 클라우드와 엣지 컴퓨팅
-
-### 클라우드 컴퓨팅
-
-중앙 집중형 데이터 처리 방식
-
-#### 장점
-
-* 확장성 우수
-* 구축비 절감
-
-### 엣지 컴퓨팅
-
-설비 근처에서 데이터를 처리하는 방식
-
-#### 장점
-
-* 실시간성 확보
-* 네트워크 부하 감소
-
-### 활용 방향
-
-```text
-설비
- ↓
-Edge
- ↓
-Cloud
- ↓
-AI 분석
 ```
 
-## ESG와 정보화 활용기술
+### 스마트팩토리 구축 단계
 
-### Green IT
+스마트공장 ICT 기술 활용 정도 및 역량 등에 따라 '구축 시스템 스마트화 수준(기초 - 중간1 - 중간2 - 고도)'을 구분하고 있다.
 
-정보기술을 활용한 에너지 효율 향상
+<figture markdown="span">
+      
+      <img width="1400" height="472" alt="image" src="https://github.com/user-attachments/assets/a9ecfb98-8aaa-4f08-ac94-8b2929b2f36b" />
+      <figcaption>중소밴처기업부 스마트공장관리시스템<br>https://www.smart-factory.kr/usr/pr/sf/ma/smrtFctryIntrcn</figcaption>
 
-### 탄소 데이터 관리
+</figture>
 
-* 탄소배출량 측정
-* Scope 1·2·3 관리
-* ESG 보고 자동화
+### 5대 조건
 
-### 에너지 관리 시스템(EMS)
+아래는 스마트공장을 구성하고 수준별로 발전시킴에 있어 꼭 필요한 5가지 조건이다.
 
-에너지 사용량 실시간 최적화
+1. **4M + 1E의 디지털화**
+    4M+1E의 각 요소 (Man, Machinery, Material, Method, Environment) 들의 실시간으로 디지털 값을 인지하고, 측정 가능한 정보를 제공해야 하며, 통신을 통해 대화가 가능해야 함
+2. **지능화**  
+    알고리즘 또는 인공지능 등의 솔루션을 이용, 최적해 또는 예측가능한 해를 제공해야 함
+3. **통합**  
+    사회망과 가치사슬을 통해 단대단 (End-to-end) 의 정보 교류가 이뤄지도록 하는 수평적 통합과 최하위 수준인 기계장치부터 기업비즈니스 수준까지 수직적 통합을 지향
+4. **엔지니어링 지식의 창출**  
+    지속해서 정보를 확보하고 저장한 후, 이를 바탕으로 자동화를 위한 제조 지식을 점진적으로 창출할 수 있어야함
+5. **스마트 시스템과의 연결**  
+    향후에 발전할 스마트 제품들과 통신 표준에 의거해 연결이 가능해야함
 
-## 정보화 활용기술의 최근 동향
 
-### Industry 4.0
 
-독일 제조혁신 전략으로 CPS 기반의 지능형 생산체계를 의미한다.
 
-### AI Factory
 
-AI가 생산계획과 운영을 최적화하는 공장
 
-### Hyper Automation
 
-RPA와 AI를 결합한 전사적 자동화
 
-### Autonomous Manufacturing
 
-인간 개입을 최소화한 자율생산체계
 
-### Digital Supply Chain
 
-실시간 공급망 통합관리
 
-## 정보화 활용기술의 종합
 
-정보화 활용기술은 생산시스템을 전산화·통합화·지능화하는 핵심 기반기술이다. MRP, ERP, MES를 중심으로 발전해 왔으며, 최근에는 APS, IIoT, 디지털 트윈, AI, 스마트팩토리로 확장되고 있다. 미래 제조업은 데이터 기반 의사결정과 자율운영을 지향하며, 정보화 활용기술은 생산성·품질·유연성·지속가능성을 동시에 달성하는 핵심 경쟁력으로 자리잡고 있다.
 
-### 각주
 
-[^1]: APS는 ERP의 무한능력계획(Infinite Capacity Planning)의 한계를 보완하여 실제 설비능력과 병목자원을 고려한 생산계획을 수립한다.
 
-[^2]: CPS는 독일 Industry 4.0의 핵심 개념으로, 현실 세계와 가상 세계의 실시간 연계를 통해 자율제어를 구현한다.
 
-[^3]: 스마트팩토리 고도화 단계에서는 단순 데이터 수집보다 데이터 활용을 통한 예측·최적화·자율제어 역량이 중요하다.
 
-[^4]: ISA-95는 ERP와 MES 간의 기능적 통합 모델을 정의하는 국제표준으로 스마트팩토리 구축 시 가장 널리 활용된다.
 
-[^5]: 최근 제조혁신의 방향은 AI 기반 예측(Predictive)에서 자율 의사결정(Autonomous Decision Making)으로 진화하고 있다.
+
+
+
+
 
