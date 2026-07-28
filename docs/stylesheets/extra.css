@@ -195,20 +195,14 @@
    ========================================================================== */
 
 .md-typeset table{
-
     font-size:.95rem;
-
     margin:1.0rem 0.3rem;
+    width: 100%;
 }
-
-
 
 .md-typeset table th{
-
     font-weight:700;
 }
-
-
 
 .md-typeset table td,
 .md-typeset table th {
