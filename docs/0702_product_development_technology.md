@@ -1,540 +1,165 @@
 ## 제품개발기술
 
-제품개발기술은 고객의 요구를 제품으로 구현하기 위해 아이디어 창출부터 설계, 생산, 시장출시에 이르는 전 과정을 체계적으로 관리하는 기술이다. 과거에는 기능과 성능 중심의 제품개발이 주류였으나, 오늘날에는 고객가치, 개발속도, 품질, 원가, 지속가능성을 동시에 고려하는 통합적 제품개발 체계로 발전하고 있다.
-
-```text
-시장 요구
-    ↓
-제품 기획
-    ↓
-제품 설계
-    ↓
-공정 설계
-    ↓
-생산 준비
-    ↓
-양산 및 시장 출시
-```
-
-제품개발은 기업 경쟁력의 원천이며, 개발기간(Time-to-Market), 품질(Quality), 원가(Cost)를 동시에 달성하는 것이 핵심 목표이다.
-
-## 제품개발의 개요
-
 ### 정의
 
-고객의 요구를 충족하는 제품을 기획·설계·생산하여 시장에 제공하는 일련의 활동이다.
+제품개발기술(Product Development Technology)이란 고객 요구사항을 반영하여 제품 기획, 설계, 시험, 검증, 양산까지 제품을 개발하기 위한 제반 기술과 방법론을 의미한다.
 
 ### 목적
 
-* 고객가치 창출
-* 시장경쟁력 확보
-* 수익성 향상
-* 기술혁신 실현
-* 기업의 지속성장 기반 확보
+제품개발 주요 목적은 경쟁우선순위 QCDFS(Quality, Cost, Delivery, Flexibility, Service) 확보이다.
 
-### 제품개발의 중요성
+| 목적        | 내용                |
+| --------- | ----------------- |
+| 품질 확보(Q)  | 고객 요구 품질 및 신뢰성 확보 |
+| 원가 절감(C)  | 설계 단계에서 제조비용 최소화  |
+| 납기 단축(D)  | 개발 기간 및 출시 기간 단축  |
+| 유연성 확보(F) | 다양한 고객 요구 대응      |
+| 서비스 향상(S) | 사용자 만족 및 유지관리성 향상 |
 
-| 관점 | 효과       |
-| -- | -------- |
-| 시장 | 고객만족 향상  |
-| 기술 | 기술경쟁력 확보 |
-| 생산 | 생산성 향상   |
-| 재무 | 수익성 개선   |
-| 전략 | 경쟁우위 확보  |
+특히 제조업에서는 "설계 단계에서 원가 70~80%가 결정된다"는 관점에서 제품개발 단계는 중요하다.
 
-## 제품개발 프로세스
+### 프로세스
 
-### 제품개발 단계
+일반적인 제품개발 프로세스는 다음과 같다.
 
-```text
-아이디어 창출
-      ↓
-제품기획
-      ↓
-개념설계
-      ↓
-상세설계
-      ↓
-시제품 제작
-      ↓
-시험 및 검증
-      ↓
-양산
-      ↓
-시장출시
+```mermaid
+flowchart TD
+
+    classDef start fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#000,font-weight:bold;
+    classDef process fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000,font-weight:bold;
+    classDef improve fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#000,font-weight:bold;
+
+
+    A["고객 요구 분석<br/>(VOC·시장 요구사항)"]:::start
+
+    B["제품 기획<br/>(Product Planning)<br/>제품 사양·사업성 검토"]:::process
+
+    C["개념 설계<br/>(Concept Design)<br/>기능 설계·QFD"]:::process
+
+    D["상세 설계<br/>(Detailed Design)<br/>도면·BOM·공차 설계"]:::process
+
+    E["시제품 제작<br/>(Prototype)<br/>설계 검증"]:::process
+
+    F["시험 및 검증<br/>(Test & Validation)<br/>성능·신뢰성 평가"]:::process
+
+    G["양산 준비<br/>(Production Preparation)<br/>공정 설계·설비·표준화"]:::process
+
+    H["양산 및 개선<br/>(Mass Production & Improvement)<br/>품질 안정화·Kaizen"]:::improve
+
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+
 ```
 
-### Stage-Gate Process
+| 단계         | 주요 활동            | 주요 기술 및 기법                                              | 주요 산출물                                       |
+| ---------- | ---------------- | ------------------------------------------------------- | -------------------------------------------- |
+| ① 고객 요구 분석 | 고객 요구 및 시장 환경 분석 | VOC 분석, 시장조사, 경쟁사 분석, Kano 분석, Benchmarking             | VOC 데이터, 시장분석 보고서, 고객 요구사항 목록                |
+| ② 제품 기획    | 제품 목표 및 개발 방향 설정 | 제품 사양 정의, 사업성 분석, QFD, 목표원가(Target Costing)             | 제품 기획서, Product Specification, 개발 계획서, 목표 원가 |
+| ③ 개념 설계    | 제품 기능 및 구조 설계    | 기능 분석(Function Analysis), QFD, TRIZ, System Engineering | 기능 구조도, 개념 설계안, 기술 요구사항                      |
+| ④ 상세 설계    | 제품 형상 및 부품 설계    | CAD, CAE, 공차 설계, DFM/DFA, FMEA                          | 3D 모델, 도면, BOM, 설계 FMEA, 공차 기준               |
+| ⑤ 시제품 제작   | 설계 검증용 제품 제작     | Prototype, Rapid Prototyping, Mock-up, 시험 제작            | 시제품, 제작 결과 보고서, 개선 사항                        |
+| ⑥ 시험 및 검증  | 제품 성능 및 신뢰성 검증   | 성능시험, 신뢰성시험, 환경시험, 인증시험, DOE                            | 시험 성적서, 검증 보고서, 개선 결과                        |
+| ⑦ 양산 준비    | 생산 가능성 확보        | 공정설계, Layout 설계, PFMEA, Control Plan, 작업표준화             | 공정도, 작업표준서, 검사기준서, 생산능력 평가                   |
+| ⑧ 양산 및 개선  | 양산 안정화 및 지속 개선   | SPC, Six Sigma, VE/VA, TPM, Kaizen                      | 양산 품질 데이터, 개선 보고서, 원가 절감 결과                  |
 
-제품개발의 각 단계마다 평가(Gate)를 수행하여 다음 단계 진행 여부를 결정하는 방법론이다.
+#### 주요 기법
 
-```text
-Stage
- ↓
-Gate
- ↓
-Stage
- ↓
-Gate
- ↓
-Launch
+```mermaid
+flowchart TD
+
+    classDef main fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#000,font-weight:bold;
+    classDef category fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000,font-weight:bold;
+    classDef item fill:#F5F5F5,stroke:#757575,stroke-width:1px,color:#000;
+
+
+    A["제품설계 주요 기법<br/>(Product Design Techniques)"]:::main
+
+
+    B["고객 요구 반영<br/>(Customer Requirement)"]:::category
+    B1["QFD<br/>(Quality Function Deployment)"]:::item
+    B2["Kano Model"]:::item
+
+
+    C["기능 및 가치 최적화<br/>(Function & Value Optimization)"]:::category
+    C1["VE<br/>(Value Engineering)"]:::item
+    C2["VA<br/>(Value Analysis)"]:::item
+
+
+    D["제조성 향상 설계<br/>(Design for Manufacturing)"]:::category
+    D1["DFM<br/>(Design for Manufacturing)"]:::item
+    D2["DFA<br/>(Design for Assembly)"]:::item
+    D3["DFMA<br/>(Design for Manufacturing & Assembly)"]:::item
+    D4["DFX<br/>(Design for X)"]:::item
+
+
+    E["품질 및 신뢰성 확보<br/>(Quality & Reliability)"]:::category
+    E1["FMEA<br/>(DFMEA / PFMEA)"]:::item
+    E2["Robust Design<br/>(강건설계)"]:::item
+    E3["Tolerance Design<br/>(공차설계)"]:::item
+
+
+    F["개발 효율화<br/>(Development Efficiency)"]:::category
+    F1["Concurrent Engineering<br/>(동시공학)"]:::item
+    F2["Modular Design<br/>(모듈러 설계)"]:::item
+    F3["Platform Design<br/>(플랫폼 설계)"]:::item
+    F4["TRIZ<br/>(창의적 문제해결)"]:::item
+
+
+    G["디지털 설계<br/>(Digital Engineering)"]:::category
+    G1["CAD<br/>(Computer Aided Design)"]:::item
+    G2["CAE<br/>(Computer Aided Engineering)"]:::item
+    G3["Digital Twin<br/>(디지털 트윈)"]:::item
+
+
+    A --> B
+    A --> C
+    A --> D
+    A --> E
+    A --> F
+    A --> G
+
+
+    B --> B1
+    B --> B2
+
+    C --> C1
+    C --> C2
+
+    D --> D1
+    D --> D2
+    D --> D3
+    D --> D4
+
+    E --> E1
+    E --> E2
+    E --> E3
+
+    F --> F1
+    F --> F2
+    F --> F3
+    F --> F4
+
+    G --> G1
+    G --> G2
+    G --> G3
+
 ```
 
-### 기대효과
-
-* 개발 리스크 감소
-* 투자 효율성 향상
-* 품질 확보
-* 개발기간 단축
-
-## 제품수명주기(PLC)
-
-### 개요
-
-제품이 시장에 출시된 이후 소멸될 때까지의 생애주기를 의미한다.
-
-### 제품수명주기 단계
-
-| 단계  | 특징    | 생산전략    |
-| --- | ----- | ------- |
-| 도입기 | 시장 형성 | 유연생산    |
-| 성장기 | 수요 증가 | 생산능력 확대 |
-| 성숙기 | 경쟁 심화 | 원가 절감   |
-| 쇠퇴기 | 수요 감소 | 생산 축소   |
-
-### 제품수명주기의 활용
-
-* 생산전략 수립
-* 설비계획
-* 재고정책
-* 마케팅 전략
-
-※ 생산방식과의 연계는 「생산구조와 방식」 참고
-
-## 동시공학(Concurrent Engineering)
-
-### 개요
-
-제품설계와 생산설계를 동시에 수행하는 개발방식이다.
-
-### 등장 배경
-
-기존 순차적 개발 방식은 개발기간 증가와 설계변경 비용 증가 문제가 있었다.
-
-### 특징
-
-* 부문 간 협업
-* 병렬 개발
-* 초기 문제 예방
-* 개발기간 단축
-
-### 기대효과
-
-* Time-to-Market 단축
-* 품질 향상
-* 원가 절감
-
-### 순차공학과 비교
-
-| 구분   | 순차공학  | 동시공학  |
-| ---- | ----- | ----- |
-| 개발방식 | 순차 진행 | 병렬 진행 |
-| 개발기간 | 김     | 짧음    |
-| 설계변경 | 빈번    | 감소    |
-| 협업수준 | 낮음    | 높음    |
-
-## QFD(Quality Function Deployment)
-
-### 개요
-
-고객의 요구사항(VOC)을 제품설계 특성으로 전개하는 기법이다.
-
-### 기본 개념
-
-```text
-고객 요구(VOC)
-       ↓
-품질 요구사항
-       ↓
-설계 특성
-       ↓
-부품 특성
-       ↓
-공정 특성
-```
-
-### 품질의 집(House of Quality)
-
-QFD의 대표적 분석도구이다.
-
-### 기대효과
-
-* 고객중심 설계
-* 품질 향상
-* 설계변경 감소
-
-## 가치공학(VE)
-
-### 개요
-
-제품의 기능을 유지하면서 원가를 최소화하는 체계적 기법이다.
-
-### 기본 개념
-
-```text
-가치(Value)
-=
-기능(Function)
-────────────
-원가(Cost)
-```
-
-### 적용 효과
-
-* 원가절감
-* 기능향상
-* 품질개선
-
-※ 상세 내용은 「가치공학」 참고
-
-## DFX(Design for X)
-
-### 개요
-
-제품의 전 생애주기를 고려한 설계기법이다.
-
-### 주요 유형
-
-| 구분  | 목적      |
-| --- | ------- |
-| DFM | 제조 용이성  |
-| DFA | 조립 용이성  |
-| DFS | 서비스 용이성 |
-| DFR | 신뢰성 향상  |
-| DFE | 환경성 향상  |
-| DFD | 분해 용이성  |
-
-### 의의
-
-설계단계에서 품질·원가·생산성을 동시에 확보하는 예방적 접근이다.
-
-## CAD/CAM/CAE
-
-### CAD(Computer Aided Design)
-
-컴퓨터 기반 설계 시스템
-
-### CAM(Computer Aided Manufacturing)
-
-컴퓨터 기반 제조 시스템
-
-### CAE(Computer Aided Engineering)
-
-컴퓨터 기반 해석 및 검증 시스템
-
-### 통합 효과
-
-```text
-CAD
- ↓
-CAE
- ↓
-CAM
-```
-
-* 개발기간 단축
-* 설계품질 향상
-* 생산성 향상
-
-## CAPP(Computer Aided Process Planning)
-
-### 개요
-
-설계정보를 활용하여 공정계획을 자동으로 수립하는 기술이다.
-
-### 역할
-
-```text
-설계(CAD)
-      ↓
-CAPP
-      ↓
-생산(CAM)
-```
-
-### 효과
-
-* 공정표준화
-* 공정설계 자동화
-* 생산준비기간 단축
-
-## PDM과 PLM
-
-### PDM(Product Data Management)
-
-제품 관련 데이터를 체계적으로 관리하는 시스템
-
-### PLM(Product Lifecycle Management)
-
-제품의 전 생애주기를 통합 관리하는 시스템
-
-### 비교
-
-| 구분 | PDM     | PLM     |
-| -- | ------- | ------- |
-| 범위 | 설계정보 중심 | 생애주기 전체 |
-| 목적 | 데이터 관리  | 제품혁신 관리 |
-| 관점 | 기술정보    | 경영정보    |
-
-## 모듈화 설계
-
-### 개요
-
-제품을 독립적인 기능 단위(Module)로 설계하는 방식이다.
-
-### 특징
-
-* 표준화
-* 공용화
-* 재사용성 향상
-
-### 효과
-
-* 개발기간 단축
-* 재고 감소
-* 대량맞춤생산 지원
-
-### 적용 사례
-
-* 자동차 플랫폼 전략
-* 스마트폰 모듈 설계
-* 산업용 장비
-
-## 플랫폼 전략
-
-### 개요
-
-공통 플랫폼을 기반으로 다양한 제품군을 개발하는 전략이다.
-
-### 장점
-
-* 개발비 절감
-* 제품 다양화
-* 규모의 경제 확보
-
-### 모듈화와의 관계
-
-```text
-Platform
-   ↓
-Module
-   ↓
-Variant Product
-```
-
-대량맞춤생산(Mass Customization)의 핵심 기반이 된다.
-
-## 신제품개발(NPD)
-
-### 개요
-
-New Product Development는 시장 경쟁력 확보를 위한 신제품 창출 활동이다.
-
-### 성공요인
-
-* 고객 요구 반영
-* 기술 경쟁력 확보
-* 시장 적시성 확보
-* 생산성 고려
-
-### 실패 원인
-
-* 시장조사 부족
-* 고객 요구 오판
-* 생산성 미고려
-* 개발지연
-
-## TRIZ
-
-### 개요
-
-발명의 원리를 체계화하여 창의적 문제해결을 지원하는 기법이다.
-
-### 핵심 개념
-
-* 기술적 모순
-* 물리적 모순
-* 40가지 발명원리
-* 이상성(Ideality)
-
-### 활용
-
-* 제품혁신
-* 공정혁신
-* 원가절감
-
-## 신뢰성 설계
-
-### 개요
-
-제품이 일정 기간 동안 요구 기능을 수행할 확률을 높이는 설계기법이다.
-
-### 주요 지표
-
-* MTBF
-* MTTF
-* Failure Rate
-* Reliability
-
-### 주요 기법
-
-* FMEA
-* FTA
-* RAM 분석
-
-### 효과
-
-* 품질 향상
-* 보증비용 감소
-* 고객만족 향상
-
-## 친환경 제품개발
-
-### 개요
-
-환경 영향을 최소화하는 제품개발 방식이다.
-
-### 주요 개념
-
-* Eco Design
-* Green Design
-* Circular Design
-* Life Cycle Thinking
-
-### 주요 활동
-
-* 재활용 설계
-* 에너지 절감 설계
-* 탄소 저감 설계
-* 유해물질 저감
-
-### 관련 규제
-
-* RoHS
-* REACH
-* 탄소국경조정제도(CBAM)
-
-## 디지털 기반 제품개발
-
-### 디지털 엔지니어링
-
-디지털 기술을 활용하여 제품개발 전 과정을 통합하는 체계이다.
-
-### 디지털 트윈 기반 개발
-
-```text
-실제품
-   ↕
-Digital Twin
-   ↕
-시뮬레이션
-```
-
-### MBSE(Model Based Systems Engineering)
-
-문서 중심 개발이 아닌 모델 중심 개발 방식이다.
-
-### 효과
-
-* 개발기간 단축
-* 설계오류 감소
-* 시스템 복잡성 관리
-
-## AI 기반 제품개발
-
-### 활용 분야
-
-* 생성형 설계(Generative Design)
-* 설계 자동화
-* 품질 예측
-* 시뮬레이션 최적화
-
-### Generative Design
-
-설계 목표와 제약조건을 입력하면 AI가 최적 설계안을 자동 생성하는 기술이다.
-
-### 기대효과
-
-* 혁신적 설계안 도출
-* 설계시간 단축
-* 제품 경량화
-
-## 제품개발과 생산의 통합
-
-### 개발-생산 연계
-
-제품개발은 생산성을 고려한 설계가 필수적이다.
-
-```text
-VOC
- ↓
-QFD
- ↓
-제품설계
- ↓
-공정설계
- ↓
-생산준비
- ↓
-양산
-```
-
-### 범위 연계
-
-| 제품개발기술       | 연계 분야       |
-| ------------ | ----------- |
-| DFM/DFA      | 공정설계        |
-| 동시공학         | 생산계획 및 공정설계 |
-| CAD/CAM/CAPP | 공장자동화       |
-| QFD          | 품질관리        |
-| VE           | 원가관리        |
-| PLM          | 정보화 활용기술    |
-
-## 제품개발기술의 최근 동향
-
-### Smart Product
-
-IoT와 소프트웨어가 내장된 지능형 제품
-
-### Digital Thread
-
-제품 생애주기 데이터를 통합 연결하는 기술
-
-### Software Defined Product
-
-소프트웨어 업데이트를 통해 기능이 진화하는 제품
-
-### AI-Driven Engineering
-
-AI 기반 설계 및 개발 자동화
-
-### Sustainable Product Development
-
-ESG를 고려한 지속가능 제품개발
-
-## 제품개발기술의 종합
-
-제품개발기술은 고객요구를 시장성 있는 제품으로 구현하는 기업의 핵심 경쟁력이다. QFD를 통한 고객가치 반영, 동시공학을 통한 개발기간 단축, DFX를 통한 생산성 확보, CAD/CAM/CAE 기반 디지털 설계, PLM을 통한 전주기 관리로 발전해 왔다. 최근에는 디지털 트윈, MBSE, AI 기반 생성형 설계가 도입되면서 제품개발은 데이터 기반의 지능형 혁신 프로세스로 진화하고 있으며, ESG와 지속가능성까지 고려하는 전략적 활동으로 확대되고 있다.
-
-### 각주
-
-[^1]: 제품 원가의 약 70~80%는 설계단계에서 결정되므로 제품개발 단계의 의사결정은 원가경쟁력에 결정적 영향을 미친다.
-
-[^2]: 동시공학은 설계·생산·구매·품질 부서가 초기부터 협업함으로써 개발기간 단축과 설계품질 향상을 동시에 달성한다.
-
-[^3]: DFX는 "설계단계에서 품질을 만든다(Built-in Quality)"는 예방품질 철학의 대표적 구현 방법이다.
-
-[^4]: MBSE는 항공우주, 방위산업, 자동차 산업을 중심으로 확산되고 있으며 복잡한 시스템 개발의 표준 접근법으로 자리잡고 있다.
-
-[^5]: 최근 제조업의 제품 경쟁력은 하드웨어 성능보다 소프트웨어, 데이터, 서비스가 결합된 제품-서비스 시스템(PSS, Product Service System) 관점으로 확장되고 있다.
+| 구분                     | 검토 내용                                                 |
+| ---------------------- | ----------------------------------------------------- |
+| QFD                    | 고객 요구사항을 설계 요구사항으로 변환하는 대표적 품질설계 기법으로 적절              |
+| Kano Model             | 고객 요구사항의 만족도 특성 분석 기법으로 적절                            |
+| VE/VA                  | 가치공학(Value Engineering), 가치분석(Value Analysis)으로 구분 적절 |
+| DFM/DFA/DFMA           | 제조·조립 용이성 설계 기법으로 적절                                  |
+| FMEA                   | 설계 FMEA(DFMEA), 공정 FMEA(PFMEA) 구분 필요                  |
+| Robust Design          | 다구찌(Taguchi) 강건설계와 연계 가능                              |
+| Tolerance Design       | 공차설계는 품질 및 제조성 확보 관점에서 적절                             |
+| Concurrent Engineering | 동시공학, 설계 초기 제조·품질·구매 부문 참여                            |
+| Digital Twin           | 최근 스마트제조 설계 핵심 기술로 적절                                 |
 
