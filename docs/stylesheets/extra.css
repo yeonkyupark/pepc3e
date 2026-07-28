@@ -25,11 +25,11 @@
 /* 본문 폭 */
 
 .md-grid{
-    max-width:1500px;
+    max-width:1600px;
 }
 
 .md-content{
-    max-width:900px;
+    max-width:none;
 }
 
 
