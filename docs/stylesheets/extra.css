@@ -121,7 +121,7 @@
 .md-typeset ul li,
 .md-typeset ol li{
 
-    margin-bottom:.45rem;
+    margin-bottom:.25rem;
 }
 
 
@@ -213,7 +213,7 @@
 .md-typeset table td,
 .md-typeset table th{
 
-    padding:.8rem;
+    padding:.5rem;
 }
 
 .md-typeset ul li table,
