@@ -290,7 +290,7 @@ flowchart TD
 스마트공장 ICT 기술 활용 정도 및 역량 등에 따라 '구축 시스템 스마트화 수준(기초 - 중간1 - 중간2 - 고도)'을 구분하고 있다.
 
 <figure markdown="span">  
-      ![](https://github.com/user-attachments/assets/a9ecfb98-8aaa-4f08-ac94-8b2929b2f36b)      
+      ![](https://github-production-user-asset-6210df.s3.amazonaws.com/72383349/627654720-a9ecfb98-8aaa-4f08-ac94-8b2929b2f36b.png)      
       <figcaption>중소밴처기업부 스마트공장관리시스템<br>https://www.smart-factory.kr/usr/pr/sf/ma/smrtFctryIntrcn</figcaption>
 </figure>
 
