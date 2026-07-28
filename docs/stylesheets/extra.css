@@ -1,28 +1,14 @@
 /* ==========================================================================
    Material for MkDocs - Custom Theme
-   Version : 1.0
+   Version : 3.0
+   Purpose : Professional Technical Documentation
    ========================================================================== */
+
 
 
 /* ==========================================================================
-   본문
+   Layout
    ========================================================================== */
-
-.md-typeset{
-    font-family:
-        "Pretendard",
-        "SUIT",
-        "Inter",
-        "Noto Sans KR",
-        sans-serif;
-
-    font-size:17px;
-    line-height:1.9;
-    color:#333;
-}
-
-
-/* 본문 폭 */
 
 .md-grid{
     max-width:1600px;
@@ -33,26 +19,45 @@
 }
 
 
-/* 문단 */
 
-.md-typeset p{
-    margin:.9rem 0;
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+.md-typeset{
+
+    font-family:
+        "Pretendard",
+        "SUIT",
+        "Inter",
+        "Noto Sans KR",
+        sans-serif;
+
+    font-size:18px;
+    line-height:1.8;
+    color:#333;
 }
 
 
+.md-typeset p{
+
+    margin:1rem 0;
+}
+
+
+
 /* ==========================================================================
-   제목
+   Heading
    ========================================================================== */
 
 .md-typeset h1{
 
-    font-size:2.3rem;
+    font-size:2.25rem;
     font-weight:700;
 
     color:#263238;
 
-    margin-top:.6rem;
-    margin-bottom:1.3rem;
+    margin:.6rem 0 1.3rem;
 
     padding-bottom:.45rem;
 
@@ -60,16 +65,14 @@
 }
 
 
-
 .md-typeset h2{
 
-    font-size:1.8rem;
+    font-size:1.75rem;
     font-weight:700;
 
     color:#1565c0;
 
-    margin-top:2.4rem;
-    margin-bottom:1rem;
+    margin:2.4rem 0 1rem;
 
     padding-left:.7rem;
 
@@ -77,31 +80,26 @@
 }
 
 
-
 .md-typeset h3{
 
-    font-size:1.35rem;
+    font-size:1.375rem;
     font-weight:600;
 
     color:#37474f;
 
-    margin-top:2rem;
-    margin-bottom:.8rem;
+    margin:2rem 0 .8rem;
 }
-
 
 
 .md-typeset h4{
 
-    font-size:1.15rem;
+    font-size:1.125rem;
     font-weight:600;
 
     color:#546e7a;
 
-    margin-top:1.5rem;
-    margin-bottom:.5rem;
+    margin:1.5rem 0 .6rem;
 }
-
 
 
 .md-typeset h5{
@@ -110,37 +108,44 @@
     font-weight:600;
 
     color:#607d8b;
+
+    margin:1.2rem 0 .4rem;
 }
 
 
 
 /* ==========================================================================
-   리스트
+   List
    ========================================================================== */
 
-.md-typeset ul li,
-.md-typeset ol li{
+.md-typeset ul,
+.md-typeset ol{
 
-    margin-bottom:.25rem;
+    margin:.7rem 0 1rem;
 }
 
 
-.md-typeset ul{
+.md-typeset li{
 
-    margin-top:.6rem;
-    margin-bottom:.8rem;
+    margin:.25rem 0;
+}
+
+
+.md-typeset li > ul,
+.md-typeset li > ol{
+
+    margin:.25rem 0;
 }
 
 
 
 /* ==========================================================================
-   링크
+   Link
    ========================================================================== */
 
 .md-typeset a{
 
     font-weight:500;
-
     text-decoration:none;
 }
 
@@ -153,24 +158,37 @@
 
 
 /* ==========================================================================
-   코드 블록
+   Code Block
    ========================================================================== */
 
-.highlight {
-    margin: 1.2rem 0;
+.highlight{
+
+    margin:1.2rem 0;
 }
 
 
-.highlight pre {
-    border-radius: 10px;
-    padding: 1rem;
-    overflow-x: auto;
+.highlight pre{
+
+    border-radius:10px;
+    padding:1rem;
+
+    overflow-x:auto;
 }
 
 
-.highlight pre code {
-    font-size: .75rem;
-    line-height: 1.4;
+.highlight pre code{
+
+    font-size:.83rem;
+    line-height:1.5;
+}
+
+
+/* 코드 언어 표시 */
+
+.md-code__title{
+
+    font-size:.75rem;
+    font-weight:600;
 }
 
 
@@ -178,9 +196,11 @@
 /* Inline Code */
 
 .md-typeset code{
+
     border-radius:4px;
     padding:.15rem .35rem;
-    font-size:.75rem;
+
+    font-size:.83rem;
 }
 
 
@@ -189,41 +209,86 @@
    Table
    ========================================================================== */
 
-/* 표 컨테이너 */
-.md-typeset__table {
-    width: 100%;
-    overflow-x: auto;
+.md-typeset__scrollwrap{
+
+    width:100%;
 }
 
-/* 표 */
-.md-typeset table:not([class]) {
-    width: 100%;
-    min-width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
 
-    font-size: .75rem;
-    margin: 1rem 0;
+.md-typeset__table{
+
+    width:100%;
 }
 
-/* 헤더 */
-.md-typeset table:not([class]) th {
-    font-weight: 700;
+
+/* Table */
+
+.md-typeset table:not([class]){
+
+    width:100%;
+    min-width:100%;
+
+    table-layout:fixed;
+
+    border-collapse:collapse;
+
+    margin:1rem 0;
+
+    font-size:.90rem;
 }
 
-/* 셀 */
+
+/* Header */
+
+.md-typeset table:not([class]) thead{
+
+    background:#e3f2fd;
+}
+
+
+.md-typeset table:not([class]) th{
+
+    font-weight:700;
+
+    text-align:center;
+
+    vertical-align:middle;
+}
+
+
+/* Cell */
+
 .md-typeset table:not([class]) th,
-.md-typeset table:not([class]) td {
-    padding: .15rem .3rem;
-    line-height: 1.3;
-    vertical-align: middle;
+.md-typeset table:not([class]) td{
+
+    padding:.4rem .6rem;
+
+    line-height:1.45;
+
+    vertical-align:middle;
+
+    word-break:keep-all;
+
+    overflow-wrap:anywhere;
 }
 
-/* 목록 안의 표 */
-.md-typeset ul li table:not([class]),
-.md-typeset ol li table:not([class]) {
-    margin-left: .1rem;
+
+/* Hover */
+
+.md-typeset table:not([class]) tbody tr:hover{
+
+    background:#f5f9ff;
 }
+
+
+/* Table in List */
+
+.md-typeset ul li table:not([class]),
+.md-typeset ol li table:not([class]){
+
+    margin-left:.1rem;
+}
+
 
 
 /* ==========================================================================
@@ -236,7 +301,7 @@
 
     padding:.8rem 1rem;
 
-    border-radius:4px;
+    border-radius:6px;
 
     margin:1rem 0;
 }
@@ -244,24 +309,89 @@
 
 
 /* ==========================================================================
-   이미지
+   Image
    ========================================================================== */
 
 .md-typeset img{
+
+    display:block;
+
+    margin:1rem auto;
 
     border-radius:8px;
 
     box-shadow:0 2px 12px rgba(0,0,0,.08);
 
-    margin:1rem auto;
+    max-width:100%;
+}
 
-    display:block;
+
+
+/* Figure */
+
+.md-typeset figure{
+
+    text-align:center;
+
+    margin:1.5rem auto;
+}
+
+
+.md-typeset figcaption{
+
+    margin-top:.6rem;
+
+    font-size:.85rem;
+
+    color:#666;
+
+    line-height:1.5;
 }
 
 
 
 /* ==========================================================================
-   구분선
+   Mermaid
+   ========================================================================== */
+
+.md-typeset .mermaid{
+
+    max-width:100%;
+
+    overflow-x:auto;
+
+    text-align:center;
+
+    margin:1.5rem auto;
+}
+
+
+.md-typeset li .mermaid{
+
+    margin-left:.1rem;
+}
+
+
+
+/* ==========================================================================
+   MathJax / KaTeX
+   ========================================================================== */
+
+.md-typeset mjx-container{
+
+    font-size:1.02em;
+}
+
+
+.md-typeset .arithmatex{
+
+    overflow-x:auto;
+}
+
+
+
+/* ==========================================================================
+   Horizontal Rule
    ========================================================================== */
 
 .md-typeset hr{
@@ -277,20 +407,19 @@
 
 .md-typeset .admonition{
 
+    margin:1.4rem 0;
+
     border-radius:8px;
 
-    margin:1.4rem 0;
+    font-size:.90rem;
+
+    line-height:1.6;
 }
 
 
+.md-typeset .admonition-title{
 
-/* ==========================================================================
-   Task List
-   ========================================================================== */
-
-.md-typeset input[type=checkbox]{
-
-    transform:scale(1.1);
+    font-weight:700;
 }
 
 
@@ -311,6 +440,61 @@
 
 
 /* ==========================================================================
+   Task List
+   ========================================================================== */
+
+.md-typeset input[type=checkbox]{
+
+    transform:scale(1.1);
+}
+
+
+
+/* ==========================================================================
+   Scrollbar
+   ========================================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+    height:10px;
+}
+
+
+::-webkit-scrollbar-thumb{
+
+    border-radius:20px;
+}
+
+
+::-webkit-scrollbar-track{
+
+    background:transparent;
+}
+
+
+
+/* ==========================================================================
+   Animation
+   ========================================================================== */
+
+html{
+
+    scroll-behavior:smooth;
+}
+
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3{
+
+    scroll-margin-top:80px;
+}
+
+
+
+/* ==========================================================================
    Dark Mode
    ========================================================================== */
 
@@ -318,7 +502,6 @@
 
     color:#d7d7d7;
 }
-
 
 
 [data-md-color-scheme="slate"] .md-typeset h1{
@@ -329,7 +512,6 @@
 }
 
 
-
 [data-md-color-scheme="slate"] .md-typeset h2{
 
     color:#64b5f6;
@@ -338,12 +520,10 @@
 }
 
 
-
 [data-md-color-scheme="slate"] .md-typeset h3{
 
     color:#eceff1;
 }
-
 
 
 [data-md-color-scheme="slate"] .md-typeset h4{
@@ -352,6 +532,17 @@
 }
 
 
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) thead{
+
+    background:#263b4d;
+}
+
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tbody tr:hover{
+
+    background:#253341;
+}
+
 
 [data-md-color-scheme="slate"] .md-typeset blockquote{
 
@@ -359,57 +550,13 @@
 }
 
 
+[data-md-color-scheme="slate"] .md-typeset figcaption{
+
+    color:#b0bec5;
+}
+
 
 [data-md-color-scheme="slate"] .md-typeset img{
 
     box-shadow:0 2px 14px rgba(255,255,255,.08);
-}
-
-
-
-/* ==========================================================================
-   스크롤바
-   ========================================================================== */
-
-::-webkit-scrollbar{
-
-    width:10px;
-
-    height:10px;
-}
-
-::-webkit-scrollbar-thumb{
-
-    border-radius:20px;
-}
-
-::-webkit-scrollbar-track{
-
-    background:transparent;
-}
-
-
-
-/* ==========================================================================
-   애니메이션
-   ========================================================================== */
-
-.md-typeset h1,
-.md-typeset h2,
-.md-typeset h3{
-
-    scroll-margin-top:80px;
-}
-
-html{
-
-    scroll-behavior:smooth;
-}
-
-/* ==========================================================================
-   Mermaid
-   ========================================================================== */
-
-.md-typeset li .mermaid {
-    margin-left: 0.1rem;
 }
