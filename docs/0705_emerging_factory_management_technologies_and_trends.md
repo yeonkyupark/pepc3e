@@ -45,7 +45,7 @@ flowchart TB
     I --> J
 
 
-    classDef top fill:#1f4e79,color:white;
+    classDef top fill:#5f8eB9,color:white;
     classDef esg fill:#70ad47,color:white;
     classDef env fill:#5b9bd5,color:white;
     classDef action fill:#ffc000,color:black;
