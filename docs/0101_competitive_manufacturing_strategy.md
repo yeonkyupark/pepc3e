@@ -136,16 +136,14 @@
 
 마이클 포터(Michael Porter)의 **본원적 경쟁전략**(Generic Strategies)은 기업이 특정 시장에서 경쟁우위를 확보하기 위해 선택할 수 있는 가장 기본적인 세가지 전략 방향성을 제시한다. 포터는 경쟁 우위 요소(원가냐 차별화냐)와 경쟁 영역 범위(넓은 시장이냐, 좁은 틈새시장이냐)라는 두 가지 축을 기준으로 전략을 구분했다.
 
-
 | 경쟁 영역 \ 경쟁 우위 | 낮은 원가 (Low Cost) | 차별화 (Differentiation) |
 | :--- | :--- | :--- |
 | **넓은 시장 (Broad Target)** | **1. 원가우위 전략**<br>(예: 월마트, 다이소) | **2. 차별화 전략**<br>(예: 애플, 스타벅스) |
-| **좁은 시장 (Narrow Target)** | **3a. 원가집중화 전략**<br>(예: 지역 기반 저가 마트) | **3b. 차별화집중화 전략**<br>(예: 롤스로이스, 페라리) |
+| **좁은 시장 (Narrow Target)** | **3a. 원가집중화 전략**<br>(예: 지역 기반 저가 마트) | **3b. 차별화집중화 전략**<br>(예: 롤스로이스, 페라리) |  
 
 <figure>
 
 ![본원적 경쟁전략](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Michael_Porter%27s_Three_Generic_Strategies.svg/1280px-Michael_Porter%27s_Three_Generic_Strategies.svg.png)
-
 <figcaption>https://en.wikipedia.org/wiki/Porter%27s_generic_strategies</figcaption>
 
 </figure>
@@ -184,7 +182,6 @@
 <figure>
 
 ![생산 시스템](https://theinvestorsbook.com/wp-content/uploads/2023/03/Production-System-in-Operations-Management1.jpg)
-
 <figcaption>http://theinvestorsbook.com/production-system-in-operations-management.html</figcaption>
 
 </figure>
@@ -202,9 +199,9 @@
 
 <figure>
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Product-process_matrix.svg/1920px-Product-process_matrix.svg.png)   
+    ![Product-Process Matrix](https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Product-process_matrix.svg/1920px-Product-process_matrix.svg.png)   
+    <figcaption>Product-Process matrix<br>https://en.wikipedia.org/wiki/Hayes-Wheelwright_matrix</figcaption>
 
-<figcaption>Product-Process matrix<br>https://en.wikipedia.org/wiki/Hayes-Wheelwright_matrix</figcaption>
 </figure>
 
 - **프로젝트 공정 (Project Process)**  
