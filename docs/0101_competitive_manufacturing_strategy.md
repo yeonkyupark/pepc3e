@@ -141,7 +141,7 @@
 | **넓은 시장 (Broad Target)** | **1. 원가우위 전략**<br>(예: 월마트, 다이소) | **2. 차별화 전략**<br>(예: 애플, 스타벅스) |
 | **좁은 시장 (Narrow Target)** | **3a. 원가집중화 전략**<br>(예: 지역 기반 저가 마트) | **3b. 차별화집중화 전략**<br>(예: 롤스로이스, 페라리) |  
 
-<figure>
+<figure markdown>
 
 ![본원적 경쟁전략](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Michael_Porter%27s_Three_Generic_Strategies.svg/1280px-Michael_Porter%27s_Three_Generic_Strategies.svg.png)
 <figcaption>https://en.wikipedia.org/wiki/Porter%27s_generic_strategies</figcaption>
@@ -179,7 +179,7 @@
 
 ### 생산시스템의 기본 구조
 
-<figure>
+<figure markdown>
 
 ![생산 시스템](https://theinvestorsbook.com/wp-content/uploads/2023/03/Production-System-in-Operations-Management1.jpg)
 <figcaption>http://theinvestorsbook.com/production-system-in-operations-management.html</figcaption>
@@ -197,7 +197,7 @@
 
 생산시스템은 제품 다양성(품종)과 생산량(품량)에 따라 공정 형태가 완전히 달라진다. 이는 헤이즈와 휠라이트(Hayes & Wheelwright) 제폼-공정행렬로 설명된다.
 
-<figure>
+<figure markdown>
 
     ![Product-Process Matrix](https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Product-process_matrix.svg/1920px-Product-process_matrix.svg.png)   
     <figcaption>Product-Process matrix<br>https://en.wikipedia.org/wiki/Hayes-Wheelwright_matrix</figcaption>
