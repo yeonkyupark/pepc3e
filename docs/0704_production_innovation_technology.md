@@ -1,7 +1,7 @@
 ## 생산혁신기술
 
 ### 정의
-생산혁신기술(Production Innovation Technology)은 생산시스템에 있어 품질(Quality), 원가(Cost), 납기(Delivery), 유연성(Flexibility), 안전(Safety) 및 환경(Environment) 성과를 지속적으로 향상시키기 위한 기술과 관리기법이다. 대표적인 생산혁신기술로는 TPS, Lean Production을 통한 낭비 제거, JIT를 통한 재고 절감, TPM을 통한 설비 효율 향상, Sig Sigma를 통한 품질 혁신, Kaizen과 SMED를 통한 공정 개선 그리고 스마트팩토리를 통한 디지털 제조혁신이 있다. 최근에는 IoT, Big Data, AI, Digital Twin을 활용한 데이터 기반 자율 생산체계 구축이 생산혁신의 핵심 방향으로 발전하고 있다.
+**생산혁신기술**(Production Innovation Technology)은 생산시스템에 있어 품질(Quality), 원가(Cost), 납기(Delivery), 유연성(Flexibility), 안전(Safety) 및 환경(Environment) 성과를 지속적으로 향상시키기 위한 기술과 관리기법이다. 대표적인 생산혁신기술로는 TPS, Lean Production을 통한 낭비 제거, JIT를 통한 재고 절감, TPM을 통한 설비 효율 향상, Sig Sigma를 통한 품질 혁신, Kaizen과 SMED를 통한 공정 개선 그리고 스마트팩토리를 통한 디지털 제조혁신이 있다. 최근에는 IoT, Big Data, AI, Digital Twin을 활용한 데이터 기반 자율 생산체계 구축이 생산혁신의 핵심 방향으로 발전하고 있다.
 
 ### 목적
 
@@ -211,15 +211,15 @@ SPC를 실행할 때 가장 핵심적인 도구는 관리도(Control Chart)이�
 
 | 지수 유형 | 개념 명칭 | 특징 및 설명 | 계산 공식 |
 | :--- | :--- | :--- | :--- |
-| **$C_p$** | **단기 공정능력지수**<br>(치우침 미고려) | 공정의 평균이 규격의 정중앙에 완벽하게 일치한다고 가정하고, 공정의 **퍼짐(산포)만을 평가**하는 지표입니다. | $$C_p = \frac{\text{USL} - \text{LSL}}{6\sigma}$$ |
-| **$C_{pk}$** | **장기 공정능력지수**<br>(치우침 고려) | 공정의 평균($\mu$)이 한쪽으로 치우치는 **현실적인 상황을 반영**하여, 규격 상한이나 하한 중 더 여유가 없는 쪽을 기준으로 평가하는 지표입니다. | $$C_{pk} = \min\left(\frac{\text{USL} - \mu}{3\sigma}, \frac{\mu - \text{LSL}}{3\sigma}\right)$$ |
+| **$C_p$** | **단기 공정능력지수**<br>(치우침 미고려) | 공정의 평균이 규격의 정중앙에 완벽하게 일치한다고 가정하고, 공정의 **퍼짐(산포)만을 평가**하는 지표 | $C_p = \frac{\text{USL} - \text{LSL}}{6\sigma}$ |
+| **$C_{pk}$** | **장기 공정능력지수**<br>(치우침 고려) | 공정의 평균($\mu$)이 한쪽으로 치우치는 **현실적인 상황을 반영**하여, 규격 상한이나 하한 중 더 여유가 없는 쪽을 기준으로 평가하는 지표 | $C_{pk} = \min\left(\frac{\text{USL} - \mu}{3\sigma}, \frac{\mu - \text{LSL}}{3\sigma}\right)$ |
 
 여기서
 
 - USL: 규격 상한선
 - LSL: 규격 하한선
 - $\sigma$: 공정 표준편차(산포)
-- $\mu\$: 공정 실제 평균치
+- $\mu$: 공정 실제 평균치
 - $k$: 치우침
 
 $C_{pk}$ 값에 따라 다음과 같이 판정할 수 있다. 현업에서는 일반적으로 5단계로 평가하며 1.33 이상 확보하는 것을 목표로 삼는다.
