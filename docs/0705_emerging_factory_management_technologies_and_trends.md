@@ -9,34 +9,51 @@
 - 투명한 지배구조 확보
 
 ```mermaid
-flowchart TD
+flowchart TB
 
-    A["지속가능경영<br/>Sustainability Management"]
-    B["ESG<br/>Environmental, Social, Governance"]
+    A["지속가능경영<br/>(Sustainability Management)<br/><br/>기업의 장기적 생존과 성장을 위한 경영 철학"]
+
+    B["ESG 경영<br/>(Environmental · Social · Governance)<br/><br/>지속가능성을 평가하고 관리하는 기준"]
+
+    C["환경(E)<br/>Environmental"]
+
+    D["사회(S)<br/>Social"]
+
+    E["지배구조(G)<br/>Governance"]
+
+    F["기후변화 대응"]
+
+    G["온실가스 감축"]
+
+    H["탄소중립<br/>(Net Zero)"]
+
+    I["재생에너지 전환"]
+
+    J["RE100<br/>100% 재생에너지 사용 목표"]
+
 
     A --> B
 
-    B --> C["환경(E) 영역"]
-    B --> D["사회·지배구조<br/>S/G 영역"]
+    B --> C
+    B --> D
+    B --> E
 
-    C --> E["기후변화 대응"]
-    E --> F["탄소중립<br/>Net Zero"]
-    F --> G["재생에너지 전환"]
-    G --> H["RE100"]
+    C --> F
+    F --> G
+    G --> H
+    H --> I
+    I --> J
 
-    %% 스타일 정의
-    classDef main fill:#1f4e79,color:white,stroke:#163a5c,stroke-width:2px;
-    classDef esg fill:#70ad47,color:white,stroke:#548235,stroke-width:2px;
-    classDef env fill:#5b9bd5,color:white,stroke:#2f5597,stroke-width:2px;
-    classDef sub fill:#f2f2f2,color:#333,stroke:#999;
-    classDef goal fill:#ffc000,color:#333,stroke:#bf9000,stroke-width:2px;
 
-    class A main;
+    classDef top fill:#1f4e79,color:white;
+    classDef esg fill:#70ad47,color:white;
+    classDef env fill:#5b9bd5,color:white;
+    classDef action fill:#ffc000,color:black;
+
+    class A top;
     class B esg;
-    class C env;
-    class D sub;
-    class E,F,G goal;
-    class H goal;
+    class C,D,E env;
+    class F,G,H,I,J action;
 ```
 
 ### 지속가능경영
