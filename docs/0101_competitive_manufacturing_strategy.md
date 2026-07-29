@@ -199,8 +199,8 @@
 
 <figure markdown>
 
-    ![Product-Process Matrix](https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Product-process_matrix.svg/1920px-Product-process_matrix.svg.png)   
-    <figcaption>Product-Process matrix<br>https://en.wikipedia.org/wiki/Hayes-Wheelwright_matrix</figcaption>
+![Product-Process Matrix](https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Product-process_matrix.svg/1920px-Product-process_matrix.svg.png)   
+<figcaption>Product-Process matrix<br>https://en.wikipedia.org/wiki/Hayes-Wheelwright_matrix</figcaption>
 
 </figure>
 
@@ -277,23 +277,23 @@
 
 여러 후보지 중 최적의 입지를 객관적으로 도출하기 위해 생산운영 관리에서는 다음과 같은 계량적 모델을 활용한다.
 
-- 요인평가법 (Factor Rating Method)  
+- **요인평가법**(Factor Rating Method)  
     - 양적 요인(원가, 거리 등)과 질적 요인(노동력 질, 규제 등)을 동시에 고려하는 가장 대중적인 방법이다.
     - 각 요인에 가중치를 부여한 후 후보지별 점수를 합산하여 최고점을 선택한다.
-- 무게중심법 (Center of Gravity Method)  
+- **무게중심법**(Center of Gravity Method)  
     - 공급처(원자재)와 수요처(시장)의 위치 좌표 및 물동량을 기준으로, 전체 물류 비용을 최소화하는 최적의 지리적 좌표를 찾아내는 수학적 모델이다.
-- 입지 손익분기점 분석 (Locational Break-Even Analysis)  
+- **입지 손익분기점 분석**(Locational Break-Even Analysis)  
     - 후보지별 고정비와 변동비를 산출하여, 예상 생산량에 따라 가장 총비용이 적게 드는 입지를 경제적으로 선택하는 방법이다.
 
 !!! note "리쇼어링과 니어쇼어링"
 
-    과거에는 단순히 인건비가 저렴한 **오프쇼어링**(Offshoring; 해외 이전)이 대세였다. 하지만 최근 미·중 통상 갈등, 무역법 301조 등의 관세 장벽, 그리고 글로벌 공급망 마비 사태를 겪으면서 대기업들은 자국으로 공장을 되돌리는 리쇼어링(Reshoring)이나, 주요 소비 시장 인근 국가로 공장을 옮기는 니어쇼어링(Nearshoring) 전략을 적극적으로 취하고 있다.
+    과거에는 단순히 인건비가 저렴한 **오프쇼어링**(Offshoring; 해외 이전)이 대세였다. 하지만 최근 미·중 통상 갈등, 무역법 301조 등의 관세 장벽, 그리고 글로벌 공급망 마비 사태를 겪으면서 대기업들은 자국으로 공장을 되돌리는 **리쇼어링**(Reshoring)이나, 주요 소비 시장 인근 국가로 공장을 옮기는 **니어쇼어링**(Nearshoring) 전략을 적극적으로 취하고 있다.
 
 ## 수직적 통합
 
 ### 개요
 
-수직적 통합(Vertical Integration)은 기업이 가치사슬 상에서 부품 조련, 제조, 유통, 판매에 이르는 전후방 생산·유통 과정을 직접 소유하거나 통제하는 전략이다. 시장에서 다른 기업과 거래하는 대신, 내부화를 통해 공급망을 직접 장악하는 것이 핵심이다.
+**수직적 통합**(Vertical Integration)은 기업이 가치사슬 상에서 부품 조련, 제조, 유통, 판매에 이르는 전후방 생산·유통 과정을 직접 소유하거나 통제하는 전략이다. 시장에서 다른 기업과 거래하는 대신, 내부화를 통해 공급망을 직접 장악하는 것이 핵심이다.
 
 
 | 비교 항목 | 수직적 통합 (Vertical Integration) | 아웃소싱 / 외주화 (Outsourcing) |
@@ -337,4 +337,4 @@
 
 ### 가상 통합
 
-최근 대기업들은 수직적 통합 단점(막대한 고정비)를 피하기 위해 직접 지분을 사지 않고 긴밀한 IT 데이터 시스템(SCM)으로 협력사와 실시간 수요를 공유하는 '가상 수직적 통합'(Virtual Integration)을 선호한다. 자산은 가볍게 유지하면서도 공급망의 통제력은 잃지 않는 하이브리드 전략이다.
+최근 대기업들은 수직적 통합 단점(막대한 고정비)를 피하기 위해 직접 지분을 사지 않고 긴밀한 IT 데이터 시스템(SCM)으로 협력사와 실시간 수요를 공유하는 '**가상 수직적 통합**'(Virtual Integration)을 선호한다. 자산은 가볍게 유지하면서도 공급망의 통제력은 잃지 않는 하이브리드 전략이다.
