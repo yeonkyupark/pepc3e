@@ -248,21 +248,16 @@
 
 .md-typeset table:not([class]) thead{
     background:#E3F2FD;
-    line-height:1.5;
 }
 
 
 .md-typeset table:not([class]) th{
-
+    line-height:1.5;
     font-size:16px;
     font-weight:700;
-
     text-align:left;
-
     vertical-align:middle;
-
     padding:.45rem .75rem;
-
     border-bottom:2px solid #BBDEFB;
 }
 
