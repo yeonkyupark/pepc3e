@@ -11,18 +11,18 @@
 ```mermaid
 flowchart TD
 
-    A[지속가능경영<br/>Sustainability Management]
-    B[ESG<br/>Environmental, Social, Governance]
+    A["지속가능경영<br/>Sustainability Management"]
+    B["ESG<br/>Environmental, Social, Governance"]
 
     A --> B
 
-    B --> C[환경(E) 영역]
-    B --> D[사회·지배구조<br/>S/G 영역]
+    B --> C["환경(E) 영역"]
+    B --> D["사회·지배구조<br/>S/G 영역"]
 
-    C --> E[기후변화 대응]
-    E --> F[탄소중립<br/>Net Zero]
-    F --> G[재생에너지 전환]
-    G --> H[RE100]
+    C --> E["기후변화 대응"]
+    E --> F["탄소중립<br/>Net Zero"]
+    F --> G["재생에너지 전환"]
+    G --> H["RE100"]
 
     %% 스타일 정의
     classDef main fill:#1f4e79,color:white,stroke:#163a5c,stroke-width:2px;
