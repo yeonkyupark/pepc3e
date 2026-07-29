@@ -210,88 +210,134 @@
    Table
    ========================================================================== */
 
-.md-typeset__scrollwrap{
+/* Table Wrapper */
 
+.md-typeset__scrollwrap{
     width:100%;
 }
 
+/* Table Container */
 
 .md-typeset__table{
-
     width:100%;
 }
 
 
-/* Table */
+/* ==========================================================================
+   Table
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Table Wrapper
+   -------------------------------------------------------------------------- */
+
+.md-typeset__scrollwrap{
+    width:100%;
+}
+
+.md-typeset__table{
+    width:100%;
+}
+
+
+/* --------------------------------------------------------------------------
+   Table
+   -------------------------------------------------------------------------- */
 
 .md-typeset table:not([class]){
 
-    width:100%;
-    min-width:100%;
+    width:calc(100% - 20px);
+    max-width:calc(100% - 20px);
 
-    table-layout:fixed;
+    margin:1rem 10px;
+
+    table-layout:auto;
 
     border-collapse:collapse;
 
-    margin:1rem 0;
-
-    /* font-size:.90rem; */
     font-size:16px;
 }
 
 
-/* Header */
+/* --------------------------------------------------------------------------
+   Header
+   -------------------------------------------------------------------------- */
 
 .md-typeset table:not([class]) thead{
 
-    background:#e3f2fd;
+    background:#E3F2FD;
 }
 
 
 .md-typeset table:not([class]) th{
 
+    font-size:16px;
     font-weight:700;
 
-    text-align:center;
+    text-align:left;
 
     vertical-align:middle;
+
+    padding:.45rem .75rem;
+
+    border-bottom:2px solid #BBDEFB;
 }
 
 
-/* Cell */
+/* --------------------------------------------------------------------------
+   Cell
+   -------------------------------------------------------------------------- */
 
-.md-typeset table:not([class]) th,
 .md-typeset table:not([class]) td{
 
     font-size:16px;
-    padding:.4rem .6rem;
 
-    line-height:1.45;
+    padding:.45rem .75rem;
+
+    line-height:1.5;
 
     vertical-align:middle;
 
-    word-break:keep-all;
+    text-align:left;
 
-    overflow-wrap:anywhere;
+    word-break:keep-all;
+    overflow-wrap:break-word;
+
+    border-bottom:1px solid rgba(0,0,0,.08);
 }
 
 
-/* Hover */
+/* --------------------------------------------------------------------------
+   Zebra Stripe (선택 사항)
+   -------------------------------------------------------------------------- */
+
+.md-typeset table:not([class]) tbody tr:nth-child(even){
+
+    background:#FCFCFC;
+}
+
+
+/* --------------------------------------------------------------------------
+   Hover
+   -------------------------------------------------------------------------- */
 
 .md-typeset table:not([class]) tbody tr:hover{
 
-    background:#f5f9ff;
+    background:#F5F9FF;
 }
 
 
-/* Table in List */
+/* --------------------------------------------------------------------------
+   Table in List
+   -------------------------------------------------------------------------- */
 
 .md-typeset ul li table:not([class]),
 .md-typeset ol li table:not([class]){
 
-    margin-left:.1rem;
-}
+    width:calc(100% - 20px);
 
+    margin:1rem 10px;
+}
 
 
 /* ==========================================================================
