@@ -252,7 +252,7 @@
 
 
 .md-typeset table:not([class]) th{
-    line-height:1.5;
+    line-height:1.2;
     font-size:16px;
     font-weight:700;
     text-align:left;
@@ -267,20 +267,13 @@
    -------------------------------------------------------------------------- */
 
 .md-typeset table:not([class]) td{
-
-    font-size:15px;
-
-    padding:.45rem .75rem;
-
     line-height:1.5;
-
+    font-size:15px;
+    padding:.45rem .75rem;
     vertical-align:middle;
-
     text-align:left;
-
     word-break:keep-all;
     overflow-wrap:break-word;
-
     border-bottom:1px solid rgba(0,0,0,.08);
 }
 
