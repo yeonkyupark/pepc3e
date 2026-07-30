@@ -293,11 +293,12 @@ SCM 운영 전략 카테고리 종합 요약하면 다음과 같다.
 
 유통업체와 제조업체가 협력하여 **고객 가치를 높이고 유통망 전체의 비용을 절감**하기 위해 탄생한 유통 중심 협업 프레임워크이다.
 
-* **주요 4대 영역**
-    1. **효율적 재보충(Efficient Replenishment):** POS 기반 실시간 자동 보충 체계 구축
-    2. **효율적 매장 진열(Efficient Store Assortment):** 카테고리 관리(Category Management)를 통한 공간 효율화
-    3. **효율적 판촉(Efficient Promotion):** 불필요한 할인가 판매 축소 및 효과적인 프로모션 진행
-    4. **효율적 신제품 출시(Efficient Product Launch):** 신제품 개발 및 마케팅 프로세스 공유
+주요 4대 영역은 다음과 같다. 
+
+1. **효율적 재보충(Efficient Replenishment):** POS 기반 실시간 자동 보충 체계 구축
+2. **효율적 매장 진열(Efficient Store Assortment):** 카테고리 관리(Category Management)를 통한 공간 효율화
+3. **효율적 판촉(Efficient Promotion):** 불필요한 할인가 판매 축소 및 효과적인 프로모션 진행
+4. **효율적 신제품 출시(Efficient Product Launch):** 신제품 개발 및 마케팅 프로세스 공유
 
 **4. SCOR 모델 (Supply Chain Operations Reference Model)**
 
