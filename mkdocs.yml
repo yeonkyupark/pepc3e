@@ -17,6 +17,7 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.highlight
   - pymdownx.inlinehilite
+  - pymdownx.mark
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.superfences:
