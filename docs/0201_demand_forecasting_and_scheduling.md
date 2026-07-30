@@ -29,7 +29,7 @@ flowchart LR
 
 수요의 구성요소는 시계열 데이터에 내재된 변동 패턴을 나타내며, 각 변동의 세부 원인 및 특성은 다음과 같다.
 
-<figure>
+<figure markdown>
 
 ![](https://www.researchgate.net/profile/R-Rajput/publication/344658764/figure/fig1/AS:946622322188291@1602703757672/Time-Series-components-1-A-time-series-is-a-sequence-of-observations-measured-at.jpg)
 <figcaption>https://www.researchgate.net/figure/Time-Series-components-1-A-time-series-is-a-sequence-of-observations-measured-at_fig1_344658764</figcaption>
