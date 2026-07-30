@@ -587,7 +587,7 @@ html{
    Highlight
    ========================================================================== */
 
-.hl{
+.hl01{
     display:inline;
     padding:0.08em 0.35em;
     margin:0 0.05em;
@@ -598,4 +598,17 @@ html{
     font-weight:700;
 
     border-radius:4px;
+}
+
+.hl02{
+    display:inline;
+    padding:0.1em 0.4em;
+
+    color:#D84315;
+    background:#FFF3E0;
+
+    border-left:4px solid #FB8C00;
+
+    font-weight:700;
+    border-radius:3px;
 }
