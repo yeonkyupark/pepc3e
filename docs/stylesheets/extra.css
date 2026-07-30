@@ -587,28 +587,43 @@ html{
    Highlight
    ========================================================================== */
 
-.hl01{
-    display:inline;
-    padding:0.08em 0.35em;
-    margin:0 0.05em;
-
-    background:#FFE0B2;
-    color:#BF360C;
-
-    font-weight:700;
-
-    border-radius:4px;
+/* Light Mode */
+:root {
+    --hl-bg: #FFF3E0;
+    --hl-text: #D84315;
+    --hl-border: #FB8C00;
+    --hl-bg-hover: #FFE0B2;
 }
 
-.hl02{
-    display:inline;
-    padding:0.1em 0.4em;
+/* Dark Mode */
+[data-md-color-scheme="slate"] {
+    --hl-bg: #4E342E;
+    --hl-text: #FFCC80;
+    --hl-border: #FF9800;
+    --hl-bg-hover: #5D4037;
+}
 
-    color:#D84315;
-    background:#FFF3E0;
+/* Highlight */
+.hl {
+    display: inline;
 
-    border-left:4px solid #FB8C00;
+    padding: 0.08em 0.40em;
+    margin: 0 0.05em;
 
-    font-weight:700;
-    border-radius:3px;
+    background: var(--hl-bg);
+    color: var(--hl-text);
+
+    font-weight: 700;
+    line-height: inherit;
+
+    border-left: 0.25rem solid var(--hl-border);
+    border-radius: 3px;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.hl:hover {
+    background: var(--hl-bg-hover);
 }
