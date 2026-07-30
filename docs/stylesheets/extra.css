@@ -582,3 +582,20 @@ html{
     box-shadow:0 2px 14px rgba(255,255,255,.08);
 }
 
+
+/* ==========================================================================
+   Highlight
+   ========================================================================== */
+
+.hl{
+    display:inline;
+    padding:0.08em 0.35em;
+    margin:0 0.05em;
+
+    background:#FFE0B2;
+    color:#BF360C;
+
+    font-weight:700;
+
+    border-radius:4px;
+}
