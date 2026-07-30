@@ -17,7 +17,10 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.highlight
   - pymdownx.inlinehilite
+  - pymdownx.extra
   - pymdownx.mark
+  - pymdownx.caret  # (선택) ^밑줄^ 또는 ^^윗줄^^ 기능
+  - pymdownx.tilde  # (선택) ~취소선~ 기능
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.superfences:
