@@ -38,7 +38,7 @@ flowchart TD
 * **시간 지평**: 1년 ~ 3년 이상 (장기)
 * **계획 단위**: 제품군(Product Family), 라인 전체
 * **주요 내용**
-    * 기업의 장기 경영 목표와 연계한 ==대략적인 생산 능력(Capacity) 및 설비 투자 계획==\을 수립한다.
+    * 기업의 장기 경영 목표와 연계한 <span class='hl01'>대략적인 생산 능력(Capacity) 및 설비 투자 계획을 수립</span>한다.
     * **APP(Aggregate Production Plan, 총괄생산계획)**: 전체 제품군에 대한 분기별/월별 목표 생산량과 인력, 외주 활용 여부를 결정한다.
 
 **2. 주생산계획(MPS, Master Production Schedule)**
@@ -46,7 +46,7 @@ flowchart TD
 * **시간 지평**: 수개월 ~ 1년 (중기)
 * **계획 단위**: 완제품(End Item), 개별 품목(SKU)
 * **주요 내용**
-    * APP를 바탕으로 실제 생산할 완제품의 종류, 수량, 완료 시점을 결정하는 핵심 기준 계획이다.
+    * APP를 바탕으로 실제 <span class='hl02'>생산할 완제품의 종류, 수량, 완료 시점을 결정</span>하는 핵심 기준 계획이다.
     * 고객 주문(Order)과 수요예측(Forecast)을 결합하여 자재 및 설비의 가동 가능 여부를 검증(RCCP, 개략적 능력계획)한다.
 
 **3. 자재소요계획(MRP, Material Requirements Planning)**
