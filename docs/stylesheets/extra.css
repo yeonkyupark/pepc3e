@@ -331,7 +331,7 @@
 }
 
 
-/* Blue short bar */
+/* short bar */
 
 .md-typeset blockquote::before {
 
@@ -347,7 +347,7 @@
 
     width:4px;
 
-    background:#42a5f5;
+    /* background:#42a5f5; */
 
     border-radius:8px;
 
