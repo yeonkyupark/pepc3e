@@ -463,11 +463,11 @@ GE 매트릭스는 산업 매력도와 사업 경쟁력을 축으로 설정하�
 
 ## 경영혁신과 사업환경 대응
 
-### BPR(Business Process Reengineering)
+### BPR
 
 **BPR(Business Process Reengineering, 업무 프로세스 재설계)**이란 기업의 성과를 극적으로 향상시키기 위해 기존의 업무 프로세스를 근본적으로 재생각하고 파격적으로 재설계하는 경영 혁신 기법이다.
 
-<figure>
+<figure markdown>
 
 ![](https://upload.wikimedia.org/wikipedia/commons/c/ca/Business_Process_Re-engineering.jpg)
 <figcaption>https://en.wikipedia.org/wiki/Business_process_re-engineering</figcaption>
