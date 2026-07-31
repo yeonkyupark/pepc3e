@@ -125,7 +125,7 @@ flowchart LR
 #### 주요 내용
 
 1. **공정선택**(Process Selection)  
-   공정선택은 제품 특성과 생산량에 적합한 생산방식을 선택하는 과정이다. Hayes & Wheelwright가 제시한 제품-공정 매트리스(Product-Process Matrix)가 대표적인 이론이다.
+   공정선택은 제품 특성과 생산량에 적합한 생산방식을 선택하는 과정이다. Hayes & Wheelwright가 제시한 [제품-공정 행렬(Product-Process Matrix)](https://yeonkyupark.github.io/pepc3e/0101_competitive_manufacturing_strategy/#-)가 대표적인 이론이다.
       
     | 생산방식             | 특징     | 대표 사례    |
     | ---------------- | ------ | -------- |
@@ -155,8 +155,7 @@ flowchart LR
     C --> D
     D --> E
     E --> F
-   ```     
-   
+   ```
 3. **설비선정**(Machine Selection)  
    생산량과 제품 특성에 따라 적절한 설비를 선정한다. 생산 능력, 정밀도, 자동화 수준, 경제성, 유지보수성 등을 고려해야 한다.
 4. **공장배치**(Layout)  
