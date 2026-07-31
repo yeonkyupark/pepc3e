@@ -62,16 +62,19 @@ flowchart LR
 
 **표준작업시간(Standard Work Time)**은 한 작업을 수행하는 기준시간이다. TSP에서는 일반적으로 다음 용어를 구분한다.
 
-| 구분              | 의미                      |
-| --------------- | ----------------------- |
-| Takt Time (TT)  | 고객 수요에 맞추기 위해 허용되는 생산시간 |
-| Cycle Time (CT) | 실제 1개 생산에 걸리는 시간        |
-| Lead Time (LT)  | 투입부터 완료까지 전체 시간         |
+**1. Takt Time (TT, 타크트 타임 / 택트 타임)**
 
-**Takt Time**
+고객의 주문 수요에 맞춰 제품 **1대를 생산하는 데 허용되는 목표 시간**이다. 독일어로 '박자(Beat)'를 의미하며, 생산 라인이 나아가야 할 목표 속도를 뜻한다.
 
-$$TT = \frac{가용\ 생산시간}{고객\ 요구량}$$
+* **개념 설명**  
+    생산 현장의 사정(설비 성능, 인력 등)과 상관없이 오직 고객의 수요(Market Demand)에 의해서만 결정되는 시장 중심 지표이다.
+* **산출 공식**  
 
+    $$\text{Takt Time} = \frac{\text{일일 유효 가동 시간 (Operating Time)}}{\text{일일 고객 필요 수량 (Customer Demand)}}$$
+
+* **관리 목적**  
+    과대 생산으로 인한 재고 누적을 방지하고, 라인 가동 속도를 시장 수요에 동기화(Synchronize)한다.
+  
 !!! example "Takt Time 계산"  
     하루 생산 가능한 시간이 480분, 고객 주문이 240개일 때 Takt Time은 다음과 같이 계산할 수 있다.
 
@@ -79,17 +82,56 @@ $$TT = \frac{가용\ 생산시간}{고객\ 요구량}$$
 
     즉, 2분마다 1개씩 생산해야 고객 수요를 만족하다는 의미이다.
 
-**Cycle Time**
+**2. Cycle Time (CT, 사이클 타임)**
 
-$$CT=\frac{총\ 작업시간}{생산량}$$
+단일 공정 또는 전체 라인에서 **제품 1대를 실제로 완성하는 데 걸리는 시간**이다.
+
+* **개념 설명**  
+    현장의 설비 속도, 작업자의 숙련도, 공정 배치에 따라 결정되는 **실제 기술적·현장 중심 지표**이다. 라인 전체의 CT는 가장 시간이 오래 걸리는 **병목 공정(Bottleneck Process)의 CT**에 의해 결정된다.
+* **산출 공식 및 구성**  
+
+    $$\text{Cycle Time} = \text{정미시간(Normal Time)} + \text{공정 내 순수 여유시간}$$
+    
+* **관리 목적**  
+   Takt Time과 비교하여 라인 균형화(Line Balancing)를 추진한다.  
+    * $\text{CT} > \text{TT}$: 생산 속도가 느려 납기 지연 발생 ➔ **공정 개선 및 설비/인력 증설 필요**
+    * $\text{CT} < \text{TT}$: 생산 속도가 지표보다 빠름 ➔ **재공품(WIP) 및 과잉 재고 발생**
 
 !!! example "Cycle Time 계산"
 
     총 작업시간이 400분이고 생산량이 200개일 대 CT는 다음과 같이 계살할 수 있다.
 
     $$CT=\frac{400}{200} = 2(분/개)$$
+    
+**3. Lead Time (LT, 리드 타임 / 제조 주기 시간)**
 
-CT와 TT로 다음과 같은 판단을 할 수 있다.
+원자재가 공정에 투입된 순간부터 모든 가공·조립·검사를 마치고 **완제품으로 출하될 때까지 걸리는 전체 시간**이다.
+
+* **개념 설명**  
+    단순한 가공 시간(CT)뿐만 아니라, 공정 간 이동 시간, 대기 시간, 검사 시간, 창고 보관 시간 등 부가가치가 창출되지 않는 비가치 시간(Non-Value Added Time)을 모두 포함한다.
+* **구성 요소**  
+
+    $$\text{Lead Time} = \text{가공 시간(CT의 합)} + \text{대기 시간} + \text{운반 시간} + \text{검사 시간} + \text{정지 시간}$$
+    
+* **관리 목적**  
+    리드 타임이 단축될수록 공정 내 재공품(WIP)이 줄어들고 현금 회전율이 높아지며, 시장 변화에 대한 유연성이 극대화된다.
+
+**핵심 지표 종합 비교**
+
+| 구분 | Takt Time (TT) | Cycle Time (CT) | Lead Time (LT) |
+| --- | --- | --- | --- |
+| **의미** | 고객 수요에 맞춘 **목표 속도** | 실제 공정에서 걸리는 **실제 속도** | 투입부터 완제품까지의 **전체 소요시간** |
+| **기준** | 시장 및 고객 주문량 | 현장 설비 성능 및 작업 숙련도 | 생산 프로세스 전체 흐름 (대기/이동 포함) |
+| **시간 단위** | 초/개, 분/개 | 초/개, 분/개 | 시간, 일(Days) |
+| **개선 방향** | 수요 변화에 맞춰 라인 속도 조정 | 병목 공정 개선을 통한 시간 단축 | 불필요한 대기/운반/보관 시간 제거 |
+
+!!! note "리틀의 법칙 (Little's Law)"  
+
+    $$\text{Lead Time (LT)} = \text{재공품 수량 (WIP)} \times \text{Takt Time (TT)}$$
+    
+    공정 내 재공품(WIP) 수량을 줄이면 Takt Time이 일정할 때 Lead Time을 직접적으로 단축할 수 있다.
+
+참고로, CT와 TT로 다음과 같은 판단을 할 수 있다.
 
 - $CT < TT$: 생산능력 여유
 - $CT = TT$: 균형
@@ -109,9 +151,7 @@ CT와 TT로 다음과 같은 판단을 할 수 있다.
 - 보통의 노력으로
 - 성실하게 작업을 실시하는데
 
-필요한 시간을 말한다.
-
-일반식은 다음과 같다.
+필요한 시간을 말한다. 표준시간을 계산하는 일반식은 다음과 같다.
 
 $$ST = NT \times (1 + A)$$
 
@@ -121,7 +161,7 @@ $$ST = NT \times (1 + A)$$
 - $NT$: Normal Time(정미시간)
 - $A$: Allowance(여유율)
 
-Normal Time은 다음과 같이 계산된다.
+정미시간(Normal Time)은 다음과 같이 계산된다.
 
 $$NT = OT \times PR$$
 
@@ -143,7 +183,7 @@ $$\text{표준시간(Standard Time)} = \text{정미시간(Normal Time)} + \text{
 
 정미시간은 스톱워치 등으로 실제 측정한 평균 관측시간(Observed Time)에 작업자의 속도를 평가하는 **레이팅(Rating) 계수**를 곱하여 구한다.
 
-$$\text{정미시간} = \text{평균 관측시간} \times \frac{\text{작업자 레이팅(\%)}}{100}$$
+$$\text{정미시간} = \text{평균 관측시간} \times \frac{\text{작업자 레이팅(%)}}{100}$$
 
 **정미시간 산정의 핵심: 레이팅(Rating)**
 
@@ -156,7 +196,7 @@ $$\text{정미시간} = \text{평균 관측시간} \times \frac{\text{작업자 
 * **표준 작업자**  
     정상적인 속도로 작업하는 경우 레이팅 계수 $100\%$ 적용
 
-레이팅 관련 자세한 내용은 [[공정관리 > 표준작업관리 > 레이팅 기법](https://yeonkyupark.github.io/pepc3e/0304_standard_work_management/#rating)]을 참고한다.
+레이팅 관련 자세한 내용은 [[3. 공정관리 > 4. 표준작업관리 > 레이팅 기법](https://yeonkyupark.github.io/pepc3e/0304_standard_work_management/#rating)]을 참고한다.
 
 정미시간과 관측시간·표준시간을 비교하면 다음과 같다.
 
@@ -359,6 +399,206 @@ flowchart LR
 | 작업분석(Operation Analysis) | 작업순서 개선    |
 | 라인밸런싱(Line Balancing)    | 공정 균형화     |
 
+## 표준시간 측정 방법
+
+표준시간은 표준 작업방법으로 숙련 작업자가 정상적인 작업속도에서 작업을 수행하고 여유시간을 포함하여 산출한 기준시간이다. **표준시간 측정 방법**은 직접 측정법, 간접 측정법, 경험 및 통계법으로 구분하며, 대표적으로 스톱워치법, 워크 샘플링법, 표준자료법, PTS법이 있다. 스톱워치법은 작업시간을 직접 측정한 후 레이팅을 적용하여 정상시간을 산출하고, 개인여유, 피로여유, 지연여유를 반영하여 표준시간을 결정한다. 최근에는 MTM, MOST 등 PTS법과 MES 기반 실적 데이터를 활용하여 표준시간 객관성과 유지관리를 강화하고 있다.
+
+표준시간은 다음 목적으로 활용된다.
+
+- 생산능력 산정(Capacity Planning)
+- 작업자 및 설비 부하 계산
+- 생산계획 수립
+- 원가 산정
+- 생산성 평간
+- 라인 밸러싱(Line Balancing)
+
+표준시간 산정 구조는 다음과 같다.
+
+```mermaid
+flowchart LR
+    classDef process fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#000,font-weight:bold;
+    classDef key fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000,font-weight:bold;
+    classDef final fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#000,font-weight:bold;
+
+    A["작업분석<br/>(Work Analysis)"]:::process
+    B["시간측정<br/>(Observed Time)"]:::key
+    C["레이팅 적용<br/>(Performance Rating)"]:::process
+    D["정상시간<br/>(Normal Time)"]:::process
+    E["여유시간 적용<br/>(Allowance)"]:::process
+    F["표준시간<br/>(Standard Time)"]:::final
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+```
+
+### 대표적인 표준시간 측정 방법
+
+```mermaid
+flowchart TD
+    classDef main fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#000,font-weight:bold;
+    classDef category fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000,font-weight:bold;
+    classDef detail fill:#F5F5F5,stroke:#757575,stroke-width:1px,color:#000;
+
+    A["표준시간 측정법<br/>(Standard Time Measurement Methods)"]:::main
+
+    B["직접 측정법<br/>(Direct Measurement)"]:::category
+    C["간접 측정법<br/>(Indirect Measurement)"]:::category
+    D["경험·통계법<br/>(Historical / Statistical Method)"]:::category
+
+    A --> B
+    A --> C
+    A --> D
+
+
+    B1["Stopwatch Time Study<br/>(스톱워치 시간연구)"]:::detail
+    B2["Work Sampling<br/>(워크 샘플링)"]:::detail
+
+    B --> B1
+    B --> B2
+
+
+    C1["표준자료법<br/>(Standard Data)"]:::detail
+    C2["PTS법<br/>(Predetermined Time System)"]:::detail
+
+    C --> C1
+    C --> C2
+
+
+    C21["MTM<br/>(Methods-Time Measurement)"]:::detail
+    C22["Work Factor"]:::detail
+    C23["MOST<br/>(Maynard Operation Sequence Technique)"]:::detail
+
+    C2 --> C21
+    C2 --> C22
+    C2 --> C23
+
+
+    D1["과거 실적 분석<br/>(Historical Performance Analysis)"]:::detail
+
+    D --> D1
+```
+
+| 방법                   | 측정 방식     | 적용 대상  | 특징     |
+| -------------------- | --------- | ------ | ------ |
+| Stopwatch Time Study | 직접 측정     | 반복 작업  | 가장 일반적 |
+| Work Sampling        | 간헐 관찰     | 비반복 작업 | 비율 분석  |
+| Standard Data        | 기존 데이터 조합 | 반복 생산  | 효율적    |
+| PTS(MTM,MOST)        | 동작 분석     | 수작업    | 높은 객관성 |
+| 통계법                  | 실적 분석     | 대량 생산  | 간편     |
+
+
+#### 스톱워치법
+
+**스톱워치법(Stopwatch time study)**은 가장 전통적인 표준시간 측정 방법으로, 작업을 직접 관찰하고 스톱워치로 작업시간을 측정한 후 레이팅과 여유를 적용하여 표준시간을 산정하는 방법이다.
+
+**측정 절차**
+
+1. 작업 분해  
+    작업을 요소작업으로 분해한다. 예를 들어 조립 작업을 "부품 취출 → 부품 조립 → 나사 체결 → 검사" 등으로 나눈다.
+2. 반복 측정  
+    동일한 작업을 여러 회 측정한다.  
+   
+    | 회차 |    시간 |
+    | -- | ----: |
+    | 1  |   52초 |
+    | 2  |   50초 |
+    | 3  |   51초 |
+    | 4  |   49초 |
+    | 평균 | 50.5초 |
+
+3. 평균 관측시간 산출  
+
+    $$OT = \frac{\sum{t_i}}{n}$$
+   
+4. 레이팅 적용  
+    관측시간 50초, 레이팅 110% 적용시 $NT = 50 \times 1.1 = 55(초)$로 계산된다.
+5. 여유시간 적용  
+    여유율을 15%로 산정, 외경법을 적용하면 $ST = 55(1 + 0.15) = 63.25(초)$로 계산된다.
+
+실제 작업 반영이 가능하고 현장 적용이 용이하다. 그리고 다양한 작업에서 사용 가능하다는 장점이 있다.  
+반면 관찰자 주관이 개입되고 측정 시간이 많이 소요될 수 있다. 그리고 작업자가 의식적으로 행동에 변화를 줄 수도 있다는 단점이 있다.
+
+#### 워크 샘플링법
+
+**워크 샘플링법(Work Sampling)**은 작업자를 계속 측정하지 않고 무작위 관찰을 통해 작업시간 비율을 추정하는 방법이다. 주로 비반복 작업이나 간접 작업에 사용한다.
+
+예로, 작업을 100회 무작위로 관찰했을 때 아래와 같이 측정되었다고 가정한다.
+
+| 상태   |  횟수 |
+| ---- | --: |
+| 작업 중 | 85회 |
+| 대기   | 15회 |
+
+이때 작업 비율을 계산하면 다음과 같다.
+
+$$P = \frac{85}{100} = 85\%$$
+
+이 방법은 작업자 가동률을 분석하거나 비부가가치 시간을 분석 또는 간접작업을 분석할 때 주로 활용된다.
+
+#### 표준자료법
+
+**표준자료법(Standard Data)**은 과거 측정한 작업 요소 시간을 데이터베이스화하여 새로운 작업 표준시간을 조합하는 방법이다.
+
+작업 A가 다음과 같이 데이터베이스화되어 있다고 가정하자.
+
+- 부품 가져오기 = 5초
+- 위치 맞춤 = 8초
+- 체결 = 12초
+- 검사 = 5초
+
+이 경우 표준시간은 다음과 같이 계산된다.
+
+$5 + 8 + 12 + 5 = 30(초)$
+
+측정시간을 단축하고 객관성이 향상되는 장점이 있으며 반복 작업에 효과적이다.
+
+#### PTS법
+
+**PTS법(Pre-determined Time Study)**은 작업을 기본 동작(Motion)으로 분해하고 각 동작에 미리 정해진 시간을 부여하여 표준시간을 산정하는 방법이다.
+
+대표 방법은 다음과 같다.
+
+- MTM(Method Time Measurement)
+- Work Factor
+- MOST(Maynard Operation Sequence Techinque)
+
+손동작이 다음과 같다고 가정한다.
+
+- Reach(손 뻗기)
+- Move(이동)
+- Graps(잡기)
+- Position(위치맞춤)
+
+그럼 손동작에 대한 표준시간은 다음과 같이 계산된다.
+
+$$ST = t_1 + t_2 + t_3 + t_4$$
+
+레이팅이 불필요하고, 작업 시작 전 표준시간 산정이 가능하며, 설계 단계에 적용이 가능하다.
+
+**주요 방법 비교**
+
+| 순서 | 기법명 | 개발 연도 | 개발자 / 기관 | 주요 특징 |
+| --- | --- | --- | --- | --- |
+| **1** | **Work Factor (WF)** | **1938년** | J. H. Quick 등 | 동작의 난이도와 피로 요인을 난이도 요소(Work Factor)로 수치화하여 표준시간을 측정하는 기법 |
+| **2** | **MTM** | **1948년** | H. B. Maynard 등 | 손, 팔 등의 기본 동작(Reach, Move, Turn 등)을 미세하게 분석하여 TMU($1\text{ TMU} = 0.00001\text{ hour}$) 단위로 측정하는 기법 |
+| **3** | **MOST** | **1980년** | H. B. Maynard 회사 (K. Zandin) | MTM을 간소화·발전시킨 기법으로, 시퀀스 모델(Sequence Model)을 활용해 측정 시간을 대폭 단축한 기법 |
+
+* **Work Factor (1930년대)**  
+    동작 연구의 초기 정밀 측정 기법으로, 신체 부위와 동작 변수를 정밀하게 분석하는 기틀을 마련했다.
+* **MTM (1940년대)**  
+    Work Factor보다 세부 동작 분류 체계를 정립하여 전 세계 산업공학 현장에서 가장 보편적인 PTS 기법으로 자리 잡았다.
+* **MOST (1980년대)**  
+    MTM의 지나치게 복잡한 분석 시간을 줄이기 위해 반복되는 동작 흐름을 패키지화(시퀀스화)하여, MTM 대비 분석 속도를 4~5배 이상 향상시켰다.
+
+#### 경험·통계법
+
+경험·통계법은 과거 생산실적 데이터를 이용하여 표준시간을 추정하는 방법이다. 예로, 과거 1,000개 생산 데이터를 분석한 평균 58초/개를 표준시간 후로로 사용한다. 작업방법 변화 반영이 어렵고 이상 데이터에 영향을 많이 받게 되는 단점이 있다.
+
+
+
 ## 레이팅 기법 {#rating}
 
 **레이팅(Rating)** 또는 평정(Performace Rate)은 시간연구(Time Study)에서 작업자가 수행한 실제 작업속도를 관찰하여 기준 작업속도에 대비한 작업수행 수준을 평가하는 기법이다. 즉, 작업자가 측정된 시간대로 작업했더라도 그 작업자의 숙련도나 작업 속도가 기준보다 빠르거나 느릴 수 있으므로 이를 보정하여 정상시간(Normal Time)을 산출하기 위한 과정이다.
@@ -478,7 +718,7 @@ $$Adjustment = Skill + Effort + Conditions + Consistency$$
 
 기본 평정이 100%인 경우 각 보정값을 적용하여 아래와 같이 계산한다.
 
-$$R = 1 + Adjustment}$$
+$$R = 1 + Adjustment$$
 
 !!! example "웨스팅하우스법"  
 
@@ -550,202 +790,4 @@ $$R = \frac{P_t}{T_0}$$
 
     따라서 이 작업 표준시간은 110.4초로 계산된다.
 
-## 표준시간 측정 방법
-
-표준시간은 표준 작업방법으로 숙련 작업자가 정상적인 작업속도에서 작업을 수행하고 여유시간을 포함하여 산출한 기준시간이다. **표준시간 측정 방법**은 직접 측정법, 간접 측정법, 경험 및 통계법으로 구분하며, 대표적으로 스톱워치법, 워크 샘플링법, 표준자료법, PTS법이 있다. 스톱워치법은 작업시간을 직접 측정한 후 레이팅을 적용하여 정상시간을 산출하고, 개인여유, 피로여유, 지연여유를 반영하여 표준시간을 결정한다. 최근에는 MTM, MOST 등 PTS법과 MES 기반 실적 데이터를 활용하여 표준시간 객관성과 유지관리를 강화하고 있다.
-
-표준시간은 다음 목적으로 활용된다.
-
-- 생산능력 산정(Capacity Planning)
-- 작업자 및 설비 부하 계산
-- 생산계획 수립
-- 원가 산정
-- 생산성 평간
-- 라인 밸러싱(Line Balancing)
-
-표준시간 산정 구조는 다음과 같다.
-
-```mermaid
-flowchart LR
-    classDef process fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#000,font-weight:bold;
-    classDef key fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000,font-weight:bold;
-    classDef final fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#000,font-weight:bold;
-
-    A["작업분석<br/>(Work Analysis)"]:::process
-    B["시간측정<br/>(Observed Time)"]:::key
-    C["레이팅 적용<br/>(Performance Rating)"]:::process
-    D["정상시간<br/>(Normal Time)"]:::process
-    E["여유시간 적용<br/>(Allowance)"]:::process
-    F["표준시간<br/>(Standard Time)"]:::final
-
-    A --> B
-    B --> C
-    C --> D
-    D --> E
-    E --> F
-```
-
-### 대표적인 표준시간 측정 방법
-
-```mermaid
-flowchart TD
-    classDef main fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#000,font-weight:bold;
-    classDef category fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000,font-weight:bold;
-    classDef detail fill:#F5F5F5,stroke:#757575,stroke-width:1px,color:#000;
-
-    A["표준시간 측정법<br/>(Standard Time Measurement Methods)"]:::main
-
-    B["직접 측정법<br/>(Direct Measurement)"]:::category
-    C["간접 측정법<br/>(Indirect Measurement)"]:::category
-    D["경험·통계법<br/>(Historical / Statistical Method)"]:::category
-
-    A --> B
-    A --> C
-    A --> D
-
-
-    B1["Stopwatch Time Study<br/>(스톱워치 시간연구)"]:::detail
-    B2["Work Sampling<br/>(워크 샘플링)"]:::detail
-
-    B --> B1
-    B --> B2
-
-
-    C1["표준자료법<br/>(Standard Data)"]:::detail
-    C2["PTS법<br/>(Predetermined Time System)"]:::detail
-
-    C --> C1
-    C --> C2
-
-
-    C21["MTM<br/>(Methods-Time Measurement)"]:::detail
-    C22["Work Factor"]:::detail
-    C23["MOST<br/>(Maynard Operation Sequence Technique)"]:::detail
-
-    C2 --> C21
-    C2 --> C22
-    C2 --> C23
-
-
-    D1["과거 실적 분석<br/>(Historical Performance Analysis)"]:::detail
-
-    D --> D1
-```
-
-| 방법                   | 측정 방식     | 적용 대상  | 특징     |
-| -------------------- | --------- | ------ | ------ |
-| Stopwatch Time Study | 직접 측정     | 반복 작업  | 가장 일반적 |
-| Work Sampling        | 간헐 관찰     | 비반복 작업 | 비율 분석  |
-| Standard Data        | 기존 데이터 조합 | 반복 생산  | 효율적    |
-| PTS(MTM,MOST)        | 동작 분석     | 수작업    | 높은 객관성 |
-| 통계법                  | 실적 분석     | 대량 생산  | 간편     |
-
-
-#### 스톱워치법
-
-**스톱워치법(Stopwatch time study)**은 가장 전통적인 표준시간 측정 방법으로, 작업을 직접 관찰하고 스톱워치로 작업시간을 측정한 후 레이팅과 여유를 적용하여 표준시간을 산정하는 방법이다.
-
-**측정 절차**
-
-1. 작업 분해  
-   작업을 요소작업으로 분해한다. 예를 들어 조립 작업을 "부품 취출 → 부품 조립 → 나사 체결 → 검사" 등으로 나눈다.
-2. 반복 측정  
-   동일한 작업을 여러 회 측정한다.  
-   
-    | 회차 |    시간 |
-    | -- | ----: |
-    | 1  |   52초 |
-    | 2  |   50초 |
-    | 3  |   51초 |
-    | 4  |   49초 |
-    | 평균 | 50.5초 |
-
-3. 평균 관측시간 산출  
-
-   $$OT = \frac{\sum{t_i}}{n}$$
-   
-4. 레이팅 적용  
-   관측시간 50초, 레이팅 110% 적용시 $NT = 50 \times 1.1 = 55(초)$로 계산된다.
-5. 여유시간 적용  
-   여유율을 15%로 산정, 외경법을 적용하면 $ST = 55(1 + 0.15) = 63.25(초)$로 계산된다.
-
-실제 작업 반영이 가능하고 현장 적용이 용이하다. 그리고 다양한 작업에서 사용 가능하다는 장점이 있다.  
-반면 관찰자 주관이 개입되고 측정 시간이 많이 소요될 수 있다. 그리고 작업자가 의식적으로 행동에 변화를 줄 수도 있다는 단점이 있다.
-
-#### 워크 샘플링법
-
-**워크 샘플링법(Work Sampling)**은 작업자를 계속 측정하지 않고 무작위 관찰을 통해 작업시간 비율을 추정하는 방법이다. 주로 비반복 작업이나 간접 작업에 사용한다.
-
-예로, 작업을 100회 무작위로 관찰했을 때 아래와 같이 측정되었다고 가정한다.
-
-| 상태   |  횟수 |
-| ---- | --: |
-| 작업 중 | 85회 |
-| 대기   | 15회 |
-
-이때 작업 비율을 계산하면 다음과 같다.
-
-$$P = \frac{85}{100} = 85\%$$
-
-이 방법은 작업자 가동률을 분석하거나 비부가가치 시간을 분석 또는 간접작업을 분석할 때 주로 활용된다.
-
-#### 표준자료법
-
-**표준자료법(Standard Data)**은 과거 측정한 작업 요소 시간을 데이터베이스화하여 새로운 작업 표준시간을 조합하는 방법이다.
-
-작업 A가 다음과 같이 데이터베이스화되어 있다고 가정하자.
-
-- 부품 가져오기 = 5초
-- 위치 맞춤 = 8초
-- 체결 = 12초
-- 검사 = 5초
-
-이 경우 표준시간은 다음과 같이 계산된다.
-
-$5 + 8 + 12 + 5 = 30(초)$
-
-측정시간을 단축하고 객관성이 향상되는 장점이 있으며 반복 작업에 효과적이다.
-
-#### PTS법
-
-**PTS법(Pre-determined Time Study)**은 작업을 기본 동작(Motion)으로 분해하고 각 동작에 미리 정해진 시간을 부여하여 표준시간을 산정하는 방법이다.
-
-대표 방법은 다음과 같다.
-
-- MTM(Method Time Measurement)
-- Work Factor
-- MOST(Maynard Operation Sequence Techinque)
-
-손동작이 다음과 같다고 가정한다.
-
-- Reach(손 뻗기)
-- Move(이동)
-- Graps(잡기)
-- Position(위치맞춤)
-
-그럼 손동작에 대한 표준시간은 다음과 같이 계산된다.
-
-$$ST = t_1 + t_2 + t_3 + t_4$$
-
-레이팅이 불필요하고, 작업 시작 전 표준시간 산정이 가능하며, 설계 단계에 적용이 가능하다.
-
-**주요 방법 비교**
-
-| 순서 | 기법명 | 개발 연도 | 개발자 / 기관 | 주요 특징 |
-| --- | --- | --- | --- | --- |
-| **1** | **Work Factor (WF)** | **1938년** | J. H. Quick 등 | 동작의 난이도와 피로 요인을 난이도 요소(Work Factor)로 수치화하여 표준시간을 측정하는 기법 |
-| **2** | **MTM** | **1948년** | H. B. Maynard 등 | 손, 팔 등의 기본 동작(Reach, Move, Turn 등)을 미세하게 분석하여 TMU($1\text{ TMU} = 0.00001\text{ hour}$) 단위로 측정하는 기법 |
-| **3** | **MOST** | **1980년** | H. B. Maynard 회사 (K. Zandin) | MTM을 간소화·발전시킨 기법으로, 시퀀스 모델(Sequence Model)을 활용해 측정 시간을 대폭 단축한 기법 |
-
-* **Work Factor (1930년대)**  
-    동작 연구의 초기 정밀 측정 기법으로, 신체 부위와 동작 변수를 정밀하게 분석하는 기틀을 마련했다.
-* **MTM (1940년대)**  
-    Work Factor보다 세부 동작 분류 체계를 정립하여 전 세계 산업공학 현장에서 가장 보편적인 PTS 기법으로 자리 잡았다.
-* **MOST (1980년대)**  
-    MTM의 지나치게 복잡한 분석 시간을 줄이기 위해 반복되는 동작 흐름을 패키지화(시퀀스화)하여, MTM 대비 분석 속도를 4~5배 이상 향상시켰다.
-
-#### 경험·통계법
-
-경험·통계법은 과거 생산실적 데이터를 이용하여 표준시간을 추정하는 방법이다. 예로, 과거 1,000개 생산 데이터를 분석한 평균 58초/개를 표준시간 후로로 사용한다. 작업방법 변화 반영이 어렵고 이상 데이터에 영향을 많이 받게 되는 단점이 있다.
-
-
+    
