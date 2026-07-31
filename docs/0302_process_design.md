@@ -138,24 +138,24 @@ flowchart LR
 2. **작업순서 결정**(Routing)  
    제품이 생산되는 동안 거쳐야 하는 공정 순서와 경로를 결정하는 활동이다. Routing은 공정계획에 있어 핵심 요소이다.     
    
-   ```mermaid
-   flowchart LR
+    ```mermaid
+    flowchart LR
     classDef process fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#000,font-weight:bold;
     classDef final fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#000,font-weight:bold;
-
+    
     A["원자재"]:::process
     B["절삭"]:::process
     C["열처리"]:::process
     D["연삭"]:::process
     E["검사"]:::process
     F["조립"]:::final
-
+    
     A --> B
     B --> C
     C --> D
     D --> E
     E --> F
-   ```
+    ```
    
 3. **설비선정**(Machine Selection)  
     생산량과 제품 특성에 따라 적절한 설비를 선정한다. 생산 능력, 정밀도, 자동화 수준, 경제성, 유지보수성 등을 고려해야 한다.  
