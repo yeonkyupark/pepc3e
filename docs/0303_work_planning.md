@@ -71,7 +71,7 @@ flowchart TD
 
 #### 상위 단계와의 연계
 
-* **생산계획(Production Planning)**
+* **생산계획(Production Planning)**  
     무엇을, 얼마나, 언제까지 만들 것인지 전체적인 목표 수량과 납기를 결정하는 대단위 계획 단계이다.
 * **공정계획(Process Planning)**  
     제품을 만들기 위해 필요한 가공 방법, 표준 공수, 필요한 설비 및 공구 등 기술적 조건을 정의하는 단계이다.
@@ -141,7 +141,7 @@ flowchart TD
 | EDD (Earliest Due Date)        | 납기가 가장 빠른 작업 우선 | 납기지연 최소화    |
 | CR (Critical Ratio)            | 긴급도가 높은 작업 우선   | 우선순위 동적 관리  |
 
-**FCFS**
+* **FCFS**
 
     FCFS(First Come First Served)는 먼저 도착한 작업을 먼저 처리하는 규칙으로 가장 단순한 작업순서 결정 방법이다.
     
@@ -183,7 +183,7 @@ flowchart TD
     \frac{3 + 8 + 10}{3} = 7
     $$
 
-**SPT**
+* **SPT**
 
     STP(Shortest Processing Time)는 처리시간이 짧은 작업부터 수행하는 규칙이다. 이는 평균 흐름시간을 최소화하고 평균 재공픔을 감소하는 것을 목적으로 한다. 평균 흐름시간 최소화에 최적인 규칙으로 알려져 있다.
     
@@ -213,7 +213,7 @@ flowchart TD
     
     FCFS보다 평균 흐름시간이 감소한 것을 알 수 있다.
 
-**EDD**
+* **EDD**
 
     EDD(Earliest Due Date)는 납기일(Due date)이 빠른 작업부터 처리하는 규칙이다. 이 기법은 납기 지연을 최소화 하는 것을 목적으로 한다.
     
@@ -233,7 +233,7 @@ flowchart TD
     
     EDD는 최대 지연시간 최소화에 효과적인 규칙이다.
 
-CR
+* CR
 
     CR(Critical Ratio)은 납기 긴급도를 고려하는 동적 우선순위 규칙이다.
     
