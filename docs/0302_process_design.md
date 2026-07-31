@@ -125,7 +125,7 @@ flowchart LR
 #### 주요 내용
 
 1. **공정선택**(Process Selection)  
-   공정선택은 제품 특성과 생산량에 적합한 생산방식을 선택하는 과정이다. Hayes & Wheelwright가 제시한 [제품-공정 행렬(Product-Process Matrix)](https://yeonkyupark.github.io/pepc3e/0101_competitive_manufacturing_strategy/#-)가 대표적인 이론이다.
+    공정선택은 제품 특성과 생산량에 적합한 생산방식을 선택하는 과정이다. Hayes & Wheelwright가 제시한 [제품-공정 행렬(Product-Process Matrix)](https://yeonkyupark.github.io/pepc3e/0101_competitive_manufacturing_strategy/#-)가 대표적인 이론이다.
       
     | 생산방식             | 특징     | 대표 사례    |
     | ---------------- | ------ | -------- |
@@ -156,16 +156,18 @@ flowchart LR
     D --> E
     E --> F
    ```
+   
 3. **설비선정**(Machine Selection)  
-   생산량과 제품 특성에 따라 적절한 설비를 선정한다. 생산 능력, 정밀도, 자동화 수준, 경제성, 유지보수성 등을 고려해야 한다.  
+    생산량과 제품 특성에 따라 적절한 설비를 선정한다. 생산 능력, 정밀도, 자동화 수준, 경제성, 유지보수성 등을 고려해야 한다.  
 4. **공장배치**(Layout)  
-   공정을 효율적으로 운영하기 위해 설비를 배치한다. 대표적인 배치 방식은 다음과 같다.  
-      
+    공정을 효율적으로 운영하기 위해 설비를 배치한다. 대표적인 배치 방식은 다음과 같다.
+   
     | 배치 방식                          | 특징        |
     | ------------------------------ | --------- |
     | 고정위치 배치(Fixed Position Layout) | 대형 제품 생산  |
     | 기능별 배치(Process Layout)         | 다품종 소량생산  |
     | 제품별 배치(Product Layout)         | 대량생산      |
-    | 셀 배치(Cellular Layout)          | 유사 제품군 생산 |   
+    | 셀 배치(Cellular Layout)          | 유사 제품군 생산 |
+   
 5. **작업표준**(Standardization)  
-   공정을 표준화하여 품질과 생산성을 확보한다. 작업표준에는 작업방법(Standard Method), 표준시간(Standard Time), 표준작업(Standard Work)과 같은 내용이 있다.
+    공정을 표준화하여 품질과 생산성을 확보한다. 작업표준에는 작업방법(Standard Method), 표준시간(Standard Time), 표준작업(Standard Work)과 같은 내용이 있다.
