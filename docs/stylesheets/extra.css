@@ -318,33 +318,35 @@
    Blockquote
    ========================================================================== */
 
-.md-typeset blockquote{
+.md-typeset blockquote {
 
-    border-left:5px solid #42a5f5;
+    position: relative;
 
-    padding:0.2rem 1rem;
+    margin: 0.5rem 0;
 
-    border-radius:6px;
+    padding: 0.3rem 1rem 0.3rem 1.2rem;
 
-    margin:0.2rem 0;
+    border-left:none;
 }
 
-/* Quote bar */
+
 .md-typeset blockquote::before {
 
-    content: "";
+    content:"";
 
-    position: absolute;
+    position:absolute;
 
-    left: 0;
-    top: 1rem;
-    bottom: 1rem;
+    left:0;
 
-    width: 5px;
+    top:0.7rem;
 
-    background: #42a5f5;
+    bottom:0.7rem;
 
-    border-radius: 6px;
+    width:4px;
+
+    background:#42a5f5;
+
+    border-radius:8px;
 }
 
 /* ==========================================================================
