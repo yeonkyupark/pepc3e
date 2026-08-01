@@ -1,6 +1,6 @@
 ## 사업환경 분석의 개요
 
-**사업환경 분석(Business Environment Analysis)**은 기업이 경쟁우위를 확보하기 위하여 외부환경과 내부환경을 체계적으로 분석하는 과정이다. 사업환경 분석을 통해 생산전략, 공장입지, 생산능력, 설비투자, 공급망(SCM), 스마트팩토리 구축과 같은 의사결정을 수립한다.
+**사업환경 분석(Business Environment Analysis)**은 기업이 경쟁우위를 확보하기 위하여 <span class='hl'>외부환경과 내부환경을 체계적으로 분석하는 과정</span>이다. 사업환경 분석을 통해 생산전략, 공장입지, 생산능력, 설비투자, 공급망(SCM), 스마트팩토리 구축과 같은 의사결정을 수립한다.
 
 ```mermaid
 flowchart TD
@@ -55,8 +55,6 @@ flowchart TD
     W --> X["성과<br/>QCDFS + ESG"]
 ```
 
-### 목적
-
 사업환경 분석 목적은 급변하는 시장환경 속에서 **기업 경쟁력을 확보**하고 **미래 위험에 선제적으로 대응**하는데 있다.
 
 - 경영전략 수립 지원
@@ -110,7 +108,7 @@ flowchart TB
     class D result;
 ```
 
-### 분석도구 활용 시 유의사항
+분석도구 활용 시 다음 사항을 유의한다.
 
 * 단일 분석도구에 의존하지 않는다.
 * 정량적 자료와 정성적 자료를 병행한다.
@@ -143,6 +141,13 @@ PEST 분석은 정치(Political), 경제(Economic), 사회(Social), 기술(Techn
 * 기술적 요인(Technological)  
   신기술 등장, R&D 투자, 자동화 수준, 특허 환경, 디지털 전환 등
 
+!!! note "PESTLE"
+
+    PESTLE 분석은 기업이나 프로젝트가 외부 환경에 어떻게 영향을 받는지를 체계적으로 분석하는 도구이다. PEST 분석 요소에 법적 요인과 환경적 요인이 추가된다.    
+    
+    * Legal (법적 요인): 고용 법, 소비자 법, 안전 규정, 국제 무역 법규 등 법적 요인이 기업 활동에 미치는 영향을 분석한다.    
+    * Environmental (환경적 요인): 기후 변화, 환경 보호 법규, 지속 가능한 에너지 정책 등 환경과 관련된 요소들이 기업의 운영, 특히 에너지 사용과 원자재 소싱에 미치는 영향을 조사한다.
+
 **PEST 분석의 핵심 목적**
 
 PEST 분석의 핵심 목적은 거시적 트렌드 예측, 신규 시장 진입 결정, 장기 전략 수립이 있다.
@@ -167,7 +172,7 @@ PEST 분석 각 구성 요소의 세부 특징 및 검토 사항은 다음과 �
 
 ### 5 Forces Model
 
-**5 Forces 모델**이란 마이클 포터(Michael Porter) 교수가 제안한 산업 구조 분석 도구로, 산업의 매력도와 수익성을 결정하는 5가지 경쟁 요인을 진단하는 프레임워크이다.
+**5 Forces 모델**이란 마이클 포터(Michael Porter) 교수가 제안한 산업 구조 분석 도구로, <span class='hl'>산업의 매력도와 수익성을 결정하는 5가지 경쟁 요인을 진단하는 프레임워크</span>이다.
 
 <figure markdown>
     
@@ -242,6 +247,7 @@ PEST 분석 각 구성 요소의 세부 특징 및 검토 사항은 다음과 �
 <figure markdown>
     
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Porter_Value_Chain.png/500px-Porter_Value_Chain.png)
+
 <figcaption>https://en.wikipedia.org/wiki/Value_chain</figcaption>
 
 </figure>
@@ -253,17 +259,17 @@ PEST 분석 각 구성 요소의 세부 특징 및 검토 사항은 다음과 �
 
 **가치사슬의 주요 구성 요소**
 
-가치사슬은 **본원적 활동(Primary Activities)**과 **지원 활동(Support Activities)**으로 구분된다.
+가치사슬은 <span class='hl'>**본원적 활동(Primary Activities)**과 **지원 활동(Support Activities)**으로 구분</span>된다.
 
 * **본원적 활동 (Primary Activities)**  
-  제품의 생산, 물류, 마케팅, 판매, 서비스 등 제품의 물리적 완성 및 고객 전달에 직접적으로 관련된 활동
+  제품의 생산, 물류, 마케팅, 판매, 서비스 등 제품의 물리적 완성 및 고객 전달에 직접적으로 관련된 활동이다.
     * 입고 물류(Inbound Logistics): 원자재 수령, 보관, 재고 관리
     * 운영/생산(Operations): 원자재를 최종 제품으로 변환하는 가공 및 조립
     * 출하 물류(Outbound Logistics): 최종 제품의 수집, 저장, 유통
     * 마케팅 및 판매(Marketing & Sales): 구매 유도를 위한 가격 결정, 프로모션, 채널 관리
     * 서비스(Service): 제품 판매 후 고객 지원, 수리, 유지보수
 * **지원 활동 (Support Activities)**  
-  본원적 활동이 원활하게 수행되도록 지원하고 기업 전체를 유지하는 활동
+  본원적 활동이 원활하게 수행되도록 지원하고 기업 전체를 유지하는 활동이다.
     * 기업 인프라(Firm Infrastructure): 경영 관리, 기획, 재무, 법무 등 전체 관리 조직
     * 인적자원 관리(Human Resource Management): 채용, 교육, 보상, 노사 관리
     * 기술 개발(Technology Development): 제품 및 공정 개선을 위한 R&D, IT 시스템 구축
@@ -280,9 +286,9 @@ PEST 분석 각 구성 요소의 세부 특징 및 검토 사항은 다음과 �
 * **핵심 역량 식별**  
   기업 내 핵심적으로 우수한 활동을 파악하여 아웃소싱 여부 및 자원 집중 투자 결정
 
-**가치사슬 구성 요소별 세부 내용 비교**
+**가치사슬 구성 요소별 세부 내용 비교**  
 
-가치사슬을 구성하는 본원적 활동과 지원 활동의 세부 비교는 다음과 같다.
+가치사슬을 구성하는 본원적 활동과 지원 활동을 정리, 비교하면 다음과 같다.
 
 | 구분 | 본원적 활동 (Primary Activities) | 지원 활동 (Support Activities) |
 | :--- | :--- | :--- |
@@ -295,11 +301,12 @@ PEST 분석 각 구성 요소의 세부 특징 및 검토 사항은 다음과 �
 
 ### SWOT 분석
 
-**SWOT 분석**이란 기업의 **내부 환경 요인인 강점(Strength)과 약점(Weakness)**, **외부 환경 요인인 기회(Opportunity)와 위협(Threat)**을 종합적으로 진단하여 전략을 도출하는 프레임워크이다.
+**SWOT 분석**이란 <span class='hl'>기업의 **내부 환경 요인인 강점(Strength)과 약점(Weakness)**, **외부 환경 요인인 기회(Opportunity)와 위협(Threat)**을 종합적으로 진단하여 전략을 도출하는 프레임워크</span>이다.
 
 <figure markdown>
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/SWOT_en.svg/1280px-SWOT_en.svg.png)
+
 <figcaption>https://en.wikipedia.org/wiki/SWOT_analysis</figcaption>
 
 </figure>
@@ -327,13 +334,13 @@ SWOT 분석은 내부 요인 2가지와 외부 요인 2가지로 구성된다.
 SWOT 분석의 핵심은 각 요소를 조합하여 4가지 실행 전략을 도출하는 데 있다.
 
 * SO 전략 (강점-기회)  
-  내부 강점을 활용하여 외부 기회를 적극적으로 포착하는 공격적 전략
+  내부 강점을 활용하여 외부 기회를 적극적으로 포착하는 **공격적 전략**
 * ST 전략 (강점-위협)  
-  내부 강점을 활용하여 외부 위협을 극복하거나 회피하는 다각화 전략
+  내부 강점을 활용하여 외부 위협을 극복하거나 회피하는 **다각화 전략**
 * WO 전략 (약점-기회)  
-  내부 약점을 보완하여 외부 기회를 활용하는 만재/Turnaround 전략
+  내부 약점을 보완하여 외부 기회를 활용하는 **만재/Turnaround 전략**
 * WT 전략 (약점-위협)  
-  내부 약점을 줄이고 외부 위협을 회피하는 방어적/축소 전략
+  내부 약점을 줄이고 외부 위협을 회피하는 **방어적/축소 전략**
 
 **SWOT 전략 유형별 세부 내용 비교**
 
@@ -350,12 +357,14 @@ SWOT 매트릭스를 통해 도출되는 4가지 전략 유형의 세부 특징�
 
 ### BCG 매트릭스
 
-**BCG 매트릭스(BCG Matrix)**란 보스턴 컨설팅 그룹(Boston Consulting Group)이 개발한 포트폴리오 분석 도구로, 기업의 제품군이나 사업단위(SBU)를 **시장 성장률과 상대적 시장 점유율을 기준으로 평가**하는 프레임워크이다.
+**BCG 매트릭스(BCG Matrix)**란 보스턴 컨설팅 그룹(Boston Consulting Group)이 개발한 포트폴리오 분석 도구로, 기업의 제품군이나 사업단위(SBU)를 <span class='hl'>시장 성장률과 상대적 시장 점유율을 기준으로 평가</span>하는 프레임워크이다.
 
 <figure markdown>
 
 ![https://ko.wikipedia.org/wiki/BCG_매트릭스](https://upload.wikimedia.org/wikipedia/commons/7/76/Folio_Plot_BCG_Matrix_Example.png)
+
 <figcaption></figcaption>
+
 </figure>
 
 * **사업 포트폴리오 진단**  
@@ -414,7 +423,7 @@ BCG 매트릭스를 구성하는 4가지 영역의 세부 특징 및 전략 방�
 
 ### GE 매트릭스
 
-**GE 매트릭스(GE-McKinsey Matrix)**란 제너럴 엘렉트릭(GE)사와 맥킨지(McKinsey & Company)가 공동 개발한 다각화 기업의 사업 포트폴리오 분석 도구이다.
+**GE 매트릭스(GE-McKinsey Matrix)**란 제너럴 엘렉트릭(GE)사와 맥킨지(McKinsey & Company)가 공동 개발한 다각화 기업의 사업 포트폴리오 분석 도구로 <span class='hl'>산업 매력도와 사업 경쟁력 두 축을 기준으로 다차원적 평가</span>를 수행한다.
 
 <figure markdown>
     
@@ -433,20 +442,20 @@ BCG 매트릭스를 구성하는 4가지 영역의 세부 특징 및 전략 방�
 
 GE 매트릭스는 산업 매력도와 사업 경쟁력을 축으로 설정하며, 각 축은 다수의 세부 지표를 종합하여 측정된다.
 
-* 산업 매력도 (Industry Attractiveness)  
+* **산업 매력도 (Industry Attractiveness)**  
   시장 규모, 시장 성장률, 산업 수익성, 기술적 요인, 사회적/법적 환경 등 외부 환경 요인을 종합 평가 (높음/중간/낮음)
-* 사업 경쟁력 (Business Unit Strength)  
+* **사업 경쟁력 (Business Unit Strength)**  
   상대적 시장 점유율, 브랜드 인지도, 원가 경쟁력, 기술력, 자원 확보 능력 등 내부 역량 요인을 종합 평가 (강함/중간/약함)
 
 **GE 매트릭스의 3가지 주요 구역 및 대응 전략**
 
 9개 격자는 크게 투자/육성, 수익 창출/선택적 투자, 수확/철수의 3가지 전략 구역으로 구분된다.
 
-* 투자 및 육성 구역 (Invest / Grow)  
+* **투자 및 육성 구역 (Invest / Grow)**  
   산업 매력도가 높고 사업 경쟁력이 강한 우량 사업부 영역으로, 적극적인 자원 투입을 통한 시장 지위 확대
-* 수익 창출 및 선택적 투자 구역 (Selectivity / Earnings)  
+* **수익 창출 및 선택적 투자 구역 (Selectivity / Earnings)**  
   매력도나 경쟁력이 중간 수준인 영역으로, 강점 유지 및 선택적 투자를 통한 수익성 관리
-* 수확 및 철수 구역 (Harvest / Divest)  
+* **수확 및 철수 구역 (Harvest / Divest)**  
   매력도가 낮고 경쟁력이 약한 부실 사업부 영역으로, 신규 투자를 중단하고 단기 현금 회수 후 사업 매각 또는 철수
 
 !!! note "GE 매트릭스와 BCG 매트릭스 세부 비교"
@@ -465,11 +474,12 @@ GE 매트릭스는 산업 매력도와 사업 경쟁력을 축으로 설정하�
 
 ### BPR
 
-**BPR(Business Process Reengineering, 업무 프로세스 재설계)**이란 기업의 성과를 극적으로 향상시키기 위해 기존의 업무 프로세스를 근본적으로 재생각하고 파격적으로 재설계하는 경영 혁신 기법이다.
+**BPR(Business Process Reengineering, 업무 프로세스 재설계)**이란 기업의 성과를 극적으로 향상시키기 위해 <span class='hl'>기존의 업무 프로세스를 근본적으로 재생각하고 파격적으로 재설계</span>하는 경영 혁신 기법이다.
 
 <figure markdown>
 
 ![](https://upload.wikimedia.org/wikipedia/commons/c/ca/Business_Process_Re-engineering.jpg)
+
 <figcaption>https://en.wikipedia.org/wiki/Business_process_re-engineering</figcaption>
 
 </figure>
