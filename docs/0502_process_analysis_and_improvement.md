@@ -1,6 +1,6 @@
 ## 프로세스 분석과 개선
 
-프로세스 분석과 개선(Process Analysis & Improvement)은 기업의 업무 및 생산활동을 구성하는 프로세스를 체계적으로 분석하여 낭비를 제거하고 성과를 향상시키는 활동이다. 전통적인 작업개선이 개별 공정과 작업에 초점을 두었다면, 현대의 프로세스 개선은 가치흐름(Value Stream) 전체를 대상으로 품질(Q), 원가(C), 납기(D), 유연성(F), 서비스(S)를 동시에 향상시키는 것을 목표로 한다. 최근에는 Lean, Six Sigma, TOC, BPR뿐만 아니라 Process Mining, Digital Twin, AI 기반 최적화 기술과 결합하여 데이터 기반의 지속적 개선 체계로 발전하고 있다.
+**프로세스 분석과 개선(Process Analysis & Improvement)**은 기업의 업무 및 생산활동을 구성하는 프로세스를 체계적으로 분석하여 낭비를 제거하고 성과를 향상시키는 활동이다. 전통적인 작업개선이 개별 공정과 작업에 초점을 두었다면, 현대의 프로세스 개선은 가치흐름(Value Stream) 전체를 대상으로 품질(Q), 원가(C), 납기(D), 유연성(F), 서비스(S)를 동시에 향상시키는 것을 목표로 한다. 최근에는 Lean, Six Sigma, TOC, BPR뿐만 아니라 Process Mining, Digital Twin, AI 기반 최적화 기술과 결합하여 데이터 기반의 지속적 개선 체계로 발전하고 있다.
 
 ```text
 프로세스 분석과 개선(Process Analysis & Improvement)
@@ -86,7 +86,7 @@
 
 ### VSM
 
-가치흐름지도(VSM, Value Stream Mapping)는 자재의 입고부터 최종 제품이 고객에게 전달되기까지의 전체 공정에서 물류와 정보의 흐름을 시각적으로 도식화하여 낭비 요소를 식별하고 공정을 개선하는 리닝(Lean) 생산방식의 핵심 프로세스 분석 도구이다.
+**가치흐름지도(VSM, Value Stream Mapping)**는 자재의 입고부터 최종 제품이 고객에게 전달되기까지의 전체 공정에서 물류와 정보의 흐름을 시각적으로 도식화하여 낭비 요소를 식별하고 공정을 개선하는 리닝(Lean) 생산방식의 핵심 프로세스 분석 도구이다.
 
 * **전체 공정의 시각화**  
     개별 작업 단위에 국한하지 않고 자재와 정보가 흘러가는 전체 공급망 체계를 한눈에 파악
@@ -98,6 +98,13 @@
 #### 핵심 구성 요소
 
 VSM은 일반 공정흐름도와 달리 **물리적인 자재 이동**뿐만 아니라 **제어 신호**와 **생산 지시** 같은 정보 흐름을 함께 표시한다.
+
+<figure markdown>
+
+![](https://upload.wikimedia.org/wikipedia/commons/9/99/ValueStreamMapParts.png)
+<figcaption>https://en.wikipedia.org/wiki/Value-stream_mapping</figcaption>
+
+</figure>
 
 1. **자재 흐름(Material Flow)**  
 
@@ -127,8 +134,8 @@ VSM은 일반 공정흐름도와 달리 **물리적인 자재 이동**뿐만 아
 VSM은 단순 현상 파악에 그치지 않고 미래의 개선된 공정 모습을 설계하는 단계까지 포함한다.
 
 ```
-[1단계: 제품군 선정] -> [2단계: 현재 상태 지도(Current State Map) 작성] 
-                    -> [3단계: 미래 상태 지도(Future State Map) 작성] -> [4단계: 실행 계획 수립 및 적용]
+[1단계: 제품군 선정] → [2단계: 현재 상태 지도(Current State Map) 작성] 
+                   → [3단계: 미래 상태 지도(Future State Map) 작성] → [4단계: 실행 계획 수립 및 적용]
 
 ```
 
@@ -170,7 +177,7 @@ VSM은 단순 현상 파악에 그치지 않고 미래의 개선된 공정 모�
 
 ### PDCA
 
-PDCA(Plan-Do-Check-Act) 사이클은 지속적 품질 개선(Continuous Improvement)과 공정 관리를 위해 계획, 실행, 점검, 개선의 4단계를 반복 수행하는 대명사적인 프로세스 관리 프레임워크이다.
+**PDCA(Plan-Do-Check-Act)** 사이클은 **지속적 품질 개선(Continuous Improvement)**과 공정 관리를 위해 **계획, 실행, 점검, 개선의 4단계를 반복 수행**하는 대명사적인 프로세스 관리 프레임워크이다.
 
 #### 4단계 구조
 
