@@ -2,6 +2,68 @@
 
 정보화 활용 기술(Production Support Technology)은 생산활동을 지원하기 위해 정보통신기술과 정보시스템을 활용하는 기술이다. 주요 시스템으로는 ERP, MES, SCM, PLM, WMS 등이 있으며, ERP는 전사 자원관리, MES는 생산 실행관리, SCM은 공급망 최적화 관리, PLM은 제품 생애주기 관리, WMS는 창고 및 재고 관리를 담당한다. 최근 IoT를 통한 실시간 데이터 수집과 Big Data·AI를 활용한 품질 예측, 설비 예지보전 등으로 발전하고 있으며, 이러한 기술들은 스마트팩토리 구현에 있어 핵심 기반이 된다.
 
+```text
+정보활용기술
+│
+├── 1. 스마트 제조 개요
+│      ├── Smart Factory
+│      ├── Industry 4.0
+│      ├── Industry 5.0
+│      ├── Digital Transformation(DX)
+│      └── Connected Factory
+│
+├── 2. 제조정보시스템
+│      ├── ERP
+│      ├── MES
+│      ├── SCM
+│      ├── PLM
+│      ├── APS
+│      ├── WMS
+│      ├── QMS
+│      └── EAM/CMMS
+│
+├── 3. 핵심 ICT 기술
+│      ├── IoT / IIoT
+│      ├── CPS
+│      ├── Cloud
+│      ├── Edge Computing
+│      ├── Big Data
+│      ├── AI / ML
+│      ├── AI Agent
+│      ├── Digital Twin
+│      ├── 5G
+│      └── Blockchain
+│
+├── 4. 데이터 활용
+│      ├── Data Collection
+│      ├── Data Integration
+│      ├── ETL
+│      ├── Data Warehouse
+│      ├── Data Lake
+│      ├── BI
+│      ├── Dashboard
+│      └── Predictive Analytics
+│
+├── 5. 스마트 제조 응용
+│      ├── Smart Maintenance
+│      ├── Smart Quality
+│      ├── Smart Logistics
+│      ├── Smart Scheduling
+│      ├── Energy Management
+│      ├── AI Vision
+│      └── Autonomous Factory
+│
+└── 6. 주요 KPI
+       ├── OEE
+       ├── FPY
+       ├── Throughput
+       ├── Lead Time
+       ├── Energy Efficiency
+       ├── Forecast Accuracy
+       └── Equipment Availability
+```
+
+
 ### 정보화 활용 기술 목적
 
 정보화를 통해 다음과 같은 효과를 얻을 수 있다.
