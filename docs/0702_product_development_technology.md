@@ -1,10 +1,70 @@
 ## 제품개발기술
 
-### 정의
-
 제품개발기술(Product Development Technology)이란 고객 요구사항을 반영하여 제품 기획, 설계, 시험, 검증, 양산까지 제품을 개발하기 위한 제반 기술과 방법론을 의미한다.
 
-### 목적
+```text
+제품개발기술(Product Development Technology)
+│
+├── 1. 제품개발 개요
+│      ├── Product Development
+│      ├── Product Life Cycle(PLC)
+│      ├── New Product Development(NPD)
+│      ├── Concurrent Engineering
+│      └── Design Thinking
+│
+├── 2. 제품개발 프로세스
+│      ├── 시장조사
+│      ├── 제품기획
+│      ├── 개념설계
+│      ├── 상세설계
+│      ├── 시제품 개발
+│      ├── 시험·검증
+│      ├── 양산 준비
+│      └── 양산
+│
+├── 3. 설계기술
+│      ├── CAD
+│      ├── CAE
+│      ├── CAM
+│      ├── DFX
+│      ├── Modular Design
+│      ├── Standardization
+│      └── Platform Design
+│
+├── 4. 개발기법
+│      ├── QFD
+│      ├── VE
+│      ├── FMEA
+│      ├── DOE
+│      ├── Taguchi Method
+│      ├── TRIZ
+│      └── Robust Design
+│
+├── 5. 개발관리
+│      ├── Stage-Gate
+│      ├── APQP
+│      ├── PPAP
+│      ├── PLM
+│      ├── Configuration Management
+│      └── Change Management
+│
+├── 6. 스마트 제품개발
+│      ├── Digital Twin
+│      ├── Simulation
+│      ├── AI Design
+│      ├── Generative Design
+│      ├── 3D Printing
+│      └── Digital Engineering
+│
+└── 7. 성과지표(KPI)
+       ├── Time to Market
+       ├── Development Cost
+       ├── Development Lead Time
+       ├── Design Quality
+       ├── Design Change Rate
+       ├── First Pass Yield
+       └── Customer Satisfaction
+```
 
 제품개발 주요 목적은 경쟁우선순위 QCDFS(Quality, Cost, Delivery, Flexibility, Service) 확보이다.
 
@@ -17,8 +77,6 @@
 | 서비스 향상(S) | 사용자 만족 및 유지관리성 향상 |
 
 특히 제조업에서는 "설계 단계에서 원가 70~80%가 결정된다"는 관점에서 제품개발 단계는 중요하다.
-
-### 프로세스
 
 일반적인 제품개발 프로세스는 다음과 같다.
 
@@ -67,42 +125,6 @@ flowchart LR
 | ⑥ 시험 및 검증  | 제품 성능 및 신뢰성 검증   | 성능시험, 신뢰성시험, 환경시험, 인증시험, DOE                            | 시험 성적서, 검증 보고서, 개선 결과                        |
 | ⑦ 양산 준비    | 생산 가능성 확보        | 공정설계, Layout 설계, PFMEA, Control Plan, 작업표준화             | 공정도, 작업표준서, 검사기준서, 생산능력 평가                   |
 | ⑧ 양산 및 개선  | 양산 안정화 및 지속 개선   | SPC, Six Sigma, VE/VA, TPM, Kaizen                      | 양산 품질 데이터, 개선 보고서, 원가 절감 결과                  |
-
-#### 주요 설계 기법
-
-```
-제품설계 기법
-│
-├── 고객 요구 반영
-│   ├── QFD
-│   └── Kano Model
-│
-├── 기능·가치 최적화
-│   ├── VE
-│   └── VA
-│
-├── 제조·조립성 향상
-│   ├── DFM
-│   ├── DFA
-│   ├── DFMA
-│   └── DFX
-│
-├── 품질·신뢰성 확보
-│   ├── FMEA
-│   ├── Robust Design
-│   └── Tolerance Design
-│
-├── 개발 효율화
-│   ├── Concurrent Engineering
-│   ├── Modular Design
-│   ├── Platform Design
-│   └── TRIZ
-│
-└── 디지털 설계
-    ├── CAD
-    ├── CAE
-    └── Digital Twin
-```
 
 ## 제품설계 기법
 
