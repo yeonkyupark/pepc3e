@@ -13,7 +13,7 @@
 
 ```mermaid
 flowchart LR
-    A[운송] --> B[보관] --> C[하역] --> D[포장] --> [정보]
+    A[운송] --> B[보관] --> C[하역] --> D[포장] --> E[정보]
 ```
 
 1. **운송 관리 (Transportation Management)**  
