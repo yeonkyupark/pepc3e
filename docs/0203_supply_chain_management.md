@@ -13,7 +13,7 @@ SCM은 공급망 내부에서 발생하는 3가지 핵심 요소의 흐름을 �
 
 ```
 [원자재 공급업체] ━━━━━ 제품/물류 흐름 (전방)   ━━━━━> [최종 소비자]
-[원자재 공급업체] <━━━━━ 정보 및 자금 흐름 (후방) ━━━━ [최종 소비자]
+[원자재 공급업체] <━━━━ 정보 및 자금 흐름 (후방) ━━━━━ [최종 소비자]
 ```
 
 * **제품 및 물류 흐름(Material Flow)**  
@@ -77,7 +77,7 @@ SCM 운영 전략은 "공급망 내 자원, 정보, 제품의 흐름을 어떤 �
     * **ETO(Engineer-to-Order, 주문 설계 생산)**  
       고객 요청에 맞춰 설계 단계부터 생산, 출하까지 전 과정을 맞춤형으로 진행하는 전략이다.
 
-!!! note "push/pull/push-pull 전략" {#push-pull-pushpull}  
+!!! note "push/pull/push-pull 전략" <span id="push-pull-pushpull"></span>  
 
     생산 및 물류 관리에서 Push, Pull, Push-Pull 전략은 "생산 및 자재 이동의 시점과 동기를 무엇으로 결정할 것인가"에 대한 공급망 운영 방식이다.
     
@@ -150,7 +150,7 @@ SCM 운영 전략은 "공급망 내 자원, 정보, 제품의 흐름을 어떤 �
     | **운영 초점** | 생산 및 유통 효율성 (원가 절감) | 고객 유연성 및 리크스 축소 | 유연성과 원가 효율성의 균형 |
     | **채찍효과** | 발생 가능성 높음 | 발생 가능성 낮음 | 관리 가능한 수준으로 완화 |
 
-!!! note "디커플링 포인트(Decoupling Point)" {#decoupling-point}
+!!! note "디커플링 포인트(Decoupling Point)" <span id="decoupling-point"></span>
 
     디커플링 포인트(Decoupling Point)는 공급망(SCM) 상에서 **수요예측에 기반한 Push 방식**과 **고객의 실제 확정 주문에 기반한 Pull 방식**이 갈라지는 경계점(Boundary)을 의미한다.
     
@@ -301,10 +301,10 @@ SCM 운영 전략은 "공급망 내 자원, 정보, 제품의 흐름을 어떤 �
     
     주요 4대 영역은 다음과 같다. 
     
-    1. **효율적 재보충(Efficient Replenishment):** POS 기반 실시간 자동 보충 체계 구축
-    2. **효율적 매장 진열(Efficient Store Assortment):** 카테고리 관리(Category Management)를 통한 공간 효율화
-    3. **효율적 판촉(Efficient Promotion):** 불필요한 할인가 판매 축소 및 효과적인 프로모션 진행
-    4. **효율적 신제품 출시(Efficient Product Launch):** 신제품 개발 및 마케팅 프로세스 공유
+    * **효율적 재보충(Efficient Replenishment):** POS 기반 실시간 자동 보충 체계 구축
+    * **효율적 매장 진열(Efficient Store Assortment):** 카테고리 관리(Category Management)를 통한 공간 효율화
+    * **효율적 판촉(Efficient Promotion):** 불필요한 할인가 판매 축소 및 효과적인 프로모션 진행
+    * **효율적 신제품 출시(Efficient Product Launch):** 신제품 개발 및 마케팅 프로세스 공유
 
 4. **SCOR 모델 (Supply Chain Operations Reference Model)**
 
