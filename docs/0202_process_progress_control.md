@@ -11,9 +11,9 @@
 
 진도관리는 실적 측정부터 시정 조치까지의 연속적인 피드백 루프(Feedback Loop) 과정으로 이루어진다.
 
-```
-[계획 수립] → [실적 측정 및 수집] → [계획 대비 실적 비교] → [원인 분석 및 시정 조치]
-
+```mermaid
+flowchart LR
+    A[계획 수립] --> B[실적 측정 및 수집] --> C[계획 대비 실적 비교] --> D[원인 분석 및 시정 조치]
 ```
 
 * **실적 측정 및 정보 수집**  
@@ -48,7 +48,7 @@
 
 ### 네트워크 기법
 
-**네트워크 기법(화살도표, Arrow Diagramming Method)**은 프로젝트를 구성하는 개별 작업(Activity)들을 결합점(Node)과 화살표(Arrow)로 연결하여 공정 간의 상호 연결 관계와 진행 순서를 네트워크망으로 표현한 진도관리 기법이다.
+**네트워크 기법(화살도표, Arrow Diagramming Method)**은 <span class='hl'>프로젝트를 구성하는 개별 작업(Activity)들을 결합점(Node)과 화살표(Arrow)로 연결하여 공정 간의 상호 연결 관계와 진행 순서를 네트워크망으로 표현한 진도관리 기법</span>이다.
 
 * **개념 정의**  
   작업 간 순서 관계와 소요 시간을 화살표 도형으로 표현하여 전체 프로젝트의 완료일과 핵심 관리 공정을 도출하는 기법이다.
@@ -111,30 +111,30 @@ flowchart LR
 
 네트워크 기법은 표기 방식 및 주요 구성 요소(Node와 Arrow)의 역할에 따라 **AOA(Activity-on-Arrow)** 방식과 **AON(Activity-on-Node)** 방식으로 구분된다.
 
-**1. AOA(Activity-on-Arrow) 방식**
+1. **AOA(Activity-on-Arrow) 방식**
 
-화살도표(Arrow Diagram) 방식으로, 화살표(Arrow)가 실제 작업(Activity)을 나타내고 결합점(Node)은 사건(Event)을 나타내는 네트워크 표기 기법이다.
+    화살도표(Arrow Diagram) 방식으로, 화살표(Arrow)가 실제 작업(Activity)을 나타내고 결합점(Node)은 사건(Event)을 나타내는 네트워크 표기 기법이다.
+    
+    * **개념 정의**  
+      작업을 화살표 상에 배치하여 공정의 흐름을 시각화하는 전통적인 네트워크 기법이다.
+    * **주요 특징**  
+      작업 간의 논리적 선후 관계를 명확히 표현하기 위해 시간과 자원이 소요되지 않는 명목상 작업(Dummy Activity, 점선 화살표)을 사용한다.
+    * **적용 기법**  
+      초기 CPM 및 PERT 기법에서 주로 활용되었다.
 
-* **개념 정의**  
-  작업을 화살표 상에 배치하여 공정의 흐름을 시각화하는 전통적인 네트워크 기법이다.
-* **주요 특징**  
-  작업 간의 논리적 선후 관계를 명확히 표현하기 위해 시간과 자원이 소요되지 않는 명목상 작업(Dummy Activity, 점선 화살표)을 사용한다.
-* **적용 기법**  
-  초기 CPM 및 PERT 기법에서 주로 활용되었다.
 
+2. **AON(Activity-on-Node) 방식**
 
-**2. AON(Activity-on-Node) 방식**
-
-선후도표(Precedence Diagram) 방식으로, 결합점(Node)이 실제 작업(Activity)을 나타내고 **화살표(Arrow)는 작업 간의 선후 관계**만을 나타내는 네트워크 표기 기법이다.
-
-* **개념 정의**  
-  작업을 마디(Node) 사각형 내에 배치하고 화살표로 연결하여 작업 간 의존성을 표현하는 기법이다.
-* **주요 특징**  
-  명목상 작업(Dummy Activity)을 사용할 필요가 없어 도표 작성이 상대적으로 간결하다.
-* **다양한 연관 관계 표현**  
-  단순한 FS(Finish-to-Start) 관계 외에도 SS(Start-to-Start), FF(Finish-to-Finish), SF(Start-to-Finish) 등 복잡한 선후 관계를 용이하게 표현할 수 있다.
-* **적용 기법**  
-  현대의 PDM(Precedence Diagramming Method) 및 주요 프로젝트 관리 소프트웨어(MS Project, Primavera 등)에서 표준으로 사용된다.
+    선후도표(Precedence Diagram) 방식으로, 결합점(Node)이 실제 작업(Activity)을 나타내고 **화살표(Arrow)는 작업 간의 선후 관계**만을 나타내는 네트워크 표기 기법이다.
+    
+    * **개념 정의**  
+      작업을 마디(Node) 사각형 내에 배치하고 화살표로 연결하여 작업 간 의존성을 표현하는 기법이다.
+    * **주요 특징**  
+      명목상 작업(Dummy Activity)을 사용할 필요가 없어 도표 작성이 상대적으로 간결하다.
+    * **다양한 연관 관계 표현**  
+      단순한 FS(Finish-to-Start) 관계 외에도 SS(Start-to-Start), FF(Finish-to-Finish), SF(Start-to-Finish) 등 복잡한 선후 관계를 용이하게 표현할 수 있다.
+    * **적용 기법**  
+      현대의 PDM(Precedence Diagramming Method) 및 주요 프로젝트 관리 소프트웨어(MS Project, Primavera 등)에서 표준으로 사용된다.
 
 
 !!! note "AOA와 AON 방식 비교"
@@ -147,7 +147,8 @@ flowchart LR
     | D  | 시제품 생산 | B, C  |
     | E  | 품질 검사  | D     |
 
-    **AOA (Activity on Arrow)**
+    **AOA (Activity on Arrow)**  
+    
     ```mermaid
     flowchart LR
     
@@ -215,32 +216,33 @@ flowchart LR
 | **중점 관리 대상** | 임계경로(CP) 식별을 통한 핵심 공정 관리 집중 가능 | 초보자가 이해하고 수정하기에 진입장벽 존재 |
 | **지연 영향 분석** | 특정 작업 지연 시 전체 완료일에 미치는 영향 즉시 계산 | 현장 작업자가 실시간 진도율 입력 시 추가 도구 필요 |
 
-**1. CPM(Critical Path Method, 주공정법)**
+1. **CPM(Critical Path Method, 주공정법)**
 
-건설 및 일반 제조 공정 등 과거 데이터가 충분하여 **작업 소요 시간이 확정적인(Deterministic)** 프로젝트에 주로 적용된다. 1957년 미국 화학기업 듀퐁(DuPont)과 컴퓨터 제조사 레밍턴 랜드(Remington Rand)가 공장 정기 보수 일정을 최적화하기 위해 개발하였다.
+    건설 및 일반 제조 공정 등 과거 데이터가 충분하여 **작업 소요 시간이 확정적인(Deterministic)** 프로젝트에 주로 적용된다. 1957년 미국 화학기업 듀퐁(DuPont)과 컴퓨터 제조사 레밍턴 랜드(Remington Rand)가 공장 정기 보수 일정을 최적화하기 위해 개발하였다.
+    
+    * **작동 원리**  
+      각 작업의 확실한 소요 시간을 바탕으로 임계경로(Critical Path)를 산출한다.
+    * **진도관리 활용**  
+      임계경로 상에 있는 작업의 지연은 프로젝트 전체 지연으로 직결되므로 최우선 관리 대상으로 지정하여 진도를 집중 통제한다.
 
-* **작동 원리**  
-  각 작업의 확실한 소요 시간을 바탕으로 임계경로(Critical Path)를 산출한다.
-* **진도관리 활용**  
-  임계경로 상에 있는 작업의 지연은 프로젝트 전체 지연으로 직결되므로 최우선 관리 대상으로 지정하여 진도를 집중 통제한다.
+2. **PERT(Program Evaluation and Review Technique)**
 
-**2. PERT(Program Evaluation and Review Technique)**
-
-신제품 개발, R&D 연구 등 과거 데이터가 부족하여 **작업 소요 시간이 불확실한(Probabilistic)** 프로젝트에 주로 적용된다. 미국 해군이 1958년 폴라리스 미사일 개발 사업을 추진하면서 대규모 하청업체들과의 복잡한 일정 관리를 위해 개발하였다.
-
-* **작동 원리**  
-    낙관치($a$), 모드치/최빈치($m$), 비관치($b$) 3점 추정법을 활용하여 기대 소요 시간을 계산한다.  
-
-    $$\text{기대 소요시간 } t_e = \frac{a + 4m + b}{6}$$
-
-* **진도관리 활용**  
-  확률론적 기법을 바탕으로 일정 내 프로젝트 완료 가능 확률을 산출하여 진도 위험을 통제한다.
+    신제품 개발, R&D 연구 등 과거 데이터가 부족하여 **작업 소요 시간이 불확실한(Probabilistic)** 프로젝트에 주로 적용된다. 미국 해군이 1958년 폴라리스 미사일 개발 사업을 추진하면서 대규모 하청업체들과의 복잡한 일정 관리를 위해 개발하였다.
+    
+    * **작동 원리**  
+        낙관치($a$), 모드치/최빈치($m$), 비관치($b$) 3점 추정법을 활용하여 기대 소요 시간을 계산한다.  
+    
+        $$\text{기대 소요시간 } t_e = \frac{a + 4m + b}{6}$$
+    
+    * **진도관리 활용**  
+      확률론적 기법을 바탕으로 일정 내 프로젝트 완료 가능 확률을 산출하여 진도 위험을 통제한다.
 
 CPM과 PERT를 비교하면 다음과 같다.
 
 <figure markdown>
 
 ![](https://itwiki.kr/images/a/a3/PERT_CPM.png)
+
 <figcaption>https://itwiki.kr/w/PERT/CPM</figcaption>
     
 </figure>
