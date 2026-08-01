@@ -220,6 +220,8 @@ $$Y_x = K \cdot x^n$$
     * **산출 목표**: 2번째, 4번째, 8번째 단위 부품을 생산하는 데 걸리는 시간
          
     **풀이 및 계산 과정**
+
+    ![](https://github.com/user-attachments/assets/b3c47725-b98c-4dc9-8122-347dc1b8426d)
     
     1. 학습 지수($n$) 산출  
     
