@@ -77,7 +77,7 @@ SCM 운영 전략은 "공급망 내 자원, 정보, 제품의 흐름을 어떤 �
     * **ETO(Engineer-to-Order, 주문 설계 생산)**  
       고객 요청에 맞춰 설계 단계부터 생산, 출하까지 전 과정을 맞춤형으로 진행하는 전략이다.
 
-!!! note "push/pull/push-pull 전략" <span id="push-pull-pushpull"></span>  
+!!! note "push/pull/push-pull 전략 <span id='push-pull-pushpull'></span>"  
 
     생산 및 물류 관리에서 Push, Pull, Push-Pull 전략은 "생산 및 자재 이동의 시점과 동기를 무엇으로 결정할 것인가"에 대한 공급망 운영 방식이다.
     
@@ -150,7 +150,7 @@ SCM 운영 전략은 "공급망 내 자원, 정보, 제품의 흐름을 어떤 �
     | **운영 초점** | 생산 및 유통 효율성 (원가 절감) | 고객 유연성 및 리크스 축소 | 유연성과 원가 효율성의 균형 |
     | **채찍효과** | 발생 가능성 높음 | 발생 가능성 낮음 | 관리 가능한 수준으로 완화 |
 
-!!! note "디커플링 포인트(Decoupling Point)" <span id="decoupling-point"></span>
+!!! note "디커플링 포인트(Decoupling Point) <span id='decoupling-point'></span>"
 
     디커플링 포인트(Decoupling Point)는 공급망(SCM) 상에서 **수요예측에 기반한 Push 방식**과 **고객의 실제 확정 주문에 기반한 Pull 방식**이 갈라지는 경계점(Boundary)을 의미한다.
     
