@@ -132,8 +132,23 @@ flowchart LR
 
 #### QFD
 
-QFD(Quality Function Deployment, 품질기능전개)는 고객 요구사항(VOC)을 제품 설계 요구사항으로 변환하는 체계적인 설계 기법이다. 즉, VOC를 기술 특성으로 전개하는 방법이다. 주요 도구에는 품질의 집(House of Quality)가 있다.
+<figure markdown>
 
+![](https://asq.org/-/media/Images/Learn-About-Quality/Quality-Function-Deployment/waterfall-relationship-qfd-matrices-figure-lg.gif?h=400&w=598)
+<figcaption>https://asq.org/quality-resources/qfd-quality-function-deployment</figcaption>
+
+</figure>
+
+**QFD(Quality Function Deployment, 품질기능전개)**는 <span class='hl'>고객 요구사항(VOC)을 제품 설계 요구사항으로 변환하는 체계적인 설계 기법</span>이다. 즉, VOC를 기술 특성으로 전개하는 방법이다. 주요 도구에는 품질의 집(House of Quality)가 있다.
+
+**House of Quality**
+
+<figure markdown>
+
+![]([https://asq.org/-/media/Images/Learn-About-Quality/House-of-Quality/benchmarking-house-of-quality.gif?h=399&w=440](https://asq.org/quality-resources/house-of-quality))
+
+<figcaption>https://asq.org/quality-resources/house-of-quality</figcaption>
+</figure>
 !!! example "VOC → 기술 요구사항으로 변환"  
 
     **고객요구사항**
@@ -148,13 +163,13 @@ QFD(Quality Function Deployment, 품질기능전개)는 고객 요구사항(VOC)
 
 #### Kano Model
 
-카노 모델(Kano Model)은 카노 노리아키에 의해 1980년대에 연구된 제품 개발을 논하는 상품기획이론이다. 어떤 상품을 기획할 때 각각 구성요소에 대해 소비자가 기대하는 것을 **충족, 불충족이라는 객관적인 관계**와 소비자의 **만족, 불만족이라는 주관적인 관계** 사이의 상호관계를 통해 **5가지 품질요소**로 구분하여 설명한다.
+**카노 모델(Kano Model)**은 카노 노리아키에 의해 1980년대에 연구된 제품 개발을 논하는 상품기획이론이다. 어떤 상품을 기획할 때 각각 구성요소에 대해 소비자가 기대하는 것을 **충족, 불충족이라는 객관적인 관계**와 소비자의 **만족, 불만족이라는 주관적인 관계** 사이의 상호관계를 통해 **5가지 품질요소**로 구분하여 설명한다.
 
 <figure markdown>
 
-![Kano Model](https://upload.wikimedia.org/wikipedia/commons/6/68/Kano_model_showing_transition_over_time.png)
+![Kano Model](https://asq.org/-/media/Images/Learn-About-Quality/Kano-Model/kano-model.gif?h=427&w=470)
 
-<figcaption>https://en.wikipedia.org/wiki/Kano_model</figcaption>
+<figcaption>https://asq.org/quality-resources/kano-model</figcaption>
 
 </figure>  
 
@@ -237,6 +252,7 @@ QFD(Quality Function Deployment, 품질기능전개)는 고객 요구사항(VOC)
     - 활용: RPN 점수가 높거나 심각도(S) 점수가 치명적으로 높은 항목을 최우선 개선 대상으로 선정하여 방지 대책을 수립한다.  
       
 3. FMEA의 주요 종류  
+
     | 종류 | 분석 대상 | 주요 목적 |
     | :--- | :--- | :--- |
     | **DFMEA** (Design FMEA) | 제품 설계 및 엔지니어링 단계 | 설계 결함, 부품 수명, 재질 선택 오류 등 예방 |
@@ -250,7 +266,7 @@ QFD(Quality Function Deployment, 품질기능전개)는 고객 요구사항(VOC)
 
 #### 강건설계
 
-다구찌 강건설계(Taguchi Robust Design)는 제어 인자와 직교배열표, S/N비(신호대잡음비)를 사용하여 외부 환경 변화나 잡음(Noise)에 민감하지 않은 품질 안정한 제품과 공정을 설계하는 통계적 최적화 기법이다.
+**다구찌 강건설계(Taguchi Robust Design)**는 제어 인자와 직교배열표, S/N비(신호대잡음비)를 사용하여 <span class='hl'>외부 환경 변화나 잡음(Noise)에 민감하지 않은 품질 안정한 제품과 공정을 설계하는 통계적 최적화 기법</span>이다.
 
 **핵심 개념 및 원리**
 
@@ -265,8 +281,8 @@ QFD(Quality Function Deployment, 품질기능전개)는 고객 요구사항(VOC)
 
 **3단계 설계 프로세스**
 
-- **시스템 설계**(System Design): 기본 기능 구현을 위한 과학적, 기술적 구조와 재료를 결정
-- **파마미터 설계**(Parameter Design): 잡음의 영향을 가장 적게 받는 제어 인자의 최적 수준 조합을 선택
+- **시스템 설계**(System Design): 1차 설계, 기본 기능 구현을 위한 과학적, 기술적 구조와 재료를 결정
+- **파마미터 설계**(Parameter Design): 잡음의 영향을 가장 적게 받는 제어 가능한 인자의 최적 수준 조합을 선택
 - **허용치 설계**(Tolerance Design): 비용과 품지 손신을 고려해 허용 오차 범위를 엄격하게 조절할지 결정
 
 **품질**
@@ -278,7 +294,7 @@ QFD(Quality Function Deployment, 품질기능전개)는 고객 요구사항(VOC)
 
 다구찌는 품질 저하로 인한 손실을 시각화하고 계산하기 위해 2차 함수 모델을 도입했다.
 
-$$L(y) = k(y=m)^2$$
+$$L(y) = k(y-m)^2$$
 
 여기서,
 
