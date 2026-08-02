@@ -245,7 +245,7 @@ flowchart TD
         $$
         
         $$
-        \boxed{가동률=87.5%}
+        \boxed{가동률 = 87.5\%}
         $$
         
     2. 성능률(Performance)
@@ -263,7 +263,7 @@ flowchart TD
         $$
         
         $$
-        \boxed{성능률=83.3%}
+        \boxed{성능률 = 83.3\%}
         $$
         
         의미:
@@ -293,7 +293,7 @@ flowchart TD
         $$
         
         $$
-        \boxed{품질률 = 94.3%}
+        \boxed{품질률 = 94.3\%}
         $$
     
     4. OEE 계산
@@ -313,7 +313,7 @@ flowchart TD
         따라서,
         
         $$
-        \boxed{OEE=68.8%}
+        \boxed{OEE = 68.8\%}
         $$
     
     **최종 결과**
@@ -336,7 +336,7 @@ flowchart TD
     이며, 세 요소가 곱해져 최종적으로:
     
     $$
-    \boxed{설비종합효율(OEE) = 68.8%}
+    \boxed{설비종합효율(OEE) = 68.8\%}
     $$
 
     이다.
