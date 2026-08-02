@@ -236,7 +236,8 @@
 
     margin:1rem 10px;
 
-    table-layout:auto;
+    /*table-layout:auto;*/
+    display: table;
 
     border-collapse:collapse;
 
