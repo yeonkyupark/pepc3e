@@ -632,7 +632,7 @@ flowchart LR
 
 #### 우선순위 규칙
 
-**우선순위 정렬 및 우선순위 규칙 (Sequencing & Priority Rules)**은 한 기계에 여러 작업이 대기 중일 때 어떤 작업부터 처리할지 순서를 정하는 규칙이다. 자세한 내용은 [[3. 공정관리 > 3. 작업계획 수립 > 우선순위규칙](https://yeonkyupark.github.io/pepc3e/0303_work_planning/#_7)]를 참고한다.
+**우선순위 정렬 및 우선순위 규칙 (Sequencing & Priority Rules)**은 한 기계에 여러 작업이 대기 중일 때 어떤 작업부터 처리할지 순서를 정하는 규칙이다. 자세한 내용은 [[3. 공정관리 > 3. 작업계획 수립 > 우선순위규칙](https://yeonkyupark.github.io/pepc3e/0303_work_planning/#priority-rules)]를 참고한다.
 
 * **FCFS (First-Come, First-Served)**, 먼저 도착한 작업을 먼저 처리 (공평성 확보, 납기 고려 불가)
 * **EDD (Earliest Due Date)**, 납기일이 가장 임박한 작업을 우선 처리 (납기 지연 최소화에 유수)
