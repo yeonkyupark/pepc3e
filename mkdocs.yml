@@ -11,6 +11,7 @@ edit_uri: edit/main/docs/
 
 markdown_extensions:
   - footnotes
+  - tables
   - admonition
   - attr_list
   - md_in_html
