@@ -1,6 +1,6 @@
 ## 품질관리
 
-품질관리(Quality Management)는 고객 요구사항을 만족하는 제품과 서비스를 경제적으로 제공하기 위해 품질을 계획하고, 유지하며, 개선하는 관리활동이다. ISO 9000에서는 품질 요구사항을 충족시키기 위한 운영기법과 활동으로 정의하고 있다. 품질관리 목적은 품질 향상, 원가 절감, 납기 확보 및 고객 만족이며, 품질계획, 품질관리, 품질보증, 품질개선으로 구성된다. 주요 기법으로 (신)QC 7가지 도구, 통계적 품질관리(SQC), 공정능력지수, 관리도, Six Sigma 등이 있으며, 최근 AI와 스마트팩토리를 활용한 데이터 기반 품질관리로 발전하고 있다.
+**품질관리(Quality Management)**는 고객 요구사항을 만족하는 제품과 서비스를 경제적으로 제공하기 위해 품질을 계획하고, 유지하며, 개선하는 관리활동이다. ISO 9000에서는 품질 요구사항을 충족시키기 위한 운영기법과 활동으로 정의하고 있다. 품질관리 목적은 품질 향상, 원가 절감, 납기 확보 및 고객 만족이며, 품질계획, 품질관리, 품질보증, 품질개선으로 구성된다. 주요 기법으로 (신)QC 7가지 도구, 통계적 품질관리(SQC), 공정능력지수, 관리도, Six Sigma 등이 있으며, 최근 AI와 스마트팩토리를 활용한 데이터 기반 품질관리로 발전하고 있다.
 
 ```text
 품질관리(Quality Management)
@@ -179,12 +179,12 @@ ISO 9000에서는 품질관리를 다음과 같이 정의한다.
 | 도구    | 목적     | 주요 질문             |
 | ----- | ------ | ----------------- |
 | 체크시트  | 데이터 수집 | 무슨 문제가 얼마나 발생하는가? |
-| 히스토그램 | 분포 분석  | 데이터가 어떻게 분포하는가?   |
+| 층별    | 데이터 분류 | 어디에서 문제가 발생하는가?   |
 | 파레토도  | 중점 관리  | 무엇을 먼저 개선할 것인가?   |
+| 히스토그램 | 분포 분석  | 데이터가 어떻게 분포하는가?   |
 | 특성요인도 | 원인 분석  | 왜 문제가 발생했는가?      |
 | 산점도   | 상관관계   | 두 변수는 관련이 있는가?    |
 | 관리도   | 공정 안정성 | 공정이 관리상태인가?       |
-| 층별    | 데이터 분류 | 어디에서 문제가 발생하는가?   |
 
 제조현장 중심, 데이터 분석 중심, 통계적 기초 활용, 문제 발생 후 원인 분석과 같은 특징이 있다.
 
@@ -302,7 +302,7 @@ flowchart TD
 
 ## 통계적 품질관리 {#sqc}
 
-통계적 품질관리(SQC, Statistical Quality Control)는 통계적 방법을 이용하여 제품과 공정의 변동을 분석하고 품질을 유지·개선하는 관리 방법이다. 주요 구성으로는 통계적 공정관리(SPC), 샘플링 검사, 실험계획법이 있다. SPC에서는 관리도를 이용하여 공정의 안정성을 판단하고, 공정능력지수 Cp와 Cpk를 통해 규격 만족 능력을 평가한다. 또한 샘플링 검사는 표본 검사를 통해 LOT의 합격 여부를 판단하며, 실험계획법은 공정 인자의 영향 분석과 최적 조건 도출에 활용된다. 이러한 통계적 품질관리 기법은 데이터 기반으로 공정 변동을 감소시키고 품질 향상을 달성하기 위한 핵심 방법이다.
+**통계적 품질관리(SQC, Statistical Quality Control)**는 <span class='hl'>통계적 방법을 이용하여 제품과 공정의 변동을 분석하고 품질을 유지·개선하는 관리 방법</span>이다. 주요 구성으로는 통계적 공정관리(SPC), 샘플링 검사, 실험계획법이 있다. SPC에서는 관리도를 이용하여 공정의 안정성을 판단하고, 공정능력지수 Cp와 Cpk를 통해 규격 만족 능력을 평가한다. 또한 샘플링 검사는 표본 검사를 통해 LOT의 합격 여부를 판단하며, 실험계획법은 공정 인자의 영향 분석과 최적 조건 도출에 활용된다. 이러한 통계적 품질관리 기법은 데이터 기반으로 공정 변동을 감소시키고 품질 향상을 달성하기 위한 핵심 방법이다.
 
 ```mermaid
 flowchart TD
@@ -353,7 +353,7 @@ flowchart TD
 
 SQC 핵심은 **이상원인을 발견하여 제거하고 우연원인만 존재하는 안정된 공정을 유지하는 것**이다.
 
-### 통계적 품질관리 주요 기법
+### 주요 기법
 
 SQC는 일반적으로 다음 세 가지 영역으로 구분한다.
 
@@ -387,7 +387,7 @@ flowchart TD
 
 #### 통계적 공정관리
 
-통계적 공정관리(SPC, Statistical Process Control)는 통계적 방법을 이용하여 공정 상태를 분석하고 관리하는 기법이다. 목적은 검사에 의한 불량 제거가 아니라 공정 자체를 안정화하여 불량 발생을 예방하는 것이다.  
+**통계적 공정관리(SPC, Statistical Process Control)**는 <span class='hl'>통계적 방법을 이용하여 공정 상태를 분석하고 관리하는 기법</span>이다. 목적은 검사에 의한 불량 제거가 아니라 공정 자체를 안정화하여 불량 발생을 예방하는 것이다.  
 
 제조 현장에서는 다음과 같이 여러 기법을 연결하여 적용한다.
 
@@ -421,9 +421,9 @@ flowchart LR
     F --> G
 ```
 
-##### 관리도(Control Chart)
+##### 관리도
 
-관리도는 시간에 따른 품질 데이터를 표시하여 공정이 통계적으로 관리 상태인지 판단하는 도구이다.
+관리도(Control Chart)는 시간에 따른 품질 데이터를 표시하여 공정이 통계적으로 관리 상태인지 판단하는 도구이다.
 
 ```mermaid
 xychart-beta
@@ -456,7 +456,7 @@ $$LCL = \mu - 3\sigma$$
     | 관리도      | 용도          |
     | -------- | ----------- |
     | $\bar{X} - R$ 관리도 | 평균과 범위 관리   |
-    | $\bar{X} - R$ 관리도 | 평균과 표준편차 관리 |
+    | $\bar{X} - S$ 관리도 | 평균과 표준편차 관리 |
     | $I-MR$ 관리도 | 개별 측정값 관리   |
    
 2. **계수형 관리도**  
@@ -471,7 +471,7 @@ $$LCL = \mu - 3\sigma$$
 
 ##### 공정능력 분석
 
-**공정능력 분석(Process Capability Analysis)**은 공정이 주어진 규격을 만족하는 제품을 생산할 수 있는 능력을 평가하는 방법이다. 관리도는 "공정이 안정적인가"를 판단하고 공정능력지수는 "안정된 공정이 규격을 만족할 능력이 있는가"를 판단한다.
+**공정능력 분석(Process Capability Analysis)**은 <span class='hl'>공정이 주어진 규격을 만족하는 제품을 생산할 수 있는 능력을 평가하는 방법</span>이다. 관리도는 "공정이 안정적인가"를 판단하고 공정능력지수는 "안정된 공정이 규격을 만족할 능력이 있는가"를 판단한다.
 
 1. **Cp (Process Capability Index)**
 
@@ -572,7 +572,7 @@ $$LCL = \mu - 3\sigma$$
 
     인자의 모든 수준 조합에 대해 실험을 수행하는 방식이다.
        
-    * 완전 요인 배치법(Full Factorial  
+    * 완전 요인 배치법(Full Factorial)  
         모든 인자 조합을 실험하여 주효과뿐만 아니라 인자 간 상호작용(Interaction)까지 완벽하게 파악
     * 일부 요인 배치법(Fractional Factorial)  
         실험 횟수를 줄이기 위해 핵심 조합만 선별 수행하며, 선별(Screening) 단계에 주로 활용
@@ -661,7 +661,7 @@ $$LCL = \mu - 3\sigma$$
 
 측정시스템 오차는 일반적으로 정확도와 정밀도로 구분한다.  
 
-정확도는 참값과의 근접성을 의미하며 편향(Bias)가 대표적인 평가 항목이다. 또한 측정 범위에 따른 편향 변화를 평가하는 선형성(Linearity)과 시간 변화에 따른 변동을 평가하는 안정성(Stability)도 측정시스템에 있어 중요한 특성으로 관리한다. 정밀도는 측정값 산포를 의미하며 반복성(Repeatability)와 재현성(Reproducibility)로 평가한다.  
+**정확도**는 참값과의 근접성을 의미하며 편향(Bias)가 대표적인 평가 항목이다. 또한 측정 범위에 따른 편향 변화를 평가하는 선형성(Linearity)과 시간 변화에 따른 변동을 평가하는 안정성(Stability)도 측정시스템에 있어 중요한 특성으로 관리한다. **정밀도**는 측정값 산포를 의미하며 반복성(Repeatability)와 재현성(Reproducibility)로 평가한다.  
 
 제조 현장에서는 AIAG MSA 기준에 따라 Gage R&R을 활용하여 반복성과 재현성을 분석하고 측정 시스템 적합성을 판단한다.
 
@@ -793,62 +793,12 @@ MBNQA는 단순히 품질부서만 평가하지 않고, 경영전략, 조직문�
 
 **유럽품질경영재단(EFQM)**이 개발한 경영품질 모델이다. 유럽 기업 경쟁력 향상을 위해 개발되었다.
 
-```mermaid
-flowchart LR
+<figure>
 
-    classDef main fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#000,font-weight:bold;
-    classDef direction fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000,font-weight:bold;
-    classDef execution fill:#EDE7F6,stroke:#7B1FA2,stroke-width:2px,color:#000,font-weight:bold;
-    classDef result fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#000,font-weight:bold;
-    classDef feedback fill:#FFEBEE,stroke:#D32F2F,stroke-width:2px,color:#000,font-weight:bold;
+![](https://efqm.org/wp-content/uploads/2024/06/model-updated-2024.png)
+<figcaption>https://efqm.org/the-efqm-model/</figcaption>
 
-
-    A["EFQM Excellence Model 2020<br/>(탁월성 모델)"]:::main
-
-
-    B["Direction<br/>(방향 설정)"]:::direction
-
-    B1["Purpose, Vision & Strategy<br/>(목적·비전·전략)"]:::direction
-    B2["Organisational Culture & Leadership<br/>(조직문화·리더십)"]:::direction
-
-
-    C["Execution<br/>(실행)"]:::execution
-
-    C1["Engaging Stakeholders<br/>(이해관계자 참여)"]:::execution
-    C2["Creating Sustainable Value<br/>(지속가능 가치 창출)"]:::execution
-    C3["Driving Performance & Transformation<br/>(성과 및 변화 추진)"]:::execution
-
-
-    D["Results<br/>(성과)"]:::result
-
-    D1["Stakeholder Perceptions<br/>(이해관계자 인식 성과)"]:::result
-    D2["Strategic & Operational Performance<br/>(전략 및 운영 성과)"]:::result
-
-
-    A --> B
-    A --> C
-    A --> D
-
-
-    B --> B1
-    B --> B2
-
-
-    C --> C1
-    C --> C2
-    C --> C3
-
-
-    D --> D1
-    D --> D2
-
-
-    B --> C
-    C --> D
-
-
-    D --> B
-```
+</figure>
 
 EFQM 2020 모델은 기존 Enablers–Results(가능요인–성과) 구조에서 벗어나 Direction → Execution → Results의 3개 영역으로 재구성되었다.
 
@@ -863,7 +813,7 @@ EFQM 2020 모델은 기존 Enablers–Results(가능요인–성과) 구조에�
 
 ### ISO 9001 품질경영시스템 평가
 
-**ISO 9001**은 국제표준화기구(ISO)가 제정한 품질경영시스템 요구사항이다. 조직이 고객 요구사항을 만족하는 제품과 서비스를 지속적으로 제공할 수 있는 시스템을 갖추었는지를 평가한다.
+**ISO 9001**은 국제표준화기구(ISO)가 제정한 **품질경영시스템 요구사항**이다. 조직이 고객 요구사항을 만족하는 제품과 서비스를 지속적으로 제공할 수 있는 시스템을 갖추었는지를 평가한다.
 
 | 구분 | ISO 9001:2008 (8대 원칙)                                       | ISO 9001:2015 (7대 원칙)                      | 변경 내용 |
 | -- | ----------------------------------------------------------- | ------------------------------------------ | ----- |
