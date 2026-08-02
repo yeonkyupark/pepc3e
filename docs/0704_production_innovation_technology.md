@@ -93,7 +93,7 @@
 
 #### TRIZ
 
-트리즈(TRIZ)는 러시아 과학자 겐리히 알트류레러가 전 세계 200만 건 이상 혁신적인 특허를 분석하여 정립한 '창의적 문제 해결 이론'이다. TRIZ는 러시아어인 Teoriya Resheniya Izobretatelskikh Zadach의 머리글자이다. 알트슈레러 박사는 위대한 발명가의 문제 해결 과정에 공통된 법칙이 있음을 발견하고 누구나 학습을 통해 천재처럼 창의적인 아이디어를 낼 수 있도록 체계화된 공식과 도구를 만들었다.
+**트리즈(TRIZ)**는 러시아 과학자 겐리히 알트슈레러가 전 세계 200만 건 이상 혁신적인 특허를 분석하여 정립한 '창의적 문제 해결 이론'이다. TRIZ는 러시아어인 Teoriya Resheniya Izobretatelskikh Zadach의 머리글자이다. 알트슈레러 박사는 위대한 발명가의 문제 해결 과정에 공통된 법칙이 있음을 발견하고 누구나 학습을 통해 천재처럼 창의적인 아이디어를 낼 수 있도록 체계화된 공식과 도구를 만들었다.
 
 TRIZ는 진정한 혁신은 타협(Trade-off)이나 절충안을 찾는 것이 아니라, 시스템 내부 모순을 근본적으로 극복하는 것이라고 정의한다.
 
@@ -480,7 +480,7 @@ TPM은 설비 관리 효율을 높이고 생산성을 극대화하기 위해 다
 
 <figure markdown>
 
-![Value Stream Map](https://ko.wikipedia.org/wiki/%EA%B0%80%EC%B9%98_%ED%9D%90%EB%A6%84_%EC%A7%80%EB%8F%84#/media/%ED%8C%8C%EC%9D%BC:ValueStreamMapParts.png)
+![Value Stream Map](https://upload.wikimedia.org/wikipedia/commons/9/99/ValueStreamMapParts.png)
 
 <figcaption>https://ko.wikipedia.org/wiki/가치_흐름_지도</figcaption>
 
@@ -520,10 +520,10 @@ VMS는 전체 리드타임(Lead time) 내 모든 행위를 고객 관점에서 �
 
 | 평가 지표 | 영문 명칭 | 정의 및 개념 | 계산 공식 |
 | :--- | :--- | :--- | :--- |
-| **택트 타임** | **Takt Time (T)** | 고객의 수요를 맞추기 위해 제품 1개를 생산하는 데 허용된 최대 시간 | $$\frac{\text{1일 총 가동 시간}}{\text{1일 고객 요구 수량}}$$ |
-| **사이클 타임** | **Cycle Time (C)** | 라인의 여러 공정 중 **가장 오랜 시간이 걸리는 공정의 작업 시간** (전체 생산 속도를 결정함) | $$\max(\text{각 공정별 작업 시간})$$ |
-| **최적 작업장 수** | **Theoretical Minimum (N)** | 라인 효율이 100%라고 가정할 때 필요한 이론상의 최소 작업장 수 | $$\frac{\text{모든 개별 작업 시간의 총합 }(\sum t)}{\text{사이클 타임 }(C)}$$ |
-| **라인 효율** | **Line Efficiency (E)** | 전체 작업장이 유휴 시간 없이 얼마나 효율적으로 가동되고 있는지 나타내는 비율 | $$\frac{\text{모든 개별 작업 시간의 총합 }(\sum t)}{\text{실제 작업장 수 }(n) \times \text{사이클 타임 }(C)} \times 100$$ |
+| **택트 타임** | **Takt Time (T)** | 고객의 수요를 맞추기 위해 제품 1개를 생산하는 데 허용된 최대 시간 | $\frac{\text{1일 총 가동 시간}}{\text{1일 고객 요구 수량}}$ |
+| **사이클 타임** | **Cycle Time (C)** | 라인의 여러 공정 중 **가장 오랜 시간이 걸리는 공정의 작업 시간** (전체 생산 속도를 결정함) | $\max(\text{각 공정별 작업 시간})$ |
+| **최적 작업장 수** | **Theoretical Minimum (N)** | 라인 효율이 100%라고 가정할 때 필요한 이론상의 최소 작업장 수 | $\frac{\text{모든 개별 작업 시간의 총합 }(\sum t)}{\text{사이클 타임 }(C)}$ |
+| **라인 효율** | **Line Efficiency (E)** | 전체 작업장이 유휴 시간 없이 얼마나 효율적으로 가동되고 있는지 나타내는 비율 | $\frac{\text{모든 개별 작업 시간의 총합 }(\sum t)}{\text{실제 작업장 수 }(n) \times \text{사이클 타임 }(C)} \times 100$ |
 
 현장에서 특정 공정 작업 시간이 길어 병목이 발생할 때(사이클 타임이 택트 타임보다 길때) 이를 해결하는 방법이다.
 
