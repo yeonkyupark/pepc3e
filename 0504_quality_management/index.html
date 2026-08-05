@@ -1,0 +1,3791 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../0503_productivity_management/">
+      
+      
+        <link rel="next" href="../0601_feasibility_analysis/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>4. 품질관리 - 생산운영과 공장관리</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="생산운영과 공장관리" class="md-header__button md-logo" aria-label="생산운영과 공장관리" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            생산운영과 공장관리
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4. 품질관리
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/yeonkyupark/pepc3e" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    yeonkyupark/pepc3e
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="생산운영과 공장관리" class="md-nav__button md-logo" aria-label="생산운영과 공장관리" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    생산운영과 공장관리
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/yeonkyupark/pepc3e" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    yeonkyupark/pepc3e
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 생산전략
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1. 생산전략
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0101_competitive_manufacturing_strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 경쟁우위 생산전략
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0102_production_structure_and_layout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 생산구조와 방식(Layout)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0103_purchasing_and_outsourcing_strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 구매와 외주전략
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0104_workforce_and_job_design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 인력과 직무설계
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0105_business_environment_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 사업환경 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 생산운영 및 물류관리
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2. 생산운영 및 물류관리
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0201_demand_forecasting_and_scheduling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 수요예측과 일정관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0202_process_progress_control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 프로세스 진도관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0203_supply_chain_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 공급망 관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0204_logistics_material_and_inventory_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 물류관리(자재 및 재고관리)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 공정관리
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3. 공정관리
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0301_production_planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 생산계획수립
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0302_process_design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 공정설계
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0303_work_planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 작업계획수립
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0304_standard_work_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 표준작업관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0305_maintenance_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 설비보전관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0306_process_improvement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 공정개선
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 설비관리
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4. 설비관리
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0401_facility_planning_and_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 설비계획 및 관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0402_material_handling_and_transport/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 자재취급 및 운반관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0403_environmental_and_safety_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 환경관리 및 안전관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0404_facility_and_utility_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 시설 및 유틸리티관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0405_factory_automation_technology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 공장자동화 기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 작업 및 생산성과 측정과 개선
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5. 작업 및 생산성과 측정과 개선
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0501_work_method_and_time_study/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 작업방법 및 시간연구
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0502_process_analysis_and_improvement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 프로세스 분석과 개선
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0503_productivity_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 생선성 관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 품질관리
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 품질관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        품질관리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="품질관리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        품질관리 기본 기능
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        품질관리 대표 기법
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="품질관리 대표 기법">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qc-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QC 7가지 도구
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qc-7_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        신 QC 7가지 도구
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        통계적 품질관리
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        품질비용
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="품질비용">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        분류 체계(PAF 모델)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sqc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        통계적 품질관리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="통계적 품질관리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sqc_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQC 기본 개념
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 기법
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="주요 기법">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        통계적 공정관리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="통계적 공정관리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        관리도
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        공정능력 분석
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        샘플링 검사
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실험계획법
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        측정시스템 오차
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="측정시스템 오차">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        정확도
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        정밀도
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        품질평가
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="품질평가">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        데밍상
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mbnqa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MBNQA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efqm-excellence-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EFQM Excellence Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iso-9001" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ISO 9001 품질경영시스템 평가
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 원가관리 및 경제성 공학
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    6. 원가관리 및 경제성 공학
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0601_feasibility_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 사업성 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0602_cost_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 원가관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0603_value_engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 가치공학
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0604_operations_research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 경영과학(OR)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. 생산지원기술 및 기타
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    7. 생산지원기술 및 기타
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0701_information_technology_and_smart_factory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 정보화활용기술(스마트팩토리 등)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0702_product_development_technology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 제품개발기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0703_service_operations_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 서비스운영관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0704_production_innovation_technology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 생산혁신기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0705_emerging_factory_management_technologies_and_trends/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 공장관리에 관한 신기술 및 경향에 관한 사항
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        품질관리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="품질관리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        품질관리 기본 기능
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        품질관리 대표 기법
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="품질관리 대표 기법">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qc-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QC 7가지 도구
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qc-7_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        신 QC 7가지 도구
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        통계적 품질관리
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        품질비용
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="품질비용">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        분류 체계(PAF 모델)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sqc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        통계적 품질관리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="통계적 품질관리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sqc_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQC 기본 개념
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 기법
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="주요 기법">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        통계적 공정관리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="통계적 공정관리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        관리도
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        공정능력 분석
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        샘플링 검사
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실험계획법
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        측정시스템 오차
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="측정시스템 오차">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        정확도
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        정밀도
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        품질평가
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="품질평가">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        데밍상
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mbnqa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MBNQA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efqm-excellence-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EFQM Excellence Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iso-9001" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ISO 9001 품질경영시스템 평가
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/yeonkyupark/pepc3e/edit/main/docs/0504_quality_management.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+  <h1>4. 품질관리</h1>
+
+<h2 id="_1">품질관리</h2>
+<p><strong>품질관리(Quality Management)</strong>는 고객 요구사항을 만족하는 제품과 서비스를 경제적으로 제공하기 위해 품질을 계획하고, 유지하며, 개선하는 관리활동이다. ISO 9000에서는 품질 요구사항을 충족시키기 위한 운영기법과 활동으로 정의하고 있다. 품질관리 목적은 품질 향상, 원가 절감, 납기 확보 및 고객 만족이며, 품질계획, 품질관리, 품질보증, 품질개선으로 구성된다. 주요 기법으로 (신)QC 7가지 도구, 통계적 품질관리(SQC), 공정능력지수, 관리도, Six Sigma 등이 있으며, 최근 AI와 스마트팩토리를 활용한 데이터 기반 품질관리로 발전하고 있다.</p>
+<div class="highlight"><pre><span></span><code>품질관리(Quality Management)
+│
+├── 1. 품질 개념 및 관리 체계
+│      ├── Quality
+│      ├── QC
+│      ├── QA
+│      ├── QM
+│      ├── TQM
+│      ├── Quality by Design
+│      └── Customer Satisfaction
+│
+├── 2. 품질계획(Quality Planning)
+│      ├── CTQ
+│      ├── VOC
+│      ├── QFD
+│      ├── Quality Target
+│      ├── Specification
+│      └── Control Plan
+│
+├── 3. 품질관리(Quality Control)
+│      ├── Inspection
+│      ├── SPC
+│      ├── Sampling Inspection
+│      ├── Control Chart
+│      ├── Process Capability
+│      └── Acceptance Sampling
+│
+├── 4. 품질보증(Quality Assurance)
+│      ├── ISO 9001
+│      ├── Audit
+│      ├── Document Control
+│      ├── Traceability
+│      ├── APQP
+│      └── PPAP
+│
+├── 5. 품질개선(Quality Improvement)
+│      ├── PDCA
+│      ├── DMAIC
+│      ├── Six Sigma
+│      ├── Kaizen
+│      ├── RCA
+│      ├── 5 Why
+│      └── FMEA
+│
+├── 6. 품질분석 기법
+│      ├── QC 7 Tools
+│      ├── New QC 7 Tools
+│      ├── DOE
+│      ├── Regression Analysis
+│      ├── ANOVA
+│      └── AI Analytics
+│
+├── 7. 품질 시스템
+│      ├── ISO 9001
+│      ├── IATF 16949
+│      ├── ISO 13485
+│      ├── TQM
+│      └── Lean Six Sigma
+│
+└── 8. 품질지표(KPI)
+       ├── Defect Rate
+       ├── DPPM
+       ├── PPM
+       ├── FPY
+       ├── RTY
+       ├── Cp/Cpk
+       ├── Sigma Level
+       ├── Customer Complaint
+       └── COPQ
+</code></pre></div>
+<p>품질은 단순히 "좋은 제품"을 의미하는 것이 아니라 고객 요구사항을 얼마나 충족하는가를 의미한다. 대표적인 품질 정의는 다음과 같다.</p>
+<p><strong>ISO 9000:2015</strong></p>
+<blockquote>
+<p>객체에 내재된 특성의 집합이 요구사항을 충족하는 정도(Degree to which a set of inherent charatistics fulfills requirements)</p>
+</blockquote>
+<p><strong>주란(J.M.Juran)</strong></p>
+<blockquote>
+<p>사용 목적에 적합한 정도(Fitness for Use)</p>
+</blockquote>
+<p><strong>크로스비(Philip B. Crosby)</strong></p>
+<blockquote>
+<p>요구사항에 대한 적합성(Conformance to Requirements)</p>
+</blockquote>
+<p>ISO 9000에서는 품질관리를 다음과 같이 정의한다.</p>
+<blockquote>
+<p>품질 요구사항을 충족시키기 위해 품질에 관한 운영기법과 활동을 수행하는 관리 활동</p>
+</blockquote>
+<p>즉, 품질관리란 고객이 요구하는 품질을 경제적으로 생산하기 위하여 품질을 계획하고, 유지하며, 개선하는 일련의 관리활동이다.</p>
+<div class="admonition note">
+<p class="admonition-title">품질 절대조건</p>
+<p>Philip B. Crosby는 저서 'Quality Is Free(1979)'에서 품질은 검사로 확보하는 것이 아니라 예방(Prevention)을 통해서 달성해야 하며, 올바른 품질관리는 오히려 비용을 절감한다고 주장했다. 그는 품질경영 기본 철학을 품질 절대조건(Four Absolutes of Quality Management)이라는 4가지 원칙으로 정리했다.</p>
+<table>
+<thead>
+<tr>
+<th>절대조건</th>
+<th>핵심 내용</th>
+<th>키워드</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 품질은 요구사항에 대한 적합성이다.</td>
+<td>품질은 고객 요구사항과 규격을 충족하는 것이다.</td>
+<td>Conformance to Requirements</td>
+</tr>
+<tr>
+<td>2. 품질 시스템은 예방이다.</td>
+<td>검사가 아니라 예방으로 품질을 확보한다.</td>
+<td>Prevention</td>
+</tr>
+<tr>
+<td>3. 품질의 성과 기준은 무결점이다.</td>
+<td>목표는 허용 불량이 아닌 Zero Defects이다.</td>
+<td>Zero Defects</td>
+</tr>
+<tr>
+<td>4. 품질의 측정은 비적합 비용이다.</td>
+<td>품질 수준은 불량으로 인해 발생한 비용으로 평가한다.</td>
+<td>Price of Nonconformance (PONC)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition note">
+<p class="admonition-title">품질 대가 핵심 철학</p>
+<p>대표적인 품질 대가로 Deming, Juran, Croby 등이 있으며 다음과 같이 비교된다.</p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>Deming</th>
+<th>Juran</th>
+<th>Crosby</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>핵심 철학</td>
+<td>지속적 개선(PDCA)</td>
+<td>품질계획·관리·개선</td>
+<td>무결점과 예방</td>
+</tr>
+<tr>
+<td>품질 정의</td>
+<td>고객 만족 및 시스템 개선</td>
+<td>사용 적합성(Fitness for Use)</td>
+<td>요구사항 적합성(Conformance to Requirements)</td>
+</tr>
+<tr>
+<td>대표 개념</td>
+<td>PDCA, 14원칙</td>
+<td>Juran Trilogy</td>
+<td>Four Absolutes, Zero Defects</td>
+</tr>
+<tr>
+<td>중점</td>
+<td>통계적 관리와 시스템</td>
+<td>경영관리</td>
+<td>예방과 품질문화</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>품질관리 목적은 단순히 불량을 줄이는 것이 아니라 고객 만족과 기업 경쟁력을 향상시키는 것이다. 품질은 QCD(Quality, Cost, Delivery) 중 가장 우선되는 요소로 인식된다.</p>
+<table>
+<thead>
+<tr>
+<th>목적</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>품질 향상</td>
+<td>불량 감소 및 신뢰성 확보</td>
+</tr>
+<tr>
+<td>원가 절감</td>
+<td>재작업·폐기 감소</td>
+</tr>
+<tr>
+<td>납기 확보</td>
+<td>공정 안정화</td>
+</tr>
+<tr>
+<td>생산성 향상</td>
+<td>공정 변동 감소</td>
+</tr>
+<tr>
+<td>고객 만족</td>
+<td>고객 요구 충족</td>
+</tr>
+<tr>
+<td>지속적 개선</td>
+<td>품질 수준 향상</td>
+</tr>
+</tbody>
+</table>
+<p>품질관리는 검사 중심에서 예방 중심으로 발전해 왔다.</p>
+<table>
+<thead>
+<tr>
+<th>단계</th>
+<th>특징</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inspection</td>
+<td>불량 선별</td>
+</tr>
+<tr>
+<td>QC</td>
+<td>품질 유지</td>
+</tr>
+<tr>
+<td>SQC</td>
+<td>통계적 관리</td>
+</tr>
+<tr>
+<td>TQC</td>
+<td>전사 참여</td>
+</tr>
+<tr>
+<td>TQM</td>
+<td>고객 중심의 지속적 개선</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_2">품질관리 기본 기능</h3>
+<p>품질관리는 일반적으로 품질계획(QP), 품질관리(QC), 품질보증(QA), 품질개선(QI)으로 구분한다.</p>
+<p><strong>품질계획(Quality Planning)</strong>  </p>
+<ul>
+<li>품질 목표 설정</li>
+<li>품질 기준 수립</li>
+<li>관리계획 작성</li>
+</ul>
+<p><strong>품질관리(Quality Control)</strong>  </p>
+<ul>
+<li>공정 관리</li>
+<li>검사</li>
+<li>이상 조치</li>
+</ul>
+<p><strong>품질보증(Quality Assurance)</strong>  </p>
+<ul>
+<li>고객에게 품질을 보증하는 체계</li>
+<li>ISO 9001 등이 대표적</li>
+</ul>
+<p><strong>품질개선(Quality Improvement)</strong></p>
+<ul>
+<li>지속적인 품질 향상</li>
+<li>PDCA, Six Sigma 활용</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Juran Trilogy</p>
+<p>Juran Trilogy에서는 품질계획(Quality Planning), 품질관리(Quality Control), 품질개선(Quality Improvement)을 품질관리의 3대 기능으로 제시한다.</p>
+<p><img alt="" src="https://www.juran.com/wp-content/uploads/2019/10/juran_diagrams_the-juran-trilogy-sm.png" /></p>
+</div>
+<h2 id="_3">품질관리 대표 기법</h2>
+<h3 id="qc-7">QC 7가지 도구</h3>
+<p>1950~1960년대 Ishikawa Kaoru를 중심으로 정립된 품질관리의 기본 도구로 현장 문제 해결을 위한 기본 도구이다.</p>
+<table>
+<thead>
+<tr>
+<th>도구</th>
+<th>목적</th>
+<th>주요 질문</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>체크시트</td>
+<td>데이터 수집</td>
+<td>무슨 문제가 얼마나 발생하는가?</td>
+</tr>
+<tr>
+<td>층별</td>
+<td>데이터 분류</td>
+<td>어디에서 문제가 발생하는가?</td>
+</tr>
+<tr>
+<td>파레토도</td>
+<td>중점 관리</td>
+<td>무엇을 먼저 개선할 것인가?</td>
+</tr>
+<tr>
+<td>히스토그램</td>
+<td>분포 분석</td>
+<td>데이터가 어떻게 분포하는가?</td>
+</tr>
+<tr>
+<td>특성요인도</td>
+<td>원인 분석</td>
+<td>왜 문제가 발생했는가?</td>
+</tr>
+<tr>
+<td>산점도</td>
+<td>상관관계</td>
+<td>두 변수는 관련이 있는가?</td>
+</tr>
+<tr>
+<td>관리도</td>
+<td>공정 안정성</td>
+<td>공정이 관리상태인가?</td>
+</tr>
+</tbody>
+</table>
+<p>제조현장 중심, 데이터 분석 중심, 통계적 기초 활용, 문제 발생 후 원인 분석과 같은 특징이 있다.</p>
+<h3 id="qc-7_1">신 QC 7가지 도구</h3>
+<p>1979년 JUSE에서 개발한 관리 및 기획 중심의 도구다.</p>
+<table>
+<thead>
+<tr>
+<th>도구</th>
+<th>목적</th>
+<th>주요 질문</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>친화도법</td>
+<td>아이디어 정리</td>
+<td>어떤 의견들이 같은 범주인가?</td>
+</tr>
+<tr>
+<td>연관도법</td>
+<td>인과관계 분석</td>
+<td>문제의 핵심 원인은 무엇인가?</td>
+</tr>
+<tr>
+<td>계통도법</td>
+<td>목표 전개</td>
+<td>목표를 달성하려면 무엇을 해야 하는가?</td>
+</tr>
+<tr>
+<td>매트릭스도법</td>
+<td>관계 분석</td>
+<td>요소 간 관련성은 어떠한가?</td>
+</tr>
+<tr>
+<td>매트릭스 데이터 해석법</td>
+<td>정량 분석</td>
+<td>관계의 중요도는 어느 정도인가?</td>
+</tr>
+<tr>
+<td>PDPC</td>
+<td>리스크 대응</td>
+<td>예상되는 문제와 대응책은 무엇인가?</td>
+</tr>
+<tr>
+<td>애로우 다이어그램</td>
+<td>일정 계획</td>
+<td>작업 순서와 소요기간은 어떻게 되는가?</td>
+</tr>
+</tbody>
+</table>
+<p>언어 데이터 활용, 관리 문제 해결, 신제품 개발, 정책 수립과 같은 특징이 있다.</p>
+<h3 id="_4">통계적 품질관리</h3>
+<p>대표적인 <a href="#sqc">통계적 품질관리</a> 기법이다.</p>
+<ul>
+<li>관리도</li>
+<li>공정능력지수(Cp, Cpk)</li>
+<li>샘플링 검사</li>
+<li>실험계획법(DOE)</li>
+<li>Six Sigma DMAIC</li>
+</ul>
+<h2 id="_5">품질비용</h2>
+<p>Juran과 Feigenbaum은 품질비용(Cost of Quality, COQ)를 다음과 같이 구분한다. 공장관리에서는 예방비용을 증가시켜 실패비용을 감소시키는 것이 경제적이다.</p>
+<pre class="mermaid"><code>flowchart TD
+    classDef main fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#000,font-weight:bold;
+    classDef prevent fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#000,font-weight:bold;
+    classDef appraisal fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000,font-weight:bold;
+    classDef failure fill:#FFEBEE,stroke:#D32F2F,stroke-width:2px,color:#000,font-weight:bold;
+
+
+    A["품질비용&lt;br/&gt;(COQ : Cost of Quality)"]:::main
+
+
+    B["예방비용&lt;br/&gt;(Prevention Cost)"]:::prevent
+    C["평가비용&lt;br/&gt;(Appraisal Cost)"]:::appraisal
+    D["내부실패비용&lt;br/&gt;(Internal Failure Cost)"]:::failure
+    E["외부실패비용&lt;br/&gt;(External Failure Cost)"]:::failure
+
+
+    A --&gt; B
+    A --&gt; C
+    A --&gt; D
+    A --&gt; E
+
+
+    B1["교육&lt;br/&gt;표준화&lt;br/&gt;예방활동"]:::prevent
+    C1["검사&lt;br/&gt;시험"]:::appraisal
+    D1["폐기&lt;br/&gt;재작업"]:::failure
+    E1["클레임&lt;br/&gt;리콜&lt;br/&gt;A/S"]:::failure
+
+
+    B --&gt; B1
+    C --&gt; C1
+    D --&gt; D1
+    E --&gt; E1</code></pre>
+<p>품질비용(COQ, Cost of Quality)은 제품이나 서비스의 완벽한 품질을 달성하기 위해 지출되는 비용과 불량으로 인해 발생하는 모든 손실 비용을 포함하는 품질 관리 개념이다.</p>
+<h3 id="paf">분류 체계(PAF 모델)</h3>
+<p>품질비용은 전통적으로 예방(Prevention), 평가(Appraisal), 실패(Failure)의 PAF 모델로 분류한다.</p>
+<p><img alt="" src="https://github.com/user-attachments/assets/b229b68d-9a71-4398-8c37-ba139a36c23a" /></p>
+<ol>
+<li>
+<p><strong>통제 비용(Cost of Control)</strong></p>
+<p>좋은 품질을 확보하고 불량을 미리 방지하기 위해 정당하게 투입되는 적합 비용이다.</p>
+<ul>
+<li>
+<p><strong>예방비용(P-Cost, Prevention Cost)</strong>: 불량 발생 자체를 사전에 막기 위해 지출하는 비용이다.  </p>
+<ul>
+<li><strong>주요 항목</strong>: 품질 계획 수립, 작업자 품질 교육, 설비 예방 보전, 공정 개선 활동    </li>
+</ul>
+</li>
+<li>
+<p><strong>평가비용(A-Cost, Appraisal Cost)</strong>: 제품이나 서비스가 요구 품질 기준에 적합한지 검사하고 측정하는 비용이다.  </p>
+<ul>
+<li><strong>주요 항목</strong>: 수입 검사, 공정 및 완제품 검사, 검사 장비 교정 및 유지비</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>실패 비용(Cost of Failure)</strong></p>
+<p>품질 기준을 충족하지 못해 발생하는 비적합 비용으로, 불량이 발생했기 때문에 납부해야 하는 손실 비용이다.</p>
+<ul>
+<li>
+<p><strong>내부실패비용(IF-Cost, Internal Failure Cost)</strong>: 제품이 고객에게 출하되기 전 공정 내부에서 발견된 불량으로 인한 비용이다.  </p>
+<ul>
+<li><strong>주요 항목</strong>: 폐기(Scrap), 재작업(Rework), 재검사 비용, 공정 대기 손실 </li>
+</ul>
+</li>
+<li>
+<p><strong>외부실패비용(EF-Cost, External Failure Cost)</strong>: 제품이 고객에게 전달된 후 현장에서 발견되어 발생하는 손실 비용이다.  </p>
+<ul>
+<li><strong>주요 항목</strong>: 무상 A/S 및 보증 수리, 리콜(Recall) 비용, 반품 처리, 기업 이미지 실추 손실</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>예방 및 평가에 투자하는 비용과 실패 비용 사이에는 상반된 교환(Trade-off) 관계가 성립한다.</p>
+<ul>
+<li><strong>품질 수준 향상 시</strong><br />
+    예방비용(P-Cost)과 평가비용(A-Cost)을 늘리면 초기 투입 비용은 증가함</li>
+<li><strong>실패 비용 감소</strong><br />
+    불량률이 줄어들면서 내부실패비용(IF-Cost)과 외부실패비용(EF-Cost)이 급격히 감소함</li>
+<li><strong>최적 품질비용점</strong><br />
+    총 품질비용(Total COQ)이 최소가 되는 지점에서 경제적으로 최적의 품질 수준이 결정됨</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">PAF 비용 요소 비교</p>
+<p>품질 관리 단계에 따라 투자되는 비용 종류와 발생 시점이 달라진다.</p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>예방비용(P-Cost)</th>
+<th>평가비용(A-Cost)</th>
+<th>내부실패비용(IF-Cost)</th>
+<th>외부실패비용(EF-Cost)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>발생 시점</strong></td>
+<td>공정 설계 및 시작 전</td>
+<td>공정 진행 및 검사 시</td>
+<td>출하 전(공정 내)</td>
+<td>출하 후(고객 전달 후)</td>
+</tr>
+<tr>
+<td><strong>성격</strong></td>
+<td>불량 방지 목적의 투자</td>
+<td>품질 수준 측정 목적</td>
+<td>공정 내부 손실</td>
+<td>최악의 손실 및 신뢰도 하락</td>
+</tr>
+<tr>
+<td><strong>대표 예시</strong></td>
+<td>품질 교육, 설비 점검</td>
+<td>제품 검사, 교정 측정</td>
+<td>폐기, 재작업</td>
+<td>리콜, 무상 수리, 반품</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="sqc">통계적 품질관리</h2>
+<p><strong>통계적 품질관리(SQC, Statistical Quality Control)</strong>는 <span class='hl'>통계적 방법을 이용하여 제품과 공정의 변동을 분석하고 품질을 유지·개선하는 관리 방법</span>이다. 주요 구성으로는 통계적 공정관리(SPC), 샘플링 검사, 실험계획법이 있다. SPC에서는 관리도를 이용하여 공정의 안정성을 판단하고, 공정능력지수 Cp와 Cpk를 통해 규격 만족 능력을 평가한다. 또한 샘플링 검사는 표본 검사를 통해 LOT의 합격 여부를 판단하며, 실험계획법은 공정 인자의 영향 분석과 최적 조건 도출에 활용된다. 이러한 통계적 품질관리 기법은 데이터 기반으로 공정 변동을 감소시키고 품질 향상을 달성하기 위한 핵심 방법이다.</p>
+<pre class="mermaid"><code>flowchart TD
+    classDef main fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#000,font-weight:bold;
+    classDef category fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000,font-weight:bold;
+    classDef detail fill:#F5F5F5,stroke:#757575,stroke-width:1px,color:#000;
+
+
+    A["통계적 품질관리&lt;br/&gt;(SQC : Statistical Quality Control)"]:::main
+
+
+    B["통계적 공정관리&lt;br/&gt;(SPC : Statistical Process Control)"]:::category
+    C["검사&lt;br/&gt;(Inspection)"]:::category
+    D["개선&lt;br/&gt;(Quality Improvement)"]:::category
+
+
+    A --&gt; B
+    A --&gt; C
+    A --&gt; D
+
+
+    B1["관리도&lt;br/&gt;(Control Chart)&lt;br/&gt;&lt;br/&gt;공정 안정화&lt;br/&gt;변동 감시 및 이상 탐지"]:::detail
+    B2["공정능력 분석&lt;br/&gt;(Cp, Cpk)&lt;br/&gt;&lt;br/&gt;규격 만족 능력 평가"]:::detail
+
+
+    C1["샘플링 검사&lt;br/&gt;(Sampling Inspection)&lt;br/&gt;&lt;br/&gt;LOT 품질 판정"]:::detail
+
+
+    D1["실험계획법&lt;br/&gt;(DOE : Design of Experiments)&lt;br/&gt;&lt;br/&gt;인자 영향 분석&lt;br/&gt;최적 조건 도출"]:::detail
+
+
+    B --&gt; B1
+    B --&gt; B2
+
+    C --&gt; C1
+
+    D --&gt; D1</code></pre>
+<h3 id="sqc_1">SQC 기본 개념</h3>
+<p>제조 공정에서는 동일한 조건으로 생산하더라도 제품 특성에는 항상 변동이 발생한다. 변동에는 다음과 같이 우연원인과 이상원인으로 구분된다.</p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>내용</th>
+<th>대응 방법</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>우연원인(Common Cause)</td>
+<td>공정 자체에 내재된 일반적인 변동</td>
+<td>공정 개선, 시스템 개선</td>
+</tr>
+<tr>
+<td>이상원인(Special Cause)</td>
+<td>특정 원인에 의해 발생하는 비정상 변동</td>
+<td>원인 제거 및 조치</td>
+</tr>
+</tbody>
+</table>
+<p>SQC 핵심은 <strong>이상원인을 발견하여 제거하고 우연원인만 존재하는 안정된 공정을 유지하는 것</strong>이다.</p>
+<h3 id="_6">주요 기법</h3>
+<p>SQC는 일반적으로 다음 세 가지 영역으로 구분한다.</p>
+<pre class="mermaid"><code>flowchart TD
+    classDef main fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#000,font-weight:bold;
+    classDef category fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000,font-weight:bold;
+    classDef detail fill:#F5F5F5,stroke:#757575,stroke-width:1px,color:#000;
+
+
+    A["통계적 품질관리&lt;br/&gt;(SQC : Statistical Quality Control)"]:::main
+
+
+    B["통계적 공정관리&lt;br/&gt;(SPC : Statistical Process Control)"]:::category
+    C["샘플링 검사&lt;br/&gt;(Sampling Inspection)"]:::category
+    D["실험계획법&lt;br/&gt;(DOE : Design of Experiments)"]:::category
+
+
+    A --&gt; B
+    A --&gt; C
+    A --&gt; D
+
+
+    B1["관리도&lt;br/&gt;(Control Chart)"]:::detail
+    B2["공정능력 분석&lt;br/&gt;(Cp, Cpk)"]:::detail
+
+
+    B --&gt; B1
+    B --&gt; B2</code></pre>
+<h4 id="_7">통계적 공정관리</h4>
+<p><strong>통계적 공정관리(SPC, Statistical Process Control)</strong>는 <span class='hl'>통계적 방법을 이용하여 공정 상태를 분석하고 관리하는 기법</span>이다. 목적은 검사에 의한 불량 제거가 아니라 공정 자체를 안정화하여 불량 발생을 예방하는 것이다.  </p>
+<p>제조 현장에서는 다음과 같이 여러 기법을 연결하여 적용한다.</p>
+<pre class="mermaid"><code>flowchart LR
+    classDef start fill:#FFEBEE,stroke:#D32F2F,stroke-width:2px,color:#000,font-weight:bold;
+    classDef process fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000,font-weight:bold;
+    classDef final fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#000,font-weight:bold;
+
+
+    A["불량 증가 발생&lt;br/&gt;(Defect Increase)"]:::start
+
+    B["① 파레토 분석&lt;br/&gt;(Pareto Analysis)&lt;br/&gt;&lt;br/&gt;어떤 불량인가?"]:::process
+
+    C["② 특성요인도&lt;br/&gt;(Fishbone Diagram)&lt;br/&gt;&lt;br/&gt;원인은 무엇인가?"]:::process
+
+    D["③ 관리도&lt;br/&gt;(Control Chart)&lt;br/&gt;&lt;br/&gt;공정이 안정적인가?"]:::process
+
+    E["④ 공정능력 분석&lt;br/&gt;(Cp / Cpk)&lt;br/&gt;&lt;br/&gt;규격 만족 가능한가?"]:::process
+
+    F["⑤ 실험계획법&lt;br/&gt;(DOE)&lt;br/&gt;&lt;br/&gt;최적 조건은 무엇인가?"]:::process
+
+    G["⑥ 표준화 및 관리&lt;br/&gt;(Standardization &amp; Control)"]:::final
+
+
+    A --&gt; B
+    B --&gt; C
+    C --&gt; D
+    D --&gt; E
+    E --&gt; F
+    F --&gt; G</code></pre>
+<h5 id="_8">관리도</h5>
+<p>관리도(Control Chart)는 시간에 따른 품질 데이터를 표시하여 공정이 통계적으로 관리 상태인지 판단하는 도구이다.</p>
+<pre class="mermaid"><code>xychart-beta
+    title "관리도(Control Chart)"
+    x-axis "시간" [1,2,3,4,5,6]
+    y-axis "품질 특성값" 0 --&gt; 10
+
+    line "UCL" [8,8,8,8,8,8]
+    line "CL" [5,5,5,5,5,5]
+    line "LCL" [2,2,2,2,2,2]
+
+    line "측정값" [6,4,5,7,3,6]</code></pre>
+<p><strong>관리한계</strong></p>
+<p>관리도는 일반적으로 3σ 원리를 사용한다.</p>
+<div class="arithmatex">\[UCL = \mu + 3\sigma\]</div>
+<div class="arithmatex">\[CL = \mu\]</div>
+<div class="arithmatex">\[LCL = \mu - 3\sigma\]</div>
+<p><strong>관리도 종류</strong></p>
+<ol>
+<li>
+<p><strong>계량형 관리도</strong><br />
+   연속적인 측정값을 관리하는 관리도이다.</p>
+<table>
+<thead>
+<tr>
+<th>관리도</th>
+<th>용도</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(\bar{X} - R\)</span> 관리도</td>
+<td>평균과 범위 관리</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\bar{X} - S\)</span> 관리도</td>
+<td>평균과 표준편차 관리</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(I-MR\)</span> 관리도</td>
+<td>개별 측정값 관리</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>계수형 관리도</strong><br />
+    불량 개수나 비율을 관리하는 관리도이다.</p>
+<table>
+<thead>
+<tr>
+<th>관리도</th>
+<th>용도</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(p\)</span> 관리도</td>
+<td>불량률 관리</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(np\)</span> 관리도</td>
+<td>불량 개수 관리</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(c\)</span> 관리도</td>
+<td>결점 수 관리</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(u\)</span> 관리도</td>
+<td>단위당 결점 수 관리</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h5 id="_9">공정능력 분석</h5>
+<p><strong>공정능력 분석(Process Capability Analysis)</strong>은 <span class='hl'>공정이 주어진 규격을 만족하는 제품을 생산할 수 있는 능력을 평가하는 방법</span>이다. 관리도는 "공정이 안정적인가"를 판단하고 공정능력지수는 "안정된 공정이 규격을 만족할 능력이 있는가"를 판단한다.</p>
+<ol>
+<li>
+<p><strong>Cp (Process Capability Index)</strong></p>
+<p><strong>공정 평균</strong>이 규격 중심과 일치한다고 가정한 잠재 공정능력이다.</p>
+<div class="arithmatex">\[
+C_p = \frac{USL - LSL}{6\sigma}
+\]</div>
+<ul>
+<li><span class="arithmatex">\(USL\)</span>: 규격 상한</li>
+<li><span class="arithmatex">\(LSL\)</span>: 규격 하한</li>
+<li><span class="arithmatex">\(\sigma\)</span>: 공정 표준편차</li>
+</ul>
+</li>
+<li>
+<p><strong>Cpk (Process Capability Index considering Centering)</strong></p>
+<p><strong>공정 평균의 치우침을 고려</strong>한 실제 공정능력이다.</p>
+<div class="arithmatex">\[
+C_{pk}=min\left(\frac{USL-\mu}{3\sigma},\frac{\mu-LSL}{3\sigma}\right)
+\]</div>
+<ul>
+<li><span class="arithmatex">\(USL\)</span>: 규격 상한</li>
+<li><span class="arithmatex">\(LSL\)</span>: 규격 하한</li>
+<li><span class="arithmatex">\(\mu\)</span>: 공정 평균</li>
+<li><span class="arithmatex">\(\sigma\)</span>: 공정 표준편차</li>
+</ul>
+</li>
+</ol>
+<p><strong>Cp vs. Cpk</strong></p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>Cp</th>
+<th>Cpk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>평가 대상</td>
+<td>잠재 능력</td>
+<td>실제 능력</td>
+</tr>
+<tr>
+<td>평균 위치 고려</td>
+<td>하지 않음</td>
+<td>고려</td>
+</tr>
+<tr>
+<td>중심 이탈 영향</td>
+<td>없음</td>
+<td>있음</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">샘플링 검사</h4>
+<p><strong>샘플링 검사(Acceptance Sampling)</strong>는 전체 제품(LOT)을 전수 검사하지 않고 일부 표본을 검사하여 LOT 합격 여부를 판정하는 방법이다. 검사 비용 절감, 검사 시간 단축을 목적으로 특히 파괴 검사 시 유용하다.</p>
+<p><strong>검사 종류</strong></p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>계수형 검사</td>
+<td>불량 개수 기준</td>
+</tr>
+<tr>
+<td>계량형 검사</td>
+<td>측정값 기준</td>
+</tr>
+</tbody>
+</table>
+<p><strong>위험 요소</strong></p>
+<ol>
+<li>생산자 위험(<span class="arithmatex">\(\alpha\)</span>), 좋은 LOT를 불합격 처리하는 위험</li>
+<li>소비자 위험(<span class="arithmatex">\(\beta\)</span>), 나쁜 LOT를 합격으로 처리하는 위험</li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">샘플링 검사</p>
+<p>납품 LOT 10,000개, 전체 검사 대신 샘플링 검사를 실시한다. 검사수는 200개, 불량이 4개 발견되었다고 가정한다.</p>
+<p><strong>불량률</strong></p>
+<p><span class="arithmatex">\(p = \frac{4}{200} = 2\%\)</span></p>
+<p><strong>검사기준</strong></p>
+<table>
+<thead>
+<tr>
+<th>조건</th>
+<th>판정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>불량 0~5개</td>
+<td>합격</td>
+</tr>
+<tr>
+<td>6개 이상</td>
+<td>불합격</td>
+</tr>
+</tbody>
+</table>
+<p>검사기준에 따라 불량이 4개(&lt;5개)이므로 LOT 합격으로 판한다.</p>
+</div>
+<h4 id="_11">실험계획법</h4>
+<p><strong>실험계획법(DOE, Design of Experiments)</strong>은 실험계획법은 최소의 실험 횟수로 최고 품질의 정밀한 정보를 얻을 수 있도록 실험을 설계하고, 그 결과를 통계적으로 분석하여 공정이나 제품의 최적 조건을 도출하는 정량적 분석 기법이다. Fisher가 농업 실험에서 체계화하였으며, 제조 공정 최적화에 널리 활용된다.</p>
+<ul>
+<li><strong>주요 인자 선별(Screening)</strong><br />
+    수많은 공정 변수 중에서 출력 결과(반응치)에 유의미한 영향을 미치는 인자(Factor)를 식별</li>
+<li><strong>최적화(Optimization)</strong><br />
+    목표로 하는 반응치를 얻기 위한 최적의 인자 수준(Level) 조합 설정</li>
+<li><strong>강건 설계(Robust Design)</strong><br />
+    온도, 습도 등 제어 불가능한 잡음 인자(Noise)의 영향에 흔들리지 않는 안정적인 조건 탐색</li>
+</ul>
+<p><strong>실험계획의 3대 기본 원칙</strong></p>
+<p>실험 결과의 신뢰성과 통계적 타당성을 확보하기 위해 반드시 준수해야 하는 기준이다.</p>
+<ol>
+<li><strong>랜덤화의 원칙(Randomization)</strong><br />
+    실험 순서나 배치를 무작위로 결정하여 외생 변수나 시차에 의한 오차가 결과에 미치는 체계적 영향을 제거한다.</li>
+<li><strong>반복의 원칙(Replication)</strong><br />
+    동일한 조건에서 실험을 2회 이상 수행하여 오차의 분산(실험 오차)을 정밀하게 추정하고 결과의 신뢰성을 높인다.</li>
+<li><strong>블록화의 원칙(Blocking)</strong><br />
+    실험 환경을 동일한 성격의 블록으로 나눔으로써 파악하고자 하는 핵심 인자의 영향과 제어하기 힘든 외부 변수의 영향을 분리한다.</li>
+</ol>
+<p><strong>주요 실험계획법의 종류</strong></p>
+<p>연구의 목적, 분석 단계, 허용 가능한 실험 비용에 따라 적절한 배치 방식을 선택한다.</p>
+<ol>
+<li>
+<p><strong>요인 배치법(Factorial Design)</strong>  </p>
+<p>인자의 모든 수준 조합에 대해 실험을 수행하는 방식이다.</p>
+<ul>
+<li>완전 요인 배치법(Full Factorial)<br />
+    모든 인자 조합을 실험하여 주효과뿐만 아니라 인자 간 상호작용(Interaction)까지 완벽하게 파악</li>
+<li>일부 요인 배치법(Fractional Factorial)<br />
+    실험 횟수를 줄이기 위해 핵심 조합만 선별 수행하며, 선별(Screening) 단계에 주로 활용</li>
+</ul>
+</li>
+<li>
+<p><strong>직교배열표에 의한 배치(Orthogonal Array)</strong>  </p>
+<p>다수 인자를 적은 횟수의 실험으로 효율적으로 분석하기 위해 직교성을 가진 수학적 표를 활용하는 방식이다.</p>
+<ul>
+<li>특징<br />
+    타구치 기법(Taguchi Method) 등에서 효율적인 공정 최적화 및 비용 절감을 목적으로 광범위하게 활용</li>
+</ul>
+</li>
+<li>
+<p><strong>반응표면 분석법(RSM, Response Surface Methodology)</strong>  </p>
+<p>인자가 연속형 변수일 때 반응치와의 곡선 형태 관계(2차식 등)를 모델링하여 정밀한 최적점을 찾는 기술이다.</p>
+<ul>
+<li>대표 배치법<br />
+    중심합성계획법(CCC, Central Composite Design), 박스-벤켄 계획법(Box-Behnken Design)</li>
+</ul>
+</li>
+</ol>
+<p><strong>주요 DOE 배치법 비교</strong></p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>완전 요인 배치법</th>
+<th>일부 요인 배치법</th>
+<th>반응표면 분석법(RSM)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>주요 목적</strong></td>
+<td>인자의 효과 및 상호작용 완전 파악</td>
+<td>핵심 인자 선별(Screening)</td>
+<td>정밀한 곡선 모델링 및 최적화</td>
+</tr>
+<tr>
+<td><strong>실험 횟수</strong></td>
+<td>많음 (<span class="arithmatex">\(L^k\)</span>, 인자 수준승)</td>
+<td>적음 (<span class="arithmatex">\(L^{k-p}\)</span>)</td>
+<td>중간 이상 (중심점 포함)</td>
+</tr>
+<tr>
+<td><strong>상호작용 분석</strong></td>
+<td>모든 주효과 및 교호작용 검증 가능</td>
+<td>고차 교호작용 교송(Aliasing) 발생</td>
+<td>2차 항목 및 곡선 효과 검증 가능</td>
+</tr>
+</tbody>
+</table>
+<p><strong>DOE 수행 6단계 절차</strong></p>
+<div class="highlight"><pre><span></span><code>[1단계: 목적 정의] -&gt; [2단계: 반응치 및 인자 선정] -&gt; [3단계: 실험 계획 및 수행] 
+                 -&gt; [4단계: 통계 분석(ANOVA)] -&gt; [5단계: 최적화 및 예측] -&gt; [6단계: 확인 실험]
+</code></pre></div>
+<ol>
+<li><strong>목적 정의</strong>: 달성하고자 하는 품질목표 설정</li>
+<li><strong>반응치(<span class="arithmatex">\(Y\)</span>) 및 인자(<span class="arithmatex">\(X\)</span>) 선정</strong>: 측정 가능한 결과값과 제어할 원인 변수 및 수준 확정</li>
+<li><strong>실험 설계 및 데이터 수집</strong>: 적합한 DOE 배치법을 선택하고 무작위로 실험 수행</li>
+<li><strong>통계적 분석</strong>: 분산분석(ANOVA)을 활용하여 유의성 평가 및 회귀 모델 구축</li>
+<li><strong>최적 조건 도출</strong>: 반응치 목표를 충족하는 인자별 수준 조건 계산</li>
+<li><strong>확인 실험(Confirmation Run)</strong>: 도출된 최적 조건에서 재실험을 거쳐 모델 재현성 검증</li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">사출 공정 품질 개선</p>
+<p>사출 제품 변형량이 증가하는 문제가 발생한다고 가정한다. 품질 특성은 변형량(mm)이고 영향요인은 다음과 같다.</p>
+<table>
+<thead>
+<tr>
+<th>요인</th>
+<th>수준</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A: 금형 온도</td>
+<td>낮음/높음</td>
+</tr>
+<tr>
+<td>B: 사출 압력</td>
+<td>낮음/높음</td>
+</tr>
+<tr>
+<td>C: 냉각 시간</td>
+<td>짧음/김</td>
+</tr>
+</tbody>
+</table>
+<p><strong>실험 결과</strong>(일부)</p>
+<table>
+<thead>
+<tr>
+<th>조건</th>
+<th>온도</th>
+<th>압력</th>
+<th>냉각시간</th>
+<th style="text-align: right;">변형량</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>낮음</td>
+<td>낮음</td>
+<td>짧음</td>
+<td style="text-align: right;">0.25</td>
+</tr>
+<tr>
+<td>2</td>
+<td>높음</td>
+<td>낮음</td>
+<td>짧음</td>
+<td style="text-align: right;">0.18</td>
+</tr>
+<tr>
+<td>3</td>
+<td>낮음</td>
+<td>높음</td>
+<td>김</td>
+<td style="text-align: right;">0.12</td>
+</tr>
+<tr>
+<td>4</td>
+<td>높음</td>
+<td>높음</td>
+<td>김</td>
+<td style="text-align: right;">0.08</td>
+</tr>
+</tbody>
+</table>
+<p><strong>분석 결과</strong></p>
+<p>변형량 영향이 다음과 같다.</p>
+<div class="highlight"><pre><span></span><code>영향도
+
+냉각시간  ██████████
+
+온도      ██████
+
+압력      ███
+</code></pre></div>
+<p><strong>결과 해석</strong></p>
+<ul>
+<li>냉각시간 영향이 가장 큼</li>
+<li>냉각시간 증가 필요</li>
+</ul>
+<p><strong>최적 조건</strong></p>
+<ul>
+<li>높은 온도</li>
+<li>높은 압력</li>
+<li>긴 냉각시간</li>
+</ul>
+</div>
+<h2 id="_12">측정시스템 오차</h2>
+<p>측정시스템 오차는 일반적으로 정확도와 정밀도로 구분한다.  </p>
+<p><strong>정확도</strong>는 참값과의 근접성을 의미하며 편향(Bias)가 대표적인 평가 항목이다. 또한 측정 범위에 따른 편향 변화를 평가하는 선형성(Linearity)과 시간 변화에 따른 변동을 평가하는 안정성(Stability)도 측정시스템에 있어 중요한 특성으로 관리한다. <strong>정밀도</strong>는 측정값 산포를 의미하며 반복성(Repeatability)와 재현성(Reproducibility)로 평가한다.  </p>
+<p>제조 현장에서는 AIAG MSA 기준에 따라 Gage R&amp;R을 활용하여 반복성과 재현성을 분석하고 측정 시스템 적합성을 판단한다.</p>
+<pre class="mermaid"><code>flowchart TD
+    classDef main fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#000,font-weight:bold;
+    classDef category fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000,font-weight:bold;
+    classDef detail fill:#F5F5F5,stroke:#757575,stroke-width:1px,color:#000;
+
+
+    A["측정시스템 분석&lt;br/&gt;(MSA : Measurement System Analysis)"]:::main
+
+
+    B["정확도&lt;br/&gt;(Accuracy)"]:::category
+    C["정밀도&lt;br/&gt;(Precision)"]:::category
+
+
+    A --&gt; B
+    A --&gt; C
+
+
+    B1["Bias&lt;br/&gt;(편의)"]:::detail
+    B2["Linearity&lt;br/&gt;(선형성)"]:::detail
+    B3["Stability&lt;br/&gt;(안정성)"]:::detail
+
+
+    C1["Repeatability&lt;br/&gt;(반복성)"]:::detail
+    C2["Reproducibility&lt;br/&gt;(재현성)"]:::detail
+
+
+    B --&gt; B1
+    B --&gt; B2
+    B --&gt; B3
+
+
+    C --&gt; C1
+    C --&gt; C2</code></pre>
+<p><img alt="" src="https://github.com/user-attachments/assets/8859db11-7ebe-4185-9616-c8508c73f2d4" /></p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>항목</th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>정확도(Accuracy)</td>
+<td>Bias</td>
+<td>참값과 평균 차이</td>
+</tr>
+<tr>
+<td></td>
+<td>Linearity</td>
+<td>측정범위별 Bias 변화</td>
+</tr>
+<tr>
+<td></td>
+<td>Stability</td>
+<td>시간에 따른 Bias 변화</td>
+</tr>
+<tr>
+<td>정밀도(Precision)</td>
+<td>Repeatability</td>
+<td>반복 측정 산포</td>
+</tr>
+<tr>
+<td></td>
+<td>Reproducibility</td>
+<td>측정자 간 산포</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_13">정확도</h3>
+<p>정확도(Accuracy)는 측정값이 참값(true value)에 얼마나 가까운지를 나타내는 정도이다. 즉 "측정 결과가 얼마나 맞는가"를 의미한다.</p>
+<ol>
+<li><strong>편향(Bias)</strong>  <ul>
+<li>측정값 평균과 참값 차이, <span class="arithmatex">\(Bias = \bar{x} - x_{true}\)</span></li>
+<li>일정 방향으로 치우친 오차, Calibration 문제와 관련</li>
+</ul>
+</li>
+<li><strong>선형성(Linearity)</strong>  <ul>
+<li>측정 범위 전체에서 편향이 일정한지를 의미</li>
+<li>측정 대상 크기가 변할 때 측정 오차가 일정하게 유지되는가를 평가</li>
+<li>센서 특정 문제, 측정기 구조 오차, 교정 범위 오류 등이 원인</li>
+<li>온도가 올라 갈수록 체중계 오차가 커지는 경우</li>
+</ul>
+</li>
+<li><strong>안정성(Stability)</strong>  <ul>
+<li>시간에 따라 측정 시스템의 편향이 변하지 않는 정도</li>
+<li>측정 시스템이 시간이 지나도 동일한 정확도를 유지하는가를 평가</li>
+<li>시간이 지남에 따라 센서 열화로 몸무게가 점점 늘어나는 경우</li>
+</ul>
+</li>
+</ol>
+<h3 id="_14">정밀도</h3>
+<p>정밀도(Precision)는 측정값이 서로 얼마나 일관되게 모여 있는가를 의미한다. 이는 참값과 가까운지는 중요하지 않다.</p>
+<ol>
+<li><strong>반복성(Repeatability)</strong>  <ul>
+<li>동일 조건(같은 사람, 같은 장비, 같은 부품) 반복 측정에서 변동 평가</li>
+</ul>
+</li>
+<li><strong>재현성(Reproducibility)</strong>  <ul>
+<li>측정자(측정자1, 측정자2, 측정자3) 변동에 따른 변동 평가</li>
+</ul>
+</li>
+</ol>
+<h2 id="_15">품질평가</h2>
+<p><strong>품질평가(Quality Assessment)</strong>는 조직 품질경영 수준과 경영성과를 체계적으로 평가하여 개선 방향을 도출하는 활동이다. 대표적인 품질평가 모델로는 일본 데밍상, 미국 MBNQA, 유럽 EFQM 모델이 있다. 데밍상은 Deming의 PDCA 철학을 기반으로 TQM 활동과 통계적 품질관리를 중점 평가하며, MBNQA는 리더십, 전략, 고객, 측정 및 지식관리, 인력, 운영, 성과의 7개 범주를 통해 조직 전체 경영품질을 평가한다. 최근 품질평가는 제품 중심에서 벗어나 고객 가치 창출과 지속 가능한 경영성과를 평가하는 방향으로 발전하고 있다.</p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>데밍상</th>
+<th>MBNQA</th>
+<th>EFQM</th>
+<th>ISO 9001</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>성격</td>
+<td>품질상(Quality Award)</td>
+<td>국가 품질상</td>
+<td>경영 우수성 모델</td>
+<td>국제 품질경영시스템 표준</td>
+</tr>
+<tr>
+<td>평가 대상</td>
+<td>품질경영 활동</td>
+<td>조직 전체 경영성과</td>
+<td>조직의 탁월성 수준</td>
+<td>품질경영시스템 적합성</td>
+</tr>
+<tr>
+<td>접근 방식</td>
+<td>활동(Process) 중심</td>
+<td>성과(Result) 중심</td>
+<td>활동과 성과 연계</td>
+<td>시스템 및 프로세스 중심</td>
+</tr>
+<tr>
+<td>핵심 철학</td>
+<td>TQM, PDCA</td>
+<td>경영품질(Business Excellence)</td>
+<td>지속가능한 경영 우수성</td>
+<td>고객 만족과 지속 개선</td>
+</tr>
+<tr>
+<td>주요 활용</td>
+<td>품질혁신 수준 평가</td>
+<td>기업 경쟁력 평가</td>
+<td>조직 개선 방향 도출</td>
+<td>QMS 구축 및 인증</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_16">데밍상</h3>
+<p><strong>데밍상(Deming Prize)</strong>은 일본과학기술연맹(JUSE)이 1951년 제정한 품질상으로 W. Edwards Deming의 공헌을 기념하여 만들어졌다. 일본 기업 품질혁신과 TQM 발전에 큰 영향을 준 대표적인 품질평가 제도이다. 데밍상은 결과보다 품질경영 활동 과정(Process)을 중요하게 평가하고 데밍의 핵심 철학인 PDAC를 기반으로 한다.</p>
+<p><strong>특징</strong></p>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>중점</td>
+<td>TQM 활동</td>
+</tr>
+<tr>
+<td>특징</td>
+<td>품질관리 과정 중심</td>
+</tr>
+<tr>
+<td>주요 대상</td>
+<td>기업 및 사업부</td>
+</tr>
+<tr>
+<td>핵심</td>
+<td>PDCA, 지속적 개선</td>
+</tr>
+</tbody>
+</table>
+<p><strong>주요 평가 관점</strong></p>
+<ul>
+<li>최고경영자 품질경영 철학</li>
+<li>품질 방침 및 전략</li>
+<li>품질관리 체계</li>
+<li>통계적 품질관리 활용</li>
+<li>교육 및 인재육성</li>
+<li>지속적 개선 활동</li>
+</ul>
+<h3 id="mbnqa">MBNQA</h3>
+<p><strong>MBNQA(Malcolm Baldrige National Quality Award)</strong>는 미국 국가품질상으로 1987년 제정되었다. 미국 상무부 산하 NIST(National Institute of Standards and Technology)에서 운영한다. 제품 품질뿐 아니라 조직 전체 경영 우수성(Business Excellence)을 함게 평가하는 모델이다. 현재 평가항목은 7개 범주로 구성된다.</p>
+<p><img alt="https://www.jksqm.org/upload/thumbnails/jksqm-44-2-277f1.gif" src="https://www.jksqm.org/upload/thumbnails/jksqm-44-2-277f1.gif" /></p>
+<table>
+<thead>
+<tr>
+<th>번호</th>
+<th>항목</th>
+<th>평가 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Leadership</td>
+<td>최고경영자의 리더십</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Strategy</td>
+<td>전략 수립 및 실행</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Customers</td>
+<td>고객 중심 경영</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Measurement, Analysis, Knowledge Management</td>
+<td>측정·분석·지식관리</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Workforce</td>
+<td>인적자원 관리</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Operations</td>
+<td>운영 및 프로세스 관리</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Results</td>
+<td>성과 결과</td>
+</tr>
+</tbody>
+</table>
+<p>MBNQA는 단순히 품질부서만 평가하지 않고, 경영전략, 조직문화, 인력관리, 운영 프로세스, 고객 만족, 재무성과까지 포함한다. 즉, "품질은 품질부서 업무가 아니라 조직 전체 경영 활동이다"라는 TQM 철학을 반영한다.</p>
+<h3 id="efqm-excellence-model">EFQM Excellence Model</h3>
+<p><strong>유럽품질경영재단(EFQM)</strong>이 개발한 경영품질 모델이다. 유럽 기업 경쟁력 향상을 위해 개발되었다.</p>
+<figure>
+
+![](https://efqm.org/wp-content/uploads/2024/06/model-updated-2024.png)
+<figcaption>https://efqm.org/the-efqm-model/</figcaption>
+
+</figure>
+
+<p>EFQM 2020 모델은 기존 Enablers–Results(가능요인–성과) 구조에서 벗어나 Direction → Execution → Results의 3개 영역으로 재구성되었다.</p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>EFQM 2010</th>
+<th>EFQM 2020</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>핵심 구조</td>
+<td>Enablers → Results</td>
+<td>Direction → Execution → Results</td>
+</tr>
+<tr>
+<td>관점</td>
+<td>조직 운영 요소 중심</td>
+<td>지속가능한 가치 창출 중심</td>
+</tr>
+<tr>
+<td>리더십 위치</td>
+<td>Enabler 항목</td>
+<td>Direction의 핵심 요소</td>
+</tr>
+<tr>
+<td>개선 방식</td>
+<td>결과 피드백</td>
+<td>학습·혁신 기반 지속 개선</td>
+</tr>
+<tr>
+<td>주요 대상</td>
+<td>조직 내부 운영</td>
+<td>고객·구성원·사회 등 이해관계자</td>
+</tr>
+</tbody>
+</table>
+<h3 id="iso-9001">ISO 9001 품질경영시스템 평가</h3>
+<p><strong>ISO 9001</strong>은 국제표준화기구(ISO)가 제정한 <strong>품질경영시스템 요구사항</strong>이다. 조직이 고객 요구사항을 만족하는 제품과 서비스를 지속적으로 제공할 수 있는 시스템을 갖추었는지를 평가한다.</p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>ISO 9001:2008 (8대 원칙)</th>
+<th>ISO 9001:2015 (7대 원칙)</th>
+<th>변경 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>고객 중심(Customer Focus)</td>
+<td>고객 중심(Customer Focus)</td>
+<td>유지</td>
+</tr>
+<tr>
+<td>2</td>
+<td>리더십(Leadership)</td>
+<td>리더십(Leadership)</td>
+<td>유지</td>
+</tr>
+<tr>
+<td>3</td>
+<td>전원 참여(Involvement of People)</td>
+<td>인원의 참여(Engagement of People)</td>
+<td>표현 변경</td>
+</tr>
+<tr>
+<td>4</td>
+<td>프로세스 접근법(Process Approach)</td>
+<td>프로세스 접근법(Process Approach)</td>
+<td>유지</td>
+</tr>
+<tr>
+<td>5</td>
+<td>경영에 대한 시스템 접근(System Approach to Management)</td>
+<td>삭제 및 프로세스 접근법에 통합</td>
+<td>통합</td>
+</tr>
+<tr>
+<td>6</td>
+<td>지속적 개선(Continual Improvement)</td>
+<td>개선(Improvement)</td>
+<td>개념 유지</td>
+</tr>
+<tr>
+<td>7</td>
+<td>의사결정에 대한 사실적 접근(Factual Approach to Decision Making)</td>
+<td>근거 기반 의사결정(Evidence-based Decision Making)</td>
+<td>표현 변경</td>
+</tr>
+<tr>
+<td>8</td>
+<td>공급자와의 상호 유익한 관계(Mutually Beneficial Supplier Relationships)</td>
+<td>관계 관리(Relationship Management)</td>
+<td>확대</td>
+</tr>
+</tbody>
+</table>
+<p>ISO 9001:2008 대비 ISO 9001:2015 핵심변화는 다음과 같다.</p>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>ISO 9001:2008</th>
+<th>ISO 9001:2015</th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>품질경영 접근</td>
+<td>품질경영시스템(QMS) 운영</td>
+<td>조직 경영시스템과 통합</td>
+<td>경영 관점 강화</td>
+</tr>
+<tr>
+<td>구조</td>
+<td>8개 조항 구조</td>
+<td>High Level Structure(HLS) 10개 조항</td>
+<td>ISO 표준 간 구조 통일</td>
+</tr>
+<tr>
+<td>위험관리</td>
+<td>명시적 요구 없음</td>
+<td>Risk-based Thinking 도입</td>
+<td>예방 중심 강화</td>
+</tr>
+<tr>
+<td>문서관리</td>
+<td>문서화 요구 중심</td>
+<td>문서화된 정보(Documented Information)</td>
+<td>유연성 증가</td>
+</tr>
+<tr>
+<td>경영책임</td>
+<td>경영대리인 요구</td>
+<td>경영진 직접 참여 강조</td>
+<td>책임 강화</td>
+</tr>
+<tr>
+<td>공급자 관리</td>
+<td>구매 프로세스 중심</td>
+<td>외부 제공자 관리 확대</td>
+<td>공급망 관리 강화</td>
+</tr>
+<tr>
+<td>지식관리</td>
+<td>요구 없음</td>
+<td>조직 지식 관리 요구</td>
+<td>지식 기반 경영 반영</td>
+</tr>
+<tr>
+<td>변경관리</td>
+<td>부분적 요구</td>
+<td>계획된 변경 관리 요구</td>
+<td>변경 리스크 관리</td>
+</tr>
+</tbody>
+</table>
+<p>가장 중요한 변화는 위험 기반 사고(Risk-based Thinking)이다. 기존에는 예방조치(Preventive Action)가 별도 요구사항으로 존재했으나 2015에서는 예방조치를 별도 항목으로 두지 않고 모든 프로세스에 위함 기반 사고를 적용했다.</p>
+<pre class="mermaid"><code>flowchart LR
+    classDef old fill:#FFEBEE,stroke:#D32F2F,stroke-width:2px,color:#000,font-weight:bold;
+    classDef new fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#000,font-weight:bold;
+    classDef title fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#000,font-weight:bold;
+
+
+    A["제조 현장 사례&lt;br/&gt;(설비 고장 관리)"]:::title
+
+
+    B["과거&lt;br/&gt;ISO 9001:2008&lt;br/&gt;(사후 대응 중심)"]:::old
+
+    B1["설비 고장 발생&lt;br/&gt;(Failure Occurrence)"]:::old
+    B2["재발 방지 대책 수립&lt;br/&gt;(Corrective Action)"]:::old
+
+
+    C["현재&lt;br/&gt;ISO 9001:2015&lt;br/&gt;(리스크 기반 사고)"]:::new
+
+    C1["설비 고장 가능성 분석&lt;br/&gt;(Risk Analysis)"]:::new
+    C2["예방보전 계획 수립&lt;br/&gt;(Preventive Maintenance Plan)"]:::new
+    C3["고장 발생 전에 관리&lt;br/&gt;(Risk Prevention)"]:::new
+
+
+    A --&gt; B
+    A --&gt; C
+
+
+    B --&gt; B1
+    B1 --&gt; B2
+
+
+    C --&gt; C1
+    C1 --&gt; C2
+    C2 --&gt; C3</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../0503_productivity_management/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 3. 생선성 관리">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                3. 생선성 관리
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../0601_feasibility_analysis/" class="md-footer__link md-footer__link--next" aria-label="Next: 1. 사업성 분석">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                1. 사업성 분석
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.action.edit", "toc.follow", "navigation.footer"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

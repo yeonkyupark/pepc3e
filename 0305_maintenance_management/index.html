@@ -1,0 +1,2922 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../0304_standard_work_management/">
+      
+      
+        <link rel="next" href="../0306_process_improvement/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>5. 설비보전관리 - 생산운영과 공장관리</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="생산운영과 공장관리" class="md-header__button md-logo" aria-label="생산운영과 공장관리" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            생산운영과 공장관리
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              5. 설비보전관리
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/yeonkyupark/pepc3e" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    yeonkyupark/pepc3e
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="생산운영과 공장관리" class="md-nav__button md-logo" aria-label="생산운영과 공장관리" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    생산운영과 공장관리
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/yeonkyupark/pepc3e" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    yeonkyupark/pepc3e
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 생산전략
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1. 생산전략
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0101_competitive_manufacturing_strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 경쟁우위 생산전략
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0102_production_structure_and_layout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 생산구조와 방식(Layout)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0103_purchasing_and_outsourcing_strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 구매와 외주전략
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0104_workforce_and_job_design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 인력과 직무설계
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0105_business_environment_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 사업환경 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 생산운영 및 물류관리
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2. 생산운영 및 물류관리
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0201_demand_forecasting_and_scheduling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 수요예측과 일정관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0202_process_progress_control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 프로세스 진도관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0203_supply_chain_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 공급망 관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0204_logistics_material_and_inventory_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 물류관리(자재 및 재고관리)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 공정관리
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3. 공정관리
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0301_production_planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 생산계획수립
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0302_process_design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 공정설계
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0303_work_planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 작업계획수립
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0304_standard_work_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 표준작업관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 설비보전관리
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 설비보전관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        설비보전 관리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="설비보전 관리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        설비보전 개요
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        설비보전 분류
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TPM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TPM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tpm-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TPM 8대 활동(지주)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        자주보전 7단계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#OEE" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        설비 종합효율 지표
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        신뢰성 지표
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        설비 6대 로스
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="설비 6대 로스">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#6_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        설비 6대 로스 종류
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        욕조곡선
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="욕조곡선">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        욕조곡선 3단계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        만성로스와 돌발로스
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        강제열화와 자연열화
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0306_process_improvement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 공정개선
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 설비관리
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4. 설비관리
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0401_facility_planning_and_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 설비계획 및 관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0402_material_handling_and_transport/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 자재취급 및 운반관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0403_environmental_and_safety_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 환경관리 및 안전관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0404_facility_and_utility_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 시설 및 유틸리티관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0405_factory_automation_technology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 공장자동화 기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 작업 및 생산성과 측정과 개선
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5. 작업 및 생산성과 측정과 개선
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0501_work_method_and_time_study/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 작업방법 및 시간연구
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0502_process_analysis_and_improvement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 프로세스 분석과 개선
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0503_productivity_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 생선성 관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0504_quality_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 품질관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 원가관리 및 경제성 공학
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    6. 원가관리 및 경제성 공학
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0601_feasibility_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 사업성 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0602_cost_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 원가관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0603_value_engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 가치공학
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0604_operations_research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 경영과학(OR)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. 생산지원기술 및 기타
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    7. 생산지원기술 및 기타
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0701_information_technology_and_smart_factory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 정보화활용기술(스마트팩토리 등)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0702_product_development_technology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 제품개발기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0703_service_operations_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 서비스운영관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0704_production_innovation_technology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 생산혁신기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0705_emerging_factory_management_technologies_and_trends/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 공장관리에 관한 신기술 및 경향에 관한 사항
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        설비보전 관리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="설비보전 관리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        설비보전 개요
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        설비보전 분류
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TPM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TPM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tpm-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TPM 8대 활동(지주)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        자주보전 7단계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#OEE" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        설비 종합효율 지표
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        신뢰성 지표
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        설비 6대 로스
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="설비 6대 로스">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#6_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        설비 6대 로스 종류
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        욕조곡선
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="욕조곡선">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        욕조곡선 3단계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        만성로스와 돌발로스
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        강제열화와 자연열화
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/yeonkyupark/pepc3e/edit/main/docs/0305_maintenance_management.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+  <h1>5. 설비보전관리</h1>
+
+<h2 id="_1">설비보전 관리</h2>
+<p><strong>설비보전관리(Maintenance)</strong>는 설비가 요구하는 기능을 지속적으로 수행하도록 유지하거나 고장 후 기능을 복원하기 위한 계획적 관리활동이다. 주요 목적은 설비 신뢰성, 가용성, 안전성 및 경제성을 확보하여 생산성을 향상시키는데 있다. 보전 방식은 사후보전, 예방보전, 개량보전, 보전예방, 예지보전으로 구분되며, 최근에는 IoT와 AI를 활용한 상태기반보전과 예지보전이 확대되고 있다. 또한 TPM에서는 전원참여를 통해 설비종합효율(OEE)을 극대화하고 고장 Zero, 불량 Zero, 재해 Zero를 목표로 지속적인 설비 개선을 추진한다.</p>
+<h3 id="_2">설비보전 개요</h3>
+<p><strong>ISO 14224 Maintenance 정의</strong></p>
+<blockquote>
+<p>"An action intended to retain an item in, or restore it to, a state in which it can perform its required function."<br />
+<span class='hl'>설비가 요구되는 기능을 수행할 수 있는 상태를 유지하거나 복원하기 위한 모든 기술적·관리적 활동</span></p>
+</blockquote>
+<p><strong>설비보전 관리 목적</strong></p>
+<p>설비보전에 있어 궁극적인 목적은 <span class='hl'>설비 생애주기(Life cycle) 동안 생산능력을 안정적으로 유지하면서 최소 비용으로 운영</span>하는 것이다.</p>
+<table>
+<thead>
+<tr>
+<th>목적</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>설비 가동률 향상</td>
+<td>고장시간 최소화</td>
+</tr>
+<tr>
+<td>생산성 향상</td>
+<td>생산 중단 감소</td>
+</tr>
+<tr>
+<td>품질 확보</td>
+<td>설비 이상으로 인한 불량 감소</td>
+</tr>
+<tr>
+<td>안전 확보</td>
+<td>설비 사고 예방</td>
+</tr>
+<tr>
+<td>보전비 절감</td>
+<td>최적의 유지보수 비용 달성</td>
+</tr>
+<tr>
+<td>설비 수명 연장</td>
+<td>설비 자산의 가치 유지</td>
+</tr>
+</tbody>
+</table>
+<p><strong>설비보전 기본 개념</strong></p>
+<p>설비보전은 다음과 같이 두 가지 활동으로 구분된다.</p>
+<ol>
+<li><strong>유지(Maintain)</strong><ul>
+<li>성능 유지, 고장나지 않도록 예방하는 활동</li>
+</ul>
+</li>
+<li><strong>복원(Restore)</strong><ul>
+<li>고장 후 기능 회복, 고장 발생 시 신속히 복구하는 활동</li>
+</ul>
+</li>
+</ol>
+<h3 id="_3">설비보전 분류</h3>
+<pre class="mermaid"><code>flowchart TD
+    classDef main fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#000,font-weight:bold;
+    classDef category fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000,font-weight:bold;
+
+    A["설비보전&lt;br/&gt;(Maintenance)"]:::main
+
+    B["사후보전&lt;br/&gt;(BM : Breakdown Maintenance)"]:::category
+    C["예방보전&lt;br/&gt;(PM : Preventive Maintenance)"]:::category
+    D["개량보전&lt;br/&gt;(CM : Corrective Maintenance)"]:::category
+    E["보전예방&lt;br/&gt;(MP : Maintenance Prevention)"]:::category
+    F["예지보전&lt;br/&gt;(CBM / PdM)&lt;br/&gt;Condition-Based / Predictive Maintenance"]:::category
+
+    A --&gt; B
+    A --&gt; C
+    A --&gt; D
+    A --&gt; E
+    A --&gt; F</code></pre>
+<ul>
+<li>
+<p><strong>사후보전(BM : Breakdown Maintenance)</strong>
+    고장이 발생한 후 수리하느 방식이다. 초기 보전비용이 적고 관리가 단순하다는 장점이 있다. 반면 생산중단이 발생이나 납기 지연, 긴급수리 비용 증가 등 단점도 있다. 즈로 전등, 소형 팬, 저가 소모품 등에 적용한다.</p>
+</li>
+<li>
+<p><strong>예방보전(PM : Preventive Maintenance)</strong>
+    고장이 발생하기 전에 계획적으로 점검 및 교체하는 방식이다. 대표적인 기법으로 Time-Based Maintenance(TBM)이 있다. 고장 예방, 계획정비 가능한 장점이 있지만 아직 사용할 수 있는 부품도 교체될 수 있고 과잉보전할 가능성이 존재한다.</p>
+</li>
+<li>
+<p><strong>개량보전(CM : Corrective Maintenance)</strong>
+    고장이 반복되는 설비를 근본적으로 개선하는 활동이다. 예로 기존 체인 구동에 주기적인 문제가 발생하여 벨트 구동으로 변경하여 고장 감소 활동을 들 수 있다. 단순 수리가 아니라 설비 자체를 개선하는 활동이다.</p>
+</li>
+<li>
+<p><strong>보전예방(MP : Maintenance Prevention)</strong>
+    설비를 설계·도입하는 단계부터 유지보수가 쉽도록 설계하는 활동이다. 예로 윤활 위치 외부 설치, 모듈화 설계, 점검 공간 확보 등을 들 수 있다.</p>
+</li>
+<li>
+<p><strong>예지보전(PdM : Predictive Maintenance)</strong>
+    설비 상태를 실시간으로 모니터링하여 고장을 예측하고 필요한 시점에 보전하는 방식이다. 상태기준보전(CBM, Condition-Based Maintenance)가 대표적인 형태이다.</p>
+<p><strong>주요 활용 기술</strong></p>
+<ul>
+<li>진동 분석</li>
+<li>열화상</li>
+<li>오일 분석</li>
+<li>전류 분석</li>
+<li>AI 기반 이상 진단</li>
+</ul>
+<p>불필요한 정비 감소 및 계획 외 정지 최소화 등 장점이 있으나 초기 투자 비용와 센서 및 분석 시스템이 필요하다는 단점이 있다.</p>
+</li>
+</ul>
+<h3 id="tpm">TPM</h3>
+<p><strong>TPM(Total Productive Maintenance)</strong>은 다음과 같이 정의한다. (Nakajima, 1998)</p>
+<blockquote>
+<p><span class='hl'>설비 종합효율을 극대화하기 위해 전원이 참여하는 생산보전 활동</span></p>
+</blockquote>
+<p>핵심 특징은 "<strong>보전부서만의 활동이 아니라 전원이 참여한다</strong>"는 점이다.</p>
+<p><strong>TPM 목표</strong></p>
+<ul>
+<li>고장 Zero</li>
+<li>불량 Zero</li>
+<li>재해 Zero</li>
+</ul>
+<h4 id="tpm-8">TPM 8대 활동(지주)</h4>
+<p>TPM의 목적을 달성하기 위해서는 다음 8가지의 활동이 필요하다.</p>
+<table>
+<thead>
+<tr>
+<th>활동</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>개별개선</td>
+<td>손실 제거</td>
+</tr>
+<tr>
+<td>자주보전</td>
+<td>작업자의 일상 점검</td>
+</tr>
+<tr>
+<td>계획보전</td>
+<td>예방보전 체계 구축</td>
+</tr>
+<tr>
+<td>품질보전</td>
+<td>설비 기인 불량 방지</td>
+</tr>
+<tr>
+<td>초기관리</td>
+<td>신설비 안정화</td>
+</tr>
+<tr>
+<td>교육훈련</td>
+<td>보전 기술 향상</td>
+</tr>
+<tr>
+<td>관리간접 개선</td>
+<td>사무 생산성 향상</td>
+</tr>
+<tr>
+<td>안전·환경</td>
+<td>무재해 활동</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p><strong>개별개선 (Individual Improvement)</strong></p>
+<ul>
+<li><strong>개념</strong>: 특정 설비나 라인의 6대 로스(고장, 작업준비, 일시정지, 속도저하, 불량, 초기수율 저하)를 체계적으로 분석하여 제거하는 활동이다.</li>
+<li><strong>핵심 목표</strong>: 설비의 종합효율(OEE)을 극대화하고 병목 공정의 만성 로스를 복구·개선한다.</li>
+</ul>
+</li>
+<li>
+<p><strong>자주보전 (Autonomous Maintenance)</strong></p>
+<ul>
+<li><strong>개념</strong>: "내 설비는 내가 지킨다"는 의식하에 현장 작업자가 직접 수행하는 보전 활동이다.</li>
+<li><strong>주요 내용</strong>: 청소·점검·주유·체경(점검 및 조이기)의 기본 준수, 불합리 발견 및 개선, 자주점검표 작성 등 7단계를 거쳐 추진한다.</li>
+</ul>
+</li>
+<li>
+<p><strong>계획보전 (Planned Maintenance)</strong></p>
+<ul>
+<li><strong>개념</strong>: 보전 전문 부서(정비팀)가 주도하여 설비의 신뢰성과 유지보수성을 높이는 정기적·예방적 활동이다.</li>
+<li><strong>주요 내용</strong>: 시간기준 보전(TBM), 상태기준 보전(CBM), 예방보전(PM) 체계 구축 및 수리비·부품 재고 최적화이다.</li>
+</ul>
+</li>
+<li>
+<p><strong>품질보전 (Quality Maintenance)</strong></p>
+<ul>
+<li><strong>개념</strong>: 제품의 품질 불량을 발생시키지 않는 설비 조건(Quality-Maintenance Condition)을 설정하고 이를 유지·관리하는 활동이다.</li>
+<li><strong>주요 내용</strong>: 설비의 마모나 정밀도 이상이 제품 품질에 미치는 영향(M-Q 관계)을 분석하여 불량 원인을 원천 차단한다.</li>
+</ul>
+</li>
+<li>
+<p><strong>초기관리 / 제품·설비 개발 보전 (Initial Flow Control)</strong></p>
+<ul>
+<li><strong>개념</strong>: 신제품 개발이나 신규 설비 도입 단계부터 고장이 나지 않고 가동이 용이한 설비를 설계·투입하는 활동이다.</li>
+<li><strong>주요 내용</strong>: 설비 제작 시 LCC(Life Cycle Cost)를 최소화하고, 신규 라인 설치 후 양산까지의 수율 확보 기간을 최단 축소한다.</li>
+</ul>
+</li>
+<li>
+<p><strong>교육훈련 (Education &amp; Training)</strong></p>
+<ul>
+<li><strong>개념</strong>: 작업자와 정비원에게 필요한 기술 및 보전 역량을 체계적으로 향상시키는 활동이다.</li>
+<li><strong>주요 내용</strong>: 작업자의 운전·점검 능력 향상, 정비원의 고도 진단 기술 습득, OJT(현장실습교육) 및 기량 인증제 운영이다.</li>
+</ul>
+</li>
+<li>
+<p><strong>사무/간접부문 (Administrative TPM)</strong></p>
+<ul>
+<li><strong>개념</strong>: 생산 현장을 지원하는 구매, 영업, 관리 등 사무·간접 부문의 업무 효율화를 도모하는 활동이다.</li>
+<li><strong>주요 내용</strong>: 사무 로스(정보 전달 지연, 서류 작성 중복 등) 제거, 생산 부문 지원 체계 최적화, 업무 표준화 추진이다.</li>
+</ul>
+</li>
+<li>
+<p><strong>안전·보건·환경 (Safety, Health &amp; Environment)</strong></p>
+<ul>
+<li><strong>개념</strong>: 근로자의 안전한 작업 환경을 조성하고, 환경 오염 요소를 사전 차단하는 활동이다.</li>
+<li><strong>주요 내용</strong>: 무재해 사업장 구축, 위험성 평가(Risk Assessment), 친환경 공정 구축 및 산업재해 예방이다.</li>
+</ul>
+</li>
+</ol>
+<h4 id="7">자주보전 7단계</h4>
+<p><strong>자주보전</strong>(自主保全, Autonomous Maintenance)은 TPM(Total Productive Maintenance)의 8대 활동 중 하나로, 생산부문의 <span class='hl'>작업자가 자신의 설비를 스스로 관리하여 설비의 기본 조건을 유지하고 이상을 조기에 발견하는 활동</span>이다. TPM 자주보전은 일반적으로 다음 7단계 전개 과정으로 추진한다.</p>
+<p>다음은 자주보전 7단계와 설비에 강한 오퍼레이터 육성을 정리한 표이다.</p>
+<table>
+<thead>
+<tr>
+<th>단계</th>
+<th>자주보전 7단계</th>
+<th>주요 활동</th>
+<th>설비에 강한 오퍼레이터 육성</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1단계</td>
+<td><strong>초기청소</strong></td>
+<td>설비와 주변의 먼지, 오염 제거, 이상 발견</td>
+<td>청소를 단순 미화가 아닌 <strong>설비 점검 활동</strong>으로 인식. 누유, 풀림, 마모 등 이상 발견 능력 향상</td>
+</tr>
+<tr>
+<td>2단계</td>
+<td><strong>발생원·곤란개소 개선</strong></td>
+<td>오염 발생 원인 제거, 청소·점검이 어려운 부분 개선</td>
+<td>설비 구조를 이해하고 <strong>왜 문제가 발생하는지 원인 분석 능력</strong> 배양</td>
+</tr>
+<tr>
+<td>3단계</td>
+<td><strong>청소·급유 기준 작성</strong></td>
+<td>청소 위치, 방법, 주기, 급유 기준 표준화</td>
+<td>설비 관리 기준을 스스로 설정하고 <strong>기본 유지관리 능력 확보</strong></td>
+</tr>
+<tr>
+<td>4단계</td>
+<td><strong>총점검</strong></td>
+<td>설비 구조, 기능, 점검 방법 교육 및 실시</td>
+<td>설비 원리와 구성요소를 이해하여 <strong>이상 징후를 조기에 발견하는 능력 확보</strong></td>
+</tr>
+<tr>
+<td>5단계</td>
+<td><strong>자주점검</strong></td>
+<td>작업자가 직접 정기 점검 수행</td>
+<td>설비 상태를 스스로 판단하고 <strong>일상 점검 역량 확보</strong></td>
+</tr>
+<tr>
+<td>6단계</td>
+<td><strong>표준화</strong></td>
+<td>청소·점검·급유·조작 기준 통합 및 준수</td>
+<td>개인 경험이 아닌 <strong>표준 기반 설비 관리 능력 확보</strong></td>
+</tr>
+<tr>
+<td>7단계</td>
+<td><strong>자주관리</strong></td>
+<td>지속적인 개선 활동, 목표 관리, 유지 발전</td>
+<td>설비 효율 향상을 주도하는 <strong>전문 오퍼레이터로 성장</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="OEE">설비 종합효율 지표</h3>
+<p>대표적인 설비효율 지표로 <strong>OEE(Overall Equipment Effectiveness, 설비 종합효율)</strong>가 있다.</p>
+<div class="arithmatex">\[OEE = Availability \times Performance \times Quality\]</div>
+<pre class="mermaid"><code>flowchart TD
+    classDef main fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#000,font-weight:bold;
+    classDef factor fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000,font-weight:bold;
+    classDef calc fill:#F5F5F5,stroke:#757575,stroke-width:1px,color:#000;
+    classDef loss fill:#FFEBEE,stroke:#D32F2F,stroke-width:2px,color:#000;
+    classDef result fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#000,font-weight:bold;
+
+
+    A["OEE(설비종합효율)&lt;br/&gt;= 가동률 × 성능효율 × 품질률"]:::main
+
+
+    B["가동률&lt;br/&gt;(Availability)&lt;br/&gt;&lt;br/&gt;= 가동시간&lt;br/&gt;÷ 부하시간"]:::factor
+    C["성능효율&lt;br/&gt;(Performance)&lt;br/&gt;&lt;br/&gt;= (이론CT × 생산수량)&lt;br/&gt;÷ 가동시간"]:::factor
+    D["품질률&lt;br/&gt;(Quality)&lt;br/&gt;&lt;br/&gt;= 양품수&lt;br/&gt;÷ 총생산수"]:::factor
+
+
+    B1["설비고장&lt;br/&gt;(Equipment Failure)"]:::loss
+    B2["준비·교체&lt;br/&gt;(Setup &amp; Adjustment)"]:::loss
+
+    C1["공회전·일시정지&lt;br/&gt;(Idling &amp; Minor Stops)"]:::loss
+    C2["속도저하&lt;br/&gt;(Reduced Speed)"]:::loss
+
+    D1["초기불량&lt;br/&gt;(Start-up Loss)"]:::loss
+    D2["불량·재작업&lt;br/&gt;(Defects &amp; Rework)"]:::loss
+
+    A --&gt; B
+    A --&gt; C
+    A --&gt; D
+
+    B --&gt; B1
+    B --&gt; B2
+
+    C --&gt; C1
+    C --&gt; C2
+
+    D --&gt; D1
+    D --&gt; D2</code></pre>
+<ul>
+<li>부하시간: 전체 일할 시간에서 미리 정한 쉬는 시간을 제외한 시간(조업시간 - 계획정지시간)</li>
+<li>이론CT: 이론 또는 표준 Cycle Time</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">설비종합효율(OEE)</p>
+<p>어떤 생산설비의 하루 운영 데이터를 조사한 결과 다음과 같다. 해당 설비의 OEE(설비종합효율)를 계산하시오.</p>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th style="text-align: right;">값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>계획 생산시간</td>
+<td style="text-align: right;">480분</td>
+</tr>
+<tr>
+<td>비가동 시간(고장, 대기 등)</td>
+<td style="text-align: right;">60분</td>
+</tr>
+<tr>
+<td>이론 Cycle Time</td>
+<td style="text-align: right;">1분/개</td>
+</tr>
+<tr>
+<td>총 생산수량</td>
+<td style="text-align: right;">350개</td>
+</tr>
+<tr>
+<td>불량수량</td>
+<td style="text-align: right;">20개</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>가동률(Availability)</p>
+<p>공식:</p>
+<div class="arithmatex">\[
+가동률=\frac{실제운전시간}{계획생산시간}
+\]</div>
+<p>실제운전시간:</p>
+<div class="arithmatex">\[
+480-60=420분
+\]</div>
+<p>따라서,</p>
+<div class="arithmatex">\[
+가동률=\frac{420}{480} = 0.875
+\]</div>
+<div class="arithmatex">\[
+\boxed{가동률 = 87.5\%}
+\]</div>
+</li>
+<li>
+<p>성능률(Performance)</p>
+<p>공식:</p>
+<div class="arithmatex">\[
+성능률 = \frac{이론 Cycle Time \times 총생산수량} = {실제운전시간}
+\]</div>
+<p>대입:</p>
+<div class="arithmatex">\[        
+\frac{1 \times 350}{420} = 0.8333
+\]</div>
+<div class="arithmatex">\[
+\boxed{성능률 = 83.3\%}
+\]</div>
+<p>의미:</p>
+<ul>
+<li>설비가 정상 속도 대비 얼마나 빠르게 생산했는지를 나타냄</li>
+<li>미세정지, 속도저하 등이 반영됨</li>
+</ul>
+</li>
+<li>
+<p>품질률(Quality)</p>
+<p>공식:</p>
+<div class="arithmatex">\[
+품질률 = \frac{양품수량}{총생산수량}
+\]</div>
+<p>양품수량:</p>
+<div class="arithmatex">\[
+350 - 20 = 330개
+\]</div>
+<p>따라서,</p>
+<div class="arithmatex">\[
+품질률 = \frac{330}{350} = 0.9429
+\]</div>
+<div class="arithmatex">\[
+\boxed{품질률 = 94.3\%}
+\]</div>
+</li>
+<li>
+<p>OEE 계산</p>
+<p>공식:</p>
+<div class="arithmatex">\[
+OEE = 가동률 \times 성능률 \times 품질률
+\]</div>
+<p>대입:</p>
+<div class="arithmatex">\[
+= 0.875 \times 0.833 \times 0.943 = 0.688
+\]</div>
+<p>따라서,</p>
+<div class="arithmatex">\[
+\boxed{OEE = 68.8\%}
+\]</div>
+</li>
+</ol>
+<p><strong>최종 결과</strong></p>
+<table>
+<thead>
+<tr>
+<th>지표</th>
+<th style="text-align: right;">계산 결과</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>가동률(A)</td>
+<td style="text-align: right;">87.5%</td>
+</tr>
+<tr>
+<td>성능률(P)</td>
+<td style="text-align: right;">83.3%</td>
+</tr>
+<tr>
+<td>품질률(Q)</td>
+<td style="text-align: right;">94.3%</td>
+</tr>
+<tr>
+<td><strong>OEE</strong></td>
+<td style="text-align: right;"><strong>68.8%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>결과 해석</strong></p>
+<p>이 설비는:</p>
+<ul>
+<li>계획시간 중 <strong>87.5%만 실제 생산에 사용</strong></li>
+<li>정상 속도 대비 <strong>83.3% 수준으로 운전</strong></li>
+<li>생산품 중 <strong>94.3%가 양품</strong></li>
+</ul>
+<p>이며, 세 요소가 곱해져 최종적으로:</p>
+<div class="arithmatex">\[
+\boxed{설비종합효율(OEE) = 68.8\%}
+\]</div>
+<p>이다.</p>
+<p>참고로 TPM 관점에서는 OEE를 단순한 설비 가동률이 아니라 <strong>6대 로스(고장, 준비교체, 순간정지, 속도저하, 불량, 초기수율저하)를 얼마나 제거했는지 나타내는 종합 지표</strong>로 활용한다.</p>
+</div>
+<h3 id="_4">신뢰성 지표</h3>
+<p>대표적인 신뢰성 지표로 <strong>MTBF(Mean Time Between Failures, 평균고장간격)</strong>, <strong>MTTR(Mean Time To Repair, 평균수리시간)</strong>, <strong>Availability(가용도)</strong> 등이 있다.</p>
+<p><img alt="" src="https://github.com/user-attachments/assets/bbe66b56-06e4-4888-8bd7-fd8047811252" /></p>
+<table>
+<thead>
+<tr>
+<th>지표</th>
+<th>의미</th>
+<th>적용 대상</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MTTD</strong></td>
+<td>고장이 발생한 후 이를 감지하는 데 걸리는 평균 시간</td>
+<td>모니터링 시스템, IT 운영, 스마트팩토리</td>
+</tr>
+<tr>
+<td><strong>MTTR</strong></td>
+<td>고장 발생 후 정상 상태로 복구하는 평균 시간</td>
+<td>수리 가능한 설비(Repairable System)</td>
+</tr>
+<tr>
+<td><strong>MTTF</strong></td>
+<td>설비가 고장 날 때까지의 평균 운전 시간</td>
+<td>수리하지 않는 부품(Non-repairable Item)</td>
+</tr>
+<tr>
+<td><strong>MTBF</strong></td>
+<td>한 번의 고장 이후 다음 고장까지의 평균 시간(고장 간 평균 간격)</td>
+<td>수리 가능한 설비(Repairable System)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><strong>MTBF</strong></p>
+<div class="arithmatex">\[MTBF = \frac{총가동시간}{고장횟수}\]</div>
+</li>
+<li>
+<p><strong>MTTR</strong></p>
+<div class="arithmatex">\[MTTR = \frac{총수리시간}{고장횟수}\]</div>
+</li>
+<li>
+<p><strong>Availability</strong></p>
+<div class="arithmatex">\[Availability = \frac{MTBF}{MTBF + MTTR}\]</div>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">가용도</p>
+<p>MTBF 200시간, MTTR 10시간이라 가정했을 때 가용도는 다음과 같이 계산된다.</p>
+<div class="arithmatex">\[Availability = \frac{200}{210} = 95.2\%\]</div>
+</div>
+<h2 id="6">설비 6대 로스</h2>
+<p><strong>설비 6대 로스(6 Big Losses)</strong>란 TPM(Total Productive Maintenance)에서 <span class='hl'>설비종합효율(OEE)을 저해하는 대표적인 생산 손실 요인을 6가지로 분류한 것</span>이다. TPM의 창시자인 Seiichi Nakajima가 제시한 개념으로, 설비가 가진 최대 생산능력을 발휘하지 못하는 원인을 분석하고 개선하기 위한 관리 체계이다.</p>
+<p><img alt="" src="https://yeonkyupark.github.io/pepc2e/images/oee.png" /></p>
+<h3 id="6_1">설비 6대 로스 종류</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>6대 로스</th>
+<th>OEE 영향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>고장 정지 로스(Breakdown Loss)</td>
+<td>가동률</td>
+</tr>
+<tr>
+<td>2</td>
+<td>준비·조정 로스(Setup and Adjustment Loss)</td>
+<td>가동률</td>
+</tr>
+<tr>
+<td>3</td>
+<td>공회전·순간정지 로스(Idling and Minor Stoppage Loss)</td>
+<td>성능률</td>
+</tr>
+<tr>
+<td>4</td>
+<td>속도 저하 로스(Reduced Speed Loss)</td>
+<td>성능률</td>
+</tr>
+<tr>
+<td>5</td>
+<td>초기 수율 로스(Start-up Yield Loss)</td>
+<td>품질률</td>
+</tr>
+<tr>
+<td>6</td>
+<td>불량·재작업 로스(Defect and Rework Loss)</td>
+<td>품질률</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><strong>고장 정리 로스</strong><br />
+   설비고장으로 인해 계획되지 않은 정지가 발생하여 생산하지 못하는 시간 손실을 의미한다.<br />
+   예방보전, 예지보전, 고장원인 분석, MTBF 향상을 통해 개선할 수 있다.</li>
+<li><strong>준비·조정 로스</strong><br />
+   제품 변경, 금형 교체, 조건 설정 등 생산 준비 과정에서 발생하는 시간 손실을 의미한다.<br />
+   SMED(Single Minute Exchange of Die), 금형 교환 시간을 한자리 분(minute) 수준으로 단축하는 방법으로 개선할 수 있다.</li>
+<li><strong>공회전·순간정지 로스</strong><br />
+   설비가 일시적으로 멈추거나 공회전하여 발생하는 작은 정지 손실을 의미한다.<br />
+   현상 분석, 센서 개선, 부품 공급 개선, 자주보전을 통해 개선할 수 있다.   </li>
+<li><strong>속도 저하 로스</strong><br />
+   설비가 설계속도 또는 표준속도보다 낮은 속도로 운전하여 발생하는 생산 손실을 의미한다.<br />
+   최적 운전조건 설정, 설비 개선, 마모 관리를 통해 개선할 수 있다.</li>
+<li><strong>초기 수율 로스</strong><br />
+   설비 가동 초기 안정화 과정에서 발생하는 불량 및 손실을 의미한다.<br />
+   조건 표준화, 초품 승인 체계, 설비 초기 완정화를 통해 개선할 수 있다.</li>
+<li><strong>불량·재작업 로스</strong><br />
+   생산 과정에서 발생한 불량품과 재작업으로 인해 발생하는 손실을 의미한다.<br />
+   불량 원인 분석, 공정능력 향상, Fool Proof(Poka-Yoke), 품질보전을 통해 개선할 수 있다.</li>
+</ol>
+<p>6대 로스 개선과 TPM 활동을 연결하면 다음과 같이 개선할 수 있다.</p>
+<table>
+<thead>
+<tr>
+<th>6대 로스</th>
+<th>주요 TPM 활동</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>고장 정지</td>
+<td>계획보전, 예지보전</td>
+</tr>
+<tr>
+<td>준비 조정</td>
+<td>개별개선, SMED</td>
+</tr>
+<tr>
+<td>순간정지</td>
+<td>자주보전, 조건관리</td>
+</tr>
+<tr>
+<td>속도저하</td>
+<td>개량보전, 설비 개선</td>
+</tr>
+<tr>
+<td>초기수율</td>
+<td>초기관리, 품질보전</td>
+</tr>
+<tr>
+<td>불량재작업</td>
+<td>품질보전, Poka-Yoke</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_5">욕조곡선</h2>
+<p><strong>욕조곡선(Bathtub Curve)</strong>은 <span class='hl'>설비 수명기간 동안 고장률(Failure Rate)이 시간에 따라 변화하는 형태를 나타낸 신뢰성 이론</span>에 있어 대표적인 모델이다. 시간에 따라 고장율 변화가 욕조 모양과 유사하여 욕조곡선이라고 부른다.</p>
+<div class="arithmatex">\[\lambda = \frac{단위시간당\ 고장\ 발생수}{생존\ 설비수}\]</div>
+<h3 id="3">욕조곡선 3단계</h3>
+<p><img alt="" src="https://nrms.kisti.re.kr/bitextimages/TRKO201300024419/TRKO201300024419_129_image_89.jpg" /></p>
+<table>
+<thead>
+<tr>
+<th>수명 단계</th>
+<th>주요 원인</th>
+<th>적합한 보전</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>초기 고장</td>
+<td>설계·제작 문제</td>
+<td>개선보전(CM), 품질개선</td>
+</tr>
+<tr>
+<td>우발 고장</td>
+<td>불규칙 고장</td>
+<td>예지보전(PdM), CBM</td>
+</tr>
+<tr>
+<td>마모 고장</td>
+<td>노후화</td>
+<td>예방보전(PM), 교체</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>초기 고장 영역</p>
+<p><strong>설비 설치 초기(Early Failure Period)</strong>에는 고장률이 높다가 시간이 지나면서 감소하는 영역이다.</p>
+<ul>
+<li>
+<p><strong>초기 고장 원인</strong></p>
+<ul>
+<li>설계 오류</li>
+<li>제작 불량</li>
+<li>조립 불량</li>
+<li>설치 오류</li>
+<li>초기 품질 문제</li>
+</ul>
+</li>
+<li>
+<p><strong>보전 방식(개선 활동 중심)</strong></p>
+<ul>
+<li>시운전 강화</li>
+<li>초기 불량 제거</li>
+<li>설계 계선</li>
+<li>공급업체 품질 관리</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>우발 고장 영역</p>
+<p><strong>우발 고장 영역(Random Failure Period)</strong>은 시간이 지나도 비교적 일정한 고장률을 유지하는 영역이다.</p>
+<ul>
+<li>
+<p><strong>원인</strong></p>
+<ul>
+<li>외부 충격</li>
+<li>작업 실수</li>
+<li>예측하기 어려운 부품 결함</li>
+</ul>
+</li>
+<li>
+<p><strong>보전방식</strong></p>
+<ul>
+<li>예방보전(PM)</li>
+<li>상태기반보전(CBM)</li>
+<li>예지보전(PdM)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>마모 고장 영역</p>
+<p><strong>마모 고장 영역(Wear-out Failure Period)</strong>은 설비 노후화로 고장률이 급격히 증가한다.</p>
+<ul>
+<li>
+<p><strong>원인</strong></p>
+<ul>
+<li>마찰</li>
+<li>피로</li>
+<li>부식</li>
+<li>마모</li>
+</ul>
+</li>
+<li>
+<p><strong>보전방식</strong></p>
+<ul>
+<li>예방 교체</li>
+<li>개량보전</li>
+<li>설비 갱신</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="_6">만성로스와 돌발로스</h2>
+<p>TPM에서는 설비종합효율을 저해하는 손실을 로스(Loss)라고 한다. 돌발로스와 만성로스로 구분할 수 있다.</p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>돌발로스</th>
+<th>만성로스</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>발생</td>
+<td>갑작스러움</td>
+<td>반복적</td>
+</tr>
+<tr>
+<td>빈도</td>
+<td>낮음</td>
+<td>높음</td>
+</tr>
+<tr>
+<td>1회 영향</td>
+<td>큼</td>
+<td>작음</td>
+</tr>
+<tr>
+<td>총 영향</td>
+<td>크거나 중간</td>
+<td>누적되어 큼</td>
+</tr>
+<tr>
+<td>발견</td>
+<td>쉬움</td>
+<td>어려움</td>
+</tr>
+<tr>
+<td>대책</td>
+<td>복구·예방</td>
+<td>원인 제거·개선</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>돌발로스</p>
+<p><strong>돌발로스</strong>(Breakdown Loss)는 <span class='hl'>설비에 갑작스러운 고장으로 인해 발생한 비계획 정지 손실</span> 말한다. 즉, 예상하지 못한 설비 정지이다. 발생 빈도가 낮고 1회 발생시 영향이 크며 긴급 복구가 필요하다. 프레스 설비 운행 중 유압 시스템 고장, 모터 손실, PLC 오류 등이 해당된다. 이런 경우 생산라인이 정지된다.</p>
+</li>
+<li>
+<p>만성로스</p>
+<p><strong>만성로스</strong>(Chronic Loss)는 <span class='hl'>반복적으로 발생하지만 개별 영향이 작아 쉽게 인식되지 않는 지속적인 손실</span>을 의미한다. 반복 발생하지만 원인이 숨겨져 있고 누적 손실이 큰 특징이 있다. 매일 1회 5초씩 C/T이 느린 경우 작은 대기시간으로 인식이 어렵지만 미세한 품질 편차가 발생하고 장기간 누적될 경우 생산량에 비례하여 손실이 발생하게 된다. 현상 분석, 미세 원인 제거, 조건 최적화, 공정 개선 등을 통해 만성로스를 개선할 수 있다.</p>
+</li>
+</ol>
+<h2 id="_7">강제열화와 자연열화</h2>
+<p><strong>열화(Deterioration)</strong>는 <span class='hl'>설비가 사용 과정에서 성능이 저하되어 요구 기능을 만족하지 못하게 되는 현상</span>을 말한다. 자연열화와 강제열화로 구분할 수 있다.</p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>자연열화</th>
+<th>강제열화</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원인</td>
+<td>시간 경과</td>
+<td>잘못된 사용·관리</td>
+</tr>
+<tr>
+<td>발생</td>
+<td>필연적</td>
+<td>예방 가능</td>
+</tr>
+<tr>
+<td>속도</td>
+<td>완만</td>
+<td>급격</td>
+</tr>
+<tr>
+<td>관리</td>
+<td>수명관리</td>
+<td>운전·관리 개선</td>
+</tr>
+<tr>
+<td>대책</td>
+<td>PM, 교체</td>
+<td>자주보전, 운전조건 개선</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>자연열화</p>
+<p><strong>자연열화</strong>(Natural Deterioration)는 <span class='hl'>설비가 정상 조건에서 사용되면서 시간이 경과함에 따라 자연적으로 발생하는 열화</span>를 말한다. 마모, 피로, 부식, 윤활유 열화 등이 원인이 될 수 있다. 예측 및 관리가 가능하고 수명 곡선과 관련되어 있다. 자연열화 예로 베어링 경우, 사용 시간이 증가하면 윤활 성능이 저하되어 마모가 증가하여 교체가 필요하게 된다.</p>
+</li>
+<li>
+<p>강제열화</p>
+<p><strong>강제열화</strong>(Forced Deterioration)는 <span class='hl'>정상 사용 조건을 벗어난 운전이나 관리 부족으로 인해 설비 열화가 가속되는 현상</span>을 말한다. 과부하 운전, 정격 초과 사용, 잘못된 사용이 원인이 될 수 있다. 또한 관리 측면에서 윤활 부족, 청소 미흡, 점검 누락도 원인이 될 수 있다. 강제열화 예로 베어링 경우, 정상 1,000rpm 운전에서 1,500rpm으로 과부하 운전을 하게 되면 온도가 상승하여 윤활이 파괴어어 조기 고장으로 이어진다.</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../0304_standard_work_management/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 4. 표준작업관리">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                4. 표준작업관리
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../0306_process_improvement/" class="md-footer__link md-footer__link--next" aria-label="Next: 6. 공정개선">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                6. 공정개선
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.action.edit", "toc.follow", "navigation.footer"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

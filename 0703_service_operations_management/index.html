@@ -1,0 +1,2733 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../0702_product_development_technology/">
+      
+      
+        <link rel="next" href="../0704_production_innovation_technology/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>3. 서비스운영관리 - 생산운영과 공장관리</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="생산운영과 공장관리" class="md-header__button md-logo" aria-label="생산운영과 공장관리" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            생산운영과 공장관리
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3. 서비스운영관리
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/yeonkyupark/pepc3e" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    yeonkyupark/pepc3e
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="생산운영과 공장관리" class="md-nav__button md-logo" aria-label="생산운영과 공장관리" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    생산운영과 공장관리
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/yeonkyupark/pepc3e" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    yeonkyupark/pepc3e
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 생산전략
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1. 생산전략
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0101_competitive_manufacturing_strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 경쟁우위 생산전략
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0102_production_structure_and_layout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 생산구조와 방식(Layout)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0103_purchasing_and_outsourcing_strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 구매와 외주전략
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0104_workforce_and_job_design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 인력과 직무설계
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0105_business_environment_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 사업환경 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 생산운영 및 물류관리
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2. 생산운영 및 물류관리
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0201_demand_forecasting_and_scheduling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 수요예측과 일정관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0202_process_progress_control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 프로세스 진도관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0203_supply_chain_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 공급망 관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0204_logistics_material_and_inventory_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 물류관리(자재 및 재고관리)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 공정관리
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3. 공정관리
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0301_production_planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 생산계획수립
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0302_process_design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 공정설계
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0303_work_planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 작업계획수립
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0304_standard_work_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 표준작업관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0305_maintenance_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 설비보전관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0306_process_improvement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 공정개선
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 설비관리
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4. 설비관리
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0401_facility_planning_and_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 설비계획 및 관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0402_material_handling_and_transport/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 자재취급 및 운반관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0403_environmental_and_safety_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 환경관리 및 안전관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0404_facility_and_utility_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 시설 및 유틸리티관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0405_factory_automation_technology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 공장자동화 기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 작업 및 생산성과 측정과 개선
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5. 작업 및 생산성과 측정과 개선
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0501_work_method_and_time_study/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 작업방법 및 시간연구
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0502_process_analysis_and_improvement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 프로세스 분석과 개선
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0503_productivity_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 생선성 관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0504_quality_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 품질관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 원가관리 및 경제성 공학
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    6. 원가관리 및 경제성 공학
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0601_feasibility_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 사업성 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0602_cost_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 원가관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0603_value_engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 가치공학
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0604_operations_research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 경영과학(OR)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. 생산지원기술 및 기타
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    7. 생산지원기술 및 기타
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0701_information_technology_and_smart_factory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 정보화활용기술(스마트팩토리 등)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0702_product_development_technology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 제품개발기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 서비스운영관리
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 서비스운영관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        서비스운영관리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="서비스운영관리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 기능
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 기법
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="주요 기법">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        서비스 청사진
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servqual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SERVQUAL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        대기행렬
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lean-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lean Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        제품 서비스화
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        제조업 생산관리 비교
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4p" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        마케팅 믹스 4P
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0704_production_innovation_technology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 생산혁신기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0705_emerging_factory_management_technologies_and_trends/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 공장관리에 관한 신기술 및 경향에 관한 사항
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        서비스운영관리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="서비스운영관리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 기능
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 기법
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="주요 기법">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        서비스 청사진
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servqual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SERVQUAL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        대기행렬
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lean-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lean Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        제품 서비스화
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        제조업 생산관리 비교
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4p" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        마케팅 믹스 4P
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/yeonkyupark/pepc3e/edit/main/docs/0703_service_operations_management.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+  <h1>3. 서비스운영관리</h1>
+
+<h2 id="_1">서비스운영관리</h2>
+<p><strong>서비스 운영관리(Service Operations Management)</strong>는 고객에게 서비스를 효율적이고 일관되게 제공하기 위해 사람, 시설, 정보, 프로세스를 계획·운영·통제·개선하는 관리 활동이다. 서비스는 무형성, 이질성, 비분리성, 소멸성 특성을 가지므로 제조 운영과 다른 접근이 필요하다. 주요 관리 대상은 서비스 설계, 수요관리, 용량관리, 대기행렬 관리 및 서비스 품질관리이여, 대표적인 기법으로는 Service Blueprint, SERVQUAL, Queueing Theory, Lean Service가 있다. 제조업에서도 A/S, 유지보수, 물류, 원격 모니터링 등 서비스 운영관리 중요성이 지속적으로 확대되고 있다.</p>
+<div class="highlight"><pre><span></span><code>서비스 운영관리(Service Operations Management)
+│
+├── 1. 서비스 개요
+│      ├── Service
+│      ├── Service Operations
+│      ├── Service System
+│      ├── Service Value
+│      └── Customer Experience(CX)
+│
+├── 2. 서비스 설계
+│      ├── Service Design
+│      ├── Service Blueprint
+│      ├── Service Process
+│      ├── Service Package
+│      └── Servitization
+│
+├── 3. 서비스 운영
+│      ├── Capacity Planning
+│      ├── Queue Management
+│      ├── Scheduling
+│      ├── Workforce Planning
+│      ├── Facility Layout
+│      └── Service Recovery
+│
+├── 4. 품질관리
+│      ├── SERVQUAL
+│      ├── GAP Model
+│      ├── VOC
+│      ├── Complaint Management
+│      └── Customer Satisfaction
+│
+├── 5. 서비스 개선
+│      ├── Lean Service
+│      ├── Six Sigma
+│      ├── BPM
+│      ├── Process Mining
+│      ├── AI Service
+│      └── Digital Service
+│
+└── 6. 주요 KPI
+       ├── Waiting Time
+       ├── Service Level
+       ├── Response Time
+       ├── First Contact Resolution
+       ├── Customer Satisfaction
+       ├── NPS
+       └── Utilization
+</code></pre></div>
+<p>서비스 운영관리는 제조와 다른 서비스 특성을 이해하는 것에서 시작한다. 시버스 경영 분야에서는 일반적으로 IHIP(무형성, 이질성, 비분리성, 소멸성) 네가지 특성을 설명한다.</p>
+<table>
+<thead>
+<tr>
+<th>특성</th>
+<th>내용</th>
+<th>예시</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>무형성(Intangibility)</td>
+<td>형태가 없어 사전에 품질을 확인하기 어려움</td>
+<td>컨설팅, 교육</td>
+</tr>
+<tr>
+<td>이질성(Heterogeneity)</td>
+<td>서비스 제공자나 상황에 따라 품질이 달라짐</td>
+<td>미용, 의료</td>
+</tr>
+<tr>
+<td>비분리성(Inseparability)</td>
+<td>생산과 소비가 동시에 발생</td>
+<td>병원 진료, 강의</td>
+</tr>
+<tr>
+<td>소멸성(Perishability)</td>
+<td>재고로 저장할 수 없음</td>
+<td>항공 좌석, 호텔 객실</td>
+</tr>
+</tbody>
+</table>
+<p>서비스 운영관리 목적은 QCDS(Quality, Cost, Delivery, Service)를 달성하는 것이다.</p>
+<table>
+<thead>
+<tr>
+<th>목적</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>품질(Q)</td>
+<td>일관된 서비스 품질 확보</td>
+</tr>
+<tr>
+<td>원가(C)</td>
+<td>운영 효율화 및 비용 절감</td>
+</tr>
+<tr>
+<td>납기(D)</td>
+<td>대기시간 및 처리시간 단축</td>
+</tr>
+<tr>
+<td>서비스(S)</td>
+<td>고객 만족 및 고객 경험 향상</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_2">주요 기능</h3>
+<pre class="mermaid"><code>flowchart TD
+
+    classDef main fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#000,font-weight:bold;
+    classDef category fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000,font-weight:bold;
+    classDef process fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#000,font-weight:bold;
+
+
+    A["서비스 운영관리&lt;br/&gt;(Service Operations Management)"]:::main
+
+    B["서비스 전략&lt;br/&gt;(Service Strategy)"]:::category
+
+    C["서비스 설계&lt;br/&gt;(Service Design)"]:::category
+    D["수요관리&lt;br/&gt;(Demand Management)"]:::category
+    E["자원관리&lt;br/&gt;(Capacity &amp; Resource Management)"]:::category
+
+    F["서비스 제공&lt;br/&gt;(Service Delivery)"]:::process
+
+    G["품질관리 및 지속적 개선&lt;br/&gt;(Quality Management &amp; Continuous Improvement)"]:::process
+
+
+    A --&gt; B
+    B --&gt; C
+    B --&gt; D
+    B --&gt; E
+
+    C --&gt; F
+    D --&gt; F
+    E --&gt; F
+
+    F --&gt; G
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>기능</th>
+<th>주요 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>서비스 전략</strong></td>
+<td>서비스 목표, 고객가치, 경쟁전략 수립</td>
+</tr>
+<tr>
+<td><strong>서비스 설계</strong></td>
+<td>서비스 프로세스, 서비스 청사진(Service Blueprint), 표준 설계</td>
+</tr>
+<tr>
+<td><strong>수요관리</strong></td>
+<td>수요예측, 예약관리, 대기행렬(Queue) 관리</td>
+</tr>
+<tr>
+<td><strong>자원관리</strong></td>
+<td>인력, 설비, 용량(Capacity) 및 일정 관리</td>
+</tr>
+<tr>
+<td><strong>서비스 제공</strong></td>
+<td>서비스 실행, 고객 접점(Moment of Truth) 관리</td>
+</tr>
+<tr>
+<td><strong>품질 및 개선</strong></td>
+<td>SERVQUAL, 고객만족(CS), KPI, PDCA, 지속적 개선</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_3">주요 기법</h3>
+<h4 id="_4">서비스 청사진</h4>
+<figure>
+<p><img alt="Service Blueprint" src="https://public-images.interaction-design.org/tags/td-what-are-service-blueprints-illustration-service-blue-print-anatomy.png" /></p>
+<figcaption>https://ixdf.org/literature/topics/service-blueprint</figcaption>
+</figure>
+<p>서비스 청사진(Service Blueprint)은 <span class='hl'>고객 관점에서 서비스 전달 과정을 시각화하여 물리적 증거, 고객 행동, 전방 및 후방 직원 행동, 지원 브포레스를 단계별로 분석하는 도구</span>이다. 서비스 운영 문제점을 찾고 개선하는데 사용된다.  </p>
+<p>세로축을 기준으로 크게 4가지 행동 영역으로 나뉘며 각 영역은 3가지 경계선으로 구분된다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">구성 요소</th>
+<th style="text-align: left;">명칭</th>
+<th style="text-align: left;">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>행동 영역 1</strong></td>
+<td style="text-align: left;"><strong>고객 행동 (Customer Actions)</strong></td>
+<td style="text-align: left;">고객이 서비스를 이용하는 과정에서 수행하는 모든 행동 단계</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>경계선 1</em></td>
+<td style="text-align: left;"><em>상호작용선 (Line of Interaction)</em></td>
+<td style="text-align: left;">고객과 현장 직원이 직접 만나는 접점</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>행동 영역 2</strong></td>
+<td style="text-align: left;"><strong>전방 직원 행동 (Onstage Employee Actions)</strong></td>
+<td style="text-align: left;">고객의 눈에 직접 보이는 현장 직원의 서비스 행위</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>경계선 2</em></td>
+<td style="text-align: left;"><em>가시선 (Line of Visibility)</em></td>
+<td style="text-align: left;">고객이 볼 수 있는 영역과 볼 수 없는 영역의 구분선</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>행동 영역 3</strong></td>
+<td style="text-align: left;"><strong>후방 직원 행동 (Backstage Employee Actions)</strong></td>
+<td style="text-align: left;">고객의 눈에는 보이지 않지만, 전방 서비스를 지원하는 직원의 행위</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>경계선 3</em></td>
+<td style="text-align: left;"><em>내부 상호작용선 (Line of Internal Interaction)</em></td>
+<td style="text-align: left;">서비스 지원 직원과 기업 내부 시스템 간의 경계선</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>행동 영역 4</strong></td>
+<td style="text-align: left;"><strong>지원 프로세스 (Support Processes)</strong></td>
+<td style="text-align: left;">서비스가 원활히 제공되도록 돕는 내부 시스템, 기술, 인프라 등</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>기타 요소</strong></td>
+<td style="text-align: left;"><strong>물적 증거 (Physical Evidence)</strong></td>
+<td style="text-align: left;">각 단계에서 고객이 접하는 유형적 요소 (매장 인테리어, 웹사이트, 영수증 등)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>핵심 목적</strong></p>
+<ul>
+<li>오류 가능 지점(Fail Points) 발견: 서비스 과정 중 실수가 생기기 쉬운 취약점을 미리 파악하여 예방책을 강구</li>
+<li>대기 시간 관리: 서비스 지연이 발생하는 병목 구간을 시각화하여 대기 시간을 감소</li>
+<li>부서 간 협업 강화: 전방 직원과 후방 지원 부서가 서로 어떻게 연결되어 있는지 명확히 이해</li>
+</ul>
+<h4 id="servqual">SERVQUAL</h4>
+<p><strong>SERVQUAL(서비스 품질 측정 모델)</strong>은 1988년 파라수라만(A. Parasuraman), 자이탐율(A. Zeithaml), 베리(L. Berry) 교수가 개발한 <span class='hl'>서비스 품질 측정 및 평가를 위한 대표적인 정량적 모델</span>이다. 고객이 기대하는 서비스 수준(<strong>기대, Expectation</strong>)과 실제 제공받았다고 느끼는 서비스 수준(<strong>성과, Perception</strong>) 간의 차이(Gap)를 측정하여 서비스 품질을 산출한다.</p>
+<ol>
+<li>
+<p><strong>SERVQUAL의 핵심 측정 원리</strong> (Gap 모델)</p>
+<p>SERVQUAL은 서비스 품질을 단일 절대 수치가 아닌, 고객의 기대와 지각 간의 격차(Gap)로 정의한다.</p>
+<div class="arithmatex">\[\text{서비스 품질}(SQ) = \text{지각된 성과}(P) - \text{기대 수준}(E)\]</div>
+<ul>
+<li><strong><span class="arithmatex">\(SQ &gt; 0\)</span> (지각 &gt; 기대)</strong>: 고객이 기대한 것 이상으로 만족함 (고품질/매우 만족)</li>
+<li><strong><span class="arithmatex">\(SQ = 0\)</span> (지각 = 기대)</strong>: 기대에 부응함 (적정 품질/만족)</li>
+<li><strong><span class="arithmatex">\(SQ &lt; 0\)</span> (지각 &lt; 기대)</strong>: 기대에 미달함 (저품질/불만족, 서비스 갭 발생)</li>
+</ul>
+</li>
+<li>
+<p><strong>SERVQUAL의 5대 차원</strong> (RATER 모델)  </p>
+<p>서비스 품질을 평가하는 5가지 핵심 영역으로, 앞 글자를 따 <strong>RATER</strong> 모델이라고도 부른다.</p>
+<ol>
+<li>
+<p><strong>신뢰성 (Reliability)</strong></p>
+<ul>
+<li>약속한 서비스를 정확하고 신뢰성 있게 이행하는 능력        </li>
+<li><strong>예시</strong>: 약속한 배송 시간 준수, 정밀한 서비스 처리, 주문 오차 없는 이행</li>
+</ul>
+</li>
+<li>
+<p><strong>확신성 (Assurance)</strong></p>
+<ul>
+<li>직원의 지식, 예의, 그리고 고객에게 신뢰와 확신을 심어주는 능력        </li>
+<li><strong>예시</strong>: 직원의 전문적인 지식수준, 정중하고 친절한 태도, 안전한 거래 보장</li>
+</ul>
+</li>
+<li>
+<p><strong>유형성 (Tangibles)</strong></p>
+<ul>
+<li>물리적 시설, 장비, 직원들의 외모 및 통신 매체 등의 시각적·외형적 요소</li>
+<li><strong>예시</strong>: 매장의 청결도, 최신 기계 설비, 직원 유니폼의 깔끔함</li>
+</ul>
+</li>
+<li>
+<p><strong>공감성 (Empathy)</strong></p>
+<ul>
+<li>고객에게 전달하는 개별적인 관심과 배려하는 마음        </li>
+<li><strong>예시</strong>: 고객 개개인의 요구사항 기억, 맞춤형 서비스 제공, 고객 입장에서의 운영 시간 설정</li>
+</ul>
+</li>
+<li>
+<p><strong>응답성 (Responsiveness)</strong></p>
+<ul>
+<li>고객을 기꺼이 돕고 신속한 서비스를 제공하려는 자발적 의지        </li>
+<li><strong>예시</strong>: 고객 문의에 대한 신속한 응답, 짧은 대기 시간, 적극적인 문제 해결 태도    </li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>SERVQUAL의 서비스 갭(Gap) 모델</strong>  </p>
+<p>고객 불만족이 발생하는 원인을 5가지 서비스 제공 내부·외부 단계별 격차로 분석한다.</p>
+<p><img alt="" src="https://yeonkyupark.github.io/pepc2e/images/service_gap_model.png" /></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">격차 유형</th>
+<th style="text-align: left;">명칭</th>
+<th style="text-align: left;">발생 원인 (이유)</th>
+<th style="text-align: left;">해결 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Gap 1</strong></td>
+<td style="text-align: left;"><strong>시장 조사 격차</strong><br>(고객 기대 - 경영자 인식)</td>
+<td style="text-align: left;">고객이 무엇을 원하는지 경영진이 정확히 모를 때 발생합니다.</td>
+<td style="text-align: left;">마케팅 조사 강화, 현장과의 소통 확대</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Gap 2</strong></td>
+<td style="text-align: left;"><strong>품질 표준 격차</strong><br>(경영자 인식 - 서비스 규격)</td>
+<td style="text-align: left;">고객 니즈는 알지만, 이를 구체적인 서비스 표준이나 시스템으로 만들지 못할 때 발생합니다.</td>
+<td style="text-align: left;">서비스 프로세스 표준화, 경영진의 품질 개선 의지</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Gap 3</strong></td>
+<td style="text-align: left;"><strong>서비스 제공 격차</strong><br>(서비스 규격 - 실제 제공)</td>
+<td style="text-align: left;">규격과 매뉴얼은 잘 짜여 있으나, 직원의 숙련도 부족이나 의욕 저하로 실제 현장에서 실행되지 않을 때 발생합니다.</td>
+<td style="text-align: left;">직원 교육 지원, 팀워크 강화, 적절한 보상 시스템 구축</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Gap 4</strong></td>
+<td style="text-align: left;"><strong>외적 커뮤니케이션 격차</strong><br>(실제 제공 - 외부 광고)</td>
+<td style="text-align: left;">광고나 홍보를 통해 고객에게 과도한 약속을 하여, 실제 서비스보다 기대치를 너무 높여 놓았을 때 발생합니다.</td>
+<td style="text-align: left;">과대광고 자제, 부서 간(마케팅-현장) 긴밀한 커뮤니케이션</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Gap 5</strong></td>
+<td style="text-align: left;"><strong>최종 서비스 품질 격차</strong><br>(고객 기대 - 실제 경험)</td>
+<td style="text-align: left;">Gap 1부터 Gap 4까지의 문제들이 누적되어 나타나는 최종 결과물입니다. 고객의 불만족으로 직결됩니다.</td>
+<td style="text-align: left;">Gap 1 ~ Gap 4를 줄이면 자동으로 해결됨</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>SERVQUAL의 장단점 및 한계</p>
+<ul>
+<li>
+<p>장점</p>
+<ul>
+<li>다양한 서비스 산업(금융, 의료, 외식, 공공 서비스 등)에 보편적으로 적용 가능함</li>
+<li>5대 차원별 분석을 통해 서비스 부족 요소와 개선 영역을 명확히 식별할 수 있음</li>
+</ul>
+</li>
+<li>
+<p>한계점 및 비판</p>
+<ul>
+<li><strong>설문 중복성</strong>: 서비스 이용 전 기대(E)와 이용 후 성과(P)를 각각 측정해야 하므로 설문 문항이 길어짐(총 44개 문항)</li>
+<li><strong>SERVPERF 모델의 등장</strong>: Cronin &amp; Taylor(1992)는 기대치(E) 측정 없이 <strong>지각된 성과(P)만 측정하는 것이 타당도와 예측력이 더 높다</strong>며 SERVPERF 모델을 제시함</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>SERVQUAL 차원 요약표</strong></p>
+<table>
+<thead>
+<tr>
+<th>차원 (Dimension)</th>
+<th>핵심 개념</th>
+<th>평가 질문의 예시</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>신뢰성 (Reliability)</strong></td>
+<td>약속 이행 및 정확성</td>
+<td>"약속한 서비스를 처음부터 정확히 수행하는가?"</td>
+</tr>
+<tr>
+<td><strong>확신성 (Assurance)</strong></td>
+<td>전문성 및 신뢰감</td>
+<td>"직원이 정중하며 질문에 전문적으로 답하는가?"</td>
+</tr>
+<tr>
+<td><strong>유형성 (Tangibles)</strong></td>
+<td>물리적 환경 및 장비</td>
+<td>"최신 장비와 깨끗한 시설을 갖추고 있는가?"</td>
+</tr>
+<tr>
+<td><strong>공감성 (Empathy)</strong></td>
+<td>개별적 관심 및 배려</td>
+<td>"고객의 상황을 이해하고 맞춤형 배려를 제공하는가?"</td>
+</tr>
+<tr>
+<td><strong>응답성 (Responsiveness)</strong></td>
+<td>신속성 및 자발성</td>
+<td>"고객의 요청에 즉각적으로 대응하는가?"</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_5">대기행렬</h4>
+<p>대기행렬 이론(Queueing Theory)은 서비스 시스템에서 발생할 수 있는 대기 현상(줄 서기)을 수학적으로 모델링하여, <strong>고객의 대기 시간을 최소화하고 서비스 시설의 효율성을 극대화</strong>하기 위한 확률적 분석 기법이다.</p>
+<ol>
+<li>
+<p><strong>대기행렬 시스템의 주요 구성 요소</strong>  </p>
+<p>대기행렬 시스템은 크게 <strong>도착 과정</strong>, <strong>대기열 구조</strong>, <strong>서비스 메커니즘</strong>의 3가지 단계로 구성된다.</p>
+<pre class="mermaid"><code>flowchart LR
+    A[고객 모집단] -- "(도착)" --&gt; B["대기열 (줄)"] -- "[ 서비스 창구 ]" --&gt; C["퇴장"]    </code></pre>
+<ol>
+<li>
+<p><strong>도착 과정 (Arrival Process)</strong></p>
+<p>고객이 시스템에 들어오는 형태를 정의한다.</p>
+<ul>
+<li><strong>도착 패턴</strong>: 주로 단위 시간당 도착 고객 수가 포아송 분포(Poisson Distribution)를 따르며, 고객 간 도착 간격 시간은 지수 분포(Exponential Distribution)를 따름</li>
+<li><strong>모집단 크기</strong>: 무한 모집단(일반 소비재 매장 등)과 유한 모집단(공장 내 특정 기계의 고장 대기 등)으로 구분함</li>
+</ul>
+</li>
+<li>
+<p><strong>대기열 구조 (Queue Structure)</strong></p>
+<p>고객이 서비스를 받기 전 대기하는 공간 및 규칙이다.</p>
+<ul>
+<li><strong>대기열 수용 용량</strong>: 무한 대기열 또는 유한 대기열(공간 한계로 일정 수 이상 수용 불가)</li>
+<li><strong>대기열 규칙(Queue Discipline / 서비스 순서)</strong>:</li>
+<li><strong>FIFO (First-In, First-Out)</strong>: 선착순 서비스 (가장 일반적)</li>
+<li><strong>LIFO (Last-In, First-Out)</strong>: 후착순 서비스 (창고 적재, 스택 구조)</li>
+<li><strong>PRI (Priority)</strong>: 우선순위 기준 서비스 (응급실, VIP 고객 우선 처리)</li>
+<li><strong>SIRO (Service In Random Order)</strong>: 무작위 서비스  </li>
+</ul>
+</li>
+<li>
+<p><strong>서비스 메커니즘 (Service Mechanism)</strong></p>
+<p>서비스 창구의 수와 서비스가 제공되는 시간의 특성을 나타낸다.</p>
+<ul>
+<li><strong>창구 구조</strong>: 단일 창구(Single-Channel) 또는 다중 창구(Multi-Channel)</li>
+<li><strong>서비스 시간</strong>: 고객 1명을 처리하는 데 걸리는 시간으로, 주로 지수 분포를 따름</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>켄달의 표기법 (Kendall's Notation)</strong></p>
+<p>대기행렬 모델의 특성을 표준적으로 표현하기 위해 <strong><span class="arithmatex">\(A / B / c / K / m / Z\)</span></strong> 형식의 표기법을 사용한다. (보통 앞의 3개 자리가 가장 중요하게 활용됨)</p>
+<div class="arithmatex">\[\text{표기법}: A / B / c\]</div>
+<ul>
+<li><strong><span class="arithmatex">\(A\)</span> (도착 분포)</strong>: <span class="arithmatex">\(M\)</span> (포아송/지수 분포), <span class="arithmatex">\(D\)</span> (확정적/일정 시간), <span class="arithmatex">\(G\)</span> (일반 확률 분포)</li>
+<li><strong><span class="arithmatex">\(B\)</span> (서비스 시간 분포)</strong>: <span class="arithmatex">\(M\)</span> (지수 분포), <span class="arithmatex">\(D\)</span> (확정적/일정 시간), <span class="arithmatex">\(G\)</span> (일반 확률 분포)</li>
+<li><strong><span class="arithmatex">\(c\)</span> (서비스 창구 수)</strong>: <span class="arithmatex">\(1, 2, 3, \dots, n\)</span></li>
+<li><strong>예시</strong><ul>
+<li><strong><span class="arithmatex">\(M/M/1\)</span></strong>: 도착 및 서비스 시간이 지수 분포를 따르는 <strong>단일 창구</strong> 대기행렬 모델</li>
+<li><strong><span class="arithmatex">\(M/M/c\)</span></strong>: 도착 및 서비스 시간이 지수 분포를 따르는 <strong>다중 창구(<span class="arithmatex">\(c\)</span>개)</strong> 대기행렬 모델</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>대기행렬의 주요 성능 지표 및 수학적 기호</strong></p>
+<p>대기행렬을 분석할 때 산출하는 핵심 평가지표이다.</p>
+<ol>
+<li>
+<p>기본 매개변수</p>
+<ul>
+<li><span class="arithmatex">\(\lambda\)</span> (라메다): 단위 시간당 평균 도착률 (Arrival Rate)</li>
+<li><span class="arithmatex">\(\mu\)</span> (뮤): 창구 1개당 단위 시간당 평균 서비스 처리율 (Service Rate)</li>
+<li><span class="arithmatex">\(\rho\)</span> (로): 서비스 창구 이용률 (System Utilization) <span class="arithmatex">\(\rightarrow\)</span> <span class="arithmatex">\(\rho = \frac{\lambda}{c \cdot \mu}\)</span> (<span class="arithmatex">\(\rho &lt; 1\)</span>이어야 대기열이 무한히 늘어나지 않고 안정 상태를 유지함)</li>
+</ul>
+</li>
+<li>
+<p>주요 평가지표 수식</p>
+<ul>
+<li><span class="arithmatex">\(L\)</span> (시스템 내 평균 고객 수)</li>
+<li><span class="arithmatex">\(L_q\)</span> (대기열 내 평균 고객 수)</li>
+<li><span class="arithmatex">\(W\)</span> (시스템 내 평균 머무름 시간)</li>
+<li><span class="arithmatex">\(W_q\)</span> (대기열 내 평균 대기 시간)</li>
+</ul>
+</li>
+</ol>
+<p><strong>대기행렬 모델 종합 요약표</strong></p>
+<table>
+<thead>
+<tr>
+<th>모델 구분</th>
+<th>창구 수</th>
+<th>특징 및 용도</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><span class="arithmatex">\(M/M/1\)</span></strong></td>
+<td>단일 (<span class="arithmatex">\(c=1\)</span>)</td>
+<td>계산이 가장 간편함, 소규모 창구나 단일 서버 처리 분석에 활용</td>
+</tr>
+<tr>
+<td><strong><span class="arithmatex">\(M/M/c\)</span></strong></td>
+<td>다중 (<span class="arithmatex">\(c &gt; 1\)</span>)</td>
+<td>은행 창구, 공항 탑승 수속, 호출 센터(Call Center) 분석에 활용</td>
+</tr>
+<tr>
+<td><strong><span class="arithmatex">\(M/D/1\)</span></strong></td>
+<td>단일 (<span class="arithmatex">\(c=1\)</span>)</td>
+<td>서비스 시간이 일정함(자동화 기계 등), 대기 시간이 <span class="arithmatex">\(M/M/1\)</span>의 절반으로 감소</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>리틀의 법칙 (Little's Law)</strong></p>
+<p>대기행렬 이론에서 가장 중요하게 사용되는 관측 법칙으로, 대기열의 상태와 관계없이 안정 상태인 모든 시스템에 적용된다.</p>
+<div class="arithmatex">\[L = \lambda \cdot W\]</div>
+<div class="arithmatex">\[L_q = \lambda \cdot W_q\]</div>
+<ul>
+<li><strong>의의</strong>: 평균 고객 수(<span class="arithmatex">\(L\)</span>)와 평균 머무름 시간(<span class="arithmatex">\(W\)</span>) 간의 정비례 관계를 설명하여, 하나의 값만 측정해도 다른 값을 쉽게 산출할 수 있게 함</li>
+</ul>
+</li>
+</ol>
+<h4 id="lean-service">Lean Service</h4>
+<p>린 서비스(Lean Service)는 도요타 생산 방식(TPS)에서 유래한 <strong>린(Lean) 사상을 서비스 업종에 맞게 이식 및 재구성한 경영 혁신 방법론</strong>이다. 서비스 가치 전달 프로세스에서 <strong>비가치 창출 요소(낭비, Waste)를 철저히 배제</strong>하고, 고객이 실제 가치를 느끼는 핵심 프로세스만을 연속적으로 흐르게 하여 <strong>서비스 제공 시간 단축, 품질 향상, 원가 절감</strong>을 동시에 달성한다.</p>
+<ol>
+<li>
+<p><strong>린 서비스의 5대 핵심 원칙 (Womack &amp; Jones)</strong></p>
+<p>린 서비스 활동을 추진할 때 기반이 되는 5단계 기본 원칙이다.</p>
+<ol>
+<li>
+<p>고객 가치 정의 (Define Value)</p>
+<p>제조자나 공급자의 시각이 아닌 <strong>최종 고객의 관점에서 무엇이 진정한 가치인가</strong>를 정의한다.</p>
+<ul>
+<li><strong>적용</strong>: 고객이 기꺼이 지불하고자 하는 서비스 속성(예: 빠른 응답, 정확성, 편의성)을 명확히 함</li>
+</ul>
+</li>
+<li>
+<p>가치 흐름 분석 (Value Stream Mapping, VSM)</p>
+<p>서비스가 기획되어 고객에게 전달되기까지의 <strong>전 과정(가치 흐름)을 시각화</strong>하여 가치 창출 단계와 비가치 창출 단계(낭비)를 구별한다.</p>
+</li>
+<li>
+<p>흐름 창출 (Create Flow)</p>
+<p>정체, 대기, 병목 현상 없이 <strong>서비스 작업이 끊김 없이 연속적으로 흐르도록</strong> 공정을 재설계한다.</p>
+<ul>
+<li><strong>적용</strong>: 부서 간 단절(Silo) 제거, 불필요한 승인 절차 단축, 병목 구간 개선</li>
+</ul>
+</li>
+<li>
+<p>당김 방식 적용 (Establish Pull)</p>
+<p>공급자가 일방적으로 밀어 넣는 방식(Push)이 아니라, 고객의 실제 수요가 발생했을 때 서비스를 제공하는 당김 방식(Pull)을 구축한다.</p>
+<ul>
+<li><strong>적용</strong>: 과잉 제공 배제, 고객 요청 즉시 처리 시스템 구축</li>
+</ul>
+</li>
+<li>
+<p>완벽성 추구 (Pursue Perfection)</p>
+<p>단발성 프로젝트로 끝내지 않고 지속적 개선(Kaizen)을 통해 무결점 서비스 상태를 지향한다.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>서비스 부문의 7대 낭비 (7 Wastes in Service)</strong></p>
+<p>제조업의 7대 낭비를 서비스 현장의 특성(무형성, 비저장성, 동시성)에 맞추어 재정의한 개념이다.</p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>낭비 유형</th>
+<th>서비스 현장의 대표적 사례</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td><strong>대기 (Waiting)</strong></td>
+<td>고객의 대기 시간, 직원의 서류 승인 대기, 시스템 로딩 시간</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td><strong>과잉 제공 (Over-production)</strong></td>
+<td>고객이 원하지 않는 과도한 서류 작성 요구, 쓸데없이 복잡한 보고서</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td><strong>불필요한 이동 (Motion)</strong></td>
+<td>서류/도구를 찾으러 직원이 오가는 동선, 비효율적인 화면 이동</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td><strong>운반 (Transportation)</strong></td>
+<td>부서 간 불필요한 서류 이동, 정보 전송의 여러 단계 거침</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td><strong>과잉 처리 (Over-processing)</strong></td>
+<td>불필요한 중복 데이터 입력, 다단계 이중 승인 절차</td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td><strong>재고 (Inventory)</strong></td>
+<td>처리되지 못하고 쌓여 있는 미결 업무, 대기 중인 고객 요청 건</td>
+</tr>
+<tr>
+<td><strong>7</strong></td>
+<td><strong>결함/수정 (Defects/Rework)</strong></td>
+<td>입력 오류로 인한 재작업, 서비스 불만족에 따른 재처리</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>린 서비스의 핵심 추진 기법</strong></p>
+<ul>
+<li><strong>가치흐름지도(VSM, Value Stream Map)</strong><br />
+    현재 상태의 서비스 프로세스를 도식화(Current State Map)하여 낭비를 찾고, 이상적인 미래 상태(Future State Map)를 설계함</li>
+<li><strong>5S 활동</strong><br />
+    정리(Sort), 정돈(Set in order), 청소(Shine), 청결(Standardize), 습관화(Sustain)를 통해 업무 환경의 효율성을 극대화함</li>
+<li><strong>포카요케(Poka-Yoke / 실수 방지)</strong><br />
+    휴먼 에러(Human Error)가 일어날 수 없도록 시스템적 안전장치를 마련함 (예: 필수 입력 항목 미입력 시 다음 단계 진행 불가)</li>
+<li><strong>표준 작업(Standard Work)</strong><br />
+    최선의 서비스 제공 방법을 표준화하여 모든 직원이 동일한 품질을 유지하게 함</li>
+<li><strong>시각적 관리(Visual Management)</strong><br />
+    진행 상황, 대기자 수, 오류 현황 등을 현황판(Kanban 등)을 통해 누구나 한눈에 파악하도록 시각화함</li>
+</ul>
+</li>
+<li>
+<p><strong>제조업 린(Lean) vs 린 서비스(Lean Service) 비교</strong></p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>제조업 린 (Manufacturing Lean)</th>
+<th>린 서비스 (Lean Service)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>대체 원자재</strong></td>
+<td>물리적 부품, 원자재</td>
+<td>정보, 데이터, 서류, 고객</td>
+</tr>
+<tr>
+<td><strong>프로세스 가시성</strong></td>
+<td>눈으로 제품 이동 확인 가능</td>
+<td>비가시적(컴퓨터/서류상 진행)</td>
+</tr>
+<tr>
+<td><strong>변동성 원인</strong></td>
+<td>기계 고장, 자재 불량</td>
+<td>고객 요구의 다양성, 사람의 능력 차이</td>
+</tr>
+<tr>
+<td><strong>개선 중심</strong></td>
+<td>공정 라인 배치, 재고 관리</td>
+<td>정보 흐름 단순화, 표준화, 대기 시간 단축</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h3 id="_6">제품 서비스화</h3>
+<p><strong>제품 서비스화(Servitization)</strong>은 제조업체가 물품을 한 번 팔고 끝내는 대신 유지 보수, 구독, 정기 점검 같은 <span class='hl'>무형 서비스를 더해 지속적인 이익을 얻는 사업 방식<span>이다. 지속적인 수익창출, 고객과의 관계 유지, 디지털 기술 활용 같은 특징이 있다.</p>
+<p><strong>주요 방식</strong></p>
+<ul>
+<li><strong>일회성 판매에서 구독·렌탈로 전환</strong><br />
+    물건 값을 한 번에 받는 대신 매달 요금을 받고 빌려주거나 관리</li>
+<li><strong>예측 정비 및 유지보수</strong><br />
+    기계나 장비에 센서를 달아 고장이 나기 전에 미리 고쳐주거나 점검하는 서비스를 제공</li>
+<li><strong>맞춤형 솔루션 제공</strong><br />
+    단순히 물건만 주는 것이 아니라 고객에게 꼭 맞는 사용 방법을 상담하고 관리</li>
+</ul>
+<h3 id="_7">제조업 생산관리 비교</h3>
+<p>제조업 생산관리와 서비스 운영관리를 비교하면 다음과 같은 특성이 있다.</p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>생산 운영관리</th>
+<th>서비스 운영관리</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>대상</td>
+<td>유형 제품</td>
+<td>무형 서비스</td>
+</tr>
+<tr>
+<td>재고</td>
+<td>가능</td>
+<td>불가능</td>
+</tr>
+<tr>
+<td>품질 확인</td>
+<td>출하 전 가능</td>
+<td>제공 중 또는 제공 후 가능</td>
+</tr>
+<tr>
+<td>생산과 소비</td>
+<td>분리</td>
+<td>동시 발생</td>
+</tr>
+<tr>
+<td>핵심 관리</td>
+<td>생산성, 품질, 원가</td>
+<td>고객 경험, 대기시간, 서비스 품질</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4p">마케팅 믹스 4P</h2>
+<p><strong>마케팅 믹스 4P</strong>는 기업이 목표 시장에서 <span class='hl'>마케팅 목표를 달성하기 위해 조합하고 통제하는 4가지 핵심 요소</span>를 뜻한다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">구성 요소</th>
+<th style="text-align: left;">한글 명칭</th>
+<th style="text-align: left;">정의 및 개념</th>
+<th style="text-align: left;">주요 관리 항목 예시</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Product</strong></td>
+<td style="text-align: left;"><strong>제품</strong></td>
+<td style="text-align: left;">고객의 욕구를 충족시키는 유무형의 상품</td>
+<td style="text-align: left;">품질, 디자인, 브랜드명, 기능, 포장, 보증 서비스</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Price</strong></td>
+<td style="text-align: left;"><strong>가격</strong></td>
+<td style="text-align: left;">고객이 제품을 구매하기 위해 지불하는 대가</td>
+<td style="text-align: left;">가격 책정 전략, 할인 혜택, 할부 조건, 도매/소매 가격</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Place</strong></td>
+<td style="text-align: left;"><strong>유통</strong></td>
+<td style="text-align: left;">제품이 생산자로부터 고객에게 전달되는 경로</td>
+<td style="text-align: left;">유통 채널(온/오프라인), 매장 위치, 재고 관리, 물류 시스템</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Promotion</strong></td>
+<td style="text-align: left;"><strong>촉진</strong></td>
+<td style="text-align: left;">제품의 가치를 고객에게 알리고 구매를 유도하는 활동</td>
+<td style="text-align: left;">광고, PR(홍보), 인적 판매, 판매 촉진(이벤트, 쿠폰)</td>
+</tr>
+</tbody>
+</table>
+<p>최근 서비스 마케팅에서는 4P에 사람(People), 프로세스(Process), 물리적 증거(Physical Evidence)를 더해 7P를 주로 사용한다.</p>
+<ul>
+<li><strong>사람</strong>(People)<br />
+    고객과 직접적으로 만나는 직원이나 서비스 제공자, 고객 경험에 영향을 주는 모든 사람을 의미</li>
+<li><strong>과정</strong>(Process)<br />
+    제품이나 서비스가 고객에게 전달되는 전체 절차나 과정으로, 효율성과 고객 만족도를 높이기 위한 시스템</li>
+<li><strong>물리적 증거</strong>(Physical Evidence)<br />
+    서비스가 무형이기 때문에 고객에게 신뢰를 주거나 브랜드 이미지를 형성하는 물리적 환경, 포장, 인테리어 등을 포함</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../0702_product_development_technology/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2. 제품개발기술">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                2. 제품개발기술
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../0704_production_innovation_technology/" class="md-footer__link md-footer__link--next" aria-label="Next: 4. 생산혁신기술">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                4. 생산혁신기술
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.action.edit", "toc.follow", "navigation.footer"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

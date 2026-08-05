@@ -1,0 +1,2923 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../0203_supply_chain_management/">
+      
+      
+        <link rel="next" href="../0301_production_planning/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>4. 물류관리(자재 및 재고관리) - 생산운영과 공장관리</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="생산운영과 공장관리" class="md-header__button md-logo" aria-label="생산운영과 공장관리" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            생산운영과 공장관리
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4. 물류관리(자재 및 재고관리)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/yeonkyupark/pepc3e" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    yeonkyupark/pepc3e
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="생산운영과 공장관리" class="md-nav__button md-logo" aria-label="생산운영과 공장관리" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    생산운영과 공장관리
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/yeonkyupark/pepc3e" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    yeonkyupark/pepc3e
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 생산전략
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1. 생산전략
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0101_competitive_manufacturing_strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 경쟁우위 생산전략
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0102_production_structure_and_layout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 생산구조와 방식(Layout)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0103_purchasing_and_outsourcing_strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 구매와 외주전략
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0104_workforce_and_job_design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 인력과 직무설계
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0105_business_environment_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 사업환경 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 생산운영 및 물류관리
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2. 생산운영 및 물류관리
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0201_demand_forecasting_and_scheduling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 수요예측과 일정관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0202_process_progress_control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 프로세스 진도관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0203_supply_chain_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 공급망 관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 물류관리(자재 및 재고관리)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 물류관리(자재 및 재고관리)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        물류관리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="물류관리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5대 핵심 영역
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        현대적 분류
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        트렌드 및 주요 개념
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        대표 관리 기법
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="대표 관리 기법">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        유통 및 보충 관리 기법
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        하역 및 단위화 기법
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        운송 및 경로 최적화 기법
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고 및 풀필먼트 관리 기법
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고관리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="재고관리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고 보유 목적 및 분류
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고 관련 비용
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고관리 모형
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="재고관리 모형">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고관리 기본 개념
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고관리 비용 요소
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고관리 모형 분류
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="재고관리 모형 분류">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        확정적 재고관리 모형
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        확률적 재고관리 모형
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eoq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EOQ(경제적 주문량)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 공정관리
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3. 공정관리
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0301_production_planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 생산계획수립
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0302_process_design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 공정설계
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0303_work_planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 작업계획수립
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0304_standard_work_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 표준작업관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0305_maintenance_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 설비보전관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0306_process_improvement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 공정개선
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 설비관리
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4. 설비관리
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0401_facility_planning_and_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 설비계획 및 관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0402_material_handling_and_transport/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 자재취급 및 운반관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0403_environmental_and_safety_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 환경관리 및 안전관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0404_facility_and_utility_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 시설 및 유틸리티관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0405_factory_automation_technology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 공장자동화 기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 작업 및 생산성과 측정과 개선
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5. 작업 및 생산성과 측정과 개선
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0501_work_method_and_time_study/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 작업방법 및 시간연구
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0502_process_analysis_and_improvement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 프로세스 분석과 개선
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0503_productivity_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 생선성 관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0504_quality_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 품질관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 원가관리 및 경제성 공학
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    6. 원가관리 및 경제성 공학
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0601_feasibility_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 사업성 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0602_cost_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 원가관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0603_value_engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 가치공학
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0604_operations_research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 경영과학(OR)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. 생산지원기술 및 기타
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    7. 생산지원기술 및 기타
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0701_information_technology_and_smart_factory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 정보화활용기술(스마트팩토리 등)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0702_product_development_technology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 제품개발기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0703_service_operations_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 서비스운영관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0704_production_innovation_technology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 생산혁신기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0705_emerging_factory_management_technologies_and_trends/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 공장관리에 관한 신기술 및 경향에 관한 사항
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        물류관리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="물류관리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5대 핵심 영역
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        현대적 분류
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        트렌드 및 주요 개념
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        대표 관리 기법
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="대표 관리 기법">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        유통 및 보충 관리 기법
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        하역 및 단위화 기법
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        운송 및 경로 최적화 기법
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고 및 풀필먼트 관리 기법
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고관리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="재고관리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고 보유 목적 및 분류
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고 관련 비용
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고관리 모형
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="재고관리 모형">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고관리 기본 개념
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고관리 비용 요소
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        재고관리 모형 분류
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="재고관리 모형 분류">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        확정적 재고관리 모형
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        확률적 재고관리 모형
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eoq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EOQ(경제적 주문량)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/yeonkyupark/pepc3e/edit/main/docs/0204_logistics_material_and_inventory_management.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+  <h1>4. 물류관리(자재 및 재고관리)</h1>
+
+<h2 id="_1">물류관리</h2>
+<p>물류관리(Logistics Management)는 원자재의 수급부터 완제품이 최종 소비자에게 전달되고, 필요시 회수/폐기되는 전 과정에서 <strong>물자(Goods)와 관련 정보(Information)의 효율적인 흐름과 보관을 계획, 실행, 통제하는 관리 활동</strong>이다.</p>
+<ul>
+<li><strong>개념 정의</strong><br />
+  공급망(SCM) 내에서 가치 창출을 목적으로 재화의 이동 및 보관을 최적화하여 시간적·장소적 유용성(Utility)을 창출하는 프로세스이다.</li>
+<li><strong>핵심 목표</strong><br />
+  고객이 요구하는 서비스 수준을 충족(고객 만족)하는 동시에 물류 총비용(Total Logistics Cost)을 최소화하는 것이다.</li>
+</ul>
+<h3 id="5">5대 핵심 영역</h3>
+<p>물류관리는 크게 5가지 기능적 영역으로 구성된다.</p>
+<pre class="mermaid"><code>flowchart LR
+    A[운송] --&gt; B[보관] --&gt; C[하역] --&gt; D[포장] --&gt; E[정보]</code></pre>
+<ol>
+<li>
+<p><strong>운송 관리 (Transportation Management)</strong>  </p>
+<ul>
+<li>화물을 한 장소에서 다른 장소로 이동시키는 핵심 기능으로, 시간 및 공간적 격차를 해소한다.</li>
+<li>도로, 철도, 항공, 해상 등 최적 수송 수단을 선택하고 배차 및 경로를 최적화(TMS 활용)한다.</li>
+</ul>
+</li>
+<li>
+<p><strong>보관 및 창고 관리 (Warehouse &amp; Inventory Management)</strong>  </p>
+<ul>
+<li>생산과 소비 사이의 시간적 격차를 조정하기 위해 재화를 안전하게 보관하고 수급 상황을 조절한다.</li>
+<li>창고 관리 시스템(WMS)을 통해 입출고, 재고 정확도, 로케이션(Location)을 관리한다.</li>
+</ul>
+</li>
+<li>
+<p><strong>하역 관리 (Material Handling)</strong>  </p>
+<ul>
+<li>창고나 수송 수단 내부에서 물품을 적재, 하역, 이동, 분류하는 작업이다.</li>
+<li>팔레트, 지게차, 자동화 컨베이어, AGV/AMR 등을 활용해 하역 작업의 효율화를 도모한다.</li>
+</ul>
+</li>
+<li>
+<p><strong>포장 관리 (Packaging)</strong>  </p>
+<ul>
+<li>수송 및 보관 과정에서 물품의 파손을 방지하고, 유통 작업의 효율성을 높이기 위해 단위화(Unit Load System)하는 작업이다.</li>
+</ul>
+</li>
+<li>
+<p><strong>물류 정보 관리 (Logistics Information System)</strong>  </p>
+<ul>
+<li>발주, 수주, 재고 현황, 위치 추적 등 물류 활동 전반에 필요한 데이터를 실시간으로 수집하고 공유하여 전체 물류 흐름의 가시성을 제공한다.</li>
+</ul>
+</li>
+</ol>
+<h3 id="_2">현대적 분류</h3>
+<p>공정에 따른 분류로 물류는 재화가 이동하는 공정상의 위치에 따라 다음과 같이 구분된다.</p>
+<ul>
+<li><strong>조달물류 (Inbound Logistics)</strong>: 원자재, 부품 등을 공급자로부터 제조 공장까지 수송·보관하는 물류</li>
+<li><strong>사내/생산물류 (Internal Logistics)</strong>: 공장 내부에서 반제품, 부품의 이동 및 공정 간 대기를 관리하는 물류</li>
+<li><strong>판매/유통물류 (Outbound Logistics)</strong>: 완성된 제품을 공장/창고에서 최종 소비자나 유통업체로 배송하는 물류</li>
+<li><strong>역물류 (Reverse Logistics)</strong>: 반품, 교환, 수리, 재활용, 폐기 등을 위해 소비자로부터 공급자 방향으로 거꾸로 이동하는 물류</li>
+</ul>
+<h3 id="_3">트렌드 및 주요 개념</h3>
+<p><strong>3PL / 4PL (제3자 / 제4자 물류)</strong>  </p>
+<ul>
+<li><strong>3PL:</strong> 물류 전문 업체에 물류 기능(운송, 보관 등)을 외주화하는 방식</li>
+<li><strong>4PL:</strong> 3PL에 IT 솔루션, 컨설팅, 공급망 기획 기능까지 결합하여 종합 제공하는 방식</li>
+</ul>
+<p><strong>스마트 물류 (Smart Logistics)</strong>  </p>
+<p>IoT, AI 기반 수요 예측, 로봇 기술(AGV, 풀필먼트 로봇), 풀필먼트 센터(Fulfillment Center)를 활용한 자동화 및 실시간 물류 가시성 확보</p>
+<p><strong>풀필먼트 (Fulfillment)</strong>  </p>
+<p>이커머스 환경에서 고객 주문 접수부터 재고 관리, 피킹, 패킹, 배송, 반품 처리까지의 전 과정을 일괄 처리하는 서비스</p>
+<p>물류관리 주요 지표 및 영역 요약하면 다음과 같다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">구분</th>
+<th style="text-align: left;">주요 내용</th>
+<th style="text-align: left;">핵심 평가 지표 (KPI)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>운송 관리</strong></td>
+<td style="text-align: left;">배송 경로 최적화 및 운송 수단 선택</td>
+<td style="text-align: left;">정시 배송률(OTD), 단위당 운송비</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>창고/재고 관리</strong></td>
+<td style="text-align: left;">보관 효율화 및 수급 조절</td>
+<td style="text-align: left;">재고 정확도, 창고 공간 활용률</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>하역 및 포장</strong></td>
+<td style="text-align: left;">작업 파손 방지 및 수하물 단위화</td>
+<td style="text-align: left;">파손율, 시간당 피킹/하역 수량</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>역물류</strong></td>
+<td style="text-align: left;">반품, 수리, 폐기 프로세스 전담</td>
+<td style="text-align: left;">반품 처리 리드타임, 재활용율</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_4">대표 관리 기법</h3>
+<p>대표적인 물류 관리 기법(Logistics Management Techniques)는 단순한 화물 이동을 넘어 <strong>재고 최적화, 운송 효율성, 보관 공간 활용, 정보 공유</strong>를 극대화하는 다양한 전문 기법들을 활용한다. 주요 관리 영역별 대표적인 기법들은 다음과 같다.</p>
+<h4 id="_5">유통 및 보충 관리 기법</h4>
+<p>대표적인 유통 및 보충 관리 기법(Replenishment &amp; Distribution)은 다음과 같다.</p>
+<p><strong>크로스도킹 (Cross-Docking)</strong></p>
+<p>창고 입고 후 보관 및 피킹 과정 없이, <strong>입고된 화물을 즉시 출고 분류 구역으로 이동시켜 배송 차량에 재적재</strong>하는 물류 기법이다.</p>
+<ul>
+<li><strong>장점</strong>: 창고 보관 비용 및 재공품 재고 최소화, 리드타임 단축</li>
+<li><strong>적용</strong>: 대형 유통업체(예: 월마트), 리테일 배송 센터</li>
+</ul>
+<p><strong>VMI (Vendor Managed Inventory, 공급자 관리 재고)</strong></p>
+<p>구매자(유통/제조사)의 재고 수준 및 POS 데이터를 공유받아, <strong>공급업체(Vendor)가 직접 구매자의 재고 수준과 보충 시점을 관리</strong>하는 기법이다.</p>
+<ul>
+<li><strong>장점</strong>: 구매자의 발주 부담 감축, 공급자의 생산 및 출하 일정 예측 가능성 향상</li>
+</ul>
+<p><strong>밀크런 (Milk Run, 순회 수집 방식)</strong></p>
+<p>하나의 수송 차량이 <strong>여러 공급업체를 순차적으로 돌며 자재나 제품을 수집</strong>하여 공장이나 창고로 운송하는 방식이다.</p>
+<ul>
+<li><strong>장점</strong>: 소량 다품종 자재의 운송 효율성 극대화, 차량 적재율 향상 및 운송비 절감</li>
+</ul>
+<h4 id="_6">하역 및 단위화 기법</h4>
+<p>대표적인 하역 및 단위화 기법(Material Handling &amp; Unitization)은 다음과 같다.</p>
+<p><strong>ULS (Unit Load System, 일관 수송 유닛로드 시스템)</strong></p>
+<p>화물을 팔레트(Pallet)나 컨테이너(Container) 등 표준화된 용기에 단위화(Unit)하여 조달, 보관, 하역, 수송까지 일관되게 처리하는 기법이다.</p>
+<ul>
+<li><strong>장점</strong>: 하역 작업의 기계화/자동화 용이, 화물 파손율 감소 및 하역 시간 대폭 단축</li>
+</ul>
+<p><strong>보관/자동화 시스템 (AS/RS &amp; AGV/AMR)</strong></p>
+<ul>
+<li><strong>AS/RS (Automated Storage and Retrieval System)</strong>: 컴퓨터 제어로 화물의 입출고 및 보관을 자동화하는 고층 자동창고 시스템</li>
+<li><strong>AGV/AMR (무인운반차 / 자율주행로봇)</strong>: 창고 내부에서 자재 및 상품을 지정된 장소로 자동 운반하는 로봇 기술</li>
+</ul>
+<h4 id="_7">운송 및 경로 최적화 기법</h4>
+<p>대표적인 운송 및 경로 최적화 기법(Transportation &amp; Routing)은 다음과 같다.</p>
+<p><strong>수송 경로 최적화 (VRP, Vehicle Routing Problem)</strong></p>
+<p>운송 차량 수, 배송지 위치, 차량 적재 용량, 시간제약 등을 고려하여 <strong>최적의 배송 순서와 이동 경로를 수학적 알고리즘으로 산출</strong>하는 기법이다.</p>
+<ul>
+<li><strong>장점</strong>: 총 이동 거리 축소, 연료비 절감, 정시 배송률(OTD) 향상.</li>
+</ul>
+<p><strong>복합 운송 (Intermodal / Multimodal Transport)</strong></p>
+<p>도로, 철도, 해상, 항공 등 <strong>둘 이상의 서로 다른 수송 수단을 결합</strong>하여 최적의 경로로 화물을 운송하는 기법이다.</p>
+<ul>
+<li><strong>장점</strong>: 장거리 운송 시 비용 및 탄소 배출 절감.</li>
+</ul>
+<h4 id="_8">재고 및 풀필먼트 관리 기법</h4>
+<p>대표적인 재고 및 풀필먼트 관리 기법 (Inventory &amp; Fulfillment)은 다음과 같다.</p>
+<p><strong>ABC 분석 (ABC Analysis)</strong></p>
+<p>재고 품목을 매출액이나 사용 빈도 기준(파레토 법칙)으로 A등급(상위 20% 품목이 매출 80% 차지), B등급, C등급으로 분류하여 입출고 주기와 보관 위치를 차등 관리하는 기법이다.</p>
+<ul>
+<li><strong>장점</strong>: 핵심 품목(A등급)에 관리 역량을 집중하여 재고 회전율 증대.</li>
+</ul>
+<p><strong>웨이브 피킹 / 존 피킹 (Wave &amp; Zone Picking)</strong></p>
+<ul>
+<li><strong>Zone Picking:</strong> 창고를 여러 구역(Zone)으로 나누어 작업자가 담당 구역의 상품만 피킹하는 방식</li>
+<li><strong>Wave Picking:</strong> 동일한 출하 시간대나 배송 지역별 주문을 묶어(Wave) 한 번에 피킹한 뒤 분류하는 방식</li>
+</ul>
+<p>대표적인 물류 관리 기법 비교 요약이다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">구분</th>
+<th style="text-align: left;">대표 기법</th>
+<th style="text-align: left;">주요 관리 목표</th>
+<th style="text-align: left;">핵심 효과</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>보관/유통</strong></td>
+<td style="text-align: left;">Cross-Docking, VMI</td>
+<td style="text-align: left;">보관 단계 축소 및 재고 최적화</td>
+<td style="text-align: left;">리드타임 단축, 재고 보유 비용 감축</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>운송/조달</strong></td>
+<td style="text-align: left;">Milk Run, VRP</td>
+<td style="text-align: left;">차량 적재율 향상 및 경로 최적화</td>
+<td style="text-align: left;">물류 운송비 절감, 탄소 배출 감소</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>하역/보관</strong></td>
+<td style="text-align: left;">ULS, AS/RS, AMR</td>
+<td style="text-align: left;">작업 표준화 및 프로세스 자동화</td>
+<td style="text-align: left;">하역 파손 방지, 시간당 피킹 수량 증대</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>재고/피킹</strong></td>
+<td style="text-align: left;">ABC 분석, Wave Picking</td>
+<td style="text-align: left;">품목별 차등 관리 및 피킹 동선 최적화</td>
+<td style="text-align: left;">재고 회전율 향상, 피킹 오류 감소</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_9">재고관리</h2>
+<p>재고관리(Inventory Management)는 기업이 원자재, 반제품, 완제품 등 자재의 흐름을 효율적으로 통제하여 <span class='hl'>고객의 수요에 적시 대응하는 동시에 재고 보유에 따른 비용을 최소화하는 관리 활동</span>이다</p>
+<ul>
+<li><strong>개념 정의</strong><br />
+  생산 및 판매 활동이 원활하게 이루어지도록 적정 수량의 재고를 적시에 확보하고 유지하는 운영 메커니즘이다</li>
+<li><strong>핵심 목표</strong><br />
+  고객 서비스 수준(Service Level) 향상과 재고 관련 총비용(Total Inventory Cost) 절감 간의 최적 균형 확보이다</li>
+</ul>
+<h3 id="_10">재고 보유 목적 및 분류</h3>
+<p>재고는 형성되는 목적과 공급망 내 존재하는 위치에 따라 아래와 같이 구분된다.</p>
+<ul>
+<li><strong>안전재고(Safety Stock, 완충재고)</strong><br />
+  수요의 급증이나 공급 리드타임 지연 등 불확실성에 대비하여 보유하는 재고이다.</li>
+<li><strong>주기재고/순환재고(Cycle Stock)</strong><br />
+  구매 또는 생산 시 규모의 경제를 얻기 위해 고정된 로트 크기(Lot Size) 단위로 발주하여 정기적으로 순환하는 재고이다.</li>
+<li><strong>수송재고/이동재고(Pipeline/Transit Stock)</strong><br />
+  공급업체, 공장, 물류센터, 대리점 등 공급망의 한 거점에서 다른 거점으로 운송 중(In-Transit)에 있는 재고다.</li>
+<li><strong>예비재고/예비품재고(Spare Parts/Reserve Stock)</strong><br />
+  설비의 고장 및 정비(MRO)에 대비하여 유지·보수용으로 미리 확보해 두는 부품 또는 특수 목적용 여유 재고이다.</li>
+<li><strong>투기재고(Speculative/Anticipation Stock)</strong><br />
+  원자재 가격 상승, 환율 변동, 계절적 수요 급증, 파업 등 예상되는 시장 변화에 대응해 전략적으로 대량 사전 확보하는 재고이다.</li>
+<li><strong>불용/재고폐기품(Dead/Obsolete Stock)</strong><br />
+  수요가 소멸하거나 변질, 구식화되어 더 이상 판매나 사용이 불가능한 재고이다.</li>
+</ul>
+<p>주요 재고 분류 유형 비교하면 다음과 같다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">재고 유형</th>
+<th style="text-align: left;">영어 명칭</th>
+<th style="text-align: left;">주요 보유 목적 및 특징</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>안전재고</strong></td>
+<td style="text-align: left;">Safety Stock</td>
+<td style="text-align: left;">수요 및 공급의 불확실성 흡수</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>주기재고</strong></td>
+<td style="text-align: left;">Cycle Stock</td>
+<td style="text-align: left;">발주/생산 로트 크기 최적화를 통한 단가 절감</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>수송재고</strong></td>
+<td style="text-align: left;">Pipeline Stock</td>
+<td style="text-align: left;">거점 간 이동 중에 존재하는 불가피한 재고</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>예비재고</strong></td>
+<td style="text-align: left;">Spare Parts Stock</td>
+<td style="text-align: left;">설비 유지보수 및 비상 교체용 자재 확보</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>투기재고</strong></td>
+<td style="text-align: left;">Speculative Stock</td>
+<td style="text-align: left;">가격 인상 및 수급 대란 대비 사전 구매</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_11">재고 관련 비용</h3>
+<p>재고관리는 아래 세 가지 핵심 비용 요소 간 트레이드오프(Trade-off)를 분석하여 총비용을 최소화한다.</p>
+<div class="arithmatex">\[총\ 재고비용 = 재고유지비용 + 주문/발주비용 + 재고부족비용\]</div>
+<ul>
+<li><strong>재고유지비용(Holding/Carrying Cost)</strong><br />
+  창고 보관료, 감가상각비, 보험료, 자본의 기회비용 등 재고를 보유함으로써 발생하는 비용이다.</li>
+<li><strong>주문/발주비용(Ordering/Setup Cost)</strong><br />
+  발주서 작성, 수송 및 검수, 설비 교체(Setup) 등 재고를 새로 주문하거나 생산할 때 발생하는 고정 비용이다.</li>
+<li><strong>재고부족비용(Shortage/Stockout Cost)</strong><br />
+  품절 발생으로 인한 판매 기회 손실, 고객 신뢰도 하락, 비상 수송 비용 등이다.</li>
+</ul>
+<h2 id="_12">재고관리 모형</h2>
+<p><strong>재고관리 모형(Inventory control model)</strong>은 생산과 판매활동을 원활하게 하기 위해 재고 수준, 주문 시점, 주문량을 결정하는 관리 모델이다. 재고관리 모형은 크게 확정적 모형과 확률적 모형으로 구분된다. 확정적 모형에는 EOQ와 EPQ가 있으며, EOQ는 구매 시 경제적 주문량을 결정하고 EPQ는 자체 생산 시 경제적 생산량을 결정한다. 확률적 모형은 수요와 조달기간의 변동을 고려하는 방식으로 대표적으로 정량발주방식(Q System)과 정기발주방식(P System)이 있다. 실제 제조현장에서는 품목 중요도와 공급 특성에 따라 적절한 재고관리 모형을 적용하며 <span class='hl'>안전재고와 재주문점을 설정하여 생산라인 중단을 방지하고 재고 비용을 최소화 하는 방향으로 운영</span>한다.</p>
+<p>공장관리 관점에서는 재고관리 모형 핵심은 크게 두가지로 볼 수 있다.</p>
+<ol>
+<li>언제 주문할 것인가 (When to order)</li>
+<li>얼마나 주문할 것인가 (How much order)</li>
+</ol>
+<p><strong>재고관리 모형 분류</strong>  </p>
+<pre class="mermaid"><code>flowchart TB
+
+    A["재고관리 모형"]
+
+    A --&gt; B["확정적 모형"]
+    A ----&gt; C["확률적 모형"]
+    A --&gt; D["품목관리 기법"]
+
+    B --&gt; B1["EOQ"]
+    B --&gt; B2["EPQ"]
+    B --&gt; B3["Quantity Discount Model"]
+
+    C --&gt; C1["Q System (정량발주)"]
+    C --&gt; C2["P System (정기발주)"]
+    C --&gt; C3["Base Stock Model"]
+    C --&gt; C4["Min-Max System"]
+    C --&gt; C5["Two-Bin System"]
+    C --&gt; C6["Newsvendor Model"]
+
+    D --&gt; D1["ABC 분석"]
+    D --&gt; D2["XYZ 분석"]
+    D --&gt; D3["FSN 분석"]</code></pre>
+<h3 id="_13">재고관리 기본 개념</h3>
+<p>제조 현장에서 재고는 단순히 쌓아두는 물품이 아니라 생산 안정성을 확보하기 위한 완충 장치(Buffer)이다. 재고가 부족하면 부품 부족, 조립 라인 정지, 생산 손실 발생, 납기 지연으로 이어질 수 있다. 따라서 일정 수준 재고를 보유해야 한다. 하지만 재고를 너무 많이 보유하게 되면 과잉 재고, 창고 비용 증가, 자금 부담 증가, 불용재고 발생과 같은 문제가 발생한다. 재고관리 모형은 <span class='hl'>생산 중단 위험과 재고 비용 사이 최적점을 찾는 방법</span>이다.</p>
+<h3 id="_14">재고관리 비용 요소</h3>
+<ol>
+<li><strong>구매 비용</strong> (Purchasing cost)<br />
+   제품이나 자재를 구매하는 비용이다. 부품 단가, 원자재 가격 등이 해당된다.</li>
+<li><strong>주문 비용</strong> (Ordering cost)<br />
+   주문할 때 발생하는 비용이다. 발주 처리 비용, 구매 담당자 업무 비용, 운송 준비 비용, 검사 비용 등이 해당된다.</li>
+<li><strong>재고보유 비용</strong> (Holding cost)<br />
+   재고를 보관하면서 발생하는 비용이다. 창고 비용, 보험료, 자금 이자, 관리 비용, 노후화 비용 등이 해당되며 보유 재고량이 많아질수록 증가한다.</li>
+<li><strong>재고부족 비용</strong> (Shorage cost)<br />
+   재고 부족으로 발생하는 손실이다. 생산라인 정지, 긴급 구매 비용, 납기 지연, 고객 불만 등이 해당된다.</li>
+</ol>
+<h3 id="_15">재고관리 모형 분류</h3>
+<p>재고관리 모형은 크게 수요 특성과 발주 방식에 따라 구분된다.</p>
+<h4 id="_16">확정적 재고관리 모형</h4>
+<p><strong>확정적 재고관리 모형(Deterministic Inventory Model)</strong>은 <span class='hl'>수량과 조달 기간이 일정하다고 가정하는 재고관리 모형</span>이다. 즉, 필요한 양을 알고 언제 도착하는지도 알고 있는 경우이다. 대표적으로 EOQ, EPQ가 있다. 계산이 단순하고 반복 생산 환경에 적합하며 안정적 수요 제품에 적용할 수 있다.</p>
+<p><strong>재고관리 모형 종합비교</strong></p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>EOQ</th>
+<th>EPQ</th>
+<th>Q System</th>
+<th>P System</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>수요</td>
+<td>확정</td>
+<td>확정</td>
+<td>변동 가능</td>
+<td>변동 가능</td>
+</tr>
+<tr>
+<td>목적</td>
+<td>주문량 결정</td>
+<td>생산량 결정</td>
+<td>주문 시점 결정</td>
+<td>주문 주기 결정</td>
+</tr>
+<tr>
+<td>재고 확인</td>
+<td>주기적 가정</td>
+<td>생산 중심</td>
+<td>실시간</td>
+<td>주기적</td>
+</tr>
+<tr>
+<td>대표 적용</td>
+<td>구매품</td>
+<td>생산품</td>
+<td>핵심 부품</td>
+<td>일반 자재</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><strong>EOQ 모형</strong><br />
+   주문비용과 재고보유비용 합을 최소화하는 최적 주문량을 경정하는 모형이다. 즉, <span class='hl'>한 번 주문할 때 몇 개를 주문하는 것이 가장 경제적인가</span>에 대한 해결 모델이다. 연간 사용량이 일정하고 공급이 안정적이며 가격 변화가 적은 상황에 적합하다. 공장에서 사용하는 표준 볼트 주문을 그 예이다.</li>
+<li><strong>EPQ 모형</strong><br />
+   제품을 외부에서 구매하는 것이 아니라 자체 생산하는 경우 경제적 생산량을 결정하는 모형이다.</li>
+</ol>
+<p>EOQ는 구매 중심이고 EQP는 생산 중심 관리 모형이다.</p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>EOQ</th>
+<th>EPQ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>대상</td>
+<td>구매</td>
+<td>자체 생산</td>
+</tr>
+<tr>
+<td>입고 방식</td>
+<td>한 번에 입고</td>
+<td>생산하면서 증가</td>
+</tr>
+<tr>
+<td>적용</td>
+<td>부품 구매</td>
+<td>제품 생산 배치</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_17">확률적 재고관리 모형</h4>
+<p><strong>확률적 재고관리 모형(Probabilistic Inventory Model)</strong>은 <span class='hl'>수요 또는 조달기간이 불확실한 상황에서 안전재고를 고려하여 재고를 관리하는 모형</span>이다. 실제 제조현장에서 더 많이 사용된다.</p>
+<ol>
+<li><strong>정량발주 모형</strong>(Q System, Continuous Review System)<br />
+   재고 수준을 계혹 확인하다가 일정 수준 이하가 되면 정해진 양을 주문하는 방식이다. 언제 주문할지 결정하는 방식이다.</li>
+<li><strong>정기발주 모형</strong>(P System, Periodic Review System)<br />
+   일정한 주기마다 재고를 확인하고 필요한 양을 주문하는 방식이다. 관리가 단순하고 발주 일정 관리가 용이하지만 재고 부족 위험이 증가하게 된다.</li>
+<li><strong>Two-Bin System</strong><br />
+   재고를 두 개 저장 구역(Bin)으로 나누어 관리하는 가장 단순한 재고관리 방식이다. 첫 번째 Bin을 모두 사용하면(ROP) 두 번째 Bin을 사용하는 동시에 새로운 주문을 한다. 모델이 매우 단순하고 관리하기가 쉬우며 소모품 관리에 적합하다. 재고 최적화가 어렵고 대량 품목에는 부적합한 단점이 있다. 공장에서는 장갑, 볼트, 청소용품, 윤활유 등 MRO 자재 관리에 많이 사용된다.</li>
+<li><strong>Min-Max System</strong><br />
+   재고가 최소 수준(Min)에 도달하면 최대 수준(Max)가지 주문하는 방식이다. 예를 들면, 재고가 300개 이하이면 1000개까지 주문하는 방식이다. 주문량이 매번 달라지는 특징이 있으며, 관리가 쉽고 ERP에서 많이 사용된다. 일반 부품, 소모성 자재, 포장재 등에 적합하다.</li>
+<li><strong>Base Stock Model</strong><br />
+   제품이 하나 소비될 때마다 동일한 수량을 즉시 보충하여 항상 일정한 재고 수준(Base stock)을 유지하는 방식이다. 예를 들어, 재고 목표가 100인 경우 1개만 사용하더라도 1개를 즉시 발주한다. 즉 항상 100개를 유지하는 방식이다. 재고를 매우 민감하고 실시간 관리가 필요한 반도체, 항공부품, 의료장비, 고가 핵심부품 등에 적합하다. 간단한 예로 편의점 삼각김밥이 하나 팔리게 되면 즉시 본사에 1개 발주하는 시스템 형태이다.</li>
+<li><strong>Newsvendor Model</strong><br />
+   한 번만 주문할 수 있는 제품에서 부족 비용과 과잉 비용을 고려하여 최적 주문량을 결정하는 확률적 재고 모형이다. 즉, 1회성 재고관리 모형이다. 신문, 도시락, 꽃, 케이크, 크리스마스 상품, 계절 상품 등에 적합한 모델이다. 제조업에서도 이벤트 제품, 단기 프로젝트, 계절 생산 등에 활용된다.</li>
+<li><strong>(Q,R) Model</strong>
+   실무에서 매우 많이 사용되는 모델로, 재고가 재주문점(R)에 도달하면 일정량(Q)을 주문하는 방식이다. 즉 EOP와 ROP를 결합한 모델이다.</li>
+<li><strong>(s,S) Model</strong><br />
+   재고가 s 이하가 되면 S까지 보충하는 모델이다. Min-Max와 매우 유사하지만 확률적 수요를 고려하는 모델이다.</li>
+<li><strong>Optional Replenishment Model</strong>
+   정기발주(P System)에 있어 대표적인 모델이다. 예를 들면 매주 금요일 재고 조사, 목표 수준까지 보충하는 형태로 마트에서 가장 많이 사용된다.</li>
+</ol>
+<p>각 모델별 내용을 정리하면 다음과 같다.</p>
+<table>
+<thead>
+<tr>
+<th>모형</th>
+<th>언제 주문?</th>
+<th>얼마나 주문?</th>
+<th>적용 대상</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EOQ</td>
+<td>필요 시</td>
+<td>항상 일정</td>
+<td>일반 자재</td>
+</tr>
+<tr>
+<td>EPQ</td>
+<td>생산 계획</td>
+<td>생산 Lot</td>
+<td>자체 생산</td>
+</tr>
+<tr>
+<td>Q System</td>
+<td>ROP 도달</td>
+<td>항상 일정</td>
+<td>핵심 부품</td>
+</tr>
+<tr>
+<td>P System</td>
+<td>정기 점검</td>
+<td>매번 다름</td>
+<td>일반 자재</td>
+</tr>
+<tr>
+<td>Two-Bin</td>
+<td>첫 Bin 소진</td>
+<td>항상 일정</td>
+<td>소모품</td>
+</tr>
+<tr>
+<td>Min-Max</td>
+<td>Min 이하</td>
+<td>Max까지</td>
+<td>일반 부품</td>
+</tr>
+<tr>
+<td>Base Stock</td>
+<td>사용 즉시</td>
+<td>사용량만큼</td>
+<td>고가 핵심부품</td>
+</tr>
+<tr>
+<td>Newsvendor</td>
+<td>1회 주문</td>
+<td>확률 계산</td>
+<td>계절·행사 제품</td>
+</tr>
+<tr>
+<td>(s,S)</td>
+<td>s 이하</td>
+<td>S까지</td>
+<td>수요 변동 품목</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition exmaple">
+<p class="admonition-title">재주문점(Reorder Point, ROP): 재고가 일정 수준에 도달하면 발주하는 기준점</p>
+<p>예: 하루 사용량이 100개, 공급기간이 5일, 안전재고 200개이며,  </p>
+<ul>
+<li><span class="arithmatex">\(ROP = 일일수요량 \times 조달기간 + 안전재고 = 100 \times 5 + 200 = 700(개)\)</span>  </li>
+</ul>
+<p>즉, 재고가 700개가 되면 주문해야 한다는 의미이다.  </p>
+</div>
+<p><strong>Q System vs P System</strong></p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>Q System</th>
+<th>P System</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>발주 시점</td>
+<td>재고가 기준 이하일 때</td>
+<td>정해진 날짜</td>
+</tr>
+<tr>
+<td>주문량</td>
+<td>일정(Q)</td>
+<td>변동</td>
+</tr>
+<tr>
+<td>재고 확인</td>
+<td>계속 확인</td>
+<td>주기 확인</td>
+</tr>
+<tr>
+<td>적합 분야</td>
+<td>중요 부품</td>
+<td>일반 소모품</td>
+</tr>
+<tr>
+<td>관리 수준</td>
+<td>높음</td>
+<td>상대적으로 낮음</td>
+</tr>
+</tbody>
+</table>
+<h4 id="eoq">EOQ(경제적 주문량)</h4>
+<p>EOQ(Economic Order Quantity, 경제적 주문량)는 재고관리에서 주문비용과 재고보유비용 합을 최소화하는 경제적 주문량을 결정하는 기법이다. 기업은 자재를 소량 구매하면 주문비용이 증가하고 대량으로 구매하면 재고보유비용이 증가하기 때문에 두 비용이 균형을 이루는 최적 주문량을산출하는 것이 EOQ 목적이다. EOQ는 연간 수요량, 1회 주문비용, 단위당 보과비용을 이용하여 계산하며, 생산현장에서는 원자재 및 부품 구매 Lot Size 결정에 활용된다. 다만 실제 공장에서는 수요 변동과 공급 불확실성이 존재하므로 안전재고, MRP, JIT 등과 함께 활용하여 최적 재고 수준을 유지해야 한다.</p>
+<p>즉, EOQ는 <span class='hl'>"얼마나 자주 주문하고 한번에 얼마만큼 주문해야 총 재고 비용이 가장 낮아지는가"를 계산하는 재고관리 기법</span>이다. 이는 원자재, 부품 구매량(Lot size)을 결정하는 기본적인 재고관리 모델로 활용된다.</p>
+<p>재고관리 관점에서 주문량 결정은 EOQ, 재고 수준 관리는 안전재고와 재주문점(ROP)으로 구성된다.</p>
+<p>기업은 자재를 구매할 대 두 가지 비용 사이에서 고민을 하게 된다.</p>
+<ol>
+<li><strong>소량 주문</strong><br />
+   매일 필요한 만큼 구매, 재고 감소 및 보곤 장소 감소되지만 주문 횟수가 증가하여 발주 업무 및 운송비가 증가하게 된다.</li>
+<li><strong>대량 주문</strong><br />
+   1년에 한번 대량으로 구매, 주문 횟수가 감소하여 주문 비용이 감소하게 된다. 하지만 재고가 증가하게 되어 창고 비용 및 자금 부담이 증가하게 된다.</li>
+</ol>
+<p>따라서 주문 비용과 보관 비용을 최소화하여 총 재고비용을 최소로 하는 주문횟수와 주문량이 찾아야 한다.</p>
+<p>일반적인 EOQ 공식은 다음과 같다.</p>
+<div class="arithmatex">\[EOQ = \sqrt{\frac{2DS}{H}}\]</div>
+<p>공식에서 사용된 구성요소는 다음과 같다.  </p>
+<table>
+<thead>
+<tr>
+<th>기호</th>
+<th>의미</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D</td>
+<td>Demand</td>
+<td>연간 수요량</td>
+</tr>
+<tr>
+<td>S</td>
+<td>Setup(or Ordering Cost)</td>
+<td>1회 주문 비용</td>
+</tr>
+<tr>
+<td>H</td>
+<td>Holding Cost</td>
+<td>단위당 연간 보관 비용</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">EOQ 계산</p>
+<p>다음은 간단한 예시이다.</p>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th style="text-align: right;">값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>연간 수요량(D)</td>
+<td style="text-align: right;">10,000개</td>
+</tr>
+<tr>
+<td>1회 주문비용(S)</td>
+<td style="text-align: right;">20,000원</td>
+</tr>
+<tr>
+<td>개당 보관비용(H)</td>
+<td style="text-align: right;">500원</td>
+</tr>
+</tbody>
+</table>
+<div class="arithmatex">\[
+EOQ = \sqrt{\frac{2DS}{H}} = \sqrt{\frac{2 \times 10,000 \times 20,000}{500}} \approx 894(개)
+\]</div>
+</div>
+<p>EOQ에서 핵심 개념은 다음과 같다.</p>
+<ol>
+<li><strong>주문비용(Ordering cost)</strong><br />
+   주문할 때 발생하는 비용이다. 구매 담당장 업무 비용, 발주 처리 비용, 검사 비용, 운송 준비 비용 등이 해당된다. 주문량이 증가하면 주문 횟수 및 주문비용이 감소하게 된다. </li>
+<li><strong>재고보유비용(Holding cost)</strong><br />
+   재고를 보유하면서 발생하는 비용이다. 창고 임대료, 보험료, 자금이자, 재고 관리비용, 노후화 비용 등이 해당된다. 주문량이 증가하면 평균 재고 및 보유비용이 증가하게 된다.</li>
+</ol>
+<p>EOQ는 제조현장에서는 Lot size 결정에 영향을 주게 된다. </p>
+<div class="admonition note">
+<p class="admonition-title">Lot Size에 따른 영향</p>
+<p>예로 반도체 공정에서 웨이퍼를 생산한다고 가정한다.</p>
+<p><strong>Lot size가 작은 경우</strong>  </p>
+<ul>
+<li>생산 준비 횟수 증가</li>
+<li>셋업 손실(Setup Loss) 증가</li>
+</ul>
+<p><strong>Lot size가 큰 경우</strong>  </p>
+<ul>
+<li>재공품 증가</li>
+<li>리드타임 증가</li>
+</ul>
+<p>따라서 생산관리에서는 EOQ 개념을 확장하여 생산 배치 크기 결정, 구매 단위 결정, 재고 최적화 등에 활용하게 된다.</p>
+</div>
+<p>기본 EOQ 모델은 다음을 가정한다.</p>
+<table>
+<thead>
+<tr>
+<th>가정</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>수요 일정</td>
+<td>연간 수요가 일정</td>
+</tr>
+<tr>
+<td>납기 일정</td>
+<td>발주 후 일정 시간 뒤 입고</td>
+</tr>
+<tr>
+<td>가격 일정</td>
+<td>구매 단가 변화 없음</td>
+</tr>
+<tr>
+<td>품절 없음</td>
+<td>재고 부족 발생하지 않음</td>
+</tr>
+<tr>
+<td>한 품목 관리</td>
+<td>단일 품목 기준</td>
+</tr>
+</tbody>
+</table>
+<p>하지만 실제 제조 현장은 이러한 조건이 완벽하게 맞지 않는다.</p>
+<ul>
+<li>수요 변동</li>
+<li>공급 지연</li>
+<li>최소 주문량(MOQ)</li>
+<li>가격 할인</li>
+<li>생산능력 제약</li>
+<li>계절적 수요 변화</li>
+</ul>
+<p>따라서 실제 현장에서는 EOQ를 기본으로 하되, 안전재고, MRP, JIT, APS 등과 함께 활용해야 한다.</p>
+<div class="admonition note">
+<p class="admonition-title">EOQ vs. MRP</p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>EOQ</th>
+<th>MRP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>목적</td>
+<td>경제적인 주문량 결정</td>
+<td>필요 자재 계획</td>
+</tr>
+<tr>
+<td>기준</td>
+<td>재고 비용 최소화</td>
+<td>생산계획 기반</td>
+</tr>
+<tr>
+<td>수요</td>
+<td>독립수요</td>
+<td>종속수요</td>
+</tr>
+<tr>
+<td>적용</td>
+<td>반복 구매 품목</td>
+<td>제품 생산용 부품</td>
+</tr>
+<tr>
+<td>핵심 질문</td>
+<td>얼마나 주문할 것인가?</td>
+<td>무엇을 언제 얼마나 필요한가?</td>
+</tr>
+</tbody>
+</table>
+<p><strong>EOQ</strong>, 볼트 구매와 같은 상황에 적합하다.  </p>
+<ul>
+<li>매달 필요한 수량이 일정</li>
+<li>적정 구매량 결정</li>
+</ul>
+<p><strong>MRP</strong>, 자동차 생산과 같은 상황에 적합하다.  </p>
+<ul>
+<li>엔진 몇 개</li>
+<li>볼트 몇 개</li>
+<li>필요 날짜</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../0203_supply_chain_management/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 3. 공급망 관리">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                3. 공급망 관리
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../0301_production_planning/" class="md-footer__link md-footer__link--next" aria-label="Next: 1. 생산계획수립">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                1. 생산계획수립
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.action.edit", "toc.follow", "navigation.footer"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

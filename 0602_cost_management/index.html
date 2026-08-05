@@ -1,0 +1,2681 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../0601_feasibility_analysis/">
+      
+      
+        <link rel="next" href="../0603_value_engineering/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>2. 원가관리 - 생산운영과 공장관리</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="생산운영과 공장관리" class="md-header__button md-logo" aria-label="생산운영과 공장관리" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            생산운영과 공장관리
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2. 원가관리
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/yeonkyupark/pepc3e" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    yeonkyupark/pepc3e
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="생산운영과 공장관리" class="md-nav__button md-logo" aria-label="생산운영과 공장관리" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    생산운영과 공장관리
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/yeonkyupark/pepc3e" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    yeonkyupark/pepc3e
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 생산전략
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1. 생산전략
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0101_competitive_manufacturing_strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 경쟁우위 생산전략
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0102_production_structure_and_layout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 생산구조와 방식(Layout)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0103_purchasing_and_outsourcing_strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 구매와 외주전략
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0104_workforce_and_job_design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 인력과 직무설계
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0105_business_environment_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 사업환경 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 생산운영 및 물류관리
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2. 생산운영 및 물류관리
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0201_demand_forecasting_and_scheduling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 수요예측과 일정관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0202_process_progress_control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 프로세스 진도관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0203_supply_chain_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 공급망 관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0204_logistics_material_and_inventory_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 물류관리(자재 및 재고관리)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 공정관리
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3. 공정관리
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0301_production_planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 생산계획수립
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0302_process_design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 공정설계
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0303_work_planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 작업계획수립
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0304_standard_work_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 표준작업관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0305_maintenance_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 설비보전관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0306_process_improvement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 공정개선
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 설비관리
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4. 설비관리
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0401_facility_planning_and_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 설비계획 및 관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0402_material_handling_and_transport/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 자재취급 및 운반관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0403_environmental_and_safety_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 환경관리 및 안전관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0404_facility_and_utility_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 시설 및 유틸리티관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0405_factory_automation_technology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 공장자동화 기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 작업 및 생산성과 측정과 개선
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5. 작업 및 생산성과 측정과 개선
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0501_work_method_and_time_study/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 작업방법 및 시간연구
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0502_process_analysis_and_improvement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 프로세스 분석과 개선
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0503_productivity_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 생선성 관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0504_quality_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 품질관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 원가관리 및 경제성 공학
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    6. 원가관리 및 경제성 공학
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0601_feasibility_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 사업성 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 원가관리
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 원가관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        원가관리
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        원가 개념
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="원가 개념">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        원가(Cost)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expense" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        비용(Expense)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        손실(Loss)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        원가 구성
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="원가 구성">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        원가 3요소
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        단계별 원가 구성 체계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        부가가치
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="부가가치">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        부가가치 산출 공식
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        감가상각
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="감가상각">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        감가상각의 3대 요소
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        대표적인 방법 및 계산 수식
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0603_value_engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 가치공학
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0604_operations_research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 경영과학(OR)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. 생산지원기술 및 기타
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    7. 생산지원기술 및 기타
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0701_information_technology_and_smart_factory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 정보화활용기술(스마트팩토리 등)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0702_product_development_technology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 제품개발기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0703_service_operations_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 서비스운영관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0704_production_innovation_technology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 생산혁신기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0705_emerging_factory_management_technologies_and_trends/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 공장관리에 관한 신기술 및 경향에 관한 사항
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        원가관리
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        원가 개념
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="원가 개념">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        원가(Cost)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expense" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        비용(Expense)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        손실(Loss)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        원가 구성
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="원가 구성">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        원가 3요소
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        단계별 원가 구성 체계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        부가가치
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="부가가치">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        부가가치 산출 공식
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        감가상각
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="감가상각">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        감가상각의 3대 요소
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        대표적인 방법 및 계산 수식
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/yeonkyupark/pepc3e/edit/main/docs/0602_cost_management.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+  <h1>2. 원가관리</h1>
+
+<h2 id="_1">원가관리</h2>
+<p><strong>원가관리(Cost Management)</strong>는 제품 또는 서비스의 가치 창출 과정에서 발생하는 원가를 계획·통제·개선하여 기업의 수익성과 경쟁력을 확보하는 관리활동이다. 과거에는 제조원가 절감 중심의 관리기법이 주를 이루었으나, 오늘날에는 제품 기획부터 설계, 생산, 물류, 서비스에 이르는 전 생애주기(Life Cycle) 관점에서 원가를 관리하는 전략적 경영활동으로 발전하고 있다.</p>
+<div class="highlight"><pre><span></span><code>원가관리(Cost Management)
+│
+├── 1. 원가 개념
+│      ├── Cost
+│      ├── Expense
+│      ├── Loss
+│      ├── Cost Object
+│      └── Cost Driver
+│
+├── 2. 원가 구성
+│      ├── 재료비(Material Cost)
+│      ├── 노무비(Labor Cost)
+│      ├── 경비(Manufacturing Overhead)
+│      ├── 직접비
+│      └── 간접비
+│
+├── 3. 원가 분류
+│      ├── 고정비
+│      ├── 변동비
+│      ├── 준변동비
+│      ├── 제조원가
+│      ├── 판매관리비
+│      └── 총원가
+│
+├── 4. 원가 계산
+│      ├── 개별원가계산
+│      ├── 종합원가계산
+│      ├── 표준원가계산
+│      ├── ABC(Activity Based Costing)
+│      └── Process Costing
+│
+├── 5. 원가 분석
+│      ├── 원가 차이 분석
+│      ├── CVP 분석
+│      ├── 손익분기점 분석
+│      ├── 공헌이익 분석
+│      └── 가치분석(VE/VA)
+│
+├── 6. 원가 개선
+│      ├── Cost Reduction
+│      ├── Target Costing
+│      ├── Kaizen Costing
+│      ├── VA/VE
+│      ├── Lean Cost
+│      └── Cost Innovation
+│
+└── 7. 원가관리 지표
+       ├── 제조원가율
+       ├── 재료비율
+       ├── 노동비율
+       ├── 원가절감률
+       ├── Cost Saving
+       ├── COPQ
+       └── ROI
+</code></pre></div>
+<h2 id="_2">원가 개념</h2>
+<p>경영회계 및 원가관리에서 사용되는 원가, 비용, 손실, 원가대상, 원가동인의 기본 정의와 차이점이다.</p>
+<h3 id="cost">원가(Cost)</h3>
+<p>특정 목적을 달성하기 위해 소비된 경제적 자원의 화폐적 가치이다.</p>
+<ul>
+<li><strong>핵심 특징</strong><br />
+    아직 수익 창출에 기여하지 않은 자산 상태의 미소멸원가(Unexpired Cost)를 포함하는 가장 넓은 범위의 개념</li>
+<li><strong>예시</strong><br />
+    제품을 제조하기 위해 구입한 원재료비, 공장 기계 장치의 구입 금액, 공장 노동자의 임금</li>
+</ul>
+<p><strong>원가대상(Cost Object)</strong></p>
+<p>원가를 별도로 집계하고 측정하고자 하는 모든 활동, 단위, 또는 대상을 의미한다.</p>
+<ul>
+<li><strong>핵심 특징</strong><br />
+    "무엇의 원가를 계산할 것인가?"에 대한 답변에 해당함</li>
+<li><strong>예시</strong><br />
+    특정 제품(스마트폰 A 모델), 서비스(고객 상담 1건), 부서(생산1팀), 프로젝트, 특정 고객</li>
+</ul>
+<p><strong>원가동인(Cost Driver)</strong></p>
+<p>원가대상에 발생하는 원가의 크기를 변화시키는 인과관계가 있는 제반 요인이다.</p>
+<ul>
+<li><strong>핵심 특징</strong><br />
+    원가 발생의 근본적인 원인(Cause)이 되는 활동 수량</li>
+<li><strong>예시</strong>  <ul>
+<li><strong>전력비의 원가동인</strong>: 기계 가동 시간</li>
+<li><strong>운반비의 원가동인</strong>: 운반 횟수 또는 이동 거리</li>
+<li><strong>제품 세팅비의 원가동인</strong>: 세팅 횟수</li>
+</ul>
+</li>
+</ul>
+<h3 id="expense">비용(Expense)</h3>
+<p>원가 중에서 당기의 수익을 얻기 위해 소비되어 소멸된 부분(Expired Cost)이다.</p>
+<ul>
+<li><strong>핵심 특징</strong><br />
+    손익계산서에 반영되어 당기 수익과 대응(수익·비용 대응의 원칙)되는 금액</li>
+<li><strong>예시</strong><br />
+    판매된 제품의 매출원가, 본사 직원 급여, 광고선전비, 임차료</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">원가(Cost) vs 비용(Expense)</p>
+<p>원재료를 100만 원에 구입하면 <strong>원가(자산)</strong>가 발생하며, 이 중 60만 원어치의 제품이 완성되어 판매되면 60만 원은 매출원가라는 <strong>비용</strong>으로 전환된다.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">매몰비용 vs 기회비용</p>
+<p>의사결정을 내릴 때 고려해야 하는 두 가지 대표적인 경제학적 비용 개념이다. 의사결정 시 <strong>매몰비용은 무시해야 하며, 기회비용은 반드시 고려</strong>해야 합리적인 선택을 할 수 있다.</p>
+<ol>
+<li>
+<p>매몰비용(Sunk Cost)</p>
+<p>이미 지출되어 어떤 선택을 하더라도 다시 회수할 수 없는 비용이다.</p>
+<ul>
+<li><strong>핵심 특징</strong><br />
+    과거의 결정으로 이미 발생한 비용이므로, 미래의 의사결정에 영향을 미쳐서는 안 됨</li>
+<li><strong>매몰비용의 오류(Sunk Cost Fallacy)</strong><br />
+    이미 투자한 돈, 시간, 노력이 아깝다는 이유만으로 비합리적이거나 손실이 예상되는 결정을 계속 유지하는 현상</li>
+<li><strong>예시</strong>  <ul>
+<li><strong>영화 관람</strong>: 영화표(15,000원)를 예매하고 들어갔으나 영화가 너무 재미없는 경우, 이미 지불한 표값 15,000원은 매몰비용임 (영화관을 나오는 것이 남아있는 시간을 아끼는 합리적 선택)</li>
+<li><strong>R&amp;D 투자</strong>: 이미 100억 원을 투자한 개발 프로젝트가 시장성이 없다고 판단되었음에도, 지금까지 들어간 100억 원이 아까워 개발을 멈추지 못하는 경우</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>기회비용(Opportunity Cost)  </p>
+<p>여러 대안 중 하나를 선택함으로 인해 포기해야 하는 나머지 대안들 중 <strong>가장 가치가 높은 대안의 가치</strong>이다.</p>
+<ul>
+<li>
+<p><strong>수식 구조</strong>  </p>
+<div class="arithmatex">\[\text{명시적 비용(Direct Cost)} + \text{암묵적 비용(Implicit Cost)}\]</div>
+</li>
+<li>
+<p><strong>명시적 비용</strong>: 실제로 지출되는 현금 비용</p>
+</li>
+<li>
+<p><strong>암묵적 비용</strong>: 포기한 대안에서 얻을 수 있었던 수입이나 가치</p>
+</li>
+<li>
+<p><strong>핵심 특징</strong><br />
+    경제학에서 말하는 모든 원가 및 비용 분석의 기초가 되며, 합리적 의사결정의 핵심 평가 기준임</p>
+</li>
+<li><strong>예시</strong>  <ul>
+<li><strong>대학 진학의 기회비용</strong>: 대학 등록금 및 교재비(명시적 비용) <span class="arithmatex">\(+\)</span> 대학을 다니지 않고 취업했을 때 벌 수 있었던 연봉(암묵적 비용)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>매몰비용 vs 기회비용 비교</strong></p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>매몰비용 (Sunk Cost)</th>
+<th>기회비용 (Opportunity Cost)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>시점</strong></td>
+<td>과거의 지출 (이미 발생함)</td>
+<td>미래의 선택 (앞으로 발생함)</td>
+</tr>
+<tr>
+<td><strong>회수 가능 여부</strong></td>
+<td>절대 회수 불가능</td>
+<td>선택에 따라 달성 및 변경 가능</td>
+</tr>
+<tr>
+<td><strong>의사결정 시 반영 여부</strong></td>
+<td><strong>고려 대상 제외 (무시)</strong></td>
+<td><strong>반드시 고려 (반영)</strong></td>
+</tr>
+<tr>
+<td><strong>의사결정 원칙</strong></td>
+<td>과거 비용에 연연하지 않음</td>
+<td>기회비용을 최소화하는 대안 선택</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="loss">손실(Loss)</h3>
+<p>손실은 수익 창출 활동과 직접적인 관련 없이, 정상적인 경영 과정 외에서 자원이 소멸된 금액이다.</p>
+<ul>
+<li><strong>핵심 특징</strong><br />
+    대가로 얻어지는 <span class='hl'>수익(대가)이 전혀 없이 자산 가치가 감소한 상태</span></li>
+<li><strong>예시</strong><br />
+    화재나 자연재해로 인한 재고자산 감실, 유형자산 처분손실, 원재료 부패로 인한 폐기 손실</li>
+</ul>
+<p><strong>원가 개념 간 관계 요약</strong></p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>성격</th>
+<th>수익 대응 여부</th>
+<th>재무제표 표시</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>원가 (Cost)</strong></td>
+<td>자원의 소비 가치 (미소멸 원가 포함)</td>
+<td>미래 수익 기대 가능</td>
+<td>재고자산 등 자산 항목</td>
+</tr>
+<tr>
+<td><strong>비용 (Expense)</strong></td>
+<td>수익을 얻기 위해 소멸된 원가</td>
+<td>당기 수익과 직접 대응</td>
+<td>손익계산서 (매출원가, 판관비)</td>
+</tr>
+<tr>
+<td><strong>손실 (Loss)</strong></td>
+<td>대가 없이 소멸된 자산 가치</td>
+<td>수익 대응 없음</td>
+<td>손익계산서 (영업외비용)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">원가 구성</h2>
+<p>제품의 생산 및 판매 과정에서 발생하는 원가는 단계별 합산 방식에 따라 <strong>직접원가</strong>, <strong>제조원가</strong>, <strong>총원가</strong>, <strong>판매가격</strong>으로 계층화되어 구성된다.</p>
+<p><img alt="" src="https://yeonkyupark.github.io/pepc2e/images/cost.png" /></p>
+<h3 id="3">원가 3요소</h3>
+<p>발생 형태별 분류에 따라 제조 활동을 진행할 때 지출되는 가장 기본이 되는 3가지 원가 요소이다.</p>
+<ol>
+<li>
+<p><strong>재료비(Material Cost)</strong>  </p>
+<p>제품 제조를 위해 소비된 물품 및 원자재의 가치이다.</p>
+<ul>
+<li><strong>직접재료비</strong>: 특정 제품의 생산에 직접 사용되어 원가 대상에 확실히 추적할 수 있는 재료비 (예: 자동차의 엔진, 의류의 원단)</li>
+<li><strong>간접재료비</strong>: 여러 제품 생산에 공통으로 사용되거나 소비량이 미미하여 추적이 어려운 재료비 (예: 공용 접착제, 나사, 윤활유)</li>
+</ul>
+</li>
+<li>
+<p><strong>노무비(Labor Cost)</strong></p>
+<p>제품 제조를 위해 투입된 노동력에 대해 지급하는 대가이다.</p>
+<ul>
+<li><strong>직접노무비</strong>: 특정 제품을 직접 생산하는 라인 작업자의 임금</li>
+<li><strong>간접노무비</strong>: 공장 감독자, 품질 관리자, 공장 창고 관리자의 급여 및 수당</li>
+</ul>
+</li>
+<li>
+<p><strong>제조경비(Overhead Expenses)</strong>  </p>
+<p>제조 과정에서 발생한 재료비와 노무비를 제외한 제반 경비이다.</p>
+<ul>
+<li><strong>직접제조경비</strong>: 특정 제품 생산을 위해서만 지불한 외주 가공비, 특정 제품용 특허권 사용료</li>
+<li><strong>간접제조경비</strong>: 공장 전체의 전력비, 공장 임차료, 기계 감가상각비, 공장 화재보험료</li>
+</ul>
+</li>
+</ol>
+<h3 id="_4">단계별 원가 구성 체계</h3>
+<p>원가의 3요소(재료비·노무비·경비)는 추적 가능 여부와 발생 단계에 따라 차례대로 합산된다.</p>
+<ol>
+<li>
+<p><strong>1단계: 직접원가 (Direct Cost / Prime Cost)</strong></p>
+<p>제품을 생산하는 데 직접적으로 투입된 원가의 합계이다. (기초원가 또는 기본원가라고도 부름)</p>
+<div class="arithmatex">\[\text{직접원가} = \text{직접재료비} + \text{직접노무비} + \text{직접제조경비}\]</div>
+</li>
+<li>
+<p><strong>2단계: 제조원가 (Manufacturing Cost)</strong></p>
+<p>직접원가에 제품을 만드는 데 공통으로 들어간 간접비 요소를 합산한 금액이다. 공장에서 제품이 완성될 때까지 들어간 전체 비용을 의미한다.</p>
+<div class="arithmatex">\[\text{제조원가} = \text{직접원가} + \text{제조간접비}\]</div>
+<ul>
+<li>참고: 제조간접비(Factory Overhead)는 간접재료비, 간접노무비, 간접제조경비의 합을 뜻함</li>
+</ul>
+</li>
+<li>
+<p><strong>3단계: 총원가 (Total Cost)</strong></p>
+<p>완성된 제품을 판매하고 기업을 운영하는 데 드는 본사 차원의 비제조 비용(판매비와 관리비)까지 모두 합산한 원가이다.</p>
+<div class="arithmatex">\[\text{총원가} = \text{제조원가} + \text{판매비와 관리비(판관비)}\]</div>
+<ul>
+<li><strong>판매비와 관리비 예시</strong>: 본사 직원 급여, 영업부 수수료, 광고선전비, 본사 건물 임차료</li>
+</ul>
+</li>
+<li>
+<p><strong>4단계: 판매가격 (Selling Price)</strong></p>
+<p>기업이 목표로 하는 영업이익을 총원가에 더하여 최종적으로 시장에 책정하는 판매 금액이다.</p>
+<div class="arithmatex">\[\text{판매가격} = \text{총원가} + \text{목표이익}\]</div>
+</li>
+</ol>
+<p><strong>원가 집계 방식 요약표</strong></p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>포함 항목</th>
+<th>핵심 의의</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>직접원가</strong></td>
+<td>직접재료비 + 직접노무비 + 직접제조경비</td>
+<td>제품 생산의 핵심 직접 원가 파악</td>
+</tr>
+<tr>
+<td><strong>제조원가</strong></td>
+<td>직접원가 + 제조간접비</td>
+<td>공장 생산 완료 시점의 재고자산 평가 기준</td>
+</tr>
+<tr>
+<td><strong>총원가</strong></td>
+<td>제조원가 + 판매비와 관리비</td>
+<td>손실을 보지 않기 위한 최소 회수 금액 기준</td>
+</tr>
+<tr>
+<td><strong>판매가격</strong></td>
+<td>총원가 + 목표이익</td>
+<td>실제 소비자 판매 금액</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_5">부가가치</h2>
+<p><strong>부가가치(Value Added)</strong>는 기업이나 생산 주체가 원자재, 외부 서비스 등 타사로부터 구입한 중간재를 사용하여 <span class='hl'>생산 활동을 거친 후 새롭게 창출한 경제적 가치</span>를 의미한다. 총생산액에서 타사로부터 구입한 중간투입액을 차감한 것으로, 기업이 고유한 생산 요소를 투입하여 추가한 가치를 수치화한 지표이다.</p>
+<p><strong>부가가치의 주요 특징</strong></p>
+<p>기업의 실질적 성과와 국민 경제적 기여도를 평가하는 기준이 된다.</p>
+<ul>
+<li><strong>이중 계산 방지</strong>: 원자재 등 중간재의 가치를 제외함으로써 총생산액 산출 시 발생하는 중복 계산을 차감</li>
+<li><strong>경영 성과 측정</strong>: 단순 매출액 규모가 아닌, 기업이 자체적으로 창출한 실질적 수익력 평가</li>
+<li><strong>분배의 기준</strong>: 창출된 부가가치는 노무비(근로자), 금융비용(금융기관), 임차료(지주), 조세공과(정부), 당기순이익(주주/기업) 등으로 분배</li>
+</ul>
+<h3 id="_6">부가가치 산출 공식</h3>
+<p>부가가치를 계산하는 방식은 접근 관점에 따라 공제법(控除法)과 가산법(加算法)으로 나뉜다.</p>
+<ol>
+<li>
+<p><strong>공제법 (가공비 관점)</strong></p>
+<p>매출액에서 타사로부터 구매한 중간투입액을 직접 차감하여 산출하는 방식이다.</p>
+<div class="arithmatex">\[부가가치 = 매출액 - 중간투입액(외부구입가치)\]</div>
+<ul>
+<li><strong>중간투입액 포함 항목</strong>: 원재료비, 외주가공비, 동력비, 운반비 등 타사 지급 비용</li>
+</ul>
+</li>
+<li>
+<p><strong>가산법 (요소소득 관점)</strong></p>
+<p>생산 과정에 투입된 생산 요소에 분배되는 각 요소 소득을 합산하여 산출하는 방식이다. 한국은행 등 <strong>통계기관이나 기업 분석에서 자주 활용</strong>된다.</p>
+<div class="arithmatex">\[부가가치 = 인건비 + 금융비용 + 임차료 + 조세공과 + 감가상각비 + 경상이익\]</div>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">주요 부가가치 분석 지표</p>
+<p>부가가치를 바탕으로 기업의 생산성과 효율성을 측정하는 대표 지표이다.</p>
+<table>
+<thead>
+<tr>
+<th>지표명</th>
+<th>산출 공식</th>
+<th>의미 및 활용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>부가가치율</strong></td>
+<td><span class="arithmatex">\(\left( \frac{부가가치}{매출액} \right) \times 100\)</span></td>
+<td>매출액 중 실질 창출 가치의 비중(고부가가치 구조 평가)</td>
+</tr>
+<tr>
+<td><strong>인당 노동생산성</strong></td>
+<td><span class="arithmatex">\(\frac{부가가치}{종업원\ 수}\)</span></td>
+<td>종업원 <span class="arithmatex">\(1\)</span>인당 창출한 부가가치 금액</td>
+</tr>
+<tr>
+<td><strong>자본생산성</strong></td>
+<td><span class="arithmatex">\(\frac{부가가치}{총자본}\)</span></td>
+<td>투입된 총자본 대비 부가가치 창출 효율성</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="_7">감가상각</h2>
+<p><strong>감가상각(Depreciation)</strong>은 유형자산(건물, 기계장치, 차량운반구 등)을 사용하거나 시간이 경과함에 따라 발생하는 <strong>가치의 감소를 산정</strong>하여, 해당 자산의 <strong>취득원가를 내용연수(사용 가능 기간) 동안 차례대로 배분</strong>하여 비용으로 처리하는 회계 절차이다.</p>
+<p><strong>감가상각의 핵심 목적 및 필요성</strong></p>
+<ul>
+<li><strong>수익·비용 대응의 원칙 준수</strong><br />
+    자산을 사용하여 수익을 창출하는 기간 동안 해당 자산의 취득원가를 분할 인식함으로써 기간 손익을 정확하게 계산</li>
+<li><strong>자산 가치의 현실적 평가</strong><br />
+    장부상 유형자산의 가치를 시간이 흐름에 따라 감소시켜 재무상태표의 자산 가치를 적정하게 반영</li>
+<li><strong>절세 효과(Tax Shield)</strong><br />
+    감가상각비는 현금 유출이 없는 비용이지만 법인세 계산 시 손금(비용)으로 인정되어 세금을 줄여주는 효과 발생</li>
+</ul>
+<h3 id="3_1">감가상각의 3대 요소</h3>
+<p>감가상각비를 계산하기 위해 반드시 결정해야 하는 기준 지표이다.</p>
+<ol>
+<li>
+<p><strong>취득원가(Acquisition Cost)</strong>  </p>
+<p>자산을 구입하고 원하는 목적으로 사용하기까지 투입된 <strong>모든 비용의 합계</strong>이다.</p>
+<ul>
+<li><strong>포함 항목</strong>: 매입가액 + 운반비 + 설치비 + 시운전비 + 취득세 등</li>
+</ul>
+</li>
+<li>
+<p><strong>내용연수(Useful Life)</strong>  </p>
+<p>자산을 회사의 영업활동에 <strong>경제적으로 사용할 수 있을 것으로 예상되는 기간</strong>(년 수)이다.</p>
+</li>
+<li>
+<p><strong>잔존가치(Residual Value)</strong>  </p>
+<p>자산의 내용연수가 다하여 폐기하거나 처분할 때 얻을 수 있을 것으로 <strong>예상되는 순실리액(처분 예상가 - 처분 비용)</strong>이다.</p>
+</li>
+</ol>
+<h3 id="_8">대표적인 방법 및 계산 수식</h3>
+<p>감가상각 방법은 크게 매년 동일한 금액을 상각하는 <strong>정액법</strong>, 초기에 상각비를 많이 계상하는 <strong>가속상각법(연수합계법, 정률법, 이중거절법)</strong>, 그리고 자산의 실제 사용량에 비례하여 계상하는 <strong>생산량비례법</strong>으로 나눈다.</p>
+<ol>
+<li>
+<p><strong>정액법(Straight-Line Method)</strong>  </p>
+<p>내용연수 동안 매년 동일한 금액을 감가상각비로 인식하는 가장 단순한 방법이다.</p>
+<ul>
+<li><strong>산출 수식</strong></li>
+</ul>
+<div class="arithmatex">\[\text{연간 감가상각비} = \frac{\text{취득원가} - \text{잔존가치}}{\text{내용연수}}\]</div>
+<ul>
+<li><strong>특징 및 장단점</strong><ul>
+<li><strong>장점</strong>: 계산 및 장부 기장이 매우 간편함</li>
+<li><strong>단점</strong>: 자산의 초기 생산성이 높고 정비 수선비가 적게 드는 현실적인 자산 가치 감소 양상을 반영하지 못함</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>연수합계법(Sum-of-the-Years'-Digits Method, SYD)</strong>  </p>
+<p>내용연수의 역순 가중치를 잔여 내용연수 비율로 적용하여 초기에 상각비를 많이 계상하는 가속상각법(Accelerated Depreciation)의 대표적인 방법이다.</p>
+<ul>
+<li><strong>산출 수식</strong></li>
+</ul>
+<div class="arithmatex">\[\text{연간 감가상각비} = (\text{취득원가} - \text{잔존가치}) \times \frac{\text{잔여 내용연수}}{\text{내용연수의 합}}\]</div>
+<div class="arithmatex">\[\text{내용연수의 합} = \frac{n(n + 1)}{2} \quad (n = \text{내용연수})\]</div>
+<ul>
+<li><strong>특징 및 장단점</strong><ul>
+<li><strong>장점</strong>: 초기에 많은 비용을 처리하여 초기 법인세 절세 효과가 큼, 자산 사용 후반부로 갈수록 증가하는 수선유지비와 감소하는 감가상각비가 상쇄되어 전체 비용 부담이 평준화됨</li>
+<li><strong>단점</strong>: 매년 적용 비율이 달라지므로 정액법에 비해 계산이 다소 복잡함</li>
+</ul>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">연수합계법 예시 (취득원가 1,000만 원, 잔존가치 100만 원, 내용연수 5년)</p>
+<ul>
+<li>상각 대상 금액: <span class="arithmatex">\(1,000만 - 100만 = 900만 원\)</span></li>
+<li>내용연수의 합: <span class="arithmatex">\(1 + 2 + 3 + 4 + 5 = 15\)</span>  <ul>
+<li><strong>1년 차 상각비</strong>: <span class="arithmatex">\(900만 \times \frac{5}{15} = 300만 원\)</span></li>
+<li><strong>2년 차 상각비</strong>: <span class="arithmatex">\(900만 \times \frac{4}{15} = 240만 원\)</span></li>
+<li><strong>5년 차 상각비</strong>: <span class="arithmatex">\(900만 \times \frac{1}{15} = 60만 원\)</span></li>
+</ul>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>정률법(Declining-Balance Method)</strong>  </p>
+<p>미상각잔액(취득원가 - 감가상각누계액)에 매년 일정한 상각률을 곱하여 상각비를 산출하는 가속상각법이다.</p>
+<ul>
+<li><strong>산출 수식</strong></li>
+</ul>
+<div class="arithmatex">\[\text{연간 감가상각비} = (\text{취득원가} - \text{감가상각누계액}) \times \text{상각률}\]</div>
+<ul>
+<li><strong>특징 및 장단점</strong><ul>
+<li><strong>장점</strong>: 초기 상각비가 가장 커서 조기 투자금 회수 및 초기 절세 효과에 매우 유리함</li>
+<li><strong>단점</strong>: 매년 장부가액이 변하므로 잔존가치에 딱 맞추기 위한 기말 조정 과정이 필요함</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>이중체감법(Double-Declining Balance Method, DDB)</strong>  </p>
+<p>정률법의 한 종류로, 정액법 상각률의 정확히 2배(Double)에 해당하는 정률을 미상각잔액에 적용하여 초기에 매우 가파르게 상각하는 방법이다.</p>
+<ul>
+<li><strong>산출 수식</strong></li>
+</ul>
+<div class="arithmatex">\[\text{상각률} = \frac{2}{\text{내용연수}}\]</div>
+<div class="arithmatex">\[\text{연간 감가상각비} = (\text{취득원가} - \text{감가상각누계액}) \times \frac{2}{\text{내용연수}}\]</div>
+<ul>
+<li><strong>특징 및 주의사항</strong><ul>
+<li>상각률 계산 시 잔존가치를 차감하지 않고 취득원가에 직접 2배 상각률을 곱함</li>
+<li>단, 장부가액이 최종 잔존가치 이하로 떨어지지 않도록 마지막 해의 상각비를 제한함</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>생산량비례법(Units-of-Production Method)</strong>  </p>
+<p>시간 경과가 아닌 자산의 실제 가동 수준이나 생산량 실적에 직접 비례하여 상각비를 계산한다.</p>
+<ul>
+<li><strong>산출 수식</strong></li>
+</ul>
+<div class="arithmatex">\[\text{연간 감가상각비} = (\text{취득원가} - \text{잔존가치}) \times \frac{\text{당기 실제 생산량}}{\text{총 추정 생산량}}\]</div>
+<ul>
+<li><strong>특징 및 장단점</strong><ul>
+<li><strong>장점</strong>: 실제 조업도와 수익·비용을 정확하게 대응시킬 수 있음</li>
+<li><strong>단점</strong>: 총 추정 생산량을 객관적으로 측정하기 어려운 자산에는 적용하기 힘듦</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>감가상각 방법별 종합 비교</strong></p>
+<table>
+<thead>
+<tr>
+<th>방법</th>
+<th>상각 기준금액</th>
+<th>비용 발생 패턴</th>
+<th>주요 특징 및 적합 자산</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>정액법</strong></td>
+<td>취득원가 - 잔존가치</td>
+<td>매년 동일</td>
+<td>건물, 구축물 (시간 경과 중심)</td>
+</tr>
+<tr>
+<td><strong>연수합계법</strong></td>
+<td>취득원가 - 잔존가치</td>
+<td>매년 체감 (가속)</td>
+<td>기계장치, 정비비가 점증하는 자산</td>
+</tr>
+<tr>
+<td><strong>정률법</strong></td>
+<td>미상각 잔액</td>
+<td>매년 체감 (가속)</td>
+<td>차량, 집기비품, 가치 하락이 빠른 자산</td>
+</tr>
+<tr>
+<td><strong>이중거절법</strong></td>
+<td>미상각 잔액</td>
+<td>매년 급격히 체감</td>
+<td>기술 진보 및 진부화가 매우 빠른 설비</td>
+</tr>
+<tr>
+<td><strong>생산량비례법</strong></td>
+<td>취득원가 - 잔존가치</td>
+<td>생산량에 비례</td>
+<td>광산, 매장자원, 가동시간 명확한 기계</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">무형자산 상각(Amortization)</p>
+<p>소프트웨어(SW)나 특허권 같은 무형자산 역시 사용 기간에 따라 가치가 줄어들기 때문에 감가상각을 한다. 다만, 유형자산과 구분하기 위해 무형자산에 대해서는 <strong>상각(Amortization)이라는 용어를 주로 사용</strong>한다.
+소프트웨어, 특허권, 상표권, 실용신안권, 영업권 등 형체가 없는 무형자산(Intangible Assets)을 취득했을 때, 해당 자산을 사용해 수익을 얻는 기간(내용연수) 동안 비용으로 배분하는 회계 절차이다.</p>
+<p><strong>SW 및 특허권 상각의 주요 특징</strong></p>
+<ol>
+<li>
+<p><strong>잔존가치를 원칙적으로 '0'으로 설정</strong>  </p>
+<p>소프트웨어나 특허권은 계약기간이 끝나거나 기술 수명이 다하면 재판매가 힘든 경우가 대부분이다. 따라서 잔존가치는 제3자에게 양도하기로 한 확실한 계약이 없는 한 <strong>0원</strong>으로 두고 계산한다.</p>
+</li>
+<li>
+<p><strong>정액법 중심 적용</strong>  </p>
+<p>자산의 미래 경제적 효익이 소비되는 형태를 객관적으로 입증하기 어려운 무형자산의 특성상, 회계기준상 특별한 이유가 없다면 <strong>정액법</strong>을 기본으로 적용한다.</p>
+</li>
+<li>
+<p><strong>직접 차감법 적용</strong>  </p>
+<p>유형자산은 '감가상각누계액'이라는 차감 계정을 써서 장부가액을 보여주는 간접법을 주로 쓰지만, 무형자산은 자산 가치를 직접 줄여나가는 <strong>직접 차감법</strong>을 주로 사용한다.</p>
+<p><strong>회계처리 비교</strong>  </p>
+<ul>
+<li><strong>유형자산(기계)</strong>: (차변) 감가상각비 100 / (대변) 감가상각누계액 100</li>
+<li><strong>무형자산(특허권)</strong>: (차변) 무형자산상각비 100 / (대변) 특허권 100</li>
+</ul>
+</li>
+</ol>
+<p><strong>소프트웨어 및 특허권 상각 예시</strong></p>
+<ol>
+<li>
+<p><strong>특허권(Patent Right)</strong>  </p>
+<ul>
+<li><strong>내용연수</strong>: 법적 보호 기간(통상 20년) 또는 독점적 경제 효익을 얻을 수 있는 수명 중 짧은 기간을 설정함</li>
+<li><strong>예시</strong>: 특허권 취득원가가 1억 원이고 경제적 사용 기간이 10년인 경우, 정액법에 따라 <strong>매년 1,000만 원씩</strong> 10년간 비용 처리함</li>
+</ul>
+</li>
+<li>
+<p><strong>소프트웨어(Software)</strong>  </p>
+<ul>
+<li><strong>내용연수</strong>: 기술 진보 및 진부화 속도가 빠르기 때문에 세법 및 회계기준상 통상 <strong>3년 ~ 5년</strong>의 짧은 내용연수를 적용함</li>
+<li><strong>주의사항</strong>: 단순 사용료 형태의 구독형 SW(SaaS)는 자산으로 잡지 않고 당기 비용(수수료/임차료)으로 처리하며, 자체 개발하거나 영구 라이선스로 구매한 SW만 무형자산으로 등록 후 상각함</li>
+</ul>
+</li>
+</ol>
+<p><strong>유형자산 감가상각 vs 무형자산 상각 비교</strong></p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>유형자산 감가상각 (Depreciation)</th>
+<th>무형자산 상각 (Amortization)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>대상 자산</strong></td>
+<td>건물, 기계장치, 차량, 설비 등</td>
+<td>소프트웨어, 특허권, 영업권, 개발비 등</td>
+</tr>
+<tr>
+<td><strong>잔존가치</strong></td>
+<td>추정 잔존가액 반영</td>
+<td><strong>원칙적으로 0원</strong></td>
+</tr>
+<tr>
+<td><strong>주요 상각방법</strong></td>
+<td>정액법, 정률법, 연수합계법 등 선택</td>
+<td><strong>원칙적으로 정액법</strong></td>
+</tr>
+<tr>
+<td><strong>표시 방식</strong></td>
+<td>간접법 (감가상각누계액 표시)</td>
+<td><strong>직접법 (자산 가액 직접 차감)</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../0601_feasibility_analysis/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 1. 사업성 분석">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                1. 사업성 분석
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../0603_value_engineering/" class="md-footer__link md-footer__link--next" aria-label="Next: 3. 가치공학">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                3. 가치공학
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.action.edit", "toc.follow", "navigation.footer"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
